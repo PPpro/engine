@@ -120,17 +120,17 @@ if (AudioPlayer) {
 
         _ensureStop () {
             return new Promise((resolve) => {
-                // if (this._state === PlayingState.PLAYING) {
-                //     /* sometimes there is no way to update the playing state
-                //     especially when player unplug earphones and the audio automatically stops
-                //     so we need to force updating the playing state by pausing audio */
-                //     this.pause().then(() => {
-                //         // restart if already playing
-                //         this.setCurrentTime(0);
-                //         resolve();
-                //     });
-                //     return;
-                // }
+                if (this._state === PlayingState.PLAYING) {
+                    /* sometimes there is no way to update the playing state
+                    especially when player unplug earphones and the audio automatically stops
+                    so we need to force updating the playing state by pausing audio */
+                    this.pause().then(() => {
+                        // restart if already playing
+                        this.setCurrentTime(0);
+                        resolve();
+                    });
+                    return;
+                }
                 return resolve();
             });
         }
