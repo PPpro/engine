@@ -58,4 +58,4 @@ test('global variables are sealed', async () => {
         expect(difference).toEqual([]);
     }
 
-}, 30000);
+}, 60000);
