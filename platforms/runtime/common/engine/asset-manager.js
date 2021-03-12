@@ -1,5 +1,5 @@
 const cacheManager = require('./cache-manager');
-const { downloadFile, readText, readArrayBuffer, readJson, loadSubpackage, getUserDataPath, _subpackagesPath } = require('./fs-utils');
+const { downloadFile, readText, readArrayBuffer, readJson, loadSubpackage, getUserDataPath } = require('./fs-utils');
 cc.assetManager.fsUtils = ral.fsUtils;
 
 const REGEX = /^https?:\/\/.*/;
@@ -147,7 +147,7 @@ function downloadBundle(nameOrUrl, options, onComplete) {
     let suffix = version ? version + '.' : '';
 
     if (subpackages[bundleName]) {
-        var config = `${_subpackagesPath}${bundleName}/config.${suffix}json`;
+        var config = `subpackages/${bundleName}/config.${suffix}json`;
         loadSubpackage(bundleName, options.onFileProgress, function (err) {
             if (err) {
                 onComplete(err, null);
@@ -155,7 +155,7 @@ function downloadBundle(nameOrUrl, options, onComplete) {
             }
             downloader.importBundleEntry(bundleName).then(function () {
                 downloadJson(config, options, function (err, data) {
-                    data && (data.base = `${_subpackagesPath}${bundleName}/`);
+                    data && (data.base = `subpackages/${bundleName}/`);
                     onComplete(err, data);
                 });
             }).catch(function (err) {
@@ -414,6 +414,5 @@ cc.assetManager.transformPipeline.append(function (task) {
 var originInit = cc.assetManager.init;
 cc.assetManager.init = function (options) {
     originInit.call(cc.assetManager, options);
-    options.subpackages && options.subpackages.forEach(x => subpackages[x] = `${_subpackagesPath}` + x);
     cacheManager.init();
 };
