@@ -147,7 +147,7 @@ function downloadBundle(nameOrUrl, options, onComplete) {
     let suffix = version ? version + '.' : '';
 
     if (subpackages[bundleName]) {
-        var config = `subpackages/${bundleName}/config.${suffix}json`;
+        var config = `${bundleName}/config.${suffix}json`;
         loadSubpackage(bundleName, options.onFileProgress, function (err) {
             if (err) {
                 onComplete(err, null);
@@ -155,7 +155,7 @@ function downloadBundle(nameOrUrl, options, onComplete) {
             }
             downloader.importBundleEntry(bundleName).then(function () {
                 downloadJson(config, options, function (err, data) {
-                    data && (data.base = `subpackages/${bundleName}/`);
+                    data && (data.base = `${bundleName}/`);
                     onComplete(err, data);
                 });
             }).catch(function (err) {
