@@ -45,7 +45,7 @@ let recycleAudio = function (audio) {
     audio.src = null;
     // In case repeatly recycle audio
     if (!_audioPool.includes(audio)) {
-        if (_audioPool.length < audioEngine._maxPoolSize) {
+        if (_audioPool.length < audioEngine._maxAudioInstance) {
             _audioPool.push(audio);
         }
         else {
@@ -128,8 +128,6 @@ var audioEngine = {
     AudioState: Audio.State,
 
     _maxAudioInstance: 24,
-
-    _maxPoolSize: 32,
 
     _id2audio: _id2audio,
 
@@ -430,10 +428,10 @@ var audioEngine = {
     },
 
     /**
-     * !#en Getting audio can produce several examples.
-     * !#zh 获取一个音频可以设置几个实例
+     * !#en Getting the max number of audio instances.
+     * !#zh 获取最大的音频实例数。
      * @method getMaxAudioInstance
-     * @return {Number} max number of instances to be created from within an audio
+     * @return {Number} The max number of audio instances.
      * @example
      * cc.audioEngine.getMaxAudioInstance();
      */
