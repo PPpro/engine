@@ -58,9 +58,8 @@ export class AudioManager {
             if (this._tryAddPlaying(this._audioPlayerInfoList, audio)) {
                 return;
             }
-        } else {
-            this._tryAddPlaying(this._oneShotAudioInfoList, audio);
         }
+        this._tryAddPlaying(this._oneShotAudioInfoList, audio);
     }
 
     private _tryRemovePlaying (audioInfoList: AudioInfo<ManagedAudio>[], audio: ManagedAudio): boolean {
@@ -76,9 +75,8 @@ export class AudioManager {
             if (this._tryRemovePlaying(this._audioPlayerInfoList, audio)) {
                 return;
             }
-        } else {
-            this._tryRemovePlaying(this._oneShotAudioInfoList, audio);
         }
+        this._tryRemovePlaying(this._oneShotAudioInfoList, audio);
     }
 
     public discardOnePlayingIfNeeded () {
@@ -102,6 +100,7 @@ export class AudioManager {
             });
         }
         if (audioInfoToDiscard) {
+            // eslint-disable-next-line @typescript-eslint/no-floating-promises
             audioInfoToDiscard.audio.stop();
             this.removePlaying(audioInfoToDiscard.audio);
         }
