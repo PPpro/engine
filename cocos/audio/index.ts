@@ -36,6 +36,7 @@ import { js } from '../core/utils/js';
 import './deprecated';
 
 export { AudioClip } from './audio-clip';
+export { imAudio } from './im-audio';
 
 export { AudioSource };
 
