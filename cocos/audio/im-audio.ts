@@ -1,12 +1,12 @@
-import { AudioClip } from "./audio-clip";
+import { AudioClip } from './audio-clip';
 
 class IMAudio {
-    constructor() {
+    constructor () {
         // todo
     }
 
     play (clip: AudioClip) {
-        // return 
+        // return
     }
 }
 
