@@ -139,6 +139,7 @@ export class AudioSource extends Component {
         }).catch((e) => {});
     }
 
+    public testInterface = 1;
     /**
      * @en
      * Is looping enabled for this audio source?
