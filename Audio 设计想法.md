@@ -2,27 +2,38 @@
 
 ```ts
 // 接口设计
-// audioClip.createAudio(options: AudioOptions, cb: (audio2D: Audio2D) => void): Audio2D;
 interface AudioOptions {
     loop: boolean;
+    volume: number;
+    // ...
+}
+declare class AudioClip {
+    public createAudio(options: AudioOptions, cb: (audio2D: Audio2D) => void): Audio2D;
+    // ...
 }
 
+// 创建 Audio2D 实例
 audioClip.createAudio(options: AudioOptions, function (audio2D: Audio2D) {
     audio2D.play();  // 同步播放
 });
-
 // or
 audio2D = audioClip.createAudio(options: AudioOptions);
-audio2D.play((); // 异步播放
+audio2D.play(); // 异步播放
+
+// OneShot 播放
+audioClip.playOneShot();
+
+// 事件监听
+audio2D.on(Audio2D.EventType.ENDED, cb, target);
 ```
 
 ## 新旧方案的对比
 
-audioEngine:
+2.x audioEngine:
 - 用户引用一个 audio id, 其实是一种用户对 audio 对象弱引用的设计
 - 好处是用户不需要关心 audio 对象的销毁时间点
 - 坏处是，用户永远也不会知道，audio 什么时候会被销毁，正常的使用是，每次播放之前都要判断 audio id 是否有效
-- 另一个坏处是，audioEngine 有一些 audio 的回收逻辑，这块其实更像是游戏的业务逻辑，这块希望能够交给用户自己管理，引擎不做 audio 管理工作
+- 另一个不好的设计是，audioEngine 实现了 audio 的回收逻辑，这块其实更像是游戏的业务逻辑，希望能够交给用户自己管理，引擎不做 audio 管理工作
 
 Audio2D:
 - 直接将 Audio2D 对象暴露给用户，包括 destroy 接口
@@ -32,7 +43,7 @@ Audio2D:
 - 未来 Audio2D 还可以在原生上支持 playbackRate， panner 
 
 ## 是否存在 “用户对音频保持弱引用” 的需求 ？
-有，比如游戏里的枪声和打击声，播放完就立即销毁，用户不希望每次都做一次加载，播放完手动 destroy，这样操作起来很繁琐。  
+有，比如游戏里的枪声和打击声，播放完就立即销毁，用户不希望每次都做一次加载，播放完手动 destroy，这样操作起来太繁琐了。  
 针对这个需求，打算重新开放 AudioClip.playOneShot() 接口。  
 
 ## AudioSource.playOneShot(audioClip, volume) 是否仍然有意义 ？
@@ -55,6 +66,6 @@ audio2D.on(Audio2D.EventType.INTERRUPTED, () => {
 其他可以支持的音频需求（优先级不高）：
 - lip sync
 - Analyzer 音图生成
-- AudioGroup （用户可以自己在业务逻辑里实现）
 - Audio2D fade in / out
 - audioSprite 多音频合批，减少加载请求次数 (https://www.npmjs.com/package/audiosprite)
+- AudioGroup （用户可以自己在业务逻辑里实现）
