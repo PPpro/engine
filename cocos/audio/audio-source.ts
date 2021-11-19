@@ -326,6 +326,8 @@ export class AudioSource extends Component {
             oneShotAudio.play();
         }).catch((e) => {});
     }
+    
+    private _testPrivateInterface = 1;
 
     protected _syncStates () {
         if (!this._player) { return; }
