@@ -6,7 +6,7 @@
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated engine source code (the "Software"), a limited,  
-  worldwide, royalty-free, non-assignable, revocable and non-exclusive license
+  worldwide, royalty-free, non-assignable, revocable and non-exclusive l icense
  to use Cocos Creator solely to develop games on your target platforms. You shall
   not use Cocos Creator software for developing other software or tools that's 
   used for developing games. You are not granted to publish, distribute,
