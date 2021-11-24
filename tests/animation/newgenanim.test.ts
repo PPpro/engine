@@ -921,7 +921,7 @@ describe('NewGen Anim', () => {
             expect(triggerStates).toStrictEqual(new Array(nTriggers).fill(false));
         });
 
-        test('Automatic triggers are reset once update ended', () => {
+        test('Automatic triggers are reset once update ends', () => {
             const triggerName = 't';
             const helpVarName = 'b';
 
