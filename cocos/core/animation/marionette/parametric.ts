@@ -13,6 +13,8 @@ export enum VariableType {
     TRIGGER,
 
     INTEGER,
+
+    AUTO_TRIGGER,
 }
 
 export interface Bindable<TValue> {
@@ -160,5 +162,11 @@ export function validateVariableType (type: VariableType, expected: VariableType
 export function validateVariableTypeNumeric (type: VariableType, name: string) {
     if (type !== VariableType.FLOAT && type !== VariableType.INTEGER) {
         throw new VariableTypeMismatchedError(name, 'number or integer');
+    }
+}
+
+export function validateVariableTypeTriggerLike (type: VariableType, name: string) {
+    if (type !== VariableType.TRIGGER && type !== VariableType.AUTO_TRIGGER) {
+        throw new VariableTypeMismatchedError(name, 'trigger');
     }
 }
