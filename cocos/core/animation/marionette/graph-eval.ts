@@ -77,10 +77,6 @@ export class AnimationGraphEval {
         graphDebugGroupEnd();
     }
 
-    public getCurrentStateStatus (layer: number): Readonly<MotionStateStatus> | null {
-        return this._layerEvaluations[layer].getCurrentStateStatus();
-    }
-
     public getCurrentClipStatuses (layer: number): Iterable<Readonly<ClipStatus>> {
         return this._layerEvaluations[layer].getCurrentClipStatuses();
     }
