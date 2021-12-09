@@ -31,11 +31,6 @@ jobs:
           npm run build-declaration
           cp ./bin/.declarations/cc.d.ts ./bin/cc_base.d.ts
 
-      - name: npm install HEAD branch
-        working-directory: ./engine
-        run: |
-          npm install --ignore-scripts
-
       - name: clear dependencies
         working-directory: ./engine
         run: |
@@ -55,6 +50,11 @@ jobs:
         working-directory: ./engine
         run: |
           git pull --rebase origin ${{ github.base_ref }}
+
+      - name: npm install HEAD branch
+        working-directory: ./engine
+        run: |
+          npm install --ignore-scripts
 
       - name: build HEAD declaration
         working-directory: ./engine
