@@ -53,6 +53,15 @@ enum AudioSourceEventType {
 @help('i18n:cc.AudioSource')
 @menu('Audio/AudioSource')
 export class AudioSource extends Component {
+    /**
+     * @engine_internal
+     */
+    public _testA () {
+        // TODO
+    }
+    public _testB () {
+        // TODO
+    }
     static get maxAudioChannel () {
         return AudioPlayer.maxAudioChannel;
     }
