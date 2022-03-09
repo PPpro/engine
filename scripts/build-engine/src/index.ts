@@ -30,6 +30,9 @@ import { filePathToModuleRequest } from './utils';
 import { assetRef as rpAssetRef, pathToAssetRefURL } from './rollup-plugins/asset-ref';
 import { codeAsset } from './rollup-plugins/code-asset';
 
+export { setupBuildTimeConstants, IBuildTimeConstants, IBuildTimeConstantValue } from './build-time-constants';
+export { StatsQuery } from './stats-query';
+export { enumerateDependentChunks } from './enumerate-dependent-chunks';
 export { ModuleOption, enumerateModuleOptionReps, parseModuleOption };
 
 function equalPathIgnoreDriverLetterCase (lhs: string, rhs: string) {
