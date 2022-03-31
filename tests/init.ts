@@ -6,7 +6,7 @@ jest.mock(
 );
 
 jest.mock(
-    'pal/audio',
+    '@pal/audio',
     () => jest.requireActual('../pal/audio/web/player'),
     { virtual: true, },
 );
