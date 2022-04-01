@@ -30,10 +30,6 @@
       "./node_modules/@cocos/bullet/bullet",
       "./node_modules/@cocos/physx/PhysX",
       "./node_modules/@types/jest/index",
-
-      // pal
-      "./@types/pal/minigame",
-      "./@types/pal/input"
     ]
   },
   "include": [
