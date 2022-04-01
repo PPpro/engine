@@ -80,6 +80,7 @@
     "@cocos/dragonbones-js": "^1.0.1",
     "@cocos/physx": "1.0.7",
     "@pal/audio": "file:pal/audio",
-    "@pal/system-info": "file:pal/system-info"
+    "@pal/system-info": "file:pal/system-info",
+    "@pal/screen-adapter": "file:pal/screen-adapter"
   }
 }
