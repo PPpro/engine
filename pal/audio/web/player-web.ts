@@ -1,5 +1,5 @@
 import { EDITOR } from 'internal:constants';
-import { systemInfo } from 'pal/system-info';
+import { systemInfo } from '@pal/system-info';
 import { AudioEvent, AudioState, AudioType } from '../type';
 import { EventTarget } from '../../../cocos/core/event';
 import { clamp01 } from '../../../cocos/core';

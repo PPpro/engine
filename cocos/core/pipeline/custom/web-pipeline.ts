@@ -24,7 +24,7 @@
 ****************************************************************************/
 
 /* eslint-disable max-len */
-import { systemInfo } from 'pal/system-info';
+import { OS, systemInfo } from '@pal/system-info';
 import { Color, Buffer, DescriptorSetLayout, Device, Feature, Format, FormatFeatureBit, Sampler, Swapchain, Texture, StoreOp, LoadOp, ClearFlagBit } from '../../gfx/index';
 import { Mat4, Quat, Vec2, Vec4 } from '../../math';
 import { QueueHint, ResourceDimension, ResourceFlags, ResourceResidency, TaskType } from './types';
@@ -42,7 +42,6 @@ import { WebSceneTransversal } from './web-scene';
 import { MacroRecord } from '../../renderer';
 import { GlobalDSManager } from '../global-descriptor-set-manager';
 import { supportsR32FloatTexture } from '../define';
-import { OS } from '../../../../pal/system-info/enum-type';
 import { WebDescriptorHierarchy } from './web-descriptor-hierarchy';
 import { Compiler } from './compiler';
 import { PipelineUBO } from './ubos';

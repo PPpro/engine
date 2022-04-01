@@ -1,4 +1,6 @@
-type TouchCallback = (res: import('cocos/input/types').EventTouch) => void;
+import { EventTouch, EventMouse, EventKeyboard, EventAcceleration } from '../../cocos/input/types/event';
+
+type TouchCallback = (res: EventTouch) => void;
 /**
  * Class designed for touch input.
  */
@@ -9,7 +11,7 @@ export class TouchInputSource {
     public on (eventType: import('cocos/input/types/event-enum').InputEventType, callback: TouchCallback, target?: any);
 }
 
-type MouseCallback = (res: import('cocos/input/types').EventMouse) => void;
+type MouseCallback = (res: EventMouse) => void;
 /**
  * Class designed for mouse input.
  */
@@ -20,7 +22,7 @@ export class MouseInputSource {
     public on (eventType: import('cocos/input/types/event-enum').InputEventType, callback: MouseCallback, target?: any);
 }
 
-type KeyboardCallback = (res: import('cocos/input/types').EventKeyboard) => void;
+type KeyboardCallback = (res: EventKeyboard) => void;
 /**
  * Class Designed for keyboard input.
  */
@@ -38,7 +40,7 @@ export class GamepadInputSource {
     // TODO: add more details for GamepadInputSource class
 }
 
-type AccelerometerCallback = (res: import('cocos/input/types').EventAcceleration) => void;
+type AccelerometerCallback = (res: EventAcceleration) => void;
 /**
  * Class designed for accelerometer input
  */

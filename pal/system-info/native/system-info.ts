@@ -1,4 +1,4 @@
-import { IFeatureMap } from 'pal/system-info';
+import { IFeatureMap } from '@pal/system-info';
 import { EventTarget } from '../../../cocos/core/event';
 import { SplashScreen } from '../../../cocos/core/splash-screen';
 import legacyCC from '../../../predefine';

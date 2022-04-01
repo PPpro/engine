@@ -29,6 +29,7 @@
  */
 
 import { EDITOR, TEST, DEV, DEBUG, JSB, PREVIEW, SUPPORT_JIT } from 'internal:constants';
+import { Platform } from '@pal/system-info';
 import { legacyCC } from '../global-exports';
 import * as js from '../utils/js';
 import * as misc from '../utils/misc';
@@ -36,7 +37,6 @@ import { CCClass } from './class';
 import * as Attr from './utils/attribute';
 import MissingScript from '../components/missing-script';
 import { Details } from './deserialize';
-import { Platform } from '../../../pal/system-info/enum-type';
 import { sys } from '../platform/sys';
 import { error } from '../platform/debug';
 import { CustomSerializable, DeserializationContext, deserializeTag, SerializationContext, SerializationInput } from './custom-serializable';

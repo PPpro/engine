@@ -24,7 +24,7 @@
  */
 
 import { ALIPAY, RUNTIME_BASED, BYTEDANCE, WECHAT, LINKSURE, QTT, COCOSPLAY, HUAWEI, EDITOR, VIVO } from 'internal:constants';
-import { systemInfo } from 'pal/system-info';
+import { BrowserType, OS, systemInfo } from '@pal/system-info';
 import { macro } from '../../platform/macro';
 import { warnID, warn, debug } from '../../platform/debug';
 import { WebGLCommandAllocator } from './webgl-command-allocator';
@@ -32,7 +32,6 @@ import { WebGLStateCache } from './webgl-state-cache';
 import { WebGLTexture } from './webgl-texture';
 import { Format, TextureInfo, TextureFlagBit, TextureType, TextureUsageBit,
     BufferTextureCopy, SwapchainInfo, SurfaceTransform } from '../base/define';
-import { BrowserType, OS } from '../../../../pal/system-info/enum-type';
 import { Swapchain } from '../base/swapchain';
 import { IWebGLExtensions, WebGLDeviceManager } from './webgl-define';
 

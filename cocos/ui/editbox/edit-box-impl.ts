@@ -31,6 +31,7 @@
  * @hidden
  */
 
+import { BrowserType, OS } from '@pal/system-info';
 import { screenAdapter } from 'pal/screen-adapter';
 import { BitmapFont } from '../../2d/assets';
 import { director } from '../../core/director';
@@ -48,7 +49,6 @@ import visibleRect from '../../core/platform/visible-rect';
 import { Node } from '../../core/scene-graph';
 import { EditBoxImplBase } from './edit-box-impl-base';
 import { legacyCC } from '../../core/global-exports';
-import { BrowserType, OS } from '../../../pal/system-info/enum-type';
 
 // https://segmentfault.com/q/1010000002914610
 const SCROLLY = 40;
