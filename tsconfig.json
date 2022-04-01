@@ -32,7 +32,6 @@
       "./node_modules/@types/jest/index",
 
       // pal
-      "./@types/pal/system-info",
       "./@types/pal/screen-adapter",
       "./@types/pal/minigame",
       "./@types/pal/input"
