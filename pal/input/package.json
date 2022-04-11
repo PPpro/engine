@@ -1,4 +1,6 @@
 {
   "name": "@pal/input",
-  "types": "./index"
+  "exports": {
+    ".": "./index.d.ts"
+  }
 }

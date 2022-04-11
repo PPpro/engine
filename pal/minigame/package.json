@@ -1,4 +1,6 @@
 {
   "name": "@pal/minigame",
-  "types": "./index"
+  "exports": {
+    ".": "./index.d.ts"
+  }
 }

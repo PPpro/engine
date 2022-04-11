@@ -1,4 +1,6 @@
 {
   "name": "@pal/audio",
-  "types": "./index"
+  "exports": {
+    ".": "./index.d.ts"
+  }
 }
