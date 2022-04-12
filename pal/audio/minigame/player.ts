@@ -1,4 +1,4 @@
-import { minigame } from 'pal/minigame';
+import { minigame } from '@pal/minigame';
 import { warnID } from '../../../cocos/core';
 import { legacyCC } from '../../../cocos/core/global-exports';
 import { AudioLoadOptions, AudioType, AudioState } from '../type';

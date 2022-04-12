@@ -1,4 +1,4 @@
-import { IMiniGame } from 'pal/minigame';
+import { IMiniGame } from '@pal/minigame';
 import { Orientation } from '@pal/screen-adapter';
 import { cloneObject, createInnerAudioContextPolyfill } from '../utils';
 

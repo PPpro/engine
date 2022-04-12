@@ -1,4 +1,4 @@
-import { minigame } from 'pal/minigame';
+import { minigame } from '@pal/minigame';
 import { systemInfo } from '@pal/system-info';
 import { EventTarget } from '../../../cocos/core/event';
 import { AudioEvent, AudioState, AudioType } from '../type';

@@ -1,5 +1,5 @@
 import { COCOSPLAY, HUAWEI, LINKSURE, OPPO, QTT, VIVO } from 'internal:constants';
-import { SystemInfo, IMiniGame } from 'pal/minigame';
+import { SystemInfo, IMiniGame } from '@pal/minigame';
 
 import { Orientation } from '@pal/screen-adapter';
 import { cloneObject, createInnerAudioContextPolyfill } from '../utils';

@@ -1,5 +1,5 @@
 import { ALIPAY, BAIDU, BYTEDANCE, COCOSPLAY, HUAWEI, LINKSURE, OPPO, QTT, VIVO, WECHAT, XIAOMI, DEBUG, EDITOR, TEST } from 'internal:constants';
-import { minigame } from 'pal/minigame';
+import { minigame } from '@pal/minigame';
 import { IFeatureMap } from '@pal/system-info';
 import { EventTarget } from '../../../cocos/core/event';
 import { BrowserType, NetworkType, OS, Platform, Language, Feature } from '../enum-type';

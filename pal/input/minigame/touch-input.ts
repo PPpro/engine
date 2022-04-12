@@ -1,5 +1,5 @@
 import { TouchCallback } from 'pal/input';
-import { minigame } from 'pal/minigame';
+import { minigame } from '@pal/minigame';
 import { screenAdapter } from '@pal/screen-adapter';
 import { VIVO } from 'internal:constants';
 import { Size, Vec2 } from '../../../cocos/core/math';
