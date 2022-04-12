@@ -1,4 +1,4 @@
-import { AccelerometerCallback } from 'pal/input';
+import { AccelerometerCallback } from '@pal/input';
 import { systemInfo, BrowserType, OS } from '@pal/system-info';
 import { screenAdapter } from '@pal/screen-adapter';
 import { EventTarget } from '../../../cocos/core/event/event-target';

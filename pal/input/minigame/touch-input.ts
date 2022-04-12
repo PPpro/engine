@@ -1,4 +1,4 @@
-import { TouchCallback } from 'pal/input';
+import { TouchCallback } from '@pal/input';
 import { minigame } from '@pal/minigame';
 import { screenAdapter } from '@pal/screen-adapter';
 import { VIVO } from 'internal:constants';

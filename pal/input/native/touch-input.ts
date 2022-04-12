@@ -1,4 +1,4 @@
-import { TouchCallback } from 'pal/input';
+import { TouchCallback } from '@pal/input';
 import { screenAdapter } from '@pal/screen-adapter';
 import { Size, Vec2 } from '../../../cocos/core/math';
 import { EventTarget } from '../../../cocos/core/event';

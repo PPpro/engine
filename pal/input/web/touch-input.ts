@@ -1,4 +1,4 @@
-import { TouchCallback } from 'pal/input';
+import { TouchCallback } from '@pal/input';
 import { TEST } from 'internal:constants';
 import { systemInfo, Feature } from '@pal/system-info';
 import { screenAdapter } from '@pal/screen-adapter';

@@ -30,7 +30,7 @@ jest.mock(
 );
 
 jest.mock(
-    'pal/input',
+    '@pal/input',
     () => jest.requireActual('../pal/input/web/index'),
     { virtual: true, },
 );

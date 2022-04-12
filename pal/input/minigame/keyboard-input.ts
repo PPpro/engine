@@ -1,4 +1,4 @@
-import { KeyboardCallback } from 'pal/input';
+import { KeyboardCallback } from '@pal/input';
 import { KeyboardEventData, minigame } from '@pal/minigame';
 import { systemInfo, Feature } from '@pal/system-info';
 import { KeyCode, EventKeyboard } from '../../../cocos/input/types';

@@ -1,4 +1,4 @@
-import { MouseCallback } from 'pal/input';
+import { MouseCallback } from '@pal/input';
 import { screenAdapter } from '@pal/screen-adapter';
 import { EventMouse } from '../../../cocos/input/types';
 import { EventTarget } from '../../../cocos/core/event';
