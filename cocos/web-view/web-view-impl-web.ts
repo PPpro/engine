@@ -28,7 +28,7 @@
  * @module component/web-view
  */
 
-import { screenAdapter } from 'pal/screen-adapter';
+import { screenAdapter } from '@pal/screen-adapter';
 import { EventType } from './web-view-enums';
 import { error, warn } from '../core/platform';
 import { WebViewImpl } from './web-view-impl';

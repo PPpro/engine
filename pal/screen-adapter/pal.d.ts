@@ -1,3 +1,5 @@
+import { Orientation, PalScreenEvent } from '@pal/screen-adapter'
+
 export interface SafeAreaEdge {
     top: number;
     bottom: number;
@@ -90,8 +92,8 @@ declare class ScreenAdapter {
      * Get or set the orientation of current game.
      * Available on mobile related platform for now.
      */
-    public get orientation (): import('pal/screen-adapter/enum-type').Orientation;
-    public set orientation (value: import('pal/screen-adapter/enum-type').Orientation);
+    public get orientation (): Orientation;
+    public set orientation (value: Orientation);
 
     /**
      * Get the SafeAreaEdge based on the screen coordinate system in physical pixels.
@@ -111,8 +113,8 @@ declare class ScreenAdapter {
      */
     public exitFullScreen (): Promise<void>;
 
-    on (event: import('pal/screen-adapter/enum-type').PalScreenEvent, cb: (...args: any)=>void, target?: any);
-    off (event: import('pal/screen-adapter/enum-type').PalScreenEvent, cb?: (...args: any)=>void, target?: any);
+    on (event: PalScreenEvent, cb: (...args: any)=>void, target?: any);
+    off (event: PalScreenEvent, cb?: (...args: any)=>void, target?: any);
 }
 
 export const screenAdapter: ScreenAdapter;

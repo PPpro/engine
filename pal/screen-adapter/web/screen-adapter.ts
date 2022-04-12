@@ -1,5 +1,5 @@
 import { EDITOR, TEST } from 'internal:constants';
-import { ConfigOrientation, IScreenOptions, SafeAreaEdge } from 'pal/screen-adapter';
+import { ConfigOrientation, IScreenOptions, SafeAreaEdge } from '@pal/screen-adapter';
 import { systemInfo } from '@pal/system-info';
 import { warnID } from '../../../cocos/core/platform/debug';
 import { EventTarget } from '../../../cocos/core/event/event-target';

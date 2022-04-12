@@ -31,7 +31,7 @@
 import { ccclass, help, menu, executionOrder, requireComponent, tooltip, serializable } from 'cc.decorator';
 import { EDITOR } from 'internal:constants';
 import { minigame } from 'pal/minigame';
-import { screenAdapter } from 'pal/screen-adapter';
+import { screenAdapter } from '@pal/screen-adapter';
 import { Component } from '../core/components/component';
 import { view } from '../core/platform/view';
 import { Sprite } from '../2d/components/sprite';

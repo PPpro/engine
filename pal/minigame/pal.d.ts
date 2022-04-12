@@ -1,3 +1,5 @@
+import { Orientation } from '@pal/screen-adapter'
+
 export const minigame: IMiniGame;
 export interface IMiniGame {
     // platform related
@@ -7,7 +9,7 @@ export interface IMiniGame {
     // system
     isDevTool: boolean;
     isLandscape: boolean;
-    orientation: import('pal/screen-adapter/enum-type').Orientation;
+    orientation: Orientation;
     getSystemInfoSync(): SystemInfo;
     onShow(callback: () => void): void;
     offShow(callback: () => void): void;

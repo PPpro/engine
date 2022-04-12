@@ -30,7 +30,7 @@
  */
 
 import { EDITOR, DEV } from 'internal:constants';
-import { screenAdapter } from 'pal/screen-adapter';
+import { screenAdapter } from '@pal/screen-adapter';
 import { Director, director } from '../core/director';
 import { Vec2, Vec3 } from '../core/math';
 import { View } from '../core/platform/view';

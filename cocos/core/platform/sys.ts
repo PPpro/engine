@@ -29,7 +29,7 @@
  * @module core
  */
 import { BrowserType, Feature, Language, NetworkType, OS, Platform, systemInfo } from '@pal/system-info';
-import { screenAdapter } from 'pal/screen-adapter';
+import { screenAdapter } from '@pal/screen-adapter';
 import { WECHAT } from 'internal:constants';
 import { legacyCC } from '../global-exports';
 import { Rect } from '../math/rect';

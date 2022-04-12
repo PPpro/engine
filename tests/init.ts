@@ -24,7 +24,7 @@ jest.mock(
 );
 
 jest.mock(
-    'pal/screen-adapter',
+    '@pal/screen-adapter',
     () => jest.requireActual('../pal/screen-adapter/web/screen-adapter'),
     { virtual: true, },
 );

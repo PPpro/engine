@@ -29,7 +29,7 @@
  */
 
 import { BrowserType, OS } from '@pal/system-info';
-import { screenAdapter } from 'pal/screen-adapter';
+import { screenAdapter } from '@pal/screen-adapter';
 import { mat4 } from '../core/math';
 import { sys, screen, warn } from '../core/platform';
 import { game } from '../core';

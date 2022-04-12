@@ -23,7 +23,6 @@
  THE SOFTWARE.
  */
 
-import { screenAdapter } from 'pal/screen-adapter';
 import { markAsWarning, removeProperty, replaceProperty } from '../utils';
 import { sys } from './sys';
 import { View } from './view';

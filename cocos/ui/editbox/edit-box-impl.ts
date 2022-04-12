@@ -32,7 +32,7 @@
  */
 
 import { BrowserType, OS } from '@pal/system-info';
-import { screenAdapter } from 'pal/screen-adapter';
+import { screenAdapter } from '@pal/screen-adapter';
 import { BitmapFont } from '../../2d/assets';
 import { director } from '../../core/director';
 import { game } from '../../core/game';

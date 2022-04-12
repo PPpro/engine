@@ -1,7 +1,7 @@
 import { TouchCallback } from 'pal/input';
 import { TEST } from 'internal:constants';
 import { systemInfo, Feature } from '@pal/system-info';
-import { screenAdapter } from 'pal/screen-adapter';
+import { screenAdapter } from '@pal/screen-adapter';
 import { Rect, Vec2 } from '../../../cocos/core/math';
 import { EventTarget } from '../../../cocos/core/event';
 import { Touch, EventTouch } from '../../../cocos/input/types';

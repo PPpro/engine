@@ -1,7 +1,7 @@
 import { TEST } from 'internal:constants';
 import { MouseCallback } from 'pal/input';
 import { systemInfo, Feature } from '@pal/system-info';
-import { screenAdapter } from 'pal/screen-adapter';
+import { screenAdapter } from '@pal/screen-adapter';
 import { EventMouse } from '../../../cocos/input/types';
 import { EventTarget } from '../../../cocos/core/event';
 import { Rect, Vec2 } from '../../../cocos/core/math';

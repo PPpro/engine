@@ -1,6 +1,6 @@
 import { ALIPAY, BAIDU, COCOSPLAY, RUNTIME_BASED, VIVO, WECHAT } from 'internal:constants';
 import { minigame } from 'pal/minigame';
-import { ConfigOrientation, IScreenOptions, SafeAreaEdge } from 'pal/screen-adapter';
+import { ConfigOrientation, IScreenOptions, SafeAreaEdge } from '@pal/screen-adapter';
 import { systemInfo, OS } from '@pal/system-info';
 import { warnID } from '../../../cocos/core/platform/debug';
 import { EventTarget } from '../../../cocos/core/event/event-target';

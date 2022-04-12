@@ -29,7 +29,7 @@
  * @module core
  */
 
-import { ConfigOrientation, IScreenOptions, screenAdapter } from 'pal/screen-adapter';
+import { IScreenOptions, screenAdapter } from '@pal/screen-adapter';
 import { legacyCC } from '../global-exports';
 import { Size, Vec2 } from '../math';
 import { warnID } from './debug';

@@ -1,6 +1,6 @@
 import { MouseCallback } from 'pal/input';
 import { MouseEventData, MouseWheelEventData, minigame } from 'pal/minigame';
-import { screenAdapter } from 'pal/screen-adapter';
+import { screenAdapter } from '@pal/screen-adapter';
 import { systemInfo, Feature } from '@pal/system-info';
 import { Vec2 } from '../../../cocos/core/math';
 import { EventTarget } from '../../../cocos/core/event';

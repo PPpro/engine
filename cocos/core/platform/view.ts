@@ -32,7 +32,7 @@
 
 import '../data/class';
 import { EDITOR, MINIGAME, JSB, RUNTIME_BASED } from 'internal:constants';
-import { screenAdapter } from 'pal/screen-adapter';
+import { screenAdapter, Orientation } from '@pal/screen-adapter';
 import { EventTarget } from '../event';
 import { Rect, Size, Vec2 } from '../math';
 import visibleRect from './visible-rect';
@@ -40,7 +40,6 @@ import { legacyCC } from '../global-exports';
 import { logID, errorID } from './debug';
 import { screen } from './screen';
 import { macro } from './macro';
-import { Orientation } from '../../../pal/screen-adapter/enum-type';
 import { game } from '../game';
 
 /**
