@@ -1,0 +1,14 @@
+{
+  "name": "@cc/core",
+  "exports": {
+    ".": "./index.d.ts",
+    "./event": "./event/index.d.ts",
+    "./debug": "./debug/index.d.ts",
+    "./math": "./math/index.d.ts",
+    "./deprecate": "./deprecate/index.d.ts",
+    "./global": "./global/index.d.ts",
+    "./value-type": "./value-types/index.d.ts",
+    "./js": "./js/index.d.ts",
+    "./memop": "./memop/index.d.ts"
+  }
+}

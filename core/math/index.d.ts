@@ -2,7 +2,7 @@
  Copyright (c) 2013-2016 Chukong Technologies Inc.
  Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
 
- https://www.cocos.com/
+ http://www.cocos.com
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated engine source code (the "Software"), a limited,
@@ -23,38 +23,30 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
+
 /**
  * @packageDocumentation
- * @module core
+ * @hidden
  */
-import { legacyCC, VERSION } from './global-exports';
 
-import * as geometry from './geometry';
-import * as memop from './memop';
-import * as gfx from './gfx';
+import * as bits from './bits';
 
-import './fast-define';
-import './splash-screen';
 import './deprecated';
+/**
+ * Export module bits.
+ */
 
-legacyCC.geometry = geometry;
-
-export { memop, geometry, gfx };
-
-export * from './memop';
+export { bits };
+export { Vec2, v2 } from './vec2';
+export { Vec3, v3 } from './vec3';
+export { Vec4, v4 } from './vec4';
+export { Quat, quat } from './quat';
+export { Mat3 } from './mat3';
+export { Mat4, mat4, preTransforms } from './mat4';
+export { AffineTransform } from './affine-transform';
+export { Size, size } from './size';
+export { Rect, rect } from './rect';
+export { Color, color } from './color';
 export * from './utils';
-export * from './data';
-export * from './assets';
-export * from './platform';
-export * from './game';
-export * from './scheduler';
-export * from './director';
-
-export * from './gfx/deprecated-3.0.0';
-export * from './pipeline';
-export * from './asset-manager';
-export * from './scene-graph';
-export * from './components';
-export * from './builtin';
-export * from './animation';
-export * from './curves';
+export * from './type-define';
+export * from './math-base';

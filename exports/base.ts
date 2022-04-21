@@ -28,7 +28,7 @@
  * @hidden
  */
 
-import { legacyCC } from '../cocos/core/global-exports';
+import { legacyCC } from '@cc/core/global';
 // has to import predefines first
 import '../predefine';
 
@@ -38,6 +38,30 @@ import * as renderer from '../cocos/core/renderer';
 
 // LOAD ENGINE CORE
 export * from '../cocos/core';
+// export from core module
+import * as math from '@cc/core/math';
+export * from '@cc/core/math';
+export { EventTarget, Eventify } from '@cc/core/event';
+export * as math from '@cc/core/math'
+legacyCC.math = math;
+export {
+    debug,
+    log,
+    error,
+    warn,
+    assert,
+    logID,
+    errorID,
+    warnID,
+    assertID,
+    isDisplayStats,
+    setDisplayStats,
+    getError,
+    DebugMode,
+} from '@cc/core/debug';
+export * from '@cc/core/deprecate';
+export { VERSION } from '@cc/core/global';
+export * from '@cc/core/value-type';
 
 export { renderer };
 legacyCC.renderer = renderer;

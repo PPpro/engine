@@ -23,38 +23,12 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
+
 /**
  * @packageDocumentation
- * @module core
+ * @hidden
  */
-import { legacyCC, VERSION } from './global-exports';
 
-import * as geometry from './geometry';
-import * as memop from './memop';
-import * as gfx from './gfx';
-
-import './fast-define';
-import './splash-screen';
-import './deprecated';
-
-legacyCC.geometry = geometry;
-
-export { memop, geometry, gfx };
-
-export * from './memop';
-export * from './utils';
-export * from './data';
-export * from './assets';
-export * from './platform';
-export * from './game';
-export * from './scheduler';
-export * from './director';
-
-export * from './gfx/deprecated-3.0.0';
-export * from './pipeline';
-export * from './asset-manager';
-export * from './scene-graph';
-export * from './components';
-export * from './builtin';
-export * from './animation';
-export * from './curves';
+export { BitMask } from './bitmask';
+export { Enum, ccenum } from './enum';
+export { ValueType } from './value-type';

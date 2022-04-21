@@ -20,6 +20,7 @@
     "checkout-engine-version": "node ./scripts/checkout-engine-version.js",
     "varify-engine-version": "node ./scripts/varify-engine-version.js",
     "fetch-ral": "node ./scripts/fetch-ral.js",
+    "link-modules": "node ./scripts/link-modules.js",
     "clear-platform": "node ./native/utils/clear-platform.js",
     "update:native-external": "node ./native/utils/update-external.js",
     "test": "gulp test"
@@ -78,6 +79,8 @@
     "@cocos/bullet": "1.0.2",
     "@cocos/cannon": "1.2.8",
     "@cocos/dragonbones-js": "^1.0.1",
-    "@cocos/physx": "1.0.7"
+    "@cocos/physx": "1.0.7",
+    "@cc/pal": "file:pal",
+    "@cc/core": "file:core"
   }
 }

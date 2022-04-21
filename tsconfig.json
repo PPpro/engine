@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": ["es2015", "es2017", "dom"],
-    "module": "commonjs",
+    "lib": [
+      "es2015",
+      "es2017",
+      "dom"
+    ],
+    "module": "Node12",
     "sourceMap": true,
     "outDir": "./bin/.ts",
     "rootDir": "./",
@@ -15,9 +19,9 @@
     "isolatedModules": true,
     "baseUrl": "./",
     "paths": {
-        "cc.decorator": [
-            "cocos/core/data/decorators/index.ts"
-        ]
+      "cc.decorator": [
+        "cocos/core/data/decorators/index.ts"
+      ]
     },
     "types": [
       "./@types/globals",
@@ -29,19 +33,18 @@
       "./node_modules/@cocos/cannon/CANNON",
       "./node_modules/@cocos/bullet/bullet",
       "./node_modules/@cocos/physx/PhysX",
-      "./node_modules/@types/jest/index",
-
-      // pal
-      "./@types/pal/system-info",
-      "./@types/pal/screen-adapter",
-      "./@types/pal/minigame",
-      "./@types/pal/audio",
-      "./@types/pal/input"
+      "./node_modules/@types/jest/index"
     ]
   },
   "include": [
-      "exports/**/*.ts",
-      "index.ts",
-      "pal/**/*.ts"
+    "exports/**/*.ts",
+    "core/event/index.d.ts",
+    "core/debug/index.d.ts",
+    "core/math/index.d.ts",
+    "pal/audio/index.d.ts",
+    "pal/input/index.d.ts",
+    "pal/minigame/index.d.ts",
+    "pal/screen-adapter/index.d.ts",
+    "pal/system-info/index.d.ts"
   ]
 }

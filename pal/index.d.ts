@@ -1,0 +1,5 @@
+export * from './audio/index'
+export * from './input/index'
+export * from './minigame/index'
+export * from './screen-adapter/index'
+export * from './system-info/index'

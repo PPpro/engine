@@ -2,7 +2,7 @@
  Copyright (c) 2013-2016 Chukong Technologies Inc.
  Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
 
- https://www.cocos.com/
+ http://www.cocos.com
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated engine source code (the "Software"), a limited,
@@ -23,38 +23,30 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
+
 /**
  * @packageDocumentation
- * @module core
+ * @module event
  */
-import { legacyCC, VERSION } from './global-exports';
 
-import * as geometry from './geometry';
-import * as memop from './memop';
-import * as gfx from './gfx';
+import { legacyCC } from '@cc/core/global';
+import { Eventify } from './eventify';
 
-import './fast-define';
-import './splash-screen';
-import './deprecated';
+class Empty {}
 
-legacyCC.geometry = geometry;
+/**
+ * @en
+ * EventTarget is an object to which an event is dispatched when something has occurred.
+ * [[Node]]s are the most common event targets, but other objects can be event targets too.
+ * If a class cannot extend from EventTarget, it can consider using [[Eventify]].
+ *
+ * @zh
+ * 事件目标是具有注册监听器、派发事件能力的类，[[Node]] 是最常见的事件目标，
+ * 但是其他类也可以继承自事件目标以获得管理监听器和派发事件的能力。
+ * 如果无法继承自 EventTarget，也可以使用 [[Eventify]]
+ */
+export const EventTarget = Eventify(Empty);
 
-export { memop, geometry, gfx };
+export type EventTarget = InstanceType<typeof EventTarget>;
 
-export * from './memop';
-export * from './utils';
-export * from './data';
-export * from './assets';
-export * from './platform';
-export * from './game';
-export * from './scheduler';
-export * from './director';
-
-export * from './gfx/deprecated-3.0.0';
-export * from './pipeline';
-export * from './asset-manager';
-export * from './scene-graph';
-export * from './components';
-export * from './builtin';
-export * from './animation';
-export * from './curves';
+legacyCC.EventTarget = EventTarget;

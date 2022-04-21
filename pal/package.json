@@ -1,0 +1,11 @@
+{
+  "name": "@cc/pal",
+  "exports": {
+    ".": "./index.d.ts",
+    "./audio": "./audio/index.d.ts",
+    "./input": "./input/index.d.ts",
+    "./minigame": "./minigame/index.d.ts",
+    "./screen-adapter": "./screen-adapter/index.d.ts",
+    "./system-info": "./system-info/index.d.ts"
+  }
+}
