@@ -6,31 +6,31 @@ jest.mock(
 );
 
 jest.mock(
-    'pal/audio',
+    '@cc/pal/audio',
     () => jest.requireActual('../pal/audio/web/player'),
     { virtual: true, },
 );
 
 jest.mock(
-    'pal/minigame',
+    '@cc/pal/minigame',
     () => jest.requireActual('../pal/minigame/non-minigame'),
     { virtual: true, },
 );
 
 jest.mock(
-    'pal/system-info',
+    '@cc/pal/system-info',
     () => jest.requireActual('../pal/system-info/web/system-info'),
     { virtual: true, },
 );
 
 jest.mock(
-    'pal/screen-adapter',
+    '@cc/pal/screen-adapter',
     () => jest.requireActual('../pal/screen-adapter/web/screen-adapter'),
     { virtual: true, },
 );
 
 jest.mock(
-    'pal/input',
+    '@cc/pal/input',
     () => jest.requireActual('../pal/input/web/index'),
     { virtual: true, },
 );
