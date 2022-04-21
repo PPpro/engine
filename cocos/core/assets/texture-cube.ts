@@ -34,7 +34,7 @@ import { TextureType, TextureInfo } from '../gfx';
 import { ImageAsset } from './image-asset';
 import { PresumedGFXTextureInfo, SimpleTexture } from './simple-texture';
 import { ITexture2DCreateInfo, Texture2D } from './texture-2d';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { js } from '../utils/js';
 import { builtinResMgr } from '../builtin/builtin-res-mgr';
 

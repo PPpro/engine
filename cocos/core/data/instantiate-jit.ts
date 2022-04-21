@@ -37,7 +37,7 @@ import { CCClass } from './class';
 import { CCObject } from './object';
 import * as Attr from './utils/attribute';
 import { flattenCodeArray } from './utils/compiler';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 const Destroyed = CCObject.Flags.Destroyed;
 const PersistentMask = CCObject.Flags.PersistentMask;

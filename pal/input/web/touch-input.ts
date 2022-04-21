@@ -1,14 +1,13 @@
-import { TouchCallback } from 'pal/input';
+import { TouchCallback } from '@cc/pal/input';
 import { TEST } from 'internal:constants';
-import { systemInfo } from 'pal/system-info';
-import { screenAdapter } from 'pal/screen-adapter';
-import { Rect, Vec2 } from '../../../cocos/core/math';
-import { EventTarget } from '../../../cocos/core/event';
+import { systemInfo, Feature } from '@cc/pal/system-info';
+import { screenAdapter } from '@cc/pal/screen-adapter';
+import { Rect, Vec2 } from '@cc/core/math';
+import { EventTarget } from '@cc/core/event';
 import { Touch, EventTouch } from '../../../cocos/input/types';
 import { touchManager } from '../touch-manager';
 import { macro } from '../../../cocos/core/platform/macro';
 import { InputEventType } from '../../../cocos/input/types/event-enum';
-import { Feature } from '../../system-info/enum-type';
 
 export class TouchInputSource {
     private _canvas?: HTMLCanvasElement;

@@ -35,16 +35,16 @@ import { assertIsTrue } from '../../core/data/utils/asserts';
 import { BufferBlob } from '../misc/buffer-blob';
 import { Skeleton } from './skeleton';
 import { AABB } from '../../core/geometry';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { murmurhash2_32_gc } from '../../core/utils/murmurhash2_gc';
 import { sys } from '../../core/platform/sys';
-import { warnID } from '../../core/platform/debug';
+import { warnID } from '@cc/core/debug';
 import { RenderingSubMesh } from '../../core/assets';
 import {
     Attribute, Device, Buffer, BufferInfo, AttributeName, BufferUsageBit, Feature, Format,
     FormatInfos, FormatType, MemoryUsageBit, PrimitiveMode, getTypedArrayConstructor, DrawInfo,
 } from '../../core/gfx';
-import { Mat4, Quat, Vec3 } from '../../core/math';
+import { Mat4, Quat, Vec3 } from '@cc/core/math';
 import { Morph, MorphRendering, createMorphRendering } from './morph';
 
 function getIndexStrideCtor (stride: number) {

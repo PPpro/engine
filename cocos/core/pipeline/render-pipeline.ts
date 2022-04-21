@@ -29,7 +29,7 @@
  */
 
 import { ccclass, displayOrder, serializable, type } from 'cc.decorator';
-import { systemInfo } from 'pal/system-info';
+import { OS, systemInfo } from '@cc/pal/system-info';
 import { sceneCulling, validPunctualLightsCulling } from './scene-culling';
 import { Asset } from '../assets/asset';
 import { AccessFlagBit, Attribute, Buffer, BufferInfo, BufferUsageBit, ClearFlagBit, ClearFlags, ColorAttachment, CommandBuffer,
@@ -37,7 +37,7 @@ import { AccessFlagBit, Attribute, Buffer, BufferInfo, BufferUsageBit, ClearFlag
     InputAssemblerInfo, LoadOp, MemoryUsageBit, Rect, RenderPass, RenderPassInfo, Sampler, StoreOp, SurfaceTransform, Swapchain,
     Texture, TextureInfo, TextureType, TextureUsageBit, Viewport, GeneralBarrierInfo,
 } from '../gfx';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { MacroRecord } from '../renderer/core/pass-utils';
 import { RenderWindow } from '../renderer/core/render-window';
 import { Camera, SKYBOX_FLAG } from '../renderer/scene/camera';
@@ -49,7 +49,6 @@ import { PipelineUBO } from './pipeline-ubo';
 import { RenderFlow } from './render-flow';
 import { IPipelineEvent, PipelineEventProcessor, PipelineEventType } from './pipeline-event';
 import { decideProfilerCamera } from './pipeline-funcs';
-import { OS } from '../../../pal/system-info/enum-type';
 import { macro } from '../platform/macro';
 import { PipelineRuntime } from './custom/pipeline';
 

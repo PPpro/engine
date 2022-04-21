@@ -30,10 +30,9 @@
  */
 
 import { EDITOR, NATIVE } from 'internal:constants';
-import { TouchInputSource, MouseInputSource, KeyboardInputSource, AccelerometerInputSource } from 'pal/input';
-import { touchManager } from '../../pal/input/touch-manager';
+import { TouchInputSource, MouseInputSource, KeyboardInputSource, AccelerometerInputSource, touchManager } from '@cc/pal/input';
 import { sys } from '../core/platform/sys';
-import { EventTarget } from '../core/event/event-target';
+import { EventTarget } from '@cc/core/event';
 import { Event, EventAcceleration, EventKeyboard, EventMouse, EventTouch, Touch } from './types';
 import { InputEventType } from './types/event-enum';
 

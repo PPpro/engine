@@ -37,7 +37,7 @@ import { Skeleton } from '../assets/skeleton';
 import { AABB } from '../../core/geometry';
 import { Address, BufferUsageBit, Filter, Format, FormatInfos,
     MemoryUsageBit, Feature, Device, Buffer, BufferInfo, Sampler, SamplerInfo, FormatFeatureBit } from '../../core/gfx';
-import { Mat4, Quat, Vec3 } from '../../core/math';
+import { Mat4, Quat, Vec3 } from '@cc/core/math';
 import { UBOSkinningAnimation } from '../../core/pipeline/define';
 import { Node } from '../../core/scene-graph';
 import { ITextureBufferHandle, TextureBufferPool } from '../../core/renderer/core/texture-buffer-pool';

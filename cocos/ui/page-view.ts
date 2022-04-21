@@ -32,16 +32,16 @@ import { ccclass, help, executionOrder, menu, tooltip, type, slide, range, visib
 import { EDITOR } from 'internal:constants';
 import { EventHandler as ComponentEventHandler } from '../core/components';
 import { EventTouch } from '../input/types';
-import { Vec2, Vec3 } from '../core/math';
+import { Vec2, Vec3 } from '@cc/core/math';
 import { ccenum } from '../core/value-types/enum';
 import { Layout } from './layout';
 import { PageViewIndicator } from './page-view-indicator';
 import { ScrollView, EventType as ScrollEventType } from './scroll-view';
 import { ScrollBar } from './scroll-bar';
-import { warnID, logID } from '../core/platform/debug';
+import { warnID, logID } from '@cc/core/debug';
 import { extendsEnum } from '../core/data/utils/extends-enum';
 import { Node } from '../core/scene-graph';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { NodeEventType } from '../core/scene-graph/node-event';
 
 const _tempVec2 = new Vec2();

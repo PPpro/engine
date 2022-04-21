@@ -24,8 +24,8 @@
  */
 
 import { AABB } from '../../geometry';
-import { legacyCC } from '../../global-exports';
-import { Vec3 } from '../../math';
+import { legacyCC } from '@cc/core/global';
+import { Vec3 } from '@cc/core/math';
 import { Light, LightType, nt2lm } from './light';
 
 export class SphereLight extends Light {

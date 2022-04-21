@@ -27,7 +27,7 @@
  * @packageDocumentation
  * @hidden
  */
-import { markAsWarning, replaceProperty } from '../core/utils/x-deprecated';
+import { markAsWarning, replaceProperty } from '@cc/core/deprecate';
 import { Event, EventKeyboard, EventMouse, EventTouch, SystemEventType } from './types';
 import { SystemEvent } from './system-event';
 import { macro } from '../core/platform/macro';

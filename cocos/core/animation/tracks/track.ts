@@ -2,7 +2,7 @@ import { ccclass, serializable, uniquelyReferenced } from 'cc.decorator';
 import type { Component } from '../../components';
 import type { ObjectCurve, QuatCurve, RealCurve } from '../../curves';
 import { assertIsTrue } from '../../data/utils/asserts';
-import { error, errorID, warn, warnID } from '../../platform';
+import { error, errorID, warn, warnID } from '@cc/core/debug';
 import { Node } from '../../scene-graph';
 import { js } from '../../utils/js';
 import { CLASS_NAME_PREFIX_ANIM, createEvalSymbol } from '../define';

@@ -28,9 +28,9 @@
  * @module geometry
  */
 
-import { Vec3 } from '../math';
+import { Vec3 } from '@cc/core/math';
 import enums from './enums';
-import { IVec3Like } from '../math/type-define';
+import { IVec3Like } from '@cc/core/math';
 
 /**
  * @en

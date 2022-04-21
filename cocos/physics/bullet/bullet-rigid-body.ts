@@ -36,7 +36,7 @@ import { btCollisionFlags, btRigidBodyFlags, btCollisionObjectStates, EBtSharedB
 import { IRigidBody } from '../spec/i-rigid-body';
 import { ERigidBodyType } from '../framework/physics-enum';
 import { BulletSharedBody } from './bullet-shared-body';
-import { IVec3Like } from '../../core/math/type-define';
+import { IVec3Like } from '@cc/core/math';
 import { BulletCache, CC_V3_0, CC_V3_1 } from './bullet-cache';
 import { bt } from './instantiated';
 

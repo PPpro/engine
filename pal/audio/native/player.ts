@@ -1,10 +1,9 @@
-import { systemInfo } from 'pal/system-info';
+import { systemInfo, Platform } from '@cc/pal/system-info';
 import { AudioType, AudioState, AudioEvent } from '../type';
-import { EventTarget } from '../../../cocos/core/event';
-import { legacyCC } from '../../../cocos/core/global-exports';
-import { clamp, clamp01 } from '../../../cocos/core';
+import { EventTarget } from '@cc/core/event';
+import { legacyCC } from '@cc/core/global';
+import { clamp, clamp01 } from '@cc/core/math';
 import { enqueueOperation, OperationInfo, OperationQueueable } from '../operation-queue';
-import { Platform } from '../../system-info/enum-type';
 
 const urlCount: Record<string, number> = {};
 const audioEngine = jsb.AudioEngine;

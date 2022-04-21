@@ -28,7 +28,7 @@
  * @hidden
  */
 
-import { IVec3Like, IQuatLike } from '../../core/math/type-define';
+import { IVec3Like, IQuatLike } from '@cc/core/math';
 import { Mesh } from '../../3d';
 import { PrimitiveMode } from '../../core/gfx';
 import { bt } from './instantiated';

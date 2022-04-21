@@ -30,14 +30,14 @@
 
 import { ccclass } from 'cc.decorator';
 import { EDITOR, TEST } from 'internal:constants';
-import { clamp } from '../math/utils';
+import { clamp } from '@cc/core/math';
 import { Texture, ColorAttachment, DepthStencilAttachment, GeneralBarrierInfo, AccessFlagBit, RenderPassInfo, Format } from '../gfx';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { RenderWindow, IRenderWindowInfo } from '../renderer/core/render-window';
 import { Root } from '../root';
 import { TextureBase } from './texture-base';
 import { BufferTextureCopy } from '../gfx/base/define';
-import { errorID } from '../platform/debug';
+import { errorID } from '@cc/core/debug';
 
 export interface IRenderTextureCreateInfo {
     name?: string;

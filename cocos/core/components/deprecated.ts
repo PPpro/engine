@@ -27,8 +27,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 
 import { Camera } from './camera-component';
-import { replaceProperty } from '../utils/x-deprecated';
-import { legacyCC } from '../global-exports';
+import { replaceProperty } from '@cc/core/deprecate';
+import { legacyCC } from '@cc/core/global';
 import { js } from '../utils/js';
 
 replaceProperty(Camera, 'Camera', [

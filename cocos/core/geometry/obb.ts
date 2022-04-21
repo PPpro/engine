@@ -28,7 +28,7 @@
  * @module geometry
  */
 
-import { Mat3, Mat4, Quat, Vec3 } from '../math';
+import { Mat3, Mat4, Quat, Vec3 } from '@cc/core/math';
 import enums from './enums';
 
 const _v3_tmp = new Vec3();

@@ -35,8 +35,8 @@ import { UITransform } from './ui-transform';
 import { Renderable2D } from './renderable-2d';
 import { Canvas } from './canvas';
 import { js } from '../../core/utils/js';
-import { legacyCC } from '../../core/global-exports';
-import { Color } from '../../core/math/color';
+import { legacyCC } from '@cc/core/global';
+import { Color } from '@cc/core/math';
 
 removeProperty(UIComponent.prototype, 'UIComponent', [
     {

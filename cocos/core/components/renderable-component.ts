@@ -37,8 +37,8 @@ import { Component } from './component';
 import { IMaterialInstanceInfo, MaterialInstance } from '../renderer/core/material-instance';
 import { scene } from '../renderer';
 import { Layers } from '../scene-graph/layers';
-import { warnID } from '../platform/debug';
-import { legacyCC } from '../global-exports';
+import { warnID } from '@cc/core/debug';
+import { legacyCC } from '@cc/core/global';
 
 const _matInsInfo: IMaterialInstanceInfo = {
     parent: null!,

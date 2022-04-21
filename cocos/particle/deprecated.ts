@@ -28,13 +28,13 @@
  * @module particle
  */
 
-import { removeProperty, replaceProperty } from '../core/utils/x-deprecated';
+import { removeProperty, replaceProperty } from '@cc/core/deprecate';
 import Burst from './burst';
 import { ParticleSystem } from './particle-system';
 import { Billboard } from './billboard';
 import { Line } from './line';
 import { js } from '../core/utils/js';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 removeProperty(Burst.prototype, 'Burst.prototype', [
     {

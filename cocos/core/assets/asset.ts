@@ -33,12 +33,12 @@ import { ccclass, serializable } from 'cc.decorator';
 import { EDITOR, PREVIEW } from 'internal:constants';
 import { property } from '../data/decorators/property';
 import { getUrlWithUuid } from '../asset-manager/helper';
-import { Eventify } from '../event';
+import { Eventify } from '@cc/core/event';
 import { GCObject } from '../data/gc-object';
 import { Node } from '../scene-graph';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { extname } from '../utils/path';
-import { debug, getError, warn } from '../platform/debug';
+import { debug, getError, warn } from '@cc/core/debug';
 
 /**
  * @en

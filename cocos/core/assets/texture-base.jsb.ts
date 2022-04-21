@@ -28,7 +28,7 @@ import {
     _assertThisInitialized,
     _initializerDefineProperty,
 } from '../data/utils/decorator-jsb-utils';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Filter, PixelFormat, WrapMode } from './asset-enum';
 
 const textureBaseProto: any = jsb.TextureBase.prototype;

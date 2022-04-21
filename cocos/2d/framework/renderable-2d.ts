@@ -30,7 +30,7 @@
 import { EDITOR } from 'internal:constants';
 import { ccclass, executeInEditMode, requireComponent, disallowMultiple, tooltip,
     type, displayOrder, serializable, override, visible, displayName } from 'cc.decorator';
-import { Color } from '../../core/math';
+import { Color } from '@cc/core/math';
 import { ccenum } from '../../core/value-types/enum';
 import { builtinResMgr } from '../../core/builtin';
 import { Material } from '../../core/assets';
@@ -43,8 +43,7 @@ import { TransformBit } from '../../core/scene-graph/node-enum';
 import { UITransform } from './ui-transform';
 import { RenderableComponent } from '../../core/components/renderable-component';
 import { Stage } from '../renderer/stencil-manager';
-import { warnID } from '../../core/platform/debug';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { NodeEventType } from '../../core/scene-graph/node-event';
 
 // hack

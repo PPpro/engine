@@ -29,13 +29,13 @@
  */
 
 import { binarySearchEpsilon as binarySearch } from '../algorithm/binary-search';
-import { lerp, Quat } from '../math';
-import { errorID } from '../platform/debug';
-import { ValueType } from '../value-types';
+import { lerp, Quat } from '@cc/core/math';
+import { errorID } from '@cc/core/debug';
+import { ValueType } from '@cc/core/value-type';
 import { bezierByTime, BezierControlPoints } from './bezier';
 import * as easing from './easing';
 import { ILerpable, isLerpable } from './types';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import type * as legacy from './legacy-clip-data';
 
 export class RatioSampler {

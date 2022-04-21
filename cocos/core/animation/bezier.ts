@@ -28,7 +28,7 @@
  * @module animation
  */
 
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export type BezierControlPoints = [ number, number, number, number ];
 

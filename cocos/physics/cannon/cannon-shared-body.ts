@@ -29,7 +29,7 @@
  */
 
 import CANNON from '@cocos/cannon';
-import { Quat, Vec3 } from '../../core/math';
+import { Quat, Vec3 } from '@cc/core/math';
 import { ERigidBodyType, PhysicsGroup } from '../framework/physics-enum';
 import { getWrap, setWrap } from '../utils/util';
 import { CannonWorld } from './cannon-world';

@@ -1,7 +1,7 @@
 import { COCOSPLAY, HUAWEI, LINKSURE, OPPO, QTT, VIVO } from 'internal:constants';
-import { SystemInfo, IMiniGame } from 'pal/minigame';
+import { SystemInfo, IMiniGame } from '@cc/pal/minigame';
 
-import { Orientation } from '../screen-adapter/enum-type';
+import { Orientation } from '@cc/pal/screen-adapter';
 import { cloneObject, createInnerAudioContextPolyfill } from '../utils';
 
 declare let ral: any;

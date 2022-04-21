@@ -29,7 +29,7 @@
  */
 
 import * as _decorator from './class-decorator';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 legacyCC._decorator = _decorator;
 export { _decorator };

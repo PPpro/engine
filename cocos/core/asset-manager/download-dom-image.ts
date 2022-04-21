@@ -28,7 +28,7 @@
  * @hidden
  */
 
-import { getError } from '../platform/debug';
+import { getError } from '@cc/core/debug';
 import { CompleteCallback, IDownloadParseOptions } from './shared';
 
 export default function downloadDomImage (

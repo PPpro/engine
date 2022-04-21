@@ -22,7 +22,7 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export const GeometryRenderer = jsb.GeometryRenderer;
 legacyCC.GeometryRenderer = jsb.GeometryRenderer;

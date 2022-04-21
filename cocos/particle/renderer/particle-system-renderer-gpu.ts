@@ -29,7 +29,7 @@ import { Material } from '../../core/assets';
 import { Texture2D } from '../../core';
 import { Component } from '../../core/components';
 import { AttributeName, Format, Attribute, API } from '../../core/gfx';
-import { Mat4, Vec2, Vec4, Quat, Vec3 } from '../../core/math';
+import { Mat4, Vec2, Vec4, Quat, Vec3 } from '@cc/core/math';
 import { MaterialInstance, IMaterialInstanceInfo } from '../../core/renderer/core/material-instance';
 import { MacroRecord } from '../../core/renderer/core/pass-utils';
 import { AlignmentSpace, RenderMode, Space } from '../enum';
@@ -39,7 +39,7 @@ import { Pass } from '../../core/renderer/core/pass';
 import { packCurveRangeXYZ, packCurveRangeZ, packCurveRangeXYZW, packCurveRangeN, packCurveRangeXY } from '../animator/curve-range';
 import { ParticleSystemRendererBase } from './particle-system-renderer-base';
 import { Camera } from '../../core/renderer/scene/camera';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 const _tempWorldTrans = new Mat4();
 const _tempVec4 = new Vec4();

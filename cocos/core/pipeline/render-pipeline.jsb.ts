@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 export const RenderPipeline = nr.RenderPipeline;
 // Do not delete, for the class detection of editor
 legacyCC.RenderPipeline = RenderPipeline;

@@ -31,7 +31,7 @@
  * @module particle2d
  */
 
-import { getError } from '../core/platform/debug';
+import { getError } from '@cc/core/debug';
 import  zlib  from '../../external/compression/zlib.min';
 
 /**

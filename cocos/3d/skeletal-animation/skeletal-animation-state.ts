@@ -28,14 +28,14 @@
  * @module animation
  */
 
-import { Mat4, Quat, Vec3 } from '../../core/math';
+import { Mat4, Quat, Vec3 } from '@cc/core/math';
 import { IAnimInfo, JointAnimationInfo } from './skeletal-animation-utils';
 import { Node } from '../../core/scene-graph/node';
 import { AnimationClip } from '../../core/animation/animation-clip';
 import { AnimationState } from '../../core/animation/animation-state';
 import { SkeletalAnimation, Socket } from './skeletal-animation';
 import { SkelAnimDataHub } from './skeletal-animation-data-hub';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { JSB } from '../../core/default-constants';
 
 const m4_1 = new Mat4();

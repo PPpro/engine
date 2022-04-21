@@ -34,7 +34,7 @@ import { Component } from '../core/components/component';
 import { EventHandler } from '../core/components/component-event-handler';
 import { Node } from '../core/scene-graph/node';
 import { Camera } from '../core/components';
-import { Vec3 } from '../core/math';
+import { Vec3 } from '@cc/core/math';
 
 /**
  * @en The component that converts 3D node coordinates to UI node coordinates.

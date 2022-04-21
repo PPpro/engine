@@ -34,14 +34,14 @@ import { RenderingSubMesh } from '../../core/assets/rendering-sub-mesh';
 import { director } from '../../core/director';
 import { AttributeName, BufferUsageBit, Format, FormatInfos, MemoryUsageBit, PrimitiveMode,
     Device, Attribute, Buffer, IndirectBuffer, BufferInfo, DrawInfo, DRAW_INFO_SIZE } from '../../core/gfx';
-import { Color, Mat4, Quat, toRadian, Vec3 } from '../../core/math';
+import { Color, Mat4, Quat, toRadian, Vec3 } from '@cc/core/math';
 import { Pool } from '../../core/memop';
 import { scene } from '../../core/renderer';
 import CurveRange from '../animator/curve-range';
 import GradientRange from '../animator/gradient-range';
 import { Space, TextureMode, TrailMode } from '../enum';
 import { Particle } from '../particle';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { TransformBit } from '../../core/scene-graph/node-enum';
 
 const PRE_TRIANGLE_INDEX = 1;

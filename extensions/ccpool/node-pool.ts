@@ -30,7 +30,7 @@
 
 import { Component } from '../../cocos/core/components/component';
 import { Node } from '../../cocos/core/scene-graph';
-import { legacyCC } from '../../cocos/core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 type Constructor<T = {}> = new(...args: any[]) => T;
 

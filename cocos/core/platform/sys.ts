@@ -28,14 +28,13 @@
  * @packageDocumentation
  * @module core
  */
-import { systemInfo } from 'pal/system-info';
-import { screenAdapter } from 'pal/screen-adapter';
+import { BrowserType, Feature, Language, NetworkType, OS, Platform, systemInfo } from '@cc/pal/system-info';
+import { screenAdapter } from '@cc/pal/screen-adapter';
 import { WECHAT } from 'internal:constants';
-import { legacyCC } from '../global-exports';
-import { Rect } from '../math/rect';
-import { warnID, log } from './debug';
-import { NetworkType, Language, OS, Platform, BrowserType, Feature } from '../../../pal/system-info/enum-type';
-import { Vec2 } from '../math';
+import { legacyCC } from '@cc/core/global';
+import { Rect } from '@cc/core/math';
+import { warnID, log } from '@cc/core/debug';
+import { Vec2 } from '@cc/core/math';
 import { screen } from './screen';
 
 export declare namespace sys {

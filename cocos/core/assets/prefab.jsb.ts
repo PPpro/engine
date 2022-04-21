@@ -28,8 +28,8 @@ import {
     _assertThisInitialized,
     _initializerDefineProperty,
 } from '../data/utils/decorator-jsb-utils';
-import { legacyCC } from '../global-exports';
-import { Enum } from '../value-types';
+import { legacyCC } from '@cc/core/global';
+import { Enum } from '@cc/core/value-type';
 
 export const Prefab = jsb.Prefab;
 export type Prefab = jsb.Prefab;

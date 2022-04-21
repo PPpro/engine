@@ -24,8 +24,8 @@
  */
 
 import { Attribute } from '../../gfx';
-import { Vec3 } from '../../math';
-import { legacyCC } from '../../global-exports';
+import { Vec3 } from '@cc/core/math';
+import { legacyCC } from '@cc/core/global';
 
 export interface IInstancedAttributeBlock {
     buffer: Uint8Array;

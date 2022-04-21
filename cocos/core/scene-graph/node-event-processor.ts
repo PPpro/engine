@@ -28,12 +28,12 @@
  * @hidden
  */
 
-import { CallbacksInvoker } from '../event/callbacks-invoker';
+import { CallbacksInvoker } from '@cc/core/event';
 import { Event, EventMouse, EventTouch } from '../../input/types';
-import { Vec2 } from '../math/vec2';
+import { Vec2 } from '@cc/core/math';
 import { BaseNode } from './base-node';
 import { Node } from './node';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Component } from '../components/component';
 import { NodeEventType } from './node-event';
 import { InputEventType, SystemEventTypeUnion } from '../../input/types/event-enum';

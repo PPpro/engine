@@ -3,7 +3,7 @@
  * @hidden
  */
 
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 interface IPhysicsWrapperObject {
     PhysicsWorld: any,

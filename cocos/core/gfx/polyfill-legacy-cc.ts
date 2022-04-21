@@ -45,7 +45,7 @@ import { Shader } from './base/shader';
 import { Texture } from './base/texture';
 import { GeneralBarrier } from './base/states/general-barrier';
 import { TextureBarrier } from './base/states/texture-barrier';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import * as defines from './base/define';
 
 const polyfills: Record<string, unknown> = {

@@ -1,7 +1,7 @@
 import { binarySearchEpsilon } from '../algorithm/binary-search';
 import { ccclass, serializable } from '../data/decorators';
 import { assertIsTrue } from '../data/utils/asserts';
-import { approx, IQuatLike, lerp, Quat } from '../math';
+import { approx, IQuatLike, lerp, Quat } from '@cc/core/math';
 import { RealKeyframeValue, ExtrapolationMode, RealCurve } from './curve';
 import { QuatCurve, QuatInterpolationMode } from './quat-curve';
 import { RealInterpolationMode } from './real-curve-param';

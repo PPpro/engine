@@ -1,5 +1,5 @@
 import { assertIsTrue } from '../data/utils/asserts';
-import { approx, lerp, pingPong, repeat } from '../math';
+import { approx, lerp, pingPong, repeat } from '@cc/core/math';
 import { KeyframeCurve } from './keyframe-curve';
 import { ccclass, serializable, uniquelyReferenced } from '../data/decorators';
 import { RealInterpolationMode, ExtrapolationMode, TangentWeightMode } from './real-curve-param';

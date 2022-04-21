@@ -27,7 +27,7 @@
  * @packageDocumentation
  * @module core
  */
-import { legacyCC, VERSION } from './global-exports';
+import { legacyCC } from '@cc/core/global';
 
 import * as geometry from './geometry';
 import * as memop from './memop';

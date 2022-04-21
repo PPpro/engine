@@ -9,9 +9,9 @@ import { QuatCurve, QuatInterpolationMode, RealCurve, RealInterpolationMode, Rea
 import { assertIsTrue } from '../data/utils/asserts';
 import { Track, TrackPath } from './tracks/track';
 import { UntypedTrack } from './tracks/untyped-track';
-import { warn, warnID } from '../platform';
+import { warn, warnID } from '@cc/core/debug';
 import { RealTrack } from './tracks/real-track';
-import { Color, lerp, Quat, Size, Vec2, Vec3, Vec4 } from '../math';
+import { Color, lerp, Quat, Size, Vec2, Vec3, Vec4 } from '@cc/core/math';
 import { CubicSplineNumberValue, CubicSplineQuatValue, CubicSplineVec2Value, CubicSplineVec3Value, CubicSplineVec4Value } from './cubic-spline-value';
 import { ColorTrack } from './tracks/color-track';
 import { VectorTrack } from './tracks/vector-track';

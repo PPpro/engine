@@ -31,7 +31,7 @@
 import { removeProperty } from '../../core/utils';
 import { MeshRenderer } from './mesh-renderer';
 import { js } from '../../core/utils/js';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 removeProperty(MeshRenderer.prototype, 'MeshRenderer.prototype', [
     {

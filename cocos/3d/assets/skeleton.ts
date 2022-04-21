@@ -30,11 +30,11 @@
 
 import { ccclass, type, serializable } from 'cc.decorator';
 import { CCString } from '../../core/data/utils/attribute';
-import { Mat4 } from '../../core/math';
+import { Mat4 } from '@cc/core/math';
 import { murmurhash2_32_gc } from '../../core/utils/murmurhash2_gc';
 import { DataPoolManager } from '../skeletal-animation/data-pool-manager';
 import { Asset } from '../../core/assets/asset';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @en The skeleton asset. It stores the path related to [[SkinnedMeshRenderer.skinningRoot]] of all bones and its bind pose matrix.

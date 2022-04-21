@@ -36,11 +36,11 @@ import { CCObject } from '../data/object';
 import IDGenerator from '../utils/id-generator';
 import { getClassName, value } from '../utils/js';
 import { RenderScene } from '../renderer/scene/render-scene';
-import { Rect } from '../math';
+import { Rect } from '@cc/core/math';
 import * as RF from '../data/utils/requiring-frame';
 import { Node } from '../scene-graph';
-import { legacyCC } from '../global-exports';
-import { errorID, warnID, assertID, error } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { errorID, warnID, assertID, error } from '@cc/core/debug';
 import { CompPrefabInfo } from '../utils/prefab/prefab-info';
 import { EventHandler } from './component-event-handler';
 

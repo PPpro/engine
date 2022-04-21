@@ -28,12 +28,12 @@
  * @module scene-graph
  */
 
-import { BitMask, Enum } from '../value-types';
-import { legacyCC } from '../global-exports';
-import { log2 } from '../math/bits';
+import { BitMask, Enum } from '@cc/core/value-type';
+import { legacyCC } from '@cc/core/global';
+import { bits } from '@cc/core/math';
 import { js } from '../utils/js';
 import { assertIsTrue } from '../data/utils/asserts';
-import { getError } from '../platform/debug';
+import { getError } from '@cc/core/debug';
 
 // built-in layers, users can use 0~19 bits, 20~31 are system preserve bits.
 const layerList = {
@@ -149,7 +149,7 @@ export class Layers {
             return -1;
         }
 
-        return log2(Layers.Enum[name] as number);
+        return bits.log2(Layers.Enum[name] as number);
     }
 
     /**

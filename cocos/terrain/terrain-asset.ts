@@ -29,7 +29,7 @@
  */
 import { ccclass, serializable } from 'cc.decorator';
 import { Asset, Texture2D } from '../core/assets';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export const TERRAIN_MAX_LEVELS = 4;
 export const TERRAIN_MAX_BLEND_LAYERS = 4;

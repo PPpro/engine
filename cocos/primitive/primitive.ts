@@ -33,7 +33,7 @@ import { createMesh } from '../3d/misc';
 import { Mesh } from '../3d/assets/mesh';
 import * as primitives from '.';
 import { ccenum } from '../core/value-types/enum';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 enum PrimitiveType {
     BOX = 0,

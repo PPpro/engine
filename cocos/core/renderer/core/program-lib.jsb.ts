@@ -1,5 +1,5 @@
 import { API, } from '../../gfx';
-import { legacyCC } from '../../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export interface ITemplateInfo {
     gfxAttributes: Attribute[];

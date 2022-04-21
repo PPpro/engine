@@ -28,7 +28,7 @@
  * @hidden
  */
 
-import { replaceProperty, removeProperty } from '../utils/x-deprecated';
+import { replaceProperty, removeProperty } from '@cc/core/deprecate';
 import { Line } from './line';
 import intersect from './intersect';
 

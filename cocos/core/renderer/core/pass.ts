@@ -44,7 +44,7 @@ import { MacroRecord, MaterialProperty, customizeType, getBindingFromHandle, get
     getOffsetFromHandle, getTypeFromHandle, type2reader, type2writer, getCountFromHandle,
 } from './pass-utils';
 import { RenderPassStage, RenderPriority } from '../../pipeline/define';
-import { errorID } from '../../platform/debug';
+import { errorID } from '@cc/core/debug';
 import { InstancedBuffer } from '../../pipeline/instanced-buffer';
 import { BatchedBuffer } from '../../pipeline/batched-buffer';
 

@@ -49,7 +49,7 @@ import { Constraint } from './components/constraints/constraint';
 import { HingeConstraint } from './components/constraints/hinge-constraint';
 import { PointToPointConstraint } from './components/constraints/point-to-point-constraint';
 
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { selector } from './physics-selector';
 import * as utils from '../utils/util';
 

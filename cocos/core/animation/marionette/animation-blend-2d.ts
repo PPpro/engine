@@ -1,6 +1,6 @@
-import { Vec2 } from '../../math';
+import { Vec2 } from '@cc/core/math';
 import { property, ccclass } from '../../data/class-decorator';
-import { ccenum } from '../../value-types/enum';
+import { ccenum } from '@cc/core/value-type';
 import { createEval } from './create-eval';
 import { AnimationBlend, AnimationBlendEval, AnimationBlendItem, validateBlendParam } from './animation-blend';
 import { Motion, MotionEvalContext } from './motion';

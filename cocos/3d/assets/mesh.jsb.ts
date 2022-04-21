@@ -24,7 +24,7 @@
 */
 import { ccclass, serializable } from 'cc.decorator';
 import { _applyDecoratedDescriptor } from '../../core/data/utils/decorator-jsb-utils';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export declare namespace Mesh {
     export interface IBufferView {

@@ -29,10 +29,10 @@
  * @module event
  */
 
-import { EventTarget } from '../core/event';
+import { EventTarget } from '@cc/core/event';
 import { EventAcceleration, EventKeyboard, EventMouse, EventTouch, SystemEventType, Touch } from './types';
 import { input, Input } from './input';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { InputEventType } from './types/event-enum';
 
 export declare namespace SystemEvent {

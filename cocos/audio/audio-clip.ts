@@ -31,10 +31,9 @@
 import {
     ccclass, type, serializable, override,
 } from 'cc.decorator';
-import { AudioPlayer, OneShotAudio } from 'pal/audio';
+import { AudioPlayer, AudioState, AudioType } from '@cc/pal/audio';
 import { Asset } from '../core/assets/asset';
-import { legacyCC } from '../core/global-exports';
-import { AudioState, AudioType } from '../../pal/audio/type';
+import { legacyCC } from '@cc/core/global';
 
 export interface AudioMeta {
     player: AudioPlayer | null,

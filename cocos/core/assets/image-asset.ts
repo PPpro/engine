@@ -34,8 +34,8 @@ import { EDITOR, MINIGAME, ALIPAY, XIAOMI, JSB, TEST, BAIDU } from 'internal:con
 import { Device, Feature, Format, FormatFeatureBit } from '../gfx';
 import { Asset } from './asset';
 import { PixelFormat } from './asset-enum';
-import { legacyCC } from '../global-exports';
-import { warnID } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { warnID } from '@cc/core/debug';
 
 /**
  * @en Image source in memory

@@ -37,7 +37,7 @@ import { Skeleton } from '../assets/skeleton';
 import { Node } from '../../core/scene-graph/node';
 import { MeshRenderer } from '../framework/mesh-renderer';
 import type { SkeletalAnimation } from '../skeletal-animation';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { SkinningModel } from '../models/skinning-model';
 import { BakedSkinningModel } from '../models/baked-skinning-model';
 import { assertIsTrue } from '../../core/data/utils/asserts';

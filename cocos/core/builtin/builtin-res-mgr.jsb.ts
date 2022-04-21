@@ -23,7 +23,7 @@
  THE SOFTWARE.
 */
 
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Device } from '../gfx';
 import { SpriteFrame } from '../../2d/assets/sprite-frame';
 import type { ImageSource }  from '../assets/image-asset';

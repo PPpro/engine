@@ -33,8 +33,8 @@
 
 import { EDITOR, DEV } from 'internal:constants';
 import { getClassName, getset, isEmptyObject } from './js';
-import { legacyCC } from '../global-exports';
-import { warnID } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { warnID } from '@cc/core/debug';
 import { macro } from '../platform/macro';
 
 export const BUILTIN_CLASSID_RE = /^(?:cc|dragonBones|sp|ccsg)\..+/;

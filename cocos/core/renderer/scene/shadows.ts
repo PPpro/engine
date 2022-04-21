@@ -25,9 +25,9 @@
 
 import { Material } from '../../assets/material';
 import { Sphere } from '../../geometry';
-import { Color, Mat4, Vec3, Vec2 } from '../../math';
-import { legacyCC } from '../../global-exports';
-import { Enum } from '../../value-types';
+import { Color, Mat4, Vec3, Vec2 } from '@cc/core/math';
+import { legacyCC } from '@cc/core/global';
+import { Enum } from '@cc/core/value-type';
 import { ShadowsInfo } from '../../scene-graph/scene-globals';
 import { IMacroPatch } from '../core/pass';
 import { Shader } from '../../gfx';

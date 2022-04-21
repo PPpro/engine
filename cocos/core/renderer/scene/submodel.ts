@@ -28,8 +28,8 @@ import { RenderPriority, UNIFORM_REFLECTION_TEXTURE_BINDING, UNIFORM_REFLECTION_
 import { BatchingSchemes, IMacroPatch, Pass } from '../core/pass';
 import { DescriptorSet, DescriptorSetInfo, Device, InputAssembler, Texture, TextureType, TextureUsageBit, TextureInfo,
     Format, Sampler, Filter, Address, Shader, SamplerInfo } from '../../gfx';
-import { legacyCC } from '../../global-exports';
-import { errorID } from '../../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { errorID } from '@cc/core/debug';
 import { getPhaseID } from '../../pipeline/pass-phase';
 import { Root } from '../../root';
 

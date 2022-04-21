@@ -30,18 +30,18 @@
 
 import * as easing from './animation/easing';
 import { Material } from './assets/material';
-import { clamp01 } from './math/utils';
+import { clamp01 } from '@cc/core/math';
 import {
     Sampler, SamplerInfo, Shader, Texture, TextureInfo, Device, InputAssembler, InputAssemblerInfo, Attribute, Buffer,
     BufferInfo, Rect, Color, BufferTextureCopy, Framebuffer, CommandBuffer, BufferUsageBit, Format,
     MemoryUsageBit, TextureType, TextureUsageBit, Address, SurfaceTransform, Swapchain,
 } from './gfx';
 import { PipelineStateManager } from './pipeline';
-import { legacyCC } from './global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Root } from './root';
 import { SetIndex } from './pipeline/define';
-import { error } from './platform/debug';
-import { Mat4, Vec2 } from './math';
+import { error } from '@cc/core/debug';
+import { Mat4, Vec2 } from '@cc/core/math';
 
 const v2_0 = new Vec2();
 type SplashEffectType = 'NONE' | 'FADE-INOUT';

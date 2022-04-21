@@ -29,10 +29,10 @@
  */
 
 import { EDITOR, TEST, PREVIEW, BUILD, DEBUG, JSB, DEV } from 'internal:constants';
-import { legacyCC } from '../global-exports';
-import { ValueType } from '../value-types';
-import { Vec2, Vec3, Vec4, Color, Size, Rect, Quat, Mat4 } from '../math';
-import { warnID, errorID, getError } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { ValueType } from '@cc/core/value-type';
+import { Vec2, Vec3, Vec4, Color, Size, Rect, Quat, Mat4 } from '@cc/core/math';
+import { warnID, errorID, getError } from '@cc/core/debug';
 import * as js from '../utils/js';
 
 import { deserializeDynamic, parseUuidDependenciesDynamic } from './deserialize-dynamic';

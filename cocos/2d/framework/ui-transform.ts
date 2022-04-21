@@ -31,11 +31,11 @@
 import { ccclass, help, executeInEditMode, executionOrder, menu, tooltip, displayOrder, serializable, disallowMultiple } from 'cc.decorator';
 import { EDITOR } from 'internal:constants';
 import { Component } from '../../core/components';
-import { Mat4, Rect, Size, Vec2, Vec3 } from '../../core/math';
+import { Mat4, Rect, Size, Vec2, Vec3 } from '@cc/core/math';
 import { AABB } from '../../core/geometry';
 import { Node } from '../../core/scene-graph';
 import { Director, director } from '../../core/director';
-import { warnID } from '../../core/platform/debug';
+import { warnID } from '@cc/core/debug';
 import { NodeEventType } from '../../core/scene-graph/node-event';
 import visibleRect from '../../core/platform/visible-rect';
 

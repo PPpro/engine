@@ -30,17 +30,16 @@
  */
 
 import { DEV, EDITOR, SUPPORT_JIT, TEST } from 'internal:constants';
-import { errorID, warnID, error } from '../platform/debug';
+import { errorID, warnID, error } from '@cc/core/debug';
 import * as js from '../utils/js';
 import { getSuper } from '../utils/js';
-import { BitMask } from '../value-types';
-import { Enum } from '../value-types/enum';
+import { BitMask, Enum } from '@cc/core/value-type';
 import * as attributeUtils from './utils/attribute';
 import { IAcceptableAttributes } from './utils/attribute-defines';
 import { preprocessAttrs } from './utils/preprocess-class';
 import * as RF from './utils/requiring-frame';
 
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { PropertyStash, PropertyStashInternalFlag } from './class-stash';
 
 const DELIMETER = attributeUtils.DELIMETER;

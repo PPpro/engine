@@ -30,7 +30,7 @@
 
 import { ILifecycle } from './i-lifecycle';
 import { IGroupMask } from './i-group-mask';
-import { IVec3Like } from '../../core/math/type-define';
+import { IVec3Like } from '@cc/core/math';
 import { Collider, RigidBody, PhysicsMaterial, SimplexCollider } from '../../../exports/physics-framework';
 import { Mesh } from '../../3d/assets';
 import { ITerrainAsset } from './i-external';

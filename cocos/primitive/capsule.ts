@@ -28,7 +28,7 @@
  * @module 3d/primitive
  */
 
-import { Vec3 } from '../core/math';
+import { Vec3 } from '@cc/core/math';
 
 /**
  * @en

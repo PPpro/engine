@@ -30,7 +30,7 @@
 
 declare const gfx: any;
 
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import * as defines from './base/define';
 import * as pso from './pipeline-state.jsb';
 

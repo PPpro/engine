@@ -25,7 +25,7 @@ import {
     _assertThisInitialized,
     _initializerDefineProperty,
 } from '../data/utils/decorator-jsb-utils';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { SceneGlobals } from './scene-globals';
 import { Node } from './node';
 import { applyTargetOverrides, expandNestedPrefabInstanceNode } from "../utils/prefab/utils";

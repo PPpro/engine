@@ -31,7 +31,7 @@
 
 import { ccclass, type, serializable, editable, tooltip } from 'cc.decorator';
 import type { Node } from '../scene-graph';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @en

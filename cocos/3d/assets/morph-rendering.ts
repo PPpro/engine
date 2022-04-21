@@ -37,12 +37,12 @@ import { Texture2D } from '../../core/assets/texture-2d';
 import { ImageAsset } from '../../core/assets/image-asset';
 import { UBOMorph, UNIFORM_NORMAL_MORPH_TEXTURE_BINDING,
     UNIFORM_POSITION_MORPH_TEXTURE_BINDING, UNIFORM_TANGENT_MORPH_TEXTURE_BINDING } from '../../core/pipeline/define';
-import { warn } from '../../core/platform/debug';
+import { warn } from '@cc/core/debug';
 import { Morph, MorphRendering, MorphRenderingInstance, SubMeshMorph } from './morph';
 import { assertIsNonNullable, assertIsTrue } from '../../core/data/utils/asserts';
-import { log2, nextPow2 } from '../../core/math/bits';
+import { bits, nextPow2 } from '@cc/core/math';
 import { IMacroPatch } from '../../core/renderer';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { PixelFormat } from '../../core/assets/asset-enum';
 
 /**
@@ -590,7 +590,7 @@ function bestSizeToHavePixels (nPixels: number) {
         nPixels = 5;
     }
     const aligned = nextPow2(nPixels);
-    const epxSum = log2(aligned);
+    const epxSum = bits.log2(aligned);
     const h = epxSum >> 1;
     const w = (epxSum & 1) ? (h + 1) : h;
     return {

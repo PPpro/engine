@@ -33,8 +33,8 @@ import { CCObject } from '../data/object';
 import { MutableForwardIterator } from '../utils/array';
 import { array } from '../utils/js';
 import { tryCatchFunctor_EDITOR } from '../utils/misc';
-import { legacyCC } from '../global-exports';
-import { error, assert } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { error, assert } from '@cc/core/debug';
 
 const fastRemoveAt = array.fastRemoveAt;
 

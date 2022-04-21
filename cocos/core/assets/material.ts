@@ -34,12 +34,12 @@ import { EffectAsset } from './effect-asset';
 import { RenderableComponent } from '../components/renderable-component';
 import { Texture, Type } from '../gfx';
 import { TextureBase } from './texture-base';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { IPassInfoFull, Pass, PassOverrides } from '../renderer/core/pass';
 import { MacroRecord, MaterialProperty } from '../renderer/core/pass-utils';
-import { Color } from '../math/color';
-import { warnID } from '../platform/debug';
-import { Vec4 } from '../math';
+import { Color } from '@cc/core/math';
+import { warnID } from '@cc/core/debug';
+import { Vec4 } from '@cc/core/math';
 import { SRGBToLinear } from '../pipeline/pipeline-funcs';
 
 const v4_1 = new Vec4();

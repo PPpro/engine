@@ -29,7 +29,7 @@
  */
 
 import { ccclass, override } from 'cc.decorator';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Asset } from './asset';
 
 @ccclass('cc.BufferAsset')

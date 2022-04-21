@@ -30,7 +30,7 @@
 
 import { ccclass, type, serializable, editable, formerlySerializedAs } from 'cc.decorator';
 import { EDITOR } from 'internal:constants';
-import { lerp } from '../../core/math';
+import { lerp } from '@cc/core/math';
 import { Enum } from '../../core/value-types';
 import { AnimationCurve, constructLegacyCurveAndConvert } from '../../core/geometry/curve';
 import { Texture2D, ImageAsset, RealCurve } from '../../core';

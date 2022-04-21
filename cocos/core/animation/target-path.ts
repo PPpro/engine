@@ -30,7 +30,7 @@
 
 import { ccclass, serializable } from 'cc.decorator';
 import { Node } from '../scene-graph/node';
-import { warn, warnID } from '../platform/debug';
+import { warn, warnID } from '@cc/core/debug';
 
 export type PropertyPath = string | number;
 

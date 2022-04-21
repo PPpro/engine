@@ -31,7 +31,7 @@
 
 import { ccclass } from 'cc.decorator';
 import { Asset } from './asset';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @en The script asset base class

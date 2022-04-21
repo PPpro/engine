@@ -29,7 +29,7 @@
  */
 
 import { EmptyDevice } from '../cocos/core/gfx/empty/empty-device';
-import { legacyCC } from '../cocos/core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export { EmptyDevice };
 legacyCC.EmptyDevice = EmptyDevice;

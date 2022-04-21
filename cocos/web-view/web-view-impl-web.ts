@@ -28,12 +28,12 @@
  * @module component/web-view
  */
 
-import { screenAdapter } from 'pal/screen-adapter';
+import { screenAdapter } from '@cc/pal/screen-adapter';
 import { EventType } from './web-view-enums';
-import { error, warn } from '../core/platform';
+import { error, warn } from '@cc/core/debug';
 import { WebViewImpl } from './web-view-impl';
 import { game } from '../core';
-import { mat4 } from '../core/math';
+import { mat4 } from '@cc/core/math';
 import { contains } from '../core/utils/misc';
 
 const _mat4_temp = mat4();

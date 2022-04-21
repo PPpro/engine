@@ -38,8 +38,7 @@ import {
 import { RenderData, MeshRenderData } from './renderer/render-data';
 import { MeshBuffer } from './renderer/mesh-buffer';
 import { StencilManager } from './renderer/stencil-manager';
-import { legacyCC } from '../core/global-exports';
-import './event';
+import { legacyCC } from '@cc/core/global';
 
 import './renderer/batcher-2d';
 

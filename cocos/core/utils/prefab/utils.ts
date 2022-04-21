@@ -30,15 +30,15 @@
  */
 
 import { EDITOR, SUPPORT_JIT } from 'internal:constants';
-import { legacyCC } from '../../global-exports';
+import { legacyCC } from '@cc/core/global';
 import type { Node } from '../../scene-graph/node';
-import { errorID, warn } from '../../platform/debug';
+import { errorID, warn } from '@cc/core/debug';
 import { Component } from '../../components';
 import type { BaseNode } from '../../scene-graph/base-node';
 import { MountedChildrenInfo, PropertyOverrideInfo } from './prefab-info';
 import { MountedComponentsInfo, TargetInfo } from '.';
 import { editorExtrasTag } from '../../data';
-import { ValueType } from '../../value-types';
+import { ValueType } from '@cc/core/value-type';
 
 export function createNodeWithPrefab (node: Node) {
     // @ts-expect-error: private member access

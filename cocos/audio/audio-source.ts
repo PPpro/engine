@@ -28,11 +28,10 @@
  * @module component/audio
  */
 
-import { AudioPlayer } from 'pal/audio';
+import { AudioPlayer, AudioState } from '@cc/pal/audio';
 import { ccclass, help, menu, tooltip, type, range, serializable } from 'cc.decorator';
-import { AudioState } from '../../pal/audio/type';
 import { Component } from '../core/components/component';
-import { clamp } from '../core/math';
+import { clamp } from '@cc/core/math';
 import { AudioClip } from './audio-clip';
 import { audioManager } from './audio-manager';
 import { Node } from '../core';

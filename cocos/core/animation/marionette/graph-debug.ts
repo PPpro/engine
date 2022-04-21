@@ -1,4 +1,4 @@
-import { debug } from '../../platform/debug';
+import { debug } from '@cc/core/debug';
 
 export const GRAPH_DEBUG_ENABLED = false;
 

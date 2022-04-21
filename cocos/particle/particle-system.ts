@@ -36,8 +36,7 @@ import { ccclass, help, executeInEditMode, executionOrder, menu, tooltip, displa
 import { EDITOR } from 'internal:constants';
 import { RenderableComponent } from '../core/components/renderable-component';
 import { Material } from '../core/assets/material';
-import { Mat4, pseudoRandom, Quat, randomRangeInt, Vec2, Vec3, Vec4 } from '../core/math';
-import { INT_MAX } from '../core/math/bits';
+import { Mat4, pseudoRandom, Quat, randomRangeInt, Vec2, Vec3, bits } from '@cc/core/math';
 import { scene } from '../core/renderer';
 import ColorOverLifetimeModule from './animator/color-overtime';
 import CurveRange, { Mode } from './animator/curve-range';
@@ -56,7 +55,7 @@ import ParticleSystemRenderer from './renderer/particle-system-renderer-data';
 import TrailModule from './renderer/trail';
 import { IParticleSystemRenderer } from './renderer/particle-system-renderer-base';
 import { Particle, PARTICLE_MODULE_PROPERTY } from './particle';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { TransformBit } from '../core/scene-graph/node-enum';
 import { AABB, intersect } from '../core/geometry';
 import { Camera } from '../core/renderer/scene';
@@ -1172,7 +1171,7 @@ export class ParticleSystem extends RenderableComponent {
             particle.particleSystem = this;
             particle.reset();
 
-            const rand = pseudoRandom(randomRangeInt(0, INT_MAX));
+            const rand = pseudoRandom(randomRangeInt(0, bits.INT_MAX));
 
             if (this._shapeModule && this._shapeModule.enable) {
                 this._shapeModule.emit(particle);

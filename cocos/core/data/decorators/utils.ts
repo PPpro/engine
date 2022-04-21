@@ -30,7 +30,7 @@
 
 import { DEV } from 'internal:constants';
 import { CCClass } from '../class';
-import { error } from '../../platform/debug';
+import { error } from '@cc/core/debug';
 import { js } from '../../utils/js';
 
 export type BabelPropertyDecoratorDescriptor = PropertyDescriptor & { initializer?: any };

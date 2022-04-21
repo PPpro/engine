@@ -28,7 +28,7 @@
  * @module scene-graph
  */
 
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @en Node's coordinate space

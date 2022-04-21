@@ -28,11 +28,11 @@
  * @module animation
  */
 
-import { replaceProperty } from '../utils/x-deprecated';
+import { replaceProperty } from '@cc/core/deprecate';
 import { Animation } from './animation-component';
 import { AnimationClip } from './animation-clip';
 import { js } from '../utils/js';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 // deprecated
 replaceProperty(Animation.prototype, 'Animation', [

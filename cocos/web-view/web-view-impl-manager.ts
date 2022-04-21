@@ -28,7 +28,7 @@
  * @module component/web-view
  */
 
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { WebViewImplWeb } from './web-view-impl-web';
 
 export class WebViewImplManager {

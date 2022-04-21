@@ -31,10 +31,10 @@
  */
 
 import * as js from '../../core/utils/js';
-import { errorID, logID, assertID } from '../../core/platform/debug';
+import { errorID, logID, assertID } from '@cc/core/debug';
 import { Action } from './action';
 import { Node, CCObject } from '../../core';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 let ID_COUNTER = 0;
 

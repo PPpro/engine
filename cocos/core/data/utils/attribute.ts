@@ -25,10 +25,10 @@
 */
 
 import { EDITOR } from 'internal:constants';
-import { log, warnID } from '../../platform/debug';
+import { log, warnID } from '@cc/core/debug';
 import { formatStr, get, getClassName, isChildClassOf, value } from '../../utils/js';
 import { isPlainEmptyObj_DEV } from '../../utils/misc';
-import { legacyCC } from '../../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export const DELIMETER = '$_$';
 

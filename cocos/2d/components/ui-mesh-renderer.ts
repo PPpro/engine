@@ -36,7 +36,7 @@ import { IBatcher } from '../renderer/i-batcher';
 import { scene } from '../../core/renderer';
 import { Stage } from '../renderer/stencil-manager';
 import { Component } from '../../core/components';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @en

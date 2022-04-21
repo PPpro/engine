@@ -28,9 +28,8 @@
  * @module physics
  */
 
-import { Vec3 } from '../../core/math';
+import { Vec3, IVec3Like } from '@cc/core/math';
 import { Collider } from '../../../exports/physics-framework';
-import { IVec3Like } from '../../core/math/type-define';
 
 /**
  * @en

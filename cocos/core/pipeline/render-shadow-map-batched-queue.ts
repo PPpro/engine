@@ -44,7 +44,7 @@ import { AABB, intersect } from '../geometry';
 import { Model } from '../renderer/scene/model';
 import { RenderPipeline } from './render-pipeline';
 import { Camera } from '../renderer/scene';
-import { Mat4 } from '../math';
+import { Mat4 } from '@cc/core/math';
 
 const _matShadowView = new Mat4();
 const _matShadowProj = new Mat4();

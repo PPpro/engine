@@ -27,7 +27,7 @@
  * @hidden
  */
 
-import { removeProperty, replaceProperty } from '../utils/x-deprecated';
+import { removeProperty, replaceProperty } from '@cc/core/deprecate';
 import { Device } from './base/device';
 import { Feature, ColorAttachment, DepthStencilAttachment } from './base/define';
 

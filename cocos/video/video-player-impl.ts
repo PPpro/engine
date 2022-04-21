@@ -28,11 +28,11 @@
  * @module component/video
  */
 
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { UITransform } from '../2d/framework';
 import { VideoPlayer } from './video-player';
 import { EventType } from './video-player-enums';
-import { error } from '../core/platform';
+import { error } from '@cc/core/debug';
 import { director } from '../core/director';
 import { Node } from '../core/scene-graph';
 

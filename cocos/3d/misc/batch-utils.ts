@@ -30,7 +30,7 @@
 
 import { MeshRenderer } from '../framework/mesh-renderer';
 import { Mesh } from '../assets/mesh';
-import { Mat4 } from '../../core/math/mat4';
+import { Mat4 } from '@cc/core/math';
 import { Node } from '../../core/scene-graph/node';
 
 function checkMaterialisSame (comp1: MeshRenderer, comp2: MeshRenderer): boolean {

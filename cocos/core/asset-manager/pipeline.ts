@@ -26,7 +26,7 @@
  * @packageDocumentation
  * @module asset-manager
  */
-import { warnID } from '../platform/debug';
+import { warnID } from '@cc/core/debug';
 import { CompleteCallbackNoData } from './shared';
 import Task from './task';
 

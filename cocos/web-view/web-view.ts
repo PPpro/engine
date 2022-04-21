@@ -34,7 +34,7 @@ import { UITransform } from '../2d/framework';
 import { Component, EventHandler as ComponentEventHandler } from '../core/components';
 import { WebViewImplManager } from './web-view-impl-manager';
 import { EventType } from './web-view-enums';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import type { WebViewImpl  } from './web-view-impl';
 
 /**

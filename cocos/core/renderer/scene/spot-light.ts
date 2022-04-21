@@ -24,8 +24,8 @@
  */
 
 import { AABB, Frustum } from '../../geometry';
-import { legacyCC } from '../../global-exports';
-import { Mat4, Quat, Vec3 } from '../../math';
+import { legacyCC } from '@cc/core/global';
+import { Mat4, Quat, Vec3 } from '@cc/core/math';
 import { Light, LightType, nt2lm } from './light';
 import { PCFType } from './shadows';
 

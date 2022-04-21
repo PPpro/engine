@@ -23,9 +23,9 @@
  THE SOFTWARE.
  */
 
-import { Enum } from '../../value-types';
-import { Color, Vec4 } from '../../math';
-import { legacyCC } from '../../global-exports';
+import { Enum } from '@cc/core/value-type';
+import { Color, Vec4 } from '@cc/core/math';
+import { legacyCC } from '@cc/core/global';
 import { FogInfo } from '../../scene-graph/scene-globals';
 import { SRGBToLinear } from '../../pipeline/pipeline-funcs';
 

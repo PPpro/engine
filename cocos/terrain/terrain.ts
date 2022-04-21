@@ -39,13 +39,13 @@ import { Component } from '../core/components';
 import { CCObject, isValid } from '../core/data/object';
 import { director } from '../core/director';
 import { AttributeName, BufferUsageBit, Format, MemoryUsageBit, PrimitiveMode, Device, Attribute, Buffer, BufferInfo } from '../core/gfx';
-import { clamp, Rect, Size, Vec2, Vec3, Vec4 } from '../core/math';
+import { clamp, Rect, Size, Vec2, Vec3, Vec4 } from '@cc/core/math';
 import { MacroRecord } from '../core/renderer/core/pass-utils';
 import { Pass, scene } from '../core/renderer';
 import { Camera } from '../core/renderer/scene/camera';
 import { Root } from '../core/root';
 import { HeightField } from './height-field';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { TerrainLod, TerrainLodKey, TERRAIN_LOD_LEVELS, TERRAIN_LOD_MAX_DISTANCE } from './terrain-lod';
 import { TerrainAsset, TerrainLayerInfo, TERRAIN_HEIGHT_BASE, TERRAIN_HEIGHT_FACTORY,
     TERRAIN_BLOCK_TILE_COMPLEXITY, TERRAIN_BLOCK_VERTEX_SIZE, TERRAIN_BLOCK_VERTEX_COMPLEXITY,

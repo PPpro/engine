@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { debug } from '../../platform/debug';
+import { debug } from '@cc/core/debug';
 import { DescriptorSet } from '../base/descriptor-set';
 import { DescriptorSetLayout } from '../base/descriptor-set-layout';
 import { PipelineLayout } from '../base/pipeline-layout';
@@ -60,7 +60,7 @@ import { EmptyRenderPass } from './empty-render-pass';
 import { EmptyShader } from './empty-shader';
 import { EmptySwapchain } from './empty-swapchain';
 import { EmptyTexture } from './empty-texture';
-import { legacyCC } from '../../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export class EmptyDevice extends Device {
     public initialize (info: DeviceInfo): boolean {

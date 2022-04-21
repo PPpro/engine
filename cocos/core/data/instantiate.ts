@@ -31,11 +31,11 @@
 
 import { DEV } from 'internal:constants';
 import { isDomNode } from '../utils/misc';
-import { ValueType } from '../value-types';
+import { ValueType } from '@cc/core/value-type';
 import { CCObject } from './object';
 import { js } from '../utils/js';
-import { getError, warn } from '../platform/debug';
-import { legacyCC } from '../global-exports';
+import { getError, warn } from '@cc/core/debug';
+import { legacyCC } from '@cc/core/global';
 import { Prefab } from '../assets/prefab';
 import { Node } from '../scene-graph/node';
 import { JSB } from '../default-constants';

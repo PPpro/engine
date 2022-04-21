@@ -28,7 +28,7 @@
  */
 import { EDITOR, TEST } from 'internal:constants';
 import { Asset } from '../assets';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { js } from '../utils/js';
 import Cache from './cache';
 import { decodeUuid, normalize } from './helper';

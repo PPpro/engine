@@ -31,14 +31,14 @@
 
 import { ccclass, help, executeInEditMode, executionOrder, menu, requireComponent, tooltip, type, displayOrder, serializable, visible, displayName } from 'cc.decorator';
 import { Component } from '../core/components/component';
-import { Rect, Size, Vec2, Vec3 } from '../core/math';
+import { Rect, Size, Vec2, Vec3 } from '@cc/core/math';
 import { ccenum } from '../core/value-types/enum';
 import { UITransform } from '../2d/framework/ui-transform';
 import { director, Director } from '../core/director';
 import { TransformBit } from '../core/scene-graph/node-enum';
 import { Node, warn } from '../core';
 import { NodeEventType } from '../core/scene-graph/node-event';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @en Layout type.

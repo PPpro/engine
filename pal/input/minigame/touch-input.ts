@@ -1,9 +1,9 @@
-import { TouchCallback } from 'pal/input';
-import { minigame } from 'pal/minigame';
-import { screenAdapter } from 'pal/screen-adapter';
+import { TouchCallback } from '@cc/pal/input';
+import { minigame } from '@cc/pal/minigame';
+import { screenAdapter } from '@cc/pal/screen-adapter';
 import { VIVO } from 'internal:constants';
-import { Size, Vec2 } from '../../../cocos/core/math';
-import { EventTarget } from '../../../cocos/core/event';
+import { Size, Vec2 } from '@cc/core/math';
+import { EventTarget } from '@cc/core/event';
 import { EventTouch, Touch } from '../../../cocos/input/types';
 import { touchManager } from '../touch-manager';
 import { macro } from '../../../cocos/core/platform/macro';

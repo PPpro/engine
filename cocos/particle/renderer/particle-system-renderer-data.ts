@@ -31,7 +31,7 @@ import ParticleSystemRendererCPU from './particle-system-renderer-cpu';
 import ParticleSystemRendererGPU from './particle-system-renderer-gpu';
 import { director } from '../../core/director';
 import { Device, Feature, Format, FormatFeatureBit } from '../../core/gfx';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { errorID } from '../../core';
 
 function isSupportGPUParticle () {

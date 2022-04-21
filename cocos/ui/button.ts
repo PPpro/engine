@@ -35,12 +35,12 @@ import { SpriteFrame } from '../2d/assets';
 import { Component, EventHandler as ComponentEventHandler } from '../core/components';
 import { UITransform, Renderable2D } from '../2d/framework';
 import { EventMouse, EventTouch } from '../input/types';
-import { Color, Vec3 } from '../core/math';
+import { Color, Vec3 } from '@cc/core/math';
 import { ccenum } from '../core/value-types/enum';
-import { lerp } from '../core/math/utils';
+import { lerp } from '@cc/core/math';
 import { Node } from '../core/scene-graph/node';
 import { Sprite } from '../2d/components/sprite';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { TransformBit } from '../core/scene-graph/node-enum';
 import { NodeEventType } from '../core/scene-graph/node-event';
 

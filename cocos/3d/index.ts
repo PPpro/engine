@@ -29,7 +29,7 @@
  */
 
 import * as utils from './misc';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export * from './misc/batch-utils';
 export * from './assets';

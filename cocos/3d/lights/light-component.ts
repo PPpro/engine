@@ -30,12 +30,12 @@
 
 import { ccclass, tooltip, range, slide, type, displayOrder, serializable, editable } from 'cc.decorator';
 import { Component } from '../../core/components/component';
-import { Color, Vec3 } from '../../core/math';
+import { Color, Vec3 } from '@cc/core/math';
 import { Enum } from '../../core/value-types';
 
 import { scene } from '../../core/renderer';
 import { Root } from '../../core/root';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export const PhotometricTerm = Enum({
     LUMINOUS_FLUX: 0,

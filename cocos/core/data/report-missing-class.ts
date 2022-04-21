@@ -1,5 +1,5 @@
 import { EDITOR } from 'internal:constants';
-import { errorID } from '../platform/debug';
+import { errorID } from '@cc/core/debug';
 
 export function reportMissingClass (id: string) {
     if (EDITOR && EditorExtends.UuidUtils.isUuid(id)) {

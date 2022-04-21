@@ -28,11 +28,11 @@
  * @module animation
  */
 
-import { clamp01 } from '../math/utils';
+import { clamp01 } from '@cc/core/math';
 import { remove } from '../utils/array';
 import { AnimationState } from './animation-state';
 import { Playable } from './playable';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import type { AnimationManager } from './animation-manager';
 
 interface IManagedState {

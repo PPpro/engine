@@ -31,7 +31,7 @@
 import downloader from '../core/asset-manager/downloader';
 import factory from '../core/asset-manager/factory';
 import { CompleteCallback, IDownloadParseOptions } from '../core/asset-manager/shared';
-import { getError, log } from '../core/platform/debug';
+import { getError, log } from '@cc/core/debug';
 import { sys } from '../core/platform/sys';
 import { VideoClip } from './assets/video-clip';
 

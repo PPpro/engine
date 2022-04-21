@@ -4,11 +4,10 @@
  */
 
 import { BaseObject, TextureAtlasData, TextureData } from '@cocos/dragonbones-js';
-import { Size, Vec2 } from '../core';
 import { SpriteFrame } from '../2d';
 import { TextureBase } from '../core/assets/texture-base';
 import { ccclass } from '../core/data/decorators';
-import { Rect } from '../core/math/rect';
+import { Rect } from '@cc/core/math';
 
 @ccclass('dragonBones.CCTextureAtlasData')
 export class CCTextureAtlasData extends TextureAtlasData {

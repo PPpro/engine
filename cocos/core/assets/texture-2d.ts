@@ -35,7 +35,7 @@ import { TextureType, TextureInfo } from '../gfx';
 import { PixelFormat } from './asset-enum';
 import { ImageAsset } from './image-asset';
 import { PresumedGFXTextureInfo, SimpleTexture } from './simple-texture';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { js } from '../utils/js';
 
 /**

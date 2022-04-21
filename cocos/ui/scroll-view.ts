@@ -34,15 +34,15 @@ import { EDITOR } from 'internal:constants';
 import { EventHandler as ComponentEventHandler } from '../core/components/component-event-handler';
 import { UITransform } from '../2d/framework';
 import { Event, EventMouse, EventTouch, Touch, SystemEventType } from '../input/types';
-import { logID } from '../core/platform/debug';
-import { Size, Vec2, Vec3 } from '../core/math';
+import { logID } from '@cc/core/debug';
+import { Size, Vec2, Vec3 } from '@cc/core/math';
 import { Layout } from './layout';
 import { ScrollBar } from './scroll-bar';
 import { ViewGroup } from './view-group';
 import { Node } from '../core/scene-graph/node';
 import { director, Director } from '../core/director';
 import { TransformBit } from '../core/scene-graph/node-enum';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { NodeEventType } from '../core/scene-graph/node-event';
 
 const NUMBER_OF_GATHERED_TOUCHES_FOR_MOVE_SPEED = 5;

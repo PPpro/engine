@@ -31,7 +31,7 @@
 import { InputAssembler, Device, Attribute } from '../../core/gfx';
 import { MeshBuffer } from './mesh-buffer';
 import { BufferAccessor } from './buffer-accessor';
-import { assertID } from '../../core/platform/debug';
+import { assertID } from '@cc/core/debug';
 import { assertIsNonNullable } from '../../core/data/utils/asserts';
 import { macro } from '../../core/platform/macro';
 

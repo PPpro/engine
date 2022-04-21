@@ -31,11 +31,12 @@
  * @hidden
  */
 
-import { screenAdapter } from 'pal/screen-adapter';
+import { BrowserType, OS } from '@cc/pal/system-info';
+import { screenAdapter } from '@cc/pal/screen-adapter';
 import { BitmapFont } from '../../2d/assets';
 import { director } from '../../core/director';
 import { game } from '../../core/game';
-import { Color, Mat4, Size, Vec3 } from '../../core/math';
+import { Color, Mat4, Size, Vec3 } from '@cc/core/math';
 import { view } from '../../core/platform';
 import { KeyCode } from '../../input/types';
 import { contains } from '../../core/utils/misc';
@@ -47,8 +48,7 @@ import { sys } from '../../core/platform/sys';
 import visibleRect from '../../core/platform/visible-rect';
 import { Node } from '../../core/scene-graph';
 import { EditBoxImplBase } from './edit-box-impl-base';
-import { legacyCC } from '../../core/global-exports';
-import { BrowserType, OS } from '../../../pal/system-info/enum-type';
+import { legacyCC } from '@cc/core/global';
 
 // https://segmentfault.com/q/1010000002914610
 const SCROLLY = 40;

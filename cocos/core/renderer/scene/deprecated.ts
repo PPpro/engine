@@ -23,10 +23,10 @@
  THE SOFTWARE.
  */
 
-import { replaceProperty, removeProperty, markAsWarning } from '../../utils/x-deprecated';
+import { replaceProperty, removeProperty } from '@cc/core/deprecate';
 import { RenderScene } from './render-scene';
 import { Layers } from '../../scene-graph/layers';
-import { legacyCC } from '../../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Pass } from '../core/pass';
 import { Camera } from './camera';
 import { Shadows } from './shadows';

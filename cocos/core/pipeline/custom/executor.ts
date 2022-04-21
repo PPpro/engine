@@ -33,8 +33,7 @@ import { getPhaseID, InstancedBuffer, PipelineStateManager } from '..';
 import { Buffer, Color, ColorAttachment, CommandBuffer, DepthStencilAttachment, Device, Format, Framebuffer,
     FramebufferInfo, PipelineState, Rect, RenderPass, RenderPassInfo, Swapchain, Texture, TextureInfo,
     TextureType, TextureUsageBit, Viewport } from '../../gfx';
-import { legacyCC } from '../../global-exports';
-import { assert } from '../../platform';
+import { legacyCC } from '@cc/core/global';
 import { BatchingSchemes } from '../../renderer';
 import { Camera } from '../../renderer/scene/camera';
 import { Root } from '../../root';

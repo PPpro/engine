@@ -36,10 +36,10 @@ import IDGenerator from '../utils/id-generator';
 import { Asset } from './asset';
 import { Filter, PixelFormat, WrapMode } from './asset-enum';
 import { Sampler, Texture, Device, Format, SamplerInfo, Address, Filter as GFXFilter } from '../gfx';
-import { legacyCC } from '../global-exports';
-import { errorID } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { errorID } from '@cc/core/debug';
 import { murmurhash2_32_gc } from '../utils/murmurhash2_gc';
-import { ccenum } from '../value-types/enum';
+import { ccenum } from '@cc/core/value-type';
 
 ccenum(Format);
 

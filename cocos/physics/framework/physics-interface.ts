@@ -28,7 +28,7 @@
  * @module physics
  */
 
-import { IVec3Like } from '../../core/math';
+import { IVec3Like } from '@cc/core/math';
 import { Collider } from './components/colliders/collider';
 
 /**

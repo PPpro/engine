@@ -36,18 +36,17 @@ import { DEBUG, EDITOR, BUILD, TEST } from 'internal:constants';
 import { SceneAsset } from './assets';
 import System from './components/system';
 import { CCObject } from './data/object';
-import { EventTarget } from './event';
+import { EventTarget } from '@cc/core/event';
 import { input } from '../input';
 import { game, Game } from './game';
-import { v2, Vec2 } from './math';
 import { Root } from './root';
 import { Node, Scene } from './scene-graph';
 import { ComponentScheduler } from './scene-graph/component-scheduler';
 import NodeActivator from './scene-graph/node-activator';
 import { Scheduler } from './scheduler';
 import { js } from './utils';
-import { legacyCC } from './global-exports';
-import { errorID, error, assertID, warnID } from './platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { errorID, error, assertID, warnID } from '@cc/core/debug';
 import { containerManager } from './memop/container-manager';
 
 // ----------------------------------------------------------------------------------------------------------------------

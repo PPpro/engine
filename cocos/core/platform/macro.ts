@@ -30,7 +30,7 @@
  * @module core
  */
 
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 const SUPPORT_TEXTURE_FORMATS = ['.astc', '.pkm', '.pvr', '.webp', '.jpg', '.jpeg', '.bmp', '.png'];
 

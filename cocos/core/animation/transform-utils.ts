@@ -28,7 +28,7 @@
  * @module animation
  */
 
-import { Mat4 } from '../math';
+import { Mat4 } from '@cc/core/math';
 import { Node } from '../scene-graph';
 
 const m4_1 = new Mat4();

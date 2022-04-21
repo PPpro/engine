@@ -37,7 +37,7 @@ import { Camera } from '../../core/renderer/scene/camera';
 import { RenderScene } from '../../core/renderer/scene/render-scene';
 import { Model } from '../../core/renderer/scene/model';
 import { Layers } from '../../core/scene-graph/layers';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Pass } from '../../core/renderer/core/pass';
 import { IBatcher } from './i-batcher';
 

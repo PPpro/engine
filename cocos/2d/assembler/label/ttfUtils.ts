@@ -31,12 +31,12 @@
 import { SpriteFrame } from '../../assets';
 import { Texture2D } from '../../../core/assets';
 import { fragmentText, safeMeasureText, getBaselineOffset, BASELINE_RATIO } from '../../utils/text-utils';
-import { Color, Size, Vec2, Rect } from '../../../core/math';
+import { Color, Size, Vec2, Rect } from '@cc/core/math';
 import { HorizontalTextAlignment, Label, LabelOutline, VerticalTextAlignment, LabelShadow } from '../../components';
 import { ISharedLabelData, LetterRenderTexture } from './font-utils';
-import { logID } from '../../../core/platform/debug';
+import { logID } from '@cc/core/debug';
 import { UITransform } from '../../framework/ui-transform';
-import { legacyCC } from '../../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { assetManager } from '../../../core/asset-manager';
 import { dynamicAtlasManager } from '../../utils/dynamic-atlas/atlas-manager';
 import { BlendFactor } from '../../../core/gfx';

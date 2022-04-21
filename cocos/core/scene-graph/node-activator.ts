@@ -33,8 +33,8 @@ import { CCObject, isValid } from '../data/object';
 import { array, Pool } from '../utils/js';
 import { tryCatchFunctor_EDITOR } from '../utils/misc';
 import { invokeOnEnable, createInvokeImpl, createInvokeImplJit, OneOffInvoker, LifeCycleInvoker } from './component-scheduler';
-import { legacyCC } from '../global-exports';
-import { assert, errorID, getError } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { assert, errorID, getError } from '@cc/core/debug';
 import { NodeEventType } from './node-event';
 import { assertIsTrue } from '../data/utils/asserts';
 

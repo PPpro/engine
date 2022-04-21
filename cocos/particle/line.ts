@@ -31,12 +31,12 @@
 import { ccclass, help, executeInEditMode, menu, tooltip, displayOrder, type, serializable, range } from 'cc.decorator';
 import { Material, Texture2D } from '../core/assets';
 import { Component } from '../core/components';
-import { Vec3, Vec2, Vec4 } from '../core/math';
+import { Vec3, Vec2, Vec4 } from '@cc/core/math';
 import { LineModel } from './models/line-model';
 import { builtinResMgr } from '../core/builtin';
 import CurveRange from './animator/curve-range';
 import GradientRange from './animator/gradient-range';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { IMaterialInstanceInfo, MaterialInstance } from '../core/renderer/core/material-instance';
 
 const _matInsInfo: IMaterialInstanceInfo = {

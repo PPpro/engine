@@ -1,4 +1,4 @@
-import { approx } from '../../core/math/utils';
+import { approx } from '@cc/core/math';
 
 /**
  * Removes keys which are linear interpolations of surrounding keys.

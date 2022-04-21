@@ -28,7 +28,7 @@
  * @module asset-manager
  */
 
-import { AudioPlayer } from 'pal/audio';
+import { AudioPlayer } from '@cc/pal/audio';
 import { AudioClip, AudioMeta } from './audio-clip';
 import { CompleteCallback, IDownloadParseOptions } from '../core/asset-manager/shared';
 import downloader from '../core/asset-manager/downloader';

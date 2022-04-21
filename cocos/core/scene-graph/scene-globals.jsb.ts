@@ -36,11 +36,11 @@ import {
     _assertThisInitialized,
     _initializerDefineProperty,
 } from '../data/utils/decorator-jsb-utils';
-import { legacyCC } from '../global-exports';
-import { Color, Vec2, Vec3 } from '../math';
+import { legacyCC } from '@cc/core/global';
+import { Color, Vec2, Vec3 } from '@cc/core/math';
 import { CCFloat, CCInteger } from '../data';
 import { TextureCube } from '../assets/texture-cube';
-import { Enum } from '../value-types';
+import { Enum } from '@cc/core/value-type';
 
 /**
  * @zh

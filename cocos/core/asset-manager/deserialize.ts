@@ -30,7 +30,7 @@ import { EDITOR } from 'internal:constants';
 import { Asset } from '../assets/asset';
 import MissingScript from '../components/missing-script';
 import { deserialize, Details } from '../data/deserialize';
-import { error } from '../platform/debug';
+import { error } from '@cc/core/debug';
 import { js } from '../utils/js';
 import { dependMap, nativeDependMap } from './depend-maps';
 import { decodeUuid } from './helper';

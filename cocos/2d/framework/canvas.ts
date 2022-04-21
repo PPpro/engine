@@ -34,10 +34,9 @@ import { ccclass, help, disallowMultiple, executeInEditMode,
 import { EDITOR } from 'internal:constants';
 import { Camera } from '../../core/components/camera-component';
 import { Widget } from '../../ui/widget';
-import { game } from '../../core/game';
-import { Vec3 } from '../../core/math';
+import { Vec3 } from '@cc/core/math';
 import { view } from '../../core/platform/view';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Enum } from '../../core/value-types/enum';
 import visibleRect from '../../core/platform/visible-rect';
 import { RenderRoot2D } from './render-root-2d';

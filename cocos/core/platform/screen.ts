@@ -29,10 +29,10 @@
  * @module core
  */
 
-import { ConfigOrientation, IScreenOptions, screenAdapter } from 'pal/screen-adapter';
-import { legacyCC } from '../global-exports';
-import { Size, Vec2 } from '../math';
-import { warnID } from './debug';
+import { IScreenOptions, screenAdapter } from '@cc/pal/screen-adapter';
+import { legacyCC } from '@cc/core/global';
+import { Size, Vec2 } from '@cc/core/math';
+import { warnID } from '@cc/core/debug';
 
 /**
  * @en The screen API provides an easy way to do some screen managing stuff.

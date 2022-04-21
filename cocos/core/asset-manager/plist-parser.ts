@@ -31,7 +31,7 @@
  */
 
 import { EDITOR } from 'internal:constants';
-import { warnID } from '../platform/debug';
+import { warnID } from '@cc/core/debug';
 
 /**
  * A SAX Parser

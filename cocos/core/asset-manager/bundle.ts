@@ -28,8 +28,8 @@
  */
 import { Asset } from '../assets/asset';
 import { SceneAsset } from '../assets/scene-asset';
-import { legacyCC } from '../global-exports';
-import { error, errorID } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { error, errorID } from '@cc/core/debug';
 import Config, { IAddressableInfo, IAssetInfo, IConfigOption, ISceneInfo } from './config';
 import releaseManager from './release-manager';
 import RequestItem from './request-item';

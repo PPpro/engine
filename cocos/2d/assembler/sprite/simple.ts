@@ -28,7 +28,7 @@
  * @module ui-assembler
  */
 
-import { Vec3 } from '../../../core/math';
+import { Vec3 } from '@cc/core/math';
 import { IAssembler } from '../../renderer/base';
 import { IRenderData, RenderData } from '../../renderer/render-data';
 import { IBatcher } from '../../renderer/i-batcher';

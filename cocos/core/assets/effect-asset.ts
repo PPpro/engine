@@ -37,7 +37,7 @@ import { RenderPassStage } from '../pipeline/define';
 import { MacroRecord } from '../renderer/core/pass-utils';
 import { programLib } from '../renderer/core/program-lib';
 import { Asset } from './asset';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export declare namespace EffectAsset {
     export interface IPropertyInfo {

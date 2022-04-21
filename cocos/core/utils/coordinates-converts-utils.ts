@@ -29,10 +29,10 @@
  */
 
 import { Camera } from '../components/camera-component';
-import { Vec3 } from '../math';
+import { Vec3 } from '@cc/core/math';
 import { Node } from '../scene-graph';
-import { replaceProperty } from './x-deprecated';
-import { legacyCC } from '../global-exports';
+import { replaceProperty } from '@cc/core/deprecate';
+import { legacyCC } from '@cc/core/global';
 
 const _vec3 = new Vec3();
 

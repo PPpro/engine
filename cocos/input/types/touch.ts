@@ -29,8 +29,8 @@
  * @module event
  */
 
-import { Vec2 } from '../../core/math';
-import { legacyCC } from '../../core/global-exports';
+import { Vec2 } from '@cc/core/math';
+import { legacyCC } from '@cc/core/global';
 
 const _vec2 = new Vec2();
 /**

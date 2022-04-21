@@ -30,7 +30,7 @@
 import { ccclass, help, executeInEditMode, menu, tooltip, type, displayOrder, serializable, formerlySerializedAs } from 'cc.decorator';
 import { scene } from '../../core/renderer';
 import { Light, PhotometricTerm } from './light-component';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Camera } from '../../core/renderer/scene';
 import { Root } from '../../core/root';
 

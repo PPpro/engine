@@ -24,7 +24,7 @@
  */
 
 import { DEV } from 'internal:constants';
-import { errorID } from '../../platform/debug';
+import { errorID } from '@cc/core/debug';
 
 /**
  * @zh

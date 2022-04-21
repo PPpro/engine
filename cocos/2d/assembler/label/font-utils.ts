@@ -29,13 +29,14 @@
  */
 
 import { FontAtlas } from '../../assets/bitmap-font';
-import { Color } from '../../../core/math';
+import { Color } from '@cc/core/math';
+import { warnID } from '@cc/core/debug';
 import { ImageAsset, Texture2D } from '../../../core/assets';
 import { PixelFormat } from '../../../core/assets/asset-enum';
 import { BufferTextureCopy } from '../../../core/gfx';
 import { safeMeasureText, BASELINE_RATIO, MIDDLE_RATIO, getBaselineOffset } from '../../utils/text-utils';
 import { director, Director } from '../../../core/director';
-import { macro, warnID } from '../../../core';
+import { macro } from '../../../core/platform/macro';
 
 export interface ISharedLabelData {
     canvas: HTMLCanvasElement;

@@ -28,7 +28,7 @@
  * @module animation
  */
 
-import { getError } from '../platform/debug';
+import { getError } from '@cc/core/debug';
 
 export class Playable {
     /**

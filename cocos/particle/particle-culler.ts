@@ -31,7 +31,7 @@ import { Node } from '../core/scene-graph/node';
 import { TransformBit } from '../core/scene-graph/node-enum';
 import { RenderMode, Space } from './enum';
 import { Color, Mat4, Material, pseudoRandom, Quat, randomRangeInt, RenderingSubMesh, Vec3, Vec4 } from '../core';
-import { INT_MAX } from '../core/math/bits';
+import { INT_MAX } from '@cc/core/math';
 import { particleEmitZAxis } from './particle-general-function';
 import { IParticleSystemRenderer } from './renderer/particle-system-renderer-base';
 import { Mesh } from '../3d';
@@ -40,7 +40,7 @@ import { scene } from '../core/renderer';
 import { BlendFactor } from '../core/gfx';
 import { Primitive } from '../primitive/primitive';
 import { Root } from '../core/root';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 const _node_mat = new Mat4();
 const _node_rol = new Quat();

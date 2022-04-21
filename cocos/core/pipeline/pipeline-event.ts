@@ -1,4 +1,4 @@
-import { EventTarget } from '../event/event-target';
+import { EventTarget } from '@cc/core/event';
 
 export enum PipelineEventType {
     /**

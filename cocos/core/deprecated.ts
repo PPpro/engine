@@ -28,10 +28,10 @@
  * @hidden
  */
 
-import { replaceProperty, removeProperty, markAsWarning } from './utils/x-deprecated';
-import * as math from './math';
+import { replaceProperty, removeProperty, markAsWarning } from '@cc/core/deprecate';
+import * as math from '@cc/core/math';
 import { Scheduler } from './scheduler';
-import { legacyCC } from './global-exports';
+import { legacyCC } from '@cc/core/global';
 import { SubModel } from './renderer/scene/submodel';
 import { Root } from './root';
 import { game } from './game';

@@ -1,5 +1,5 @@
 import { ccclass } from '../data/decorators';
-import { clamp } from '../math';
+import { clamp } from '@cc/core/math';
 import { KeyframeCurve } from './keyframe-curve';
 
 export type ObjectCurveKeyframe<T> = T;

@@ -24,7 +24,7 @@
  */
 
 import { ccclass, serializable } from 'cc.decorator';
-import { Vec3, Quat, Vec4, Vec2, Mat4 } from '../../math';
+import { Vec3, Quat, Vec4, Vec2, Mat4 } from '@cc/core/math';
 
 export enum StorageUnit {
     Uint8, Uint16, Uint32,

@@ -26,15 +26,14 @@ import { EDITOR } from 'internal:constants';
 import { Frustum, Ray } from '../../geometry';
 import { SurfaceTransform, ClearFlagBit, Device, Color, ClearFlags } from '../../gfx';
 import {
-    lerp, Mat4, Rect, toRadian, Vec3, IVec4Like,
-} from '../../math';
+    lerp, Mat4, Rect, toRadian, Vec3, IVec4Like, preTransforms
+} from '@cc/core/math';
 import { CAMERA_DEFAULT_MASK } from '../../pipeline/define';
 import { Node } from '../../scene-graph';
 import { RenderScene } from './render-scene';
-import { legacyCC } from '../../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { RenderWindow } from '../core/render-window';
-import { preTransforms } from '../../math/mat4';
-import { warnID } from '../../platform/debug';
+import { warnID } from '@cc/core/debug';
 import { GeometryRenderer } from '../../pipeline/geometry-renderer';
 
 export enum CameraFOVAxis {

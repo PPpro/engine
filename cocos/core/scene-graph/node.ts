@@ -34,9 +34,9 @@ import {
 import { EDITOR } from 'internal:constants';
 import { Layers } from './layers';
 import { NodeUIProperties } from './node-ui-properties';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { BaseNode, TRANSFORM_ON } from './base-node';
-import { Mat3, Mat4, Quat, Vec3 } from '../math';
+import { Mat3, Mat4, Quat, Vec3 } from '@cc/core/math';
 import { NodeSpace, TransformBit } from './node-enum';
 import { NodeEventType } from './node-event';
 import { CustomSerializable, editorExtrasTag, SerializationContext, SerializationOutput, serializeTag } from '../data';

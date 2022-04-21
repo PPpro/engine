@@ -30,10 +30,10 @@
 
 import { ccclass, range, slide, type, editable, displayOrder, help, executeInEditMode,
     menu, tooltip, serializable, formerlySerializedAs, visible } from 'cc.decorator';
-import { toRadian } from '../../core/math';
+import { toRadian } from '@cc/core/math';
 import { scene } from '../../core/renderer';
 import { Light, PhotometricTerm } from './light-component';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Root } from '../../core/root';
 import { Camera, PCFType, ShadowType } from '../../core/renderer/scene';
 import { property } from '../../core/data/class-decorator';

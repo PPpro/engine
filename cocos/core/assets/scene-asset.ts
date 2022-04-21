@@ -32,7 +32,7 @@
 import { ccclass, editable, serializable } from 'cc.decorator';
 import { Scene } from '../scene-graph';
 import { Asset } from './asset';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @en Class for scene loading.

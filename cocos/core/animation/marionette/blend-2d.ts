@@ -1,5 +1,5 @@
 import { assertIsTrue } from '../../data/utils/asserts';
-import { Vec2, Vec3, clamp } from '../../math';
+import { Vec2, Vec3, clamp } from '@cc/core/math';
 
 /**
  * Blends given samples using simple directional algorithm.

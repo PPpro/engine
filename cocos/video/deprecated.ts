@@ -27,7 +27,7 @@
  * @packageDocumentation
  * @hidden
  */
-import { replaceProperty } from '../core/utils/x-deprecated';
+import { replaceProperty } from '@cc/core/deprecate';
 import { VideoPlayer } from './video-player';
 
 replaceProperty(VideoPlayer.prototype, 'VideoPlayer.prototype', [

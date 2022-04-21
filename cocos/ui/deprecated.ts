@@ -42,10 +42,10 @@ import { Widget } from './widget';
 import { PageView } from './page-view';
 import { PageViewIndicator } from './page-view-indicator';
 import { SafeArea } from './safe-area';
-import { warnID } from '../core/platform/debug';
+import { warnID } from '@cc/core/debug';
 import { ccclass } from '../core/data/class-decorator';
 import { js } from '../core/utils/js';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @deprecated Since v1.2

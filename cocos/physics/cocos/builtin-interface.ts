@@ -28,8 +28,7 @@
  * @hidden
  */
 
-import { Mat4, Quat, Vec3 } from '../../core/math';
-import { IVec3Like, IQuatLike } from '../../core/math/type-define';
+import { Mat4, IVec3Like, IQuatLike, Vec3 } from '@cc/core/math';
 
 /**
  * declare interface

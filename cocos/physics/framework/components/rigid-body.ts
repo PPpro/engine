@@ -44,7 +44,7 @@ import {
     serializable,
 } from 'cc.decorator';
 import { DEBUG } from 'internal:constants';
-import { Vec3 } from '../../../core/math';
+import { Vec3 } from '@cc/core/math';
 import { Component, error, warn } from '../../../core';
 import { IRigidBody } from '../../spec/i-rigid-body';
 import { selector, createRigidBody } from '../physics-selector';

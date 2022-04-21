@@ -29,7 +29,7 @@
  */
 
 import { ccclass, displayOrder, serializable } from 'cc.decorator';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { RenderPipeline } from './render-pipeline';
 import { RenderFlow } from './render-flow';
 import { RenderQueueDesc } from './pipeline-serialization';

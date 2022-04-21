@@ -40,7 +40,7 @@ import { DataPoolManager } from '../skeletal-animation/data-pool-manager';
 import { ModelType } from '../../core/renderer/scene/model';
 import { IAnimInfo, IJointTextureHandle, jointTextureSamplerInfo } from '../skeletal-animation/skeletal-animation-utils';
 import { MorphModel } from './morph-model';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 interface IJointsInfo {
     buffer: Buffer | null;

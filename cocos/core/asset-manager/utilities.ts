@@ -28,8 +28,8 @@
  */
 import { EDITOR } from 'internal:constants';
 import { Asset, Prefab, SceneAsset } from '../assets';
-import { legacyCC } from '../global-exports';
-import { error } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { error } from '@cc/core/debug';
 import { js } from '../utils/js';
 import { callInNextTick } from '../utils/misc';
 import Config from './config';

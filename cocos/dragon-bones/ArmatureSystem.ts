@@ -1,7 +1,7 @@
 import { director } from '../core/director';
 import { System } from '../core/components';
 import { ArmatureDisplay } from './ArmatureDisplay';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { errorID } from '../core';
 
 export class ArmatureSystem extends System {

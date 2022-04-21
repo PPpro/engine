@@ -33,7 +33,7 @@ import { ccclass, help, executeInEditMode, executionOrder, menu, tooltip, visibl
 import { Texture2D } from '../../core/assets';
 import { Material } from '../../core/assets/material';
 import { Mesh } from '../assets/mesh';
-import { Vec4 } from '../../core/math';
+import { Vec4 } from '@cc/core/math';
 import { scene } from '../../core/renderer';
 import { MorphModel } from '../models/morph-model';
 import { Root } from '../../core/root';
@@ -42,7 +42,7 @@ import { Enum } from '../../core/value-types';
 import { builtinResMgr } from '../../core/builtin';
 import { RenderableComponent } from '../../core/components/renderable-component';
 import { MorphRenderingInstance } from '../assets/morph';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { assertIsTrue } from '../../core/data/utils/asserts';
 import { CCFloat } from '../../core/data/utils/attribute';
 import { property } from '../../core/data/class-decorator';

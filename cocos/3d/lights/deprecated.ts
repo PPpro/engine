@@ -32,9 +32,9 @@ import { Light } from './light-component';
 import { SpotLight } from './spot-light-component';
 import { SphereLight } from './sphere-light-component';
 import { DirectionalLight } from './directional-light-component';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { js } from '../../core/utils/js';
-import { replaceProperty } from '../../core/utils/x-deprecated';
+import { replaceProperty } from '@cc/core/deprecate';
 
 /**
  * Alias of [[Light]]

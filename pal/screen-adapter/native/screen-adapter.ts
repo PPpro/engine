@@ -1,7 +1,6 @@
-import { ConfigOrientation, IScreenOptions, SafeAreaEdge } from 'pal/screen-adapter';
-import { EventTarget } from '../../../cocos/core/event/event-target';
-import { Size } from '../../../cocos/core/math';
-import { Orientation } from '../enum-type';
+import { Orientation, IScreenOptions, SafeAreaEdge } from '@cc/pal/screen-adapter';
+import { EventTarget } from '@cc/core/event';
+import { Size } from '@cc/core/math';
 
 // these value is defined in the native layer
 const orientationMap: Record<string, Orientation> = {

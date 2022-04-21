@@ -31,7 +31,7 @@
 
 import { TEST } from 'internal:constants';
 import { BASE64_VALUES } from './misc';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 const HexChars = '0123456789abcdef'.split('');
 

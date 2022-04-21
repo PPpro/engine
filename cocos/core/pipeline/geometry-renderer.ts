@@ -24,18 +24,18 @@
  */
 
 import { AABB } from '../geometry/aabb';
-import { Color } from '../math/color';
-import { Mat4 } from '../math/mat4';
-import { Vec3 } from '../math/vec3';
-import { Vec4 } from '../math/vec4';
+import { Color } from '@cc/core/math';
+import { Mat4 } from '@cc/core/math';
+import { Vec3 } from '@cc/core/math';
+import { Vec4 } from '@cc/core/math';
 import { SetIndex } from './define';
 import { PipelineStateManager } from './pipeline-state-manager';
 import { Attribute, AttributeName, Buffer, BufferInfo, BufferUsageBit,
     CommandBuffer, Device, DrawInfo, Format, InputAssembler,
     InputAssemblerInfo, MemoryUsageBit, RenderPass } from '../gfx';
-import { warnID } from '../platform/debug';
+import { warnID } from '@cc/core/debug';
 import { Frustum } from '../geometry/frustum';
-import { toRadian } from '../math/utils';
+import { toRadian } from '@cc/core/math';
 import { Camera } from '../renderer/scene/camera';
 import { PipelineSceneData } from './pipeline-scene-data';
 

@@ -26,7 +26,7 @@
  * @packageDocumentation
  * @hidden
  */
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { js, path } from '../utils';
 import Config, { IAddressableInfo, IAssetInfo } from './config';
 import { decodeUuid } from './helper';

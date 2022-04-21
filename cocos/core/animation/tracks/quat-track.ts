@@ -2,7 +2,7 @@ import { ccclass } from 'cc.decorator';
 import { QuatCurve } from '../../curves';
 import { CLASS_NAME_PREFIX_ANIM, createEvalSymbol } from '../define';
 import { SingleChannelTrack } from './track';
-import { Quat } from '../../math';
+import { Quat } from '@cc/core/math';
 
 @ccclass(`${CLASS_NAME_PREFIX_ANIM}QuatTrack`)
 export class QuatTrack extends SingleChannelTrack<QuatCurve> {

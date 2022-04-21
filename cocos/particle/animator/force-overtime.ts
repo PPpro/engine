@@ -29,7 +29,7 @@
  */
 
 import { ccclass, tooltip, displayOrder, range, type, serializable } from 'cc.decorator';
-import { pseudoRandom, Quat, Vec3 } from '../../core/math';
+import { pseudoRandom, Quat, Vec3 } from '@cc/core/math';
 import { Space, ModuleRandSeed } from '../enum';
 import { calculateTransform } from '../particle-general-function';
 import CurveRange from './curve-range';

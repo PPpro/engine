@@ -37,8 +37,8 @@ import { Type } from '../../gfx';
 import { Pass } from '../../renderer/core/pass';
 import { getDefaultFromType } from '../../renderer/core/pass-utils';
 import { IValueProxy, IValueProxyFactory } from '../value-proxy';
-import { warn } from '../../platform/debug';
-import { legacyCC } from '../../global-exports';
+import { warn } from '@cc/core/debug';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @en

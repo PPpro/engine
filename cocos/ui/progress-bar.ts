@@ -32,12 +32,12 @@
 import { ccclass, help, executionOrder, menu, requireComponent, tooltip, type, range, slide, serializable } from 'cc.decorator';
 import { Component } from '../core/components/component';
 import { UITransform } from '../2d/framework';
-import { Size, Vec2, Vec3 } from '../core/math';
+import { Size, Vec2, Vec3 } from '@cc/core/math';
 import { Enum } from '../core/value-types';
-import { clamp01 } from '../core/math/utils';
+import { clamp01 } from '@cc/core/math';
 import { Sprite } from '../2d/components/sprite';
-import { warn } from '../core/platform/debug';
-import { legacyCC } from '../core/global-exports';
+import { warn } from '@cc/core/debug';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @en

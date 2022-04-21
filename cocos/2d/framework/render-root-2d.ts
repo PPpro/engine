@@ -31,7 +31,7 @@
 import { ccclass, disallowMultiple, executeInEditMode,
     executionOrder, menu, requireComponent } from 'cc.decorator';
 import { Component } from '../../core/components/component';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { UITransform } from './ui-transform';
 
 @ccclass('cc.RenderRoot2D')

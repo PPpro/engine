@@ -29,7 +29,7 @@
  */
 import { DataPoolManager } from './data-pool-manager';
 import type { AnimationClip } from '../../core/animation/animation-clip';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { BAKE_SKELETON_CURVE_SYMBOL } from '../../core/animation/internal-symbols';
 
 type BakeData = ReturnType<AnimationClip[typeof BAKE_SKELETON_CURVE_SYMBOL]>;

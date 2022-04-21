@@ -1,4 +1,4 @@
-import { replaceProperty } from '../utils/x-deprecated';
+import { replaceProperty } from '@cc/core/deprecate';
 
 import intersect from './intersect';
 import { Line } from './line';

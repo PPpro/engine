@@ -30,12 +30,12 @@ import { TextureCube } from '../../assets/texture-cube';
 import { UNIFORM_ENVIRONMENT_BINDING, UNIFORM_DIFFUSEMAP_BINDING } from '../../pipeline/define';
 import { MaterialInstance } from '../core/material-instance';
 import { Model } from './model';
-import { legacyCC } from '../../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { SkyboxInfo } from '../../scene-graph/scene-globals';
 import { Root } from '../../root';
 import { GlobalDSManager } from '../../pipeline/global-descriptor-set-manager';
 import { Device } from '../../gfx';
-import { Enum } from '../../value-types';
+import { Enum } from '@cc/core/value-type';
 
 let skybox_mesh: Mesh | null = null;
 let skybox_material: Material | null = null;

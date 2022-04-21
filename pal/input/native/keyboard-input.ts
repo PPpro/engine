@@ -1,7 +1,6 @@
-import { KeyboardCallback } from 'pal/input';
-import { systemInfo } from 'pal/system-info';
+import { KeyboardCallback } from '@cc/pal/input';
 import { KeyCode, EventKeyboard } from '../../../cocos/input/types';
-import { EventTarget } from '../../../cocos/core/event';
+import { EventTarget } from '@cc/core/event';
 import { InputEventType } from '../../../cocos/input/types/event-enum';
 
 const nativeKeyCode2KeyCode: Record<number, KeyCode> = {

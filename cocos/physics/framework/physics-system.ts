@@ -29,7 +29,7 @@
  */
 
 import { EDITOR } from 'internal:constants';
-import { Vec3 } from '../../core/math';
+import { Vec3 } from '@cc/core/math';
 import { IRaycastOptions } from '../spec/i-physics-world';
 import { director, Director } from '../../core/director';
 import { System } from '../../core/components';
@@ -41,7 +41,7 @@ import { IPhysicsConfig, ICollisionMatrix } from './physics-config';
 import { CollisionMatrix } from './collision-matrix';
 import { PhysicsGroup } from './physics-enum';
 import { constructDefaultWorld, IWorldInitData, selector } from './physics-selector';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 legacyCC.internal.PhysicsGroup = PhysicsGroup;
 

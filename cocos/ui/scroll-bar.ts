@@ -32,13 +32,13 @@
 import { ccclass, help, executionOrder, menu, requireComponent, tooltip, displayOrder, type, serializable } from 'cc.decorator';
 import { Component } from '../core/components/component';
 import { UITransform } from '../2d/framework';
-import { Color, Size, Vec2, Vec3 } from '../core/math';
+import { Color, Size, Vec2, Vec3 } from '@cc/core/math';
 import { ccenum } from '../core/value-types/enum';
-import { clamp01 } from '../core/math/utils';
+import { clamp01 } from '@cc/core/math';
 import { ScrollView } from './scroll-view';
 import { Sprite } from '../2d/components/sprite';
 import { Node } from '../core';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 const GETTING_SHORTER_FACTOR = 20;
 const _tempPos_1 = new Vec3();

@@ -24,7 +24,7 @@
  */
 import { BUILD, EDITOR, PREVIEW } from 'internal:constants';
 import { Asset, SceneAsset } from '../assets';
-import { error, warn } from '../platform/debug';
+import { error, warn } from '@cc/core/debug';
 import packManager from './pack-manager';
 import parser from './parser';
 import { Pipeline } from './pipeline';
@@ -32,7 +32,7 @@ import RequestItem from './request-item';
 import { CompleteCallbackNoData, assets, files, parsed, pipeline } from './shared';
 import Task from './task';
 import { cache, checkCircleReference, clear, forEach, gatherAsset, getDepends, setProperties } from './utilities';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { nativeDependMap, onLoadedInvokedMap } from './depend-maps';
 
 /**

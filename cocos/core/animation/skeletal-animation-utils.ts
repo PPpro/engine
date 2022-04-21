@@ -28,8 +28,7 @@
  * @hidden
  */
 
-import { EDITOR } from 'internal:constants';
-import { Mat4 } from '../math';
+import { Mat4 } from '@cc/core/math';
 import { Node } from '../scene-graph/node';
 
 const stack: IJointTransform[] = [];

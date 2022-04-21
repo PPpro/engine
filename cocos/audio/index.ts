@@ -31,7 +31,7 @@ THE SOFTWARE.
 import './audio-downloader';
 
 import { AudioSource } from './audio-source';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { js } from '../core/utils/js';
 import './deprecated';
 

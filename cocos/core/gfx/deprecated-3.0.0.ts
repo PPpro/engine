@@ -27,8 +27,8 @@
  * @hidden
  */
 
-import { replaceProperty, removeProperty } from '../utils/x-deprecated';
-import { legacyCC } from '../global-exports';
+import { replaceProperty, removeProperty } from '@cc/core/deprecate';
+import { legacyCC } from '@cc/core/global';
 
 // Deprecated CC polyfill
 const polyfills = {

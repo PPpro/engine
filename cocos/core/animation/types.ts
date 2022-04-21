@@ -28,7 +28,7 @@
  * @module animation
  */
 
-import { ccenum } from '../value-types/enum';
+import { ccenum } from '@cc/core/value-type';
 
 export enum WrapModeMask {
     Default = 0,

@@ -29,7 +29,7 @@
  */
 
 import { AttributeName, Format, FormatInfos, Attribute } from '../../core/gfx';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export const vfmt = [
     new Attribute(AttributeName.ATTR_POSITION, Format.RGB32F),

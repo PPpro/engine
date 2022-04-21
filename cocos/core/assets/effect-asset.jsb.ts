@@ -24,7 +24,7 @@
 */
 
 import { ccclass, editable, editorOnly, serializable } from 'cc.decorator';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import {
     _applyDecoratedDescriptor,
     _assertThisInitialized,

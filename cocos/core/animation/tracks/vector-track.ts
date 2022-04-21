@@ -1,6 +1,6 @@
 import { ccclass, serializable } from 'cc.decorator';
 import { RealCurve } from '../../curves';
-import { Vec2, Vec3, Vec4 } from '../../math';
+import { Vec2, Vec3, Vec4 } from '@cc/core/math';
 import { CLASS_NAME_PREFIX_ANIM, createEvalSymbol } from '../define';
 import { Channel, RealChannel, RuntimeBinding, Track } from './track';
 import { maskIfEmpty } from './utils';

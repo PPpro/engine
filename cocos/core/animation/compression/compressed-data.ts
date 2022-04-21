@@ -1,7 +1,7 @@
 import { QuatCurve, RealCurve } from '../../curves';
 import { KeySharedQuatCurves, KeySharedRealCurves } from '../../curves/keys-shared-curves';
 import { ccclass, serializable } from '../../data/decorators';
-import { Quat, Vec2, Vec3, Vec4 } from '../../math';
+import { Quat, Vec2, Vec3, Vec4 } from '@cc/core/math';
 import { CLASS_NAME_PREFIX_ANIM } from '../define';
 import { QuatTrack } from '../tracks/quat-track';
 import { RealTrack } from '../tracks/real-track';

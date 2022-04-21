@@ -29,13 +29,12 @@
  */
 
 import CANNON from '@cocos/cannon';
-import { Vec3 } from '../../core/math';
+import { IVec3Like, Vec3 } from '@cc/core/math';
 import { IRigidBody } from '../spec/i-rigid-body';
 import { CannonSharedBody } from './cannon-shared-body';
 import { CannonWorld } from './cannon-world';
 import { PhysicsSystem } from '../framework/physics-system';
 import { ERigidBodyType, RigidBody } from '../framework';
-import { IVec3Like } from '../../core/math/type-define';
 
 const v3_cannon0 = new CANNON.Vec3();
 const v3_cannon1 = new CANNON.Vec3();

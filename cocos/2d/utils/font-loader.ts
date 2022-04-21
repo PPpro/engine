@@ -28,7 +28,7 @@
  * @hidden
  */
 
-import { warnID } from '../../core/platform/debug';
+import { warnID } from '@cc/core/debug';
 import { safeMeasureText } from './text-utils';
 import { CompleteCallback, IDownloadParseOptions } from '../../core/asset-manager/shared';
 import downloader from '../../core/asset-manager/downloader';

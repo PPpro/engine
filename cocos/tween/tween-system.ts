@@ -31,7 +31,7 @@
 import { EDITOR } from 'internal:constants';
 import { System, Director, director } from '../core';
 import { ActionManager } from './actions/action-manager';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @en

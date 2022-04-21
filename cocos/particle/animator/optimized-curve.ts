@@ -29,7 +29,7 @@
  * @hidden
  */
 
-import { repeat } from '../../core/math';
+import { repeat } from '@cc/core/math';
 import { AnimationCurve, evalOptCurve, OptimizedKey } from '../../core/geometry/curve';
 
 

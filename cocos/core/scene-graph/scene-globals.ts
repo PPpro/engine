@@ -28,14 +28,14 @@ import { ccclass, visible, type, displayOrder, readOnly, slide, range, rangeStep
 import { BAIDU, EDITOR } from 'internal:constants';
 import { TextureCube } from '../assets/texture-cube';
 import { CCFloat, CCBoolean, CCInteger } from '../data/utils/attribute';
-import { Color, Quat, Vec3, Vec2, Vec4 } from '../math';
+import { Color, Quat, Vec3, Vec2, Vec4 } from '@cc/core/math';
 import { Ambient } from '../renderer/scene/ambient';
 import { Shadows, ShadowType, PCFType, ShadowSize } from '../renderer/scene/shadows';
 import { Skybox, EnvironmentLightingType } from '../renderer/scene/skybox';
 import { Octree } from '../renderer/scene/octree';
 import { Fog, FogType } from '../renderer/scene/fog';
 import { Node } from './node';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Root } from '../root';
 
 const _up = new Vec3(0, 1, 0);

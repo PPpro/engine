@@ -1,8 +1,4 @@
-
-import { assertIsTrue } from '../../data/utils/asserts';
-import { Quat } from '../../math/quat';
-import { clamp } from '../../math/utils';
-import { Vec3 } from '../../math/vec3';
+import { Quat, Vec3 } from '@cc/core/math';
 import { Node } from '../../scene-graph/node';
 
 const THETA_ERROR = 0.001;

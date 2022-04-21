@@ -32,7 +32,7 @@ import {
     ccclass, executeInEditMode, executionOrder, help, menu, tooltip, type, serializable, editable,
 } from 'cc.decorator';
 import { SkinnedMeshRenderer } from '../skinned-mesh-renderer';
-import { Mat4 } from '../../core/math';
+import { Mat4 } from '@cc/core/math';
 import { DataPoolManager } from './data-pool-manager';
 import { Node } from '../../core/scene-graph/node';
 import { AnimationClip } from '../../core/animation/animation-clip';
@@ -40,7 +40,7 @@ import { Animation } from '../../core/animation/animation-component';
 import { SkelAnimDataHub } from './skeletal-animation-data-hub';
 import { SkeletalAnimationState } from './skeletal-animation-state';
 import { getWorldTransformUntilRoot } from '../../core/animation/transform-utils';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { AnimationManager } from '../../core/animation/animation-manager';
 import { js } from '../../core/utils/js';
 import type { AnimationState } from '../../core/animation/animation-state';

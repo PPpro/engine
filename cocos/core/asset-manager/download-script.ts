@@ -26,7 +26,7 @@
  * @packageDocumentation
  * @hidden
  */
-import { getError } from '../platform/debug';
+import { getError } from '@cc/core/debug';
 import { CompleteCallback, IBundleOptions } from './shared';
 
 const downloaded = {};

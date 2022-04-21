@@ -1,4 +1,4 @@
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Skeleton } from '../assets/skeleton';
 import { AABB } from '../../core/geometry';
 import { Mesh } from '../assets/mesh';

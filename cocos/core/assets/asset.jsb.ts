@@ -28,9 +28,9 @@ import {
     _assertThisInitialized,
     _initializerDefineProperty,
 } from '../data/utils/decorator-jsb-utils';
-import { legacyCC } from '../global-exports';
-import { CallbacksInvoker } from '../event/callbacks-invoker';
-import { applyMixins } from '../event/event-target-factory';
+import { legacyCC } from '@cc/core/global';
+import { CallbacksInvoker } from '@cc/core/event';
+import { applyMixins } from '@cc/core/event';
 import { createMap } from '../utils/js-typed';
 import { property } from '../data/class-decorator';
 import { getUrlWithUuid } from '../asset-manager/helper';

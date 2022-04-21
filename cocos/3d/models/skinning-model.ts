@@ -34,7 +34,7 @@ import { Mesh } from '../assets/mesh';
 import { Skeleton } from '../assets/skeleton';
 import { AABB } from '../../core/geometry';
 import { BufferUsageBit, MemoryUsageBit, DescriptorSet, Buffer, BufferInfo, Attribute } from '../../core/gfx';
-import { Mat4, Vec3 } from '../../core/math';
+import { Mat4, Vec3 } from '@cc/core/math';
 import { UBOSkinning } from '../../core/pipeline/define';
 import { Node } from '../../core/scene-graph/node';
 import { ModelType } from '../../core/renderer/scene/model';
@@ -43,7 +43,7 @@ import { MorphModel } from './morph-model';
 import { deleteTransform, getTransform, getWorldMatrix, IJointTransform } from '../../core/animation/skeletal-animation-utils';
 import { IMacroPatch, BatchingSchemes, Pass } from '../../core/renderer';
 
-import { warnID } from '../../core/platform/debug';
+import { warnID } from '@cc/core/debug';
 
 const myPatches: IMacroPatch[] = [
     { name: 'CC_USE_SKINNING', value: true },

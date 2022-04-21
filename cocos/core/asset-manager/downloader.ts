@@ -37,7 +37,7 @@ import downloadFile from './download-file';
 import downloadScript from './download-script';
 import { CompleteCallback, CompleteCallbackNoData, IBundleOptions, IDownloadParseOptions, files } from './shared';
 import { retry, RetryFunction, urlAppendTimestamp } from './utilities';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { IConfigOption } from './config';
 import { CCON, parseCCONJson, decodeCCONBinary } from '../data/ccon';
 

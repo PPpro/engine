@@ -28,7 +28,7 @@
  * @module animation
  */
 import { js } from '../../core/utils/js';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { SkeletalAnimation } from './skeletal-animation';
 /**
  * Alias of [[SkeletalAnimation]]

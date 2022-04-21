@@ -32,7 +32,7 @@
 import { ccclass, serializable, editable } from '../core/data/decorators';
 import { Asset } from '../core/assets/asset';
 import { SpriteFrame } from '../2d/assets/sprite-frame';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * Class for particle asset handling.

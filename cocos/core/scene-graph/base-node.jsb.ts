@@ -25,7 +25,7 @@
 
 import { ccclass, editable, serializable } from 'cc.decorator';
 import { property } from '../data/decorators/property';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { _applyDecoratedDescriptor } from '../data/utils/decorator-jsb-utils';
 import { baseNodePolyfill } from './base-node-dev';
 const baseNodeProto: any = jsb.BaseNode.prototype;

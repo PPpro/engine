@@ -33,7 +33,7 @@ import { ccclass, help, executionOrder, menu, tooltip, type, visible, override, 
 import { builtinResMgr } from '../../core/builtin';
 import { InstanceMaterialType, Renderable2D } from '../framework/renderable-2d';
 import { director } from '../../core/director';
-import { Color } from '../../core/math';
+import { Color } from '@cc/core/math';
 import { scene } from '../../core/renderer';
 import { IAssembler } from '../renderer/base';
 import { IBatcher } from '../renderer/i-batcher';
@@ -42,8 +42,8 @@ import { Impl } from '../assembler/graphics/webgl/impl';
 import { RenderingSubMesh } from '../../core/assets';
 import { Format, PrimitiveMode, Attribute, Device, BufferUsageBit, BufferInfo, MemoryUsageBit } from '../../core/gfx';
 import { vfmtPosColor, getAttributeStride, getComponentPerVertex } from '../renderer/vertex-format';
-import { legacyCC } from '../../core/global-exports';
-import { warnID } from '../../core/platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { warnID } from '@cc/core/debug';
 
 const attributes = vfmtPosColor.concat([
     new Attribute('a_dist', Format.R32F),

@@ -26,14 +26,14 @@ import {
     _initializerDefineProperty,
 } from '../data/utils/decorator-jsb-utils';
 
-import { legacyCC } from '../global-exports';
-import { errorID, getError } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { errorID, getError } from '@cc/core/debug';
 import { Component } from '../components/component';
 import { NodeEventType } from './node-event';
 import { CCObject } from '../data/object';
 import { NodeUIProperties } from './node-ui-properties';
 import { NodeSpace, TransformBit } from './node-enum';
-import { Mat4, Quat, Vec3 } from '../math';
+import { Mat4, Quat, Vec3 } from '@cc/core/math';
 import { NodeEventProcessor } from './node-event-processor';
 import { Layers } from './layers';
 import { SerializationContext, SerializationOutput, serializeTag } from '../data';

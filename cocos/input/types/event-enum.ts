@@ -27,7 +27,7 @@
  * @packageDocumentation
  * @module event
  */
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { NodeEventType } from '../../core/scene-graph/node-event';
 
 /**

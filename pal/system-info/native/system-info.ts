@@ -1,7 +1,6 @@
-import { IFeatureMap } from 'pal/system-info';
-import { EventTarget } from '../../../cocos/core/event';
-import { SplashScreen } from '../../../cocos/core/splash-screen';
-import legacyCC from '../../../predefine';
+import { IFeatureMap } from '@cc/pal/system-info';
+import { EventTarget } from '@cc/core/event';
+import legacyCC from '@cc/core/global';
 import { BrowserType, NetworkType, OS, Platform, Language, Feature } from '../enum-type';
 
 const networkTypeMap: Record<string, NetworkType> = {

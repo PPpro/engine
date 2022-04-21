@@ -31,8 +31,8 @@
 import { EDITOR, DEV, TEST } from 'internal:constants';
 import { CCObject } from '../data/object';
 import * as js from '../utils/js';
-import { legacyCC } from '../global-exports';
-import { error, errorID, getError } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { error, errorID, getError } from '@cc/core/debug';
 import { Component } from '../components';
 
 const Destroying = CCObject.Flags.Destroying;

@@ -28,8 +28,8 @@
  */
 import { BUILD, EDITOR, PREVIEW } from 'internal:constants';
 import { Asset } from '../assets/asset';
-import { legacyCC } from '../global-exports';
-import { error } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { error } from '@cc/core/debug';
 import { sys } from '../platform/sys';
 import { basename, extname } from '../utils/path';
 import Bundle from './bundle';

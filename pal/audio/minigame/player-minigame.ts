@@ -1,8 +1,8 @@
-import { minigame } from 'pal/minigame';
-import { systemInfo } from 'pal/system-info';
-import { EventTarget } from '../../../cocos/core/event';
+import { minigame } from '@cc/pal/minigame';
+import { systemInfo } from '@cc/pal/system-info';
+import { EventTarget } from '@cc/core/event';
 import { AudioEvent, AudioState, AudioType } from '../type';
-import { clamp, clamp01 } from '../../../cocos/core';
+import { clamp, clamp01 } from '@cc/core/math';
 import { enqueueOperation, OperationInfo, OperationQueueable } from '../operation-queue';
 import AudioTimer from '../audio-timer';
 

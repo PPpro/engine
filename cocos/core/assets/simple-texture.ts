@@ -31,11 +31,11 @@
 import { ccclass } from 'cc.decorator';
 import { DEV } from 'internal:constants';
 import { TextureFlagBit, TextureUsageBit, API, Texture, TextureInfo, Device, BufferTextureCopy } from '../gfx';
-import { error } from '../platform/debug';
+import { error } from '@cc/core/debug';
 import { Filter } from './asset-enum';
 import { ImageAsset } from './image-asset';
 import { TextureBase } from './texture-base';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { macro } from '../platform/macro';
 import dependUtil from '../asset-manager/depend-util';
 import { fastRemoveAt } from '../utils/array';

@@ -31,14 +31,14 @@
 import { ccclass, serializable } from 'cc.decorator';
 import { Asset } from '../assets/asset';
 import { SpriteFrame } from '../../2d/assets/sprite-frame';
-import { error, errorID, getError, warn, warnID } from '../platform/debug';
+import { error, errorID, getError, warn, warnID } from '@cc/core/debug';
 import { DataPoolManager } from '../../3d/skeletal-animation/data-pool-manager';
 import { binarySearchEpsilon } from '../algorithm/binary-search';
 import { murmurhash2_32_gc } from '../utils/murmurhash2_gc';
 import { SkelAnimDataHub } from '../../3d/skeletal-animation/skeletal-animation-data-hub';
 import { WrapMode as AnimationWrapMode, WrapMode, WrapModeMask } from './types';
-import { legacyCC } from '../global-exports';
-import { Mat4, Quat, Vec3 } from '../math';
+import { legacyCC } from '@cc/core/global';
+import { Mat4, Quat, Vec3 } from '@cc/core/math';
 import { Node } from '../scene-graph/node';
 import { assertIsTrue } from '../data/utils/asserts';
 import type { PoseOutput } from './pose-output';

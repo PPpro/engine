@@ -45,7 +45,7 @@
 
 import { ccclass, executionOrder } from 'cc.decorator';
 import { Component } from '../core/components';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 @ccclass('cc.ViewGroup')
 @executionOrder(110)

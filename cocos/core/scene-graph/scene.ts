@@ -31,11 +31,11 @@
 import { ccclass, serializable, editable } from 'cc.decorator';
 import { EDITOR, TEST } from 'internal:constants';
 import { CCObject } from '../data/object';
-import { Mat4, Quat, Vec3 } from '../math';
-import { assert, getError } from '../platform/debug';
+import { Mat4, Quat, Vec3 } from '@cc/core/math';
+import { assert, getError } from '@cc/core/debug';
 import { RenderScene } from '../renderer/scene/render-scene';
 import { BaseNode } from './base-node';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Component } from '../components/component';
 import { SceneGlobals } from './scene-globals';
 import { applyTargetOverrides, expandNestedPrefabInstanceNode } from '../utils/prefab/utils';

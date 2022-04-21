@@ -10,7 +10,7 @@ import { IBoxShape, ICircleShape, IPolygonShape, IBaseShape } from '../spec/i-ph
 import { IPhysicsWorld } from '../spec/i-physics-world';
 import { errorID, warnID, warn } from '../../core';
 import { ECollider2DType, EJoint2DType  } from './physics-types';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { IJoint2D, IDistanceJoint, ISpringJoint, IFixedJoint, IMouseJoint, IRelativeJoint, ISliderJoint, IWheelJoint, IHingeJoint } from '../spec/i-physics-joint';
 
 const FUNC = (...v: any) => 0 as any;

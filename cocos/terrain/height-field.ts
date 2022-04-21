@@ -28,7 +28,7 @@
  * @module terrain
  */
 
-import { clamp } from '../core/math';
+import { clamp } from '@cc/core/math';
 
 export class HeightField {
     public data: Uint16Array = new Uint16Array();

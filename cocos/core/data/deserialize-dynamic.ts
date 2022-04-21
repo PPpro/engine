@@ -29,16 +29,16 @@
  */
 
 import { EDITOR, TEST, DEV, DEBUG, JSB, PREVIEW, SUPPORT_JIT } from 'internal:constants';
-import { legacyCC } from '../global-exports';
+import { Platform } from '@cc/pal/system-info';
+import { legacyCC } from '@cc/core/global';
 import * as js from '../utils/js';
 import * as misc from '../utils/misc';
 import { CCClass } from './class';
 import * as Attr from './utils/attribute';
 import MissingScript from '../components/missing-script';
 import { Details } from './deserialize';
-import { Platform } from '../../../pal/system-info/enum-type';
 import { sys } from '../platform/sys';
-import { error } from '../platform/debug';
+import { error } from '@cc/core/debug';
 import { CustomSerializable, DeserializationContext, deserializeTag, SerializationContext, SerializationInput } from './custom-serializable';
 import type { deserialize, CCClassConstructor } from './deserialize';
 import { CCON } from './ccon';

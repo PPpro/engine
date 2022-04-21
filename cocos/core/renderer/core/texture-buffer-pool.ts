@@ -30,7 +30,7 @@
 
 import { getTypedArrayConstructor, Format, FormatInfos, TextureType, TextureUsageBit,
     TextureFlagBit, Texture, TextureInfo, Device, BufferTextureCopy } from '../../gfx';
-import { debug } from '../../platform/debug';
+import { debug } from '@cc/core/debug';
 
 export function nearestPOT (num: number): number {
     --num;

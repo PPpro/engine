@@ -29,11 +29,10 @@
  */
 
 import CANNON from '@cocos/cannon';
-import { Vec3, Quat } from '../../../core/math';
+import { IVec3Like, Vec3, Quat } from '@cc/core/math';
 import { commitShapeUpdates } from '../cannon-util';
 import { CannonShape } from './cannon-shape';
 import { IPlaneShape } from '../../spec/i-physics-shape';
-import { IVec3Like } from '../../../core/math/type-define';
 import { PlaneCollider } from '../../../../exports/physics-framework';
 
 export class CannonPlaneShape extends CannonShape implements IPlaneShape {

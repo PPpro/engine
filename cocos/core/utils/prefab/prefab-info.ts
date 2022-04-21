@@ -1,6 +1,6 @@
 import { ccclass, serializable, editable, type } from 'cc.decorator';
 import { EDITOR } from 'internal:constants';
-import { legacyCC } from '../../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Prefab } from '../../assets';
 import { CCObject } from '../../data';
 import { Component } from '../../components';

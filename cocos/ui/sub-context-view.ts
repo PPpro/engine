@@ -30,8 +30,8 @@
 
 import { ccclass, help, menu, executionOrder, requireComponent, tooltip, serializable } from 'cc.decorator';
 import { EDITOR } from 'internal:constants';
-import { minigame } from 'pal/minigame';
-import { screenAdapter } from 'pal/screen-adapter';
+import { minigame } from '@cc/pal/minigame';
+import { screenAdapter } from '@cc/pal/screen-adapter';
 import { Component } from '../core/components/component';
 import { view } from '../core/platform/view';
 import { Sprite } from '../2d/components/sprite';
@@ -39,9 +39,9 @@ import { Node } from '../core/scene-graph';
 import { UITransform } from '../2d/framework/ui-transform';
 import { SpriteFrame } from '../2d/assets';
 import { ImageAsset } from '../core/assets/image-asset';
-import {  Size } from '../core/math';
+import { Size } from '@cc/core/math';
 
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { NodeEventType } from '../core/scene-graph/node-event';
 import { CCObject, Texture2D } from '../core';
 

@@ -31,7 +31,7 @@
 import { AABB, Frustum, intersect, Sphere } from '../geometry';
 import { Model } from '../renderer/scene/model';
 import { Camera, SKYBOX_FLAG } from '../renderer/scene/camera';
-import { Vec2, Vec3, Mat4, Quat, Vec4 } from '../math';
+import { Vec2, Vec3, Mat4, Quat, Vec4 } from '@cc/core/math';
 import { RenderPipeline } from './render-pipeline';
 import { Pool } from '../memop';
 import { IRenderObject, UBOShadow } from './define';

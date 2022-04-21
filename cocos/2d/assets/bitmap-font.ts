@@ -32,9 +32,9 @@
 import { ccclass, type, serializable, editable } from 'cc.decorator';
 import { Font } from './font';
 import { SpriteFrame } from './sprite-frame';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { js } from '../../core/utils';
-import { warn } from '../../core/platform/debug';
+import { warn } from '@cc/core/debug';
 
 export interface IConfig {
     [key: string]: any;

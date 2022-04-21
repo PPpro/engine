@@ -28,7 +28,7 @@
  * @module particle2d
  */
 
-import { Vec2, Color } from '../core/math';
+import { Vec2, Color } from '@cc/core/math';
 import Pool from '../core/utils/pool';
 import { clampf, degreesToRadians, radiansToDegrees } from '../core/utils/misc';
 import { vfmtPosUvColor, getComponentPerVertex } from '../2d/renderer/vertex-format';

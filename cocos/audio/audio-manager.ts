@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { AudioPlayer, OneShotAudio } from 'pal/audio';
+import { AudioPlayer, OneShotAudio } from '@cc/pal/audio';
 import { fastRemoveAt } from '../core/utils/array';
 
 type ManagedAudio = AudioPlayer | OneShotAudio;

@@ -1,5 +1,5 @@
 import legacyCC from '../../../predefine';
-import { getError } from '../platform/debug';
+import { getError } from '@cc/core/debug';
 
 const VERSION = 1;
 

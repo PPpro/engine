@@ -29,7 +29,7 @@
 
 import { ImageAsset, Texture2D } from '../assets';
 import { packCustomObjData, unpackJSONs } from '../data/deserialize';
-import { error, errorID } from '../platform/debug';
+import { error, errorID } from '@cc/core/debug';
 import { js } from '../utils/js';
 import Cache from './cache';
 import downloader from './downloader';

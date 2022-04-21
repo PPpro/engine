@@ -30,7 +30,7 @@
 import { ccclass, displayOrder, serializable, type } from 'cc.decorator';
 import { RenderStage } from './render-stage';
 import { RenderPipeline } from './render-pipeline';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { Camera } from '../renderer/scene';
 
 /**

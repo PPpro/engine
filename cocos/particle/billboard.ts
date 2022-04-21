@@ -35,9 +35,9 @@ import { Mesh } from '../3d/assets';
 import { Material, Texture2D } from '../core/assets';
 import { Component } from '../core/components/component';
 import { Attribute, AttributeName, Format, PrimitiveMode } from '../core/gfx';
-import { Color, toDegree, toRadian, Vec4 } from '../core/math';
+import { Color, toDegree, toRadian, Vec4 } from '@cc/core/math';
 import { scene } from '../core/renderer';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 @ccclass('cc.Billboard')
 @help('i18n:cc.Billboard')

@@ -31,7 +31,7 @@ import { Texture2D } from '../assets/texture-2d';
 import { TextureCube } from '../assets/texture-cube';
 import { Device } from '../gfx';
 import { effects } from './effects';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { getDeviceShaderVersion } from '../renderer/core/program-lib';
 import shaderSourceAssembly from './shader-source-assembly';
 import { AssetManager } from '../asset-manager/asset-manager';

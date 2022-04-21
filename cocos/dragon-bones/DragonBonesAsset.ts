@@ -13,7 +13,7 @@ import { ArmatureCache } from './ArmatureCache';
 import { Enum, JsonAsset, Node } from '../core';
 import { CCFactory } from './CCFactory';
 import { property } from '../core/data/class-decorator';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @en The skeleton data of dragonBones.

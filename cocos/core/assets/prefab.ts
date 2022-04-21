@@ -33,11 +33,11 @@ import { ccclass, serializable, editable } from 'cc.decorator';
 import { SUPPORT_JIT, ALIPAY, RUNTIME_BASED } from 'internal:constants';
 import { compile } from '../data/instantiate-jit';
 import { js, obsolete } from '../utils/js';
-import { Enum } from '../value-types';
+import { Enum } from '@cc/core/value-type';
 import { Asset } from './asset';
 import { Node } from '../scene-graph/node';
-import { legacyCC } from '../global-exports';
-import { warnID } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { warnID } from '@cc/core/debug';
 import * as utils from '../utils/prefab';
 
 /**

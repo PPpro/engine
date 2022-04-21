@@ -34,7 +34,7 @@ import { ccclass, serializable, editable } from 'cc.decorator';
 import * as js from '../../core/utils/js';
 import { Asset } from '../../core/assets';
 import { SpriteFrame } from './sprite-frame';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 interface ISpriteAtlasSerializeData{
     name: string;

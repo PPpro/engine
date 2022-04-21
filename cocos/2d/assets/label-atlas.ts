@@ -31,7 +31,7 @@
 
 import { ccclass } from 'cc.decorator';
 import { BitmapFont } from './bitmap-font';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 /**
  * @en Class for LabelAtlas handling.
  * @zh 艺术数字字体资源类。

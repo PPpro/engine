@@ -34,11 +34,11 @@ import { EDITOR } from 'internal:constants';
 import { Component, EventHandler } from '../core/components';
 import { UITransform } from '../2d/framework';
 import { EventTouch, Touch } from '../input/types';
-import { Vec3 } from '../core/math';
+import { Vec3 } from '@cc/core/math';
 import { ccenum } from '../core/value-types/enum';
-import { clamp01 } from '../core/math/utils';
+import { clamp01 } from '@cc/core/math';
 import { Sprite } from '../2d/components/sprite';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { NodeEventType } from '../core/scene-graph/node-event';
 
 const _tempPos = new Vec3();

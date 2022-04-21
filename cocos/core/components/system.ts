@@ -29,7 +29,7 @@
  */
 
 import { ISchedulable } from '../scheduler';
-import { Enum } from '../value-types/enum';
+import { Enum } from '@cc/core/value-type';
 
 /**
  * @en Base class for all functional system managed by [[Director]].

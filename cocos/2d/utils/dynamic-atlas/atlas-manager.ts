@@ -4,7 +4,7 @@
 
 import { EDITOR } from 'internal:constants';
 import { Filter } from '../../../core/assets/asset-enum';
-import { legacyCC } from '../../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { js } from '../../../core/utils/js';
 import { Atlas } from './atlas';
 

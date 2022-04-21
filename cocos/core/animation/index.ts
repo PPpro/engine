@@ -33,7 +33,7 @@ import * as easing from './easing';
 import { ComponentPath, HierarchyPath, ICustomTargetPath, TargetPath } from './target-path';
 import { IValueProxyFactory } from './value-proxy';
 import { UniformProxyFactory } from './value-proxy-factories/uniform';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export * from './deprecated';
 

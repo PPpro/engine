@@ -29,25 +29,24 @@
  */
 
 import { EDITOR, HTML5, JSB, PREVIEW, RUNTIME_BASED, TEST } from 'internal:constants';
-import { systemInfo } from 'pal/system-info';
-import { ConfigOrientation } from 'pal/screen-adapter';
+import { BrowserType, systemInfo } from '@cc/pal/system-info';
+import { ConfigOrientation } from '@cc/pal/screen-adapter';
 import { IAssetManagerOptions } from './asset-manager/asset-manager';
-import { EventTarget } from './event';
+import { EventTarget } from '@cc/core/event';
 import { input } from '../input';
-import * as debug from './platform/debug';
+import * as debug from '@cc/core/debug';
 import { Device, DeviceInfo, Swapchain, SwapchainInfo } from './gfx';
 import { sys } from './platform/sys';
 import { macro } from './platform/macro';
 import { ICustomJointTextureLayout } from '../3d/skeletal-animation/skeletal-animation-utils';
-import { legacyCC, VERSION } from './global-exports';
+import { legacyCC, VERSION } from '@cc/core/global';
 import { IPhysicsConfig } from '../physics/framework/physics-config';
 import { bindingMappingInfo } from './pipeline/define';
 import { SplashScreen } from './splash-screen';
 import { RenderPipeline } from './pipeline/render-pipeline';
 import { Node } from './scene-graph/node';
-import { BrowserType } from '../../pal/system-info/enum-type';
 import { Layers } from './scene-graph';
-import { log2 } from './math/bits';
+import { bits } from '@cc/core/math';
 import { garbageCollectionManager } from './data/garbage-collection';
 import { screen } from './platform/screen';
 import { builtinResMgr } from './builtin/builtin-res-mgr';
@@ -607,7 +606,7 @@ export class Game extends EventTarget {
             const userLayers: LayerItem[] = this.config.layers;
             for (let i = 0; i < userLayers.length; i++) {
                 const layer = userLayers[i];
-                const bitNum = log2(layer.value);
+                const bitNum = bits.log2(layer.value);
                 Layers.addLayer(layer.name, bitNum);
             }
         }

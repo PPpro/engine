@@ -33,16 +33,15 @@ import { ccclass, help, executionOrder, menu, tooltip, displayOrder, type, range
 import { EDITOR } from 'internal:constants';
 import { SpriteAtlas } from '../assets/sprite-atlas';
 import { SpriteFrame } from '../assets/sprite-frame';
-import { Vec2 } from '../../core/math';
+import { Vec2, clamp } from '@cc/core/math';
 import { ccenum } from '../../core/value-types/enum';
-import { clamp } from '../../core/math/utils';
 import { IBatcher } from '../renderer/i-batcher';
 import { Renderable2D, InstanceMaterialType } from '../framework/renderable-2d';
 import { PixelFormat } from '../../core/assets/asset-enum';
 import { TextureBase } from '../../core/assets/texture-base';
 import { Material, RenderTexture } from '../../core';
 import { NodeEventType } from '../../core/scene-graph/node-event';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @en

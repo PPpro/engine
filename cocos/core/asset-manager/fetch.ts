@@ -29,13 +29,13 @@
  */
 
 import { Asset } from '../assets';
-import { error } from '../platform/debug';
+import { error } from '@cc/core/debug';
 import packManager from './pack-manager';
 import RequestItem from './request-item';
 import { assets, CompleteCallbackNoData, fetchPipeline } from './shared';
 import Task from './task';
 import { clear, forEach, getDepends } from './utilities';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 export default function fetch (task: Task, done: CompleteCallbackNoData) {
     let firstTask = false;

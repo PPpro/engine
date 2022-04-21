@@ -30,14 +30,14 @@
 
 import { ccclass, displayOrder, executeInEditMode, help, menu, slide, range, requireComponent, tooltip, type, serializable } from 'cc.decorator';
 import { EDITOR } from 'internal:constants';
-import { warn } from '../core/platform';
+import { warn } from '@cc/core/debug';
 import { Component, EventHandler as ComponentEventHandler } from '../core/components';
 import { UITransform } from '../2d/framework';
-import { clamp } from '../core/math';
+import { clamp } from '@cc/core/math';
 import { VideoClip } from './assets/video-clip';
 import { VideoPlayerImplManager } from './video-player-impl-manager';
 import { EventType, ResourceType } from './video-player-enums';
-import { legacyCC } from '../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { VideoPlayerImplWeb } from './video-player-impl-web';
 
 /**

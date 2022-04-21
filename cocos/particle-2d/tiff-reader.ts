@@ -34,7 +34,7 @@
  * @module particle2d
  */
 
-import { getError, logID } from '../core/platform/debug';
+import { getError, logID } from '@cc/core/debug';
 
 interface IFile {
     type: string,

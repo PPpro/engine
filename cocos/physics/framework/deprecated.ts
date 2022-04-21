@@ -29,7 +29,7 @@
  */
 
 import { PhysicsSystem } from './physics-system';
-import { replaceProperty, removeProperty } from '../../core/utils/x-deprecated';
+import { replaceProperty, removeProperty } from '@cc/core/deprecate';
 import { BoxCollider } from './components/colliders/box-collider';
 import { SphereCollider } from './components/colliders/sphere-collider';
 import { CapsuleCollider } from './components/colliders/capsule-collider';
@@ -38,7 +38,7 @@ import { MeshCollider } from './components/colliders/mesh-collider';
 import { RigidBody } from './components/rigid-body';
 import { Collider } from './components/colliders/collider';
 import { js } from '../../core/utils/js';
-import { legacyCC } from '../../core/global-exports';
+import { legacyCC } from '@cc/core/global';
 import { PhysicsMaterial } from './assets/physics-material';
 import { Constraint } from './components/constraints/constraint';
 

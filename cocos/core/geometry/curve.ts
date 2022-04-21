@@ -29,7 +29,7 @@
  */
 
 import { CCClass } from '../data/class';
-import { clamp, inverseLerp, pingPong, repeat } from '../math/utils';
+import { clamp, inverseLerp, pingPong, repeat } from '@cc/core/math';
 import { WrapModeMask } from '../animation/types';
 import { ExtrapolationMode, RealCurve, RealInterpolationMode, RealKeyframeValue } from '../curves';
 import { ccclass, serializable } from '../data/decorators';

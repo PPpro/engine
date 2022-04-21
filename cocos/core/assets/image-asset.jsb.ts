@@ -31,9 +31,9 @@ import {
     _initializerDefineProperty,
 } from '../data/utils/decorator-jsb-utils';
 import { Device, Feature, Format, FormatFeatureBit } from '../gfx';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { PixelFormat } from './asset-enum';
-import { warnID } from '../platform';
+import { warnID } from '@cc/core/debug';
 
 export type ImageAsset = jsb.ImageAsset;
 export const ImageAsset = jsb.ImageAsset;

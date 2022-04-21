@@ -26,10 +26,10 @@
 import * as VertexFormat from './vertex-format';
 import { Batcher2D } from './batcher-2d';
 import { DrawBatch2D } from './draw-batch';
-import { markAsWarning, replaceProperty, removeProperty } from '../../core/utils/x-deprecated';
+import { markAsWarning, replaceProperty, removeProperty } from '@cc/core/deprecate';
 import { MeshBuffer } from './mesh-buffer';
 import { MeshRenderData } from './render-data';
-import { warnID } from '../../core';
+import { warnID } from '@cc/core/debug';
 
 export { VertexFormat as UIVertexFormat };
 

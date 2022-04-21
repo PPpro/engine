@@ -1,11 +1,11 @@
 import { EDITOR, TEST } from 'internal:constants';
-import { ConfigOrientation, IScreenOptions, SafeAreaEdge } from 'pal/screen-adapter';
-import { systemInfo } from 'pal/system-info';
-import { warnID } from '../../../cocos/core/platform/debug';
-import { EventTarget } from '../../../cocos/core/event/event-target';
-import { Size } from '../../../cocos/core/math';
+import { ConfigOrientation, IScreenOptions, SafeAreaEdge } from '@cc/pal/screen-adapter';
+import { systemInfo } from '@cc/pal/system-info';
+import { warnID } from '@cc/core/debug';
+import { EventTarget } from '@cc/core/event';
+import { Size } from '@cc/core/math';
 import { Orientation } from '../enum-type';
-import legacyCC from '../../../predefine';
+import { legacyCC } from '@cc/core/global';
 
 interface ICachedStyle {
     width: string;

@@ -30,10 +30,10 @@
 import { EffectAsset } from './effect-asset';
 import { Texture } from '../gfx';
 import { TextureBase } from './texture-base';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { PassOverrides, MacroRecord, MaterialProperty } from '../renderer';
 
-import { Color, Mat3, Mat4, Quat, Vec2, Vec3, Vec4 } from '../math';
+import { Color, Mat3, Mat4, Quat, Vec2, Vec3, Vec4 } from '@cc/core/math';
 import { setClassName } from '../utils/js-typed';
 import { _applyDecoratedDescriptor, _assertThisInitialized, _initializerDefineProperty } from '../data/utils/decorator-jsb-utils';
 import { ccclass, serializable, type } from '../data/decorators';

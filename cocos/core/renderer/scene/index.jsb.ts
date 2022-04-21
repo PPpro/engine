@@ -22,8 +22,8 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
  */
-import { legacyCC } from '../../global-exports';
-import { Enum } from '../../value-types';
+import { legacyCC } from '@cc/core/global';
+import { Enum } from '@cc/core/value-type';
 
 export type Ambient = jsb.Ambient;
 export const Ambient = jsb.Ambient;

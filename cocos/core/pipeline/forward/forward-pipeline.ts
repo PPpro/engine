@@ -39,7 +39,7 @@ import { Swapchain, RenderPass } from '../../gfx';
 import { builtinResMgr } from '../../builtin';
 import { Texture2D } from '../../assets/texture-2d';
 import { Camera } from '../../renderer/scene';
-import { errorID } from '../../platform/debug';
+import { errorID } from '@cc/core/debug';
 import { PipelineSceneData } from '../pipeline-scene-data';
 
 const PIPELINE_TYPE = 0;

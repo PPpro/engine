@@ -28,12 +28,12 @@
  * @module ui-assembler
  */
 
-import { Color, Mat4, Vec3 } from '../../../core/math';
+import { Mat4, Vec3 } from '@cc/core/math';
 import { IRenderData, RenderData } from '../../renderer/render-data';
 import { IBatcher } from '../../renderer/i-batcher';
 import { Sprite } from '../../components';
 import { IAssembler } from '../../renderer/base';
-import { errorID } from '../../../core/platform/debug';
+import { errorID } from '@cc/core/debug';
 import { dynamicAtlasManager } from '../../utils/dynamic-atlas/atlas-manager';
 import { StaticVBChunk } from '../../renderer/static-vb-accessor';
 

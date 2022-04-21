@@ -29,8 +29,8 @@
  * @hidden
  */
 
-import { Rect } from '../math';
-import { legacyCC } from '../global-exports';
+import { Rect } from '@cc/core/math';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * `visibleRect` is a singleton object which defines the actual visible rect of the current view

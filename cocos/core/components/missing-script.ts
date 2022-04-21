@@ -34,8 +34,8 @@ import { EDITOR } from 'internal:constants';
 import { _getClassById } from '../utils/js';
 import { BUILTIN_CLASSID_RE } from '../utils/misc';
 import { Component } from './component';
-import { legacyCC } from '../global-exports';
-import { warnID, error } from '../platform/debug';
+import { legacyCC } from '@cc/core/global';
+import { warnID, error } from '@cc/core/debug';
 
 /**
  * @en
@@ -90,7 +90,7 @@ export default class MissingScript extends Component {
 legacyCC._MissingScript = MissingScript;
 
 // DEBUG: Check MissingScript class for issue 9878
-// import { error } from '../platform/debug';
+// import { error } from '@cc/core/debug';
 try {
     const props = MissingScript.__values__;
     if (props.length === 0 || props[props.length - 1] !== '_$erialized') {

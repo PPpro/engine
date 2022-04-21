@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Color, Vec2 } from '../../../../core/math';
+import { Color, Vec2 } from '@cc/core/math';
 import { MeshRenderData } from '../../../renderer/render-data';
 import { arc, ellipse, roundRect, tesselateBezier } from '../helper';
 import { LineCap, LineJoin, PointFlags } from '../types';

@@ -31,14 +31,14 @@
 import { ccclass, executeInEditMode, executionOrder, help, menu, tooltip, type, serializable } from 'cc.decorator';
 import { EDITOR, TEST } from 'internal:constants';
 import { Component } from '../components/component';
-import { Eventify } from '../event';
-import { warnID } from '../platform/debug';
+import { Eventify } from '@cc/core/event';
+import { warnID } from '@cc/core/debug';
 import * as ArrayUtils from '../utils/array';
 import { createMap } from '../utils/js-typed';
 import { AnimationClip } from './animation-clip';
 import { AnimationState, EventType } from './animation-state';
 import { CrossFade } from './cross-fade';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  * @en

@@ -28,16 +28,17 @@
  * @module component/video
  */
 
-import { screenAdapter } from 'pal/screen-adapter';
-import { mat4 } from '../core/math';
-import { sys, screen, warn } from '../core/platform';
+import { BrowserType, OS } from '@cc/pal/system-info';
+import { screenAdapter } from '@cc/pal/screen-adapter';
+import { warn } from '@cc/core/debug'
+import { mat4 } from '@cc/core/math';
+import { sys, screen } from '../core/platform';
 import { game } from '../core';
 import { contains } from '../core/utils/misc';
 import { EventType, READY_STATE } from './video-player-enums';
 import { VideoPlayerImpl } from './video-player-impl';
 import { ClearFlagBit } from '../core/gfx';
 import visibleRect from '../core/platform/visible-rect';
-import { BrowserType, OS } from '../../pal/system-info/enum-type';
 
 const MIN_ZINDEX = -(2 ** 15);
 

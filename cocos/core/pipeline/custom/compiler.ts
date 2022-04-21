@@ -23,7 +23,7 @@
  THE SOFTWARE.
 ****************************************************************************/
 import { Buffer, Framebuffer, Texture } from '../../gfx';
-import { assert } from '../../platform/debug';
+import { assert } from '@cc/core/debug';
 import { LayoutGraphData } from './layout-graph';
 import { Pipeline } from './pipeline';
 import { AccessType, Blit, ComputePass, CopyPass, Dispatch, ManagedResource, MovePass,

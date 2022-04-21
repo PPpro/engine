@@ -31,14 +31,14 @@
 import { ccclass } from 'cc.decorator';
 import System from '../components/system';
 import { director, Director } from '../director';
-import { errorID } from '../platform/debug';
+import { errorID } from '@cc/core/debug';
 import { Node } from '../scene-graph';
 import { Scheduler } from '../scheduler';
 import { MutableForwardIterator, remove } from '../utils/array';
 import { BlendStateBuffer } from '../../3d/skeletal-animation/skeletal-animation-blending';
 import { AnimationState } from './animation-state';
 import type { CrossFade } from './cross-fade';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { IJointTransform, deleteTransform, getTransform, getWorldMatrix } from './skeletal-animation-utils';
 import { Socket } from '../../3d/skeletal-animation/skeletal-animation';
 

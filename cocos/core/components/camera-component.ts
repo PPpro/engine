@@ -34,7 +34,7 @@ import { RenderTexture } from '../assets/render-texture';
 import { UITransform } from '../../2d/framework';
 import { Component } from './component';
 import { Ray } from '../geometry';
-import { Color, Rect, toRadian, Vec3 } from '../math';
+import { Color, Rect, toRadian, Vec3 } from '@cc/core/math';
 import { CAMERA_DEFAULT_MASK } from '../pipeline/define';
 import { view } from '../platform/view';
 import { scene } from '../renderer';
@@ -42,9 +42,9 @@ import { SKYBOX_FLAG, CameraProjection, CameraFOVAxis, CameraAperture, CameraISO
 import { Root } from '../root';
 import { Node } from '../scene-graph/node';
 import { Layers } from '../scene-graph/layers';
-import { Enum } from '../value-types';
+import { Enum } from '@cc/core/value-type';
 import { TransformBit } from '../scene-graph/node-enum';
-import { legacyCC } from '../global-exports';
+import { legacyCC } from '@cc/core/global';
 import { RenderWindow } from '../renderer/core/render-window';
 import { ClearFlagBit } from '../gfx';
 

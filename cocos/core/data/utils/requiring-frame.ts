@@ -25,7 +25,7 @@
 */
 
 import { EDITOR } from 'internal:constants';
-import { legacyCC } from '../../global-exports';
+import { legacyCC } from '@cc/core/global';
 
 /**
  *

@@ -1,6 +1,5 @@
-import { minigame } from 'pal/minigame';
-import { warnID } from '../../../cocos/core';
-import { legacyCC } from '../../../cocos/core/global-exports';
+import { minigame } from '@cc/pal/minigame';
+import { legacyCC } from '@cc/core/global';
 import { AudioLoadOptions, AudioType, AudioState } from '../type';
 import { AudioPlayerMinigame, OneShotAudioMinigame } from './player-minigame';
 import { AudioPlayerWeb, OneShotAudioWeb } from './player-web';

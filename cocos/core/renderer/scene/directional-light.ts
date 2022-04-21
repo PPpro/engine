@@ -23,8 +23,8 @@
  THE SOFTWARE.
  */
 
-import { legacyCC } from '../../global-exports';
-import { Vec3 } from '../../math';
+import { legacyCC } from '@cc/core/global';
+import { Vec3 } from '@cc/core/math';
 import { Ambient } from './ambient';
 import { Light, LightType } from './light';
 import { PCFType, Shadows } from './shadows';

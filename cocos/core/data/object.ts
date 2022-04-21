@@ -31,8 +31,8 @@
 import { SUPPORT_JIT, EDITOR, TEST, JSB } from 'internal:constants';
 import * as js from '../utils/js';
 import { CCClass } from './class';
-import { errorID, warnID } from '../platform/debug';
-import { legacyCC } from '../global-exports';
+import { errorID, warnID } from '@cc/core/debug';
+import { legacyCC } from '@cc/core/global';
 import { EditorExtendableObject, editorExtrasTag } from './editor-extras-tag';
 
 // definitions for CCObject.Flags

@@ -28,7 +28,7 @@
  * @module ui-assembler
  */
 
-import { Mat4, Size, Vec3 } from '../../core/math';
+import { Mat4, Size, Vec3 } from '@cc/core/math';
 import { IAssembler } from '../../2d/renderer/base';
 import { MeshRenderData } from '../../2d/renderer/render-data';
 import { IBatcher } from '../../2d/renderer/i-batcher';
