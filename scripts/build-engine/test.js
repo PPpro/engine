@@ -2,6 +2,7 @@ const rollup = require('rollup')
 const resolve = require('@rollup/plugin-node-resolve')
 const rpBabel = require('@rollup/plugin-babel').default
 const rpVirtualModuel = require('@rollup/plugin-virtual')
+const ps = require('path')
 
 
 const babelPresetEnv = require('@babel/preset-env');
@@ -26,9 +27,26 @@ async function test () {
             // String.raw`d:\editor-3d\resources\3d\engine\pal\system-info\index.d.ts`,
         ],
         plugins: [
-            rpVirtualModuel({
-                './pal': 'export * from \'c:/Users/l/Desktop/editor-3d-legacy/resources/3d/engine/pal/audio/native/player.ts\''
-            }),
+            {
+                name: 'my-example', // this name will show up in warnings and errors
+                resolveId ( source, importer ) {
+                    // console.log('resolveid', source, '             importer ', importer)
+                    if (source === './pal') {
+                        if (importer === 'C:\\Users\\l\\Desktop\\editor-3d-legacy\\resources\\3d\\engine\\pal\\minigame\\index.d.ts')
+                        return ps.join(ps.dirname(importer), 'index.d.ts')
+                        // console.log('hack resolveid', ps.join(ps.dirname(importer), 'web/index.ts'));
+                        return ps.join(ps.dirname(importer), 'web/index.ts');
+                    }
+                  return null; // other ids should be handled as usually
+                },
+                load ( id ) {
+                // console.log('load ', id)
+                  return null; // other ids should be handled as usually
+                }
+            },
+            // rpVirtualModuel({
+            //     './pal': 'export * from \'c:/Users/l/Desktop/editor-3d-legacy/resources/3d/engine/pal/audio/native/player.ts\''
+            // }),
             resolve({
                 extensions: ['.js', '.ts', '.d.ts']
             }),
