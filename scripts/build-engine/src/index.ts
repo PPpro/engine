@@ -218,21 +218,27 @@ async function doBuild ({
         });
     });
 
+    //#region options init
     const doUglify = !!options.compress;
     const engineRoot = ps.resolve(options.engine);
 
     const moduleOption = options.moduleFormat ?? ModuleOption.iife;
     const rollupFormat = moduleOptionsToRollupFormat(moduleOption);
+    //#endregion
 
+    //#region  ammo matching systemJS
     let { ammoJsWasm } = options;
     if (ammoJsWasm === 'fallback'
         && moduleOption !== ModuleOption.system) {
         console.warn('--ammojs-wasm=fallback is only available under SystemJS target.');
         ammoJsWasm = false;
     }
+    //#endregion
 
+    // stats query
     const statsQuery = await StatsQuery.create(engineRoot);
 
+//#region feature check
     if (options.features) {
         for (const feature of options.features) {
             if (!statsQuery.hasFeature(feature)) {
@@ -240,7 +246,10 @@ async function doBuild ({
             }
         }
     }
+    //#endregion
 
+
+    //#region features from options / all features
     let features: string[];
     let split = options.split ?? false;
     if (options.features && options.features.length !== 0) {
@@ -255,7 +264,9 @@ async function doBuild ({
             );
         }
     }
+    //#endregion
 
+    //#region  build time constants
     const intrinsicFlags = statsQuery.getIntrinsicFlagsOfFeatures(features);
 
     const buildTimeConstants = {
@@ -271,9 +282,11 @@ async function doBuild ({
         result[makePathEqualityKey(k)] = v;
         return result;
     }, {} as Record<string, string>);
+//#endregion
 
     const featureUnits = statsQuery.getUnitsOfFeatures(features);
 
+    //#region virtual module: internal:constants
     const rpVirtualOptions: Record<string, string> = {};
     const vmInternalConstants = statsQuery.evaluateEnvModuleSourceFromRecord({
         EXPORT_TO_GLOBAL: true,
@@ -282,6 +295,10 @@ async function doBuild ({
     console.debug(`Module source "internal-constants":\n${vmInternalConstants}`);
     rpVirtualOptions['internal:constants'] = vmInternalConstants;
 
+    //#endregion
+
+
+    //#region  rollup entries handle
     const forceStandaloneModules = ['wait-for-ammo-instantiation', 'decorator'];
 
     let rollupEntries: NonNullable<rollup.RollupOptions['input']> | undefined;
@@ -312,6 +329,9 @@ async function doBuild ({
         console.debug(`Module source "cc":\n${rpVirtualOptions.cc}`);
     }
 
+    //#endregion
+
+    //#region babel plugin setup
     const presetEnvOptions: babelPresetEnvOptions = {
         loose: options.loose ?? true,
         // We need explicitly specified targets.
@@ -367,7 +387,9 @@ async function doBuild ({
             } as babelPresetCc.Options],
         ],
     };
+//#endregion
 
+//#region rollup input plugins
     const rollupPlugins: rollup.Plugin[] = [];
 
     const codeAssetMapping: Record<string, string> = {};
@@ -490,7 +512,9 @@ async function doBuild ({
             }));
         }
     }
+    //#endregion
 
+    //#region rollup options
     let hasCriticalWarns = false;
 
     const rollupWarningHandler: rollup.WarningHandlerWithDefault = (warning, defaultHandler) => {
@@ -523,6 +547,9 @@ async function doBuild ({
         rollupOptions.perf = true;
     }
 
+    //#endregion
+
+    //#region bullet wasm virtual module
     const bulletAsmJsModule = await nodeResolveAsync('@cocos/bullet/bullet.cocos.js');
     const wasmBinaryPath = ps.join(bulletAsmJsModule, '..', 'bullet.wasm.wasm');
     if (ammoJsWasm === true) {
@@ -553,6 +580,8 @@ export default Bullet;
 `;
     }
 
+    //#endregion
+
     const rollupBuild = await rollup.rollup(rollupOptions);
 
     const timing = rollupBuild.getTimings?.();
@@ -578,6 +607,7 @@ export default Bullet;
         await fs.writeFile(incrementalFile, JSON.stringify(watchFiles, undefined, 2));
     }
 
+    //#region rollup output options
     const result: build.Result = {
         chunkAliases: {},
         exports: {},
@@ -593,9 +623,11 @@ export default Bullet;
         // minifyInternalExports: false,
         // preserveEntrySignatures: "allow-extension",
     };
+    //#endregion
 
     const rollupOutput = await rollupBuild.write(rollupOutputOptions);
 
+    //#region result handle
     const validEntryChunks: Record<string, string> = {};
     for (const output of rollupOutput.output) {
         if (output.type === 'chunk') {
@@ -621,6 +653,8 @@ export default Bullet;
 
     result.hasCriticalWarns = hasCriticalWarns;
 
+    //#endregion
+    
     return result;
 
     async function nodeResolveAsync (specifier: string) {

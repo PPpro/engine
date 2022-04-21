@@ -10,7 +10,6 @@
   "module": "index.js",
   "scripts": {
     "server": "http-server . -p 8002 -o playground/index.html",
-    "postinstall": "gulp build-debug-infos && gulp build-declarations && npm run fetch-ral",
     "build": "gulp build",
     "build:dev": "gulp build-h5-source",
     "build:min": "gulp build-h5-minified",
