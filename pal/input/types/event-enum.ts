@@ -28,7 +28,6 @@
  * @module event
  */
 import { legacyCC } from '@cc/core/global';
-import { NodeEventType } from '../../core/scene-graph/node-event';
 
 /**
  * @en The event type supported by SystemEvent and Node events
@@ -378,7 +377,5 @@ export enum InputEventType {
      */
     DEVICEMOTION = 'devicemotion',
 }
-
-export type SystemEventTypeUnion = SystemEventType | NodeEventType | InputEventType | string;
 
 legacyCC.SystemEventType = SystemEventType;

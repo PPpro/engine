@@ -70,7 +70,9 @@ export * from '../extensions/ccpool/node-pool';
 
 export { legacyCC as cclegacy };
 
-export * from '../cocos/input/types';
+export {
+    Event, EventAcceleration, EventKeyboard, EventMouse, EventTouch,
+    SystemEventType, KeyCode, Touch, Acceleration } from '@cc/pal/input';
 export * from '../cocos/input';
 
 type Constructor_<T = unknown> = Constructor<T>;

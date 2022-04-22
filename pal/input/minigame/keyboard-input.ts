@@ -1,9 +1,9 @@
 import { KeyboardCallback } from '@cc/pal/input';
 import { KeyboardEventData, minigame } from '@cc/pal/minigame';
 import { systemInfo, Feature } from '@cc/pal/system-info';
-import { KeyCode, EventKeyboard } from '../../../cocos/input/types';
+import { KeyCode, EventKeyboard } from '../types';
 import { EventTarget } from '@cc/core/event';
-import { InputEventType } from '../../../cocos/input/types/event-enum';
+import { InputEventType } from '../types/event-enum';
 
 const code2KeyCode: Record<string, KeyCode> = {
     Backspace: KeyCode.BACKSPACE,

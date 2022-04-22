@@ -2,8 +2,8 @@ import { AccelerometerCallback } from '@cc/pal/input';
 import { systemInfo, BrowserType, OS } from '@cc/pal/system-info';
 import { screenAdapter } from '@cc/pal/screen-adapter';
 import { EventTarget } from '@cc/core/event';
-import { EventAcceleration, Acceleration } from '../../../cocos/input/types';
-import { InputEventType } from '../../../cocos/input/types/event-enum';
+import { EventAcceleration, Acceleration } from '../types';
+import { InputEventType } from '../types/event-enum';
 
 export class AccelerometerInputSource {
     private _intervalInMileSeconds = 200;

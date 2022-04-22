@@ -4,10 +4,10 @@ import { systemInfo, Feature } from '@cc/pal/system-info';
 import { screenAdapter } from '@cc/pal/screen-adapter';
 import { Rect, Vec2 } from '@cc/core/math';
 import { EventTarget } from '@cc/core/event';
-import { Touch, EventTouch } from '../../../cocos/input/types';
+import { Touch, EventTouch } from '../types';
 import { touchManager } from '../touch-manager';
 import { macro } from '../../../cocos/core/platform/macro';
-import { InputEventType } from '../../../cocos/input/types/event-enum';
+import { InputEventType } from '../types/event-enum';
 
 export class TouchInputSource {
     private _canvas?: HTMLCanvasElement;

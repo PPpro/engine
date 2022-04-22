@@ -4,10 +4,10 @@ import { screenAdapter } from '@cc/pal/screen-adapter';
 import { VIVO } from 'internal:constants';
 import { Size, Vec2 } from '@cc/core/math';
 import { EventTarget } from '@cc/core/event';
-import { EventTouch, Touch } from '../../../cocos/input/types';
+import { EventTouch, Touch } from '../types';
 import { touchManager } from '../touch-manager';
 import { macro } from '../../../cocos/core/platform/macro';
-import { InputEventType } from '../../../cocos/input/types/event-enum';
+import { InputEventType } from '../types/event-enum';
 
 export class TouchInputSource {
     private _eventTarget: EventTarget = new EventTarget();

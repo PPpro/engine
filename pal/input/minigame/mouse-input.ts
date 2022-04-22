@@ -4,8 +4,8 @@ import { screenAdapter } from '@cc/pal/screen-adapter';
 import { systemInfo, Feature } from '@cc/pal/system-info';
 import { Vec2 } from '@cc/core/math';
 import { EventTarget } from '@cc/core/event';
-import { EventMouse } from '../../../cocos/input/types';
-import { InputEventType } from '../../../cocos/input/types/event-enum';
+import { EventMouse } from '../types';
+import { InputEventType } from '../types/event-enum';
 
 export class MouseInputSource {
     private _eventTarget: EventTarget = new EventTarget();
