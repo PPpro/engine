@@ -1,5 +1,5 @@
-import { macro } from '../../cocos/core/platform/macro';
-import { Touch } from '../../cocos/input/types';
+import { legacyCC } from '@cc/core/global';
+import { Touch } from './types';
 import { Vec2 } from '@cc/core/math';
 
 const tempVec2 = new Vec2();
@@ -116,14 +116,14 @@ class TouchManager {
         if (this._touchMap.has(touchID)) {
             return false;
         }
-        const maxSize = macro.ENABLE_MULTI_TOUCH ? this._maxTouches : 1;
+        const maxSize = legacyCC.macro.ENABLE_MULTI_TOUCH ? this._maxTouches : 1;
         if (this._touchMap.size < maxSize) {
             return false;
         }
         // Handle when exceed the max number of touches
         const now = performance.now();
         this._touchMap.forEach((touch) => {
-            if (now - touch.lastModified > macro.TOUCH_TIMEOUT) {
+            if (now - touch.lastModified > legacyCC.macro.TOUCH_TIMEOUT) {
                 console.log(`The touches is more than MAX_TOUCHES, release touch id ${touch.getID()}.`);
                 // TODO: need to handle touch cancel event when exceed the max number of touches ?
                 this.releaseTouch(touch.getID());

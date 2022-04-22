@@ -6,7 +6,7 @@ import { Rect, Vec2 } from '@cc/core/math';
 import { EventTarget } from '@cc/core/event';
 import { Touch, EventTouch } from '../types';
 import { touchManager } from '../touch-manager';
-import { macro } from '../../../cocos/core/platform/macro';
+import { legacyCC } from '@cc/core/global';
 import { InputEventType } from '../types/event-enum';
 
 export class TouchInputSource {
@@ -61,7 +61,7 @@ export class TouchInputSource {
             }
             if (handleTouches.length > 0) {
                 const eventTouch = new EventTouch(handleTouches, false, eventType,
-                    macro.ENABLE_MULTI_TOUCH ? touchManager.getAllTouches() : handleTouches);
+                    legacyCC.macro.ENABLE_MULTI_TOUCH ? touchManager.getAllTouches() : handleTouches);
                 this._eventTarget.emit(eventType, eventTouch);
             }
         };
