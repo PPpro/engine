@@ -84,7 +84,7 @@ async function test (moduleName) {
         ]
     });
 
-    input.write({
+    await input.write({
         format: 'system',
         file: `./target/${moduleName}.js`
         // dir: './target2/'
@@ -92,9 +92,9 @@ async function test (moduleName) {
 
     dependencies[moduleName] = true;
     for (let m in dependencies) {
-        console.log('module ', m)
         if (!dependencies[m]) {
-            test(m);
+            console.log('module ', m)
+            await test(m);
         }
     }
 }
