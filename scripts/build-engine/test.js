@@ -4,14 +4,17 @@ const rpBabel = require('@rollup/plugin-babel').default
 const rpVirtualModuel = require('@rollup/plugin-virtual')
 const ps = require('path')
 
-
 const babelPresetEnv = require('@babel/preset-env');
 // const babelPresetTs = require('@babel/preset-typescript')
 const babelProposalProperties = require('@babel/plugin-proposal-class-properties')
 const babelPresetCC = require('@cocos/babel-preset-cc');
 
 
-async function test () {
+const moduleName = '@cc/pal/audio';
+const dependencies = {}
+
+async function test (moduleName) {
+    const inputFile = require.resolve(moduleName);
     const presetEnvOptions = {
         loose: true,
         // We need explicitly specified targets.
@@ -20,12 +23,25 @@ async function test () {
     };
     let input = await rollup.rollup({
         input: [
-            String.raw`c:/Users/l/Desktop/editor-3d-legacy/resources/3d/engine/pal/index.d.ts`,
+            inputFile,
+            // String.raw`c:/Users/l/Desktop/editor-3d-legacy/resources/3d/engine/pal/audio/index.d.ts`,
             // String.raw`d:\editor-3d\resources\3d\engine\pal\input\index.d.ts`,
             // String.raw`d:\editor-3d\resources\3d\engine\pal\minigame\index.d.ts`,
             // String.raw`d:\editor-3d\resources\3d\engine\pal\screen-adapter\index.d.ts`,
             // String.raw`d:\editor-3d\resources\3d\engine\pal\system-info\index.d.ts`,
         ],
+        external: function (
+			source,
+			importer,
+			isResolved ) {
+          if (source.startsWith('@cc')) {
+            // console.log('test resolve ', require.resolve(source));
+            dependencies[source] = false;
+            return true
+          }
+          return false;
+
+        },
         plugins: [
             {
                 name: 'my-example', // this name will show up in warnings and errors
@@ -48,7 +64,8 @@ async function test () {
             //     './pal': 'export * from \'c:/Users/l/Desktop/editor-3d-legacy/resources/3d/engine/pal/audio/native/player.ts\''
             // }),
             resolve({
-                extensions: ['.js', '.ts', '.d.ts']
+                extensions: ['.js', '.ts', '.d.ts'],
+                // jail: './'
             }),
             rpBabel({
                 babelHelpers: 'bundled',
@@ -69,10 +86,18 @@ async function test () {
 
     input.write({
         format: 'system',
-        file: './target/pal-audio.js'
+        file: `./target/${moduleName}.js`
         // dir: './target2/'
     })
+
+    dependencies[moduleName] = true;
+    for (let m in dependencies) {
+        console.log('module ', m)
+        if (!dependencies[m]) {
+            test(m);
+        }
+    }
 }
 
 
-test();
+test(moduleName);
