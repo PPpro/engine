@@ -377,6 +377,10 @@ export enum InputEventType {
      * 重力感应
      */
     DEVICEMOTION = 'devicemotion',
+
+    BUTTON_DOWN = 'button-down',
+    BUTTON_PRESSING = 'button-pressing',
+    BUTTON_UP = 'button-up',
 }
 
 export type SystemEventTypeUnion = SystemEventType | NodeEventType | InputEventType | string;

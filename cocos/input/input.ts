@@ -24,14 +24,12 @@
  THE SOFTWARE.
 */
 
-
-
 import { EDITOR, NATIVE } from 'internal:constants';
 import { TouchInputSource, MouseInputSource, KeyboardInputSource, AccelerometerInputSource } from 'pal/input';
 import { touchManager } from '../../pal/input/touch-manager';
 import { sys } from '../core/platform/sys';
 import { EventTarget } from '../core/event/event-target';
-import { Event, EventAcceleration, EventKeyboard, EventMouse, EventTouch, Touch } from './types';
+import { Event, EventAcceleration, EventButton, EventKeyboard, EventMouse, EventTouch, KeyCode, Touch } from './types';
 import { InputEventType } from './types/event-enum';
 
 export enum EventDispatcherPriority {
@@ -72,7 +70,7 @@ const pointerEventTypeMap = {
 };
 
 export declare namespace Input {
-    export type EventType = EnumAlias<typeof InputEventType>;
+    export type EventType = InputEventType;
 }
 
 interface InputEventMap {
@@ -88,6 +86,13 @@ interface InputEventMap {
     [Input.EventType.KEY_PRESSING]: (event: EventKeyboard) => void,
     [Input.EventType.KEY_UP]: (event: EventKeyboard) => void,
     [Input.EventType.DEVICEMOTION]: (event: EventAcceleration) => void,
+    [Input.EventType.BUTTON_DOWN]: (event: EventButton) => void,
+    [Input.EventType.BUTTON_PRESSING]: (event: EventButton) => void,
+    [Input.EventType.BUTTON_UP]: (event: EventButton) => void,
+}
+
+export class InputAction {
+    bind (keyCodeList: KeyCode[]) {}
 }
 
 /**
@@ -145,6 +150,10 @@ export class Input {
         this._inputEventDispatcher = new InputEventDispatcher(this._eventTarget);
         this._registerEventDispatcher(this._inputEventDispatcher);
     }
+
+    onAction (action: InputAction, cb: () => void) {}
+
+    offAction (actin: InputAction, cb?: () => void) {}
 
     /**
      * @en
