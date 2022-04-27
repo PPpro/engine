@@ -92,6 +92,7 @@ interface InputEventMap {
 }
 
 export class InputAction {
+    constructor (name: string) {}
     bind (keyCodeList: KeyCode[]) {}
 }
 
@@ -151,9 +152,9 @@ export class Input {
         this._registerEventDispatcher(this._inputEventDispatcher);
     }
 
-    onAction (action: InputAction, cb: () => void) {}
+    onAction (actionName: string, cb: () => void) {}
 
-    offAction (actin: InputAction, cb?: () => void) {}
+    offAction (actionName: string, cb?: () => void) {}
 
     /**
      * @en
