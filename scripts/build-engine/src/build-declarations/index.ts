@@ -180,6 +180,14 @@ export async function build (options: {
         await fs.writeFile(ccDtsFile, code, { encoding: 'utf8' });
     }
 
+    const ccBeforeRollupDTS = ps.join(ps.dirname(outputJSPath), 'cc-before-rollup.d.ts')
+    interfaceFilter.cullInterface({
+        inputDts: ccBeforeRollupDTS,
+        privateTag: 'internal',
+        deprecateTag: 'legacyPublic',
+        deprecateTip: 'since v3.5.0, this is an engine private interface that will be removed in the future.',
+    });
+
     console.log(`Bundling...`);
     try {
         const indexOutputPath = ps.join(dirName, 'cc.d.ts');
@@ -216,13 +224,6 @@ export async function build (options: {
                 { encoding: 'utf8' },
             );
         }
-
-        interfaceFilter.cullInterface({
-            inputDts: indexOutputPath,
-            privateTag: 'engineInternal',
-            deprecateTag: 'legacyPublic',
-            deprecateTip: 'since v3.5.0, this is an engine private interface that will be removed in the future.',
-        });
     } catch (error) {
         console.error(error);
         return false;

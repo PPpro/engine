@@ -573,7 +573,7 @@ export class RichText extends Component {
     }
 
     /**
-    * @engineInternal
+    * @internal
     */
     protected SplitLongStringApproximatelyIn2048 (text: string, styleIndex: number) {
         const labelSize = this._calculateSize(styleIndex, text);
@@ -596,7 +596,7 @@ export class RichText extends Component {
     }
 
     /**
-    * @engineInternal
+    * @internal
     */
     protected splitLongStringOver2048 (text: string, styleIndex: number) {
         const partStringArr: string[] = [];
@@ -711,7 +711,7 @@ export class RichText extends Component {
     }
 
     /**
-    * @engineInternal
+    * @internal
     */
     protected _calculateSize (styleIndex: number, s: string) {
         let label: ISegment;

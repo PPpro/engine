@@ -849,7 +849,7 @@ export class Label extends Renderable2D {
     }
 
     /**
-     * @engineInternal
+     * @internal
      */
     public _updateBlendFunc () {
         // override for BYTEDANCE
