@@ -91,11 +91,6 @@ interface InputEventMap {
     [Input.EventType.BUTTON_UP]: (event: EventButton) => void,
 }
 
-export class InputAction {
-    constructor (name: string) {}
-    bind (keyCodeList: KeyCode[]) {}
-}
-
 /**
  * @en
  * This Input class manages all events of input. include: touch, mouse, accelerometer and keyboard.
@@ -151,10 +146,6 @@ export class Input {
         this._inputEventDispatcher = new InputEventDispatcher(this._eventTarget);
         this._registerEventDispatcher(this._inputEventDispatcher);
     }
-
-    onAction (actionName: string, cb: () => void) {}
-
-    offAction (actionName: string, cb?: () => void) {}
 
     /**
      * @en
