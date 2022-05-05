@@ -378,9 +378,8 @@ export enum InputEventType {
      */
     DEVICEMOTION = 'devicemotion',
 
-    BUTTON_DOWN = 'button-down',
-    BUTTON_PRESSING = 'button-pressing',
-    BUTTON_UP = 'button-up',
+    GAMEPAD_INPUT = 'gamepad-input',
+    GAMEPAD_CHANGE = 'gamepad-change',
 }
 
 export type SystemEventTypeUnion = SystemEventType | NodeEventType | InputEventType | string;
