@@ -5,7 +5,7 @@ import { Vec3 } from '../core/math/vec3';
 // ActionBinding(Trigger) = control(TriggerCondition) + interaction/trigger(TriggerCondition) + processor/modifier
 // ActionMap/ActionContext
 
-export abstract class InputControl<T=number> {
+export abstract class InputControl<T=unknown> {
     abstract readValue(): T;
 }
 

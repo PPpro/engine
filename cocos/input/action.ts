@@ -1,57 +1,45 @@
-import { v2, Vec2 } from '../core';
-import { InputControl } from './control';
+import { v2, Vec2, Vec3 } from '../core';
+import { AxisControl, InputControl, Vec2Control } from './control';
 import { KeyCode } from './types';
 
 export class InputActionContext {
     public enable () { }
     public disable () { }
-    public addAction (action: InputAction): InputAction { throw new Error(); }
+    public addAction (action: InputAction<unknown>): void { throw new Error(); }
 }
 
-export enum InputActionType {
-    BUTTON = 'BUTTON',
-    VALUE = 'VALUE',
-    // PASS_THROUGH,
-}
-
-export interface InputActionTypeValueMap {
-    [InputActionType.BUTTON]: boolean;
-    [InputActionType.VALUE]: Vec2;
-}
-
-export class InputAction {
-    constructor (name: string, type: InputActionType, inputBindingList?: InputBinding[]) {}
-    enable () {}
-    disable () {}
-
-    addBinding (binding: InputBinding) {}
-
-    readValue<K> (): K;
-    readValue () {
-        return 1;
+export abstract class InputAction<T> {
+    constructor (inputBinding: InputBinding<T>[]) {
     }
 
-    onStarted (cb: () => void) {}
-    offStarted (cb: () => void) {}
-
-    onPerformed (cb: () => void) {}
-    offPerformed (cb: () => void) {}
-
-    onCanceled (cb: () => void) {}
-    offCanceled (cb: () => void) {}
+    abstract readValue<T> (): T;
 }
 
-export enum BindingPath {
-    PS4_TRIANGLE,
-    PS4_RECT,
-    PS4_CIRCLE,
-    PS4_X,
-    pS4_DPAD_UP,
-    pS4_DPAD_DOWN,
-    PS4_DPAD_LEFT,
-    PS4_DPAD_RIGHT,
-    PS4_LEFT_JOY_STICK,
-    PS4_RIGHT_JOY_STICK,
+export class AxisAction extends InputAction<number> {
+    readValue<T> (): T {
+        throw new Error('Method not implemented.');
+    }
+    constructor (inputBinding: InputBinding<number>[]) {
+        super(inputBinding);
+    }
+}
+
+export class Vec2Action extends InputAction<Vec2> {
+    readValue<T>(): T {
+        throw new Error('Method not implemented.');
+    }
+    constructor (inputBinding: InputBinding<Vec2>[]) {
+        super(inputBinding);
+    }
+}
+
+export class Vec3Action extends InputAction<Vec3> {
+    readValue<T>(): T {
+        throw new Error('Method not implemented.');
+    }
+    constructor (inputBinding: InputBinding<Vec3>[]) {
+        super(inputBinding);
+    }
 }
 
 export abstract class Interaction {
@@ -78,11 +66,7 @@ export class InteractionPress extends Interaction {
     constructor (pressPoint: number, pressType: 'press' | 'release' | 'press and release') { super(); }
 }
 
-interface BindingData {
-    path: KeyCode | BindingPath,
+export interface InputBinding<T=unknown> {
+    control: InputControl<T>,
     interactions: Interaction[],
-}
-
-export class InputBinding {
-    constructor (control: InputControl) {}
 }
