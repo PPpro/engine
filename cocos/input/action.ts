@@ -1,4 +1,5 @@
 import { v2, Vec2 } from '../core';
+import { InputControl } from './control';
 import { KeyCode } from './types';
 
 export class InputActionContext {
@@ -83,5 +84,5 @@ interface BindingData {
 }
 
 export class InputBinding {
-    constructor (data: BindingData) {}
+    constructor (control: InputControl) {}
 }
