@@ -1,5 +1,5 @@
-import { Vec2 } from '../core/math/vec2';
-import { Vec3 } from '../core/math/vec3';
+import { Vec2 } from '../../core/math/vec2';
+import { Vec3 } from '../../core/math/vec3';
 
 // Action = [ActionBinding]
 // ActionBinding(Trigger) = control(TriggerCondition) + interaction/trigger(TriggerCondition) + processor/modifier
