@@ -27,10 +27,73 @@ export class Vec3Control extends InputControl<Vec3> {
     }
 }
 
+export class CompositeControlAxis1D extends InputControl<number> {
+    public positive!: AxisControl;
+    public negative!: AxisControl;
+    constructor (options: {
+        positive: AxisControl,
+        negative: AxisControl
+    }) {
+        super();
+    }
+
+    readValue (): number {
+        throw new Error('Method not implemented.');
+    }
+}
+
+export class CompositeControlAxis2D extends InputControl<Vec2> {
+    constructor (options: {
+        up: AxisControl,
+        down: AxisControl,
+        left: AxisControl,
+        right: AxisControl,
+    }) {
+        super();
+    }
+    readValue (): Vec2 {
+        throw new Error('Method not implemented.');
+    }
+}
+
+export class CompositeControlAxis3D extends InputControl<Vec3> {
+    constructor (options: {
+        up: AxisControl,
+        down: AxisControl,
+        left: AxisControl,
+        right: AxisControl,
+        forward: AxisControl,
+        backward: AxisControl,
+    }) {
+        super();
+    }
+
+    readValue (): Vec3 {
+        throw new Error('Method not implemented.');
+    }
+}
+
 export class ButtonControl extends AxisControl {
 
 }
 
 export class KeyControl extends AxisControl {
 
+}
+
+export class StickControl extends CompositeControlAxis2D {
+    public xAxis!: CompositeControlAxis1D;
+    public yAxis!: CompositeControlAxis1D;
+
+    public left!: ButtonControl;
+    public right!: ButtonControl;
+    public up!: ButtonControl;
+    public down!: ButtonControl;
+}
+
+export class DpadControl extends Vec2Control {
+    public left!: ButtonControl;
+    public right!: ButtonControl;
+    public up!: ButtonControl;
+    public down!: ButtonControl;
 }
