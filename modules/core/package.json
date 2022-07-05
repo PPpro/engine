@@ -1,0 +1,12 @@
+{
+  "name": "@cc/core",
+  "version": "1.0.0",
+  "exports": {
+    ".": {
+      "types": "./index.ts"
+    },
+    "./math": {
+      "types": "./math/index.ts"
+    }
+  }
+}
