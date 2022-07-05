@@ -25,7 +25,7 @@
 */
 
 import { Event } from './event';
-import { Vec2 } from '../../../core/math/vec2';
+import { Vec2 } from '@cc/core/math';
 import { legacyCC } from '../../../core/global-exports';
 import { SystemEventTypeUnion } from '../event-enum';
 

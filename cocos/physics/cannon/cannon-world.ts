@@ -24,7 +24,6 @@
  */
 
 import CANNON from '@cocos/cannon';
-import { Vec3, Quat } from '../../core/math';
 import { fillRaycastResult, toCannonRaycastOptions } from './cannon-util';
 import { CannonConstraint } from './constraints/cannon-constraint';
 import { CannonShape } from './shapes/cannon-shape';
@@ -33,7 +32,7 @@ import { RecyclePool, Node, error } from '../../core';
 import { CannonSharedBody } from './cannon-shared-body';
 import { IPhysicsWorld, IRaycastOptions } from '../spec/i-physics-world';
 import { PhysicsMaterial, PhysicsRayResult } from '../framework';
-import { IVec3Like } from '../../core/math/type-define';
+import { IVec3Like, Vec3 } from '@cc/core/math';
 import { CannonRigidBody } from './cannon-rigid-body';
 import { fastRemoveAt } from '../../core/utils/array';
 

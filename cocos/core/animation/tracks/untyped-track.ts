@@ -1,6 +1,6 @@
 import { ccclass, serializable } from 'cc.decorator';
 import { RealCurve } from '../../curves';
-import { Color, Size, Vec2, Vec3, Vec4 } from '../../math';
+import { Color, Size, Vec2, Vec3, Vec4 } from '@cc/core/math';
 import { getError } from '../../platform';
 import { CLASS_NAME_PREFIX_ANIM, createEvalSymbol } from '../define';
 import { IValueProxyFactory } from '../value-proxy';

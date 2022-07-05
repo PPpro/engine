@@ -28,7 +28,7 @@ import { ccclass, help, executionOrder, menu, tooltip, type, visible, override, 
 import { builtinResMgr } from '../../core/builtin';
 import { InstanceMaterialType, UIRenderer } from '../framework/ui-renderer';
 import { director } from '../../core/director';
-import { Color } from '../../core/math';
+import { Color } from '@cc/core/math';
 import { scene } from '../../core/renderer';
 import { IAssembler } from '../renderer/base';
 import { IBatcher } from '../renderer/i-batcher';

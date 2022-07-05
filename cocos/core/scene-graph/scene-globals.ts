@@ -24,7 +24,7 @@ import { ccclass, visible, type, displayOrder, readOnly, slide, range, rangeStep
 import { BAIDU } from 'internal:constants';
 import { TextureCube } from '../assets/texture-cube';
 import { CCFloat, CCInteger } from '../data/utils/attribute';
-import { Color, Quat, Vec3, Vec2, Vec4 } from '../math';
+import { Color, Quat, Vec3, Vec2, Vec4 } from '@cc/core/math';
 import { Ambient } from '../renderer/scene/ambient';
 import { Shadows, ShadowType, ShadowSize } from '../renderer/scene/shadows';
 import { Skybox, EnvironmentLightingType } from '../renderer/scene/skybox';

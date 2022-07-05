@@ -24,7 +24,7 @@
 */
 
 import { IUV } from '../../assets';
-import { Mat4, Vec3, Color } from '../../../core/math';
+import { Mat4, Vec3, Color } from '@cc/core/math';
 import { IRenderData, RenderData } from '../../renderer/render-data';
 import { IBatcher } from '../../renderer/i-batcher';
 import { Sprite } from '../../components/sprite';

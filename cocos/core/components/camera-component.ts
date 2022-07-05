@@ -29,7 +29,7 @@ import { RenderTexture } from '../assets/render-texture';
 import { UITransform } from '../../2d/framework';
 import { Component } from './component';
 import { Ray } from '../geometry';
-import { Color, Rect, toRadian, Vec3 } from '../math';
+import { Color, Rect, toRadian, Vec3 } from '@cc/core/math';
 import { CAMERA_DEFAULT_MASK } from '../pipeline/define';
 import { scene } from '../renderer';
 import { SKYBOX_FLAG, CameraProjection, CameraFOVAxis, CameraAperture, CameraISO, CameraShutter } from '../renderer/scene/camera';

@@ -20,7 +20,7 @@
  */
 
 import { DirectionalLight, Camera, Shadows, CSMLevel, CSMOptimizationMode } from '../../renderer/scene';
-import { Mat4, Vec3, Vec2, Quat } from '../../math';
+import { Mat4, Vec3, Vec2, Quat } from '@cc/core/math';
 import { Frustum, AABB } from '../../geometry';
 import { IRenderObject } from '../define';
 import { legacyCC } from '../../global-exports';

@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Vec3 } from '../../math/vec3';
+import { Vec3 } from '@cc/core/math';
 import { OctreeInfo } from '../../scene-graph/scene-globals';
 
 /**

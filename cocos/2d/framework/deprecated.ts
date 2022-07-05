@@ -31,7 +31,7 @@ import { UIRenderer } from './ui-renderer';
 import { Canvas } from './canvas';
 import { js } from '../../core/utils/js';
 import { legacyCC } from '../../core/global-exports';
-import { Color } from '../../core/math/color';
+import { Color } from '@cc/core/math';
 
 removeProperty(UIComponent.prototype, 'UIComponent', [
     {

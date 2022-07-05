@@ -25,7 +25,7 @@
 
 import { CallbacksInvoker } from '../event/callbacks-invoker';
 import { Event, EventMouse, EventTouch, Touch } from '../../input/types';
-import { Vec2 } from '../math/vec2';
+import { Vec2 } from '@cc/core/math';
 import { BaseNode } from './base-node';
 import { Node } from './node';
 import { legacyCC } from '../global-exports';

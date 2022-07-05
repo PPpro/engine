@@ -28,7 +28,7 @@ import { NodeEventType } from './node-event';
 import { CCObject } from '../data/object';
 import { NodeUIProperties } from './node-ui-properties';
 import { NodeSpace, TransformBit } from './node-enum';
-import { Mat4, Quat, Vec3 } from '../math';
+import { Mat4, Quat, Vec3 } from '@cc/core/math';
 import { Layers } from './layers';
 import { editorExtrasTag, SerializationContext, SerializationOutput, serializeTag } from '../data';
 import { _tempFloatArray, fillMat4WithTempFloatArray } from './utils.jsb';

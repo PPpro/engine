@@ -26,7 +26,7 @@
 import { AABB, Frustum, intersect, Sphere } from '../geometry';
 import { Model } from '../renderer/scene/model';
 import { Camera, SKYBOX_FLAG } from '../renderer/scene/camera';
-import { Vec3, Mat4, Color } from '../math';
+import { Vec3, Mat4, Color } from '@cc/core/math';
 import { RenderPipeline } from './render-pipeline';
 import { Pool } from '../memop';
 import { IRenderObject, UBOShadow } from './define';

@@ -28,9 +28,8 @@ import { ccclass, help, executionOrder, menu, tooltip, displayOrder, type, range
 import { EDITOR } from 'internal:constants';
 import { SpriteAtlas } from '../assets/sprite-atlas';
 import { SpriteFrame } from '../assets/sprite-frame';
-import { Vec2 } from '../../core/math';
+import { Vec2, clamp } from '@cc/core/math';
 import { ccenum } from '../../core/value-types/enum';
-import { clamp } from '../../core/math/utils';
 import { IBatcher } from '../renderer/i-batcher';
 import { UIRenderer, InstanceMaterialType } from '../framework/ui-renderer';
 import { PixelFormat } from '../../core/assets/asset-enum';

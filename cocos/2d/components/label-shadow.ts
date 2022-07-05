@@ -26,7 +26,7 @@
 
 import { ccclass, help, executionOrder, menu, tooltip, requireComponent, executeInEditMode, serializable } from 'cc.decorator';
 import { Component } from '../../core/components/component';
-import { Color, Vec2 } from '../../core/math';
+import { Color, Vec2 } from '@cc/core/math';
 import { Label } from './label';
 import { legacyCC } from '../../core/global-exports';
 

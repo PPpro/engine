@@ -25,7 +25,7 @@
 
 import { AABB } from '../../geometry';
 import { legacyCC } from '../../global-exports';
-import { Vec3 } from '../../math';
+import { Vec3 } from '@cc/core/math';
 import { Light, LightType, nt2lm } from './light';
 
 /**

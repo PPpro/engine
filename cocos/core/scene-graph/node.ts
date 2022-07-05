@@ -31,7 +31,7 @@ import { Layers } from './layers';
 import { NodeUIProperties } from './node-ui-properties';
 import { legacyCC } from '../global-exports';
 import { BaseNode, TRANSFORM_ON } from './base-node';
-import { approx, EPSILON, Mat3, Mat4, Quat, Vec3 } from '../math';
+import { approx, EPSILON, Mat3, Mat4, Quat, Vec3 } from '@cc/core/math';
 import { NodeSpace, TransformBit } from './node-enum';
 import { NodeEventType } from './node-event';
 import { CustomSerializable, editorExtrasTag, SerializationContext, SerializationOutput, serializeTag } from '../data';

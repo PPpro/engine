@@ -24,7 +24,7 @@
  */
 
 import { FontAtlas } from '../../assets/bitmap-font';
-import { Color } from '../../../core/math';
+import { Color } from '@cc/core/math';
 import { ImageAsset, Texture2D } from '../../../core/assets';
 import { PixelFormat } from '../../../core/assets/asset-enum';
 import { BufferTextureCopy } from '../../../core/gfx';

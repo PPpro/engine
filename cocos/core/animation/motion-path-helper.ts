@@ -25,7 +25,7 @@
 
 import { binarySearchEpsilon as binarySearch } from '../algorithm/binary-search';
 import { errorID } from '../platform/debug';
-import { Vec2, Vec3 } from '../math';
+import { Vec2, Vec3 } from '@cc/math';
 import { AnimCurve, computeRatioByType, CurveValue, EasingMethod } from './animation-curve';
 import { bezier } from './bezier';
 

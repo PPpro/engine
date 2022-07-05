@@ -39,7 +39,7 @@ import {
     Attribute, Device, Buffer, BufferInfo, AttributeName, BufferUsageBit, Feature, Format,
     FormatInfos, FormatType, MemoryUsageBit, PrimitiveMode, getTypedArrayConstructor, DrawInfo, FormatInfo, deviceManager,
 } from '../../core/gfx';
-import { Mat4, Quat, Vec3 } from '../../core/math';
+import { Mat4, Quat, Vec3 } from '@cc/core/math';
 import { Morph } from './morph';
 import { MorphRendering, createMorphRendering } from './morph-rendering';
 

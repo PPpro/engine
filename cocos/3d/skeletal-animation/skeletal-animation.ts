@@ -27,7 +27,7 @@ import {
     ccclass, executeInEditMode, executionOrder, help, menu, tooltip, type, serializable, editable,
 } from 'cc.decorator';
 import { SkinnedMeshRenderer } from '../skinned-mesh-renderer';
-import { Mat4 } from '../../core/math';
+import { Mat4 } from '@cc/core/math';
 import { DataPoolManager } from './data-pool-manager';
 import { Node } from '../../core/scene-graph/node';
 import { AnimationClip } from '../../core/animation/animation-clip';

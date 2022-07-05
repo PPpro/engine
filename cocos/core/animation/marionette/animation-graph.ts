@@ -18,7 +18,7 @@ import { move } from '../../algorithm/move';
 import { onAfterDeserializedTag } from '../../data/deserialize-symbols';
 import { CLASS_NAME_PREFIX_ANIM } from '../define';
 import { StateMachineComponent } from './state-machine-component';
-import { clamp } from '../../math';
+import { clamp } from '@cc/core/math';
 
 export { State };
 

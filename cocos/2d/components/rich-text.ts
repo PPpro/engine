@@ -32,7 +32,7 @@ import { assert, warnID } from '../../core/platform';
 import { BASELINE_RATIO, fragmentText, isUnicodeCJK, isUnicodeSpace, isEnglishWordPartAtFirst, isEnglishWordPartAtLast, getEnglishWordPartAtFirst, getEnglishWordPartAtLast } from '../utils/text-utils';
 import { HtmlTextParser, IHtmlTextParserResultObj, IHtmlTextParserStack } from '../utils/html-text-parser';
 import Pool from '../../core/utils/pool';
-import { Color, Vec2 } from '../../core/math';
+import { Color, Vec2 } from '@cc/core/math';
 import { Node } from '../../core/scene-graph';
 import { CacheMode, HorizontalTextAlignment, Label, VerticalTextAlignment } from './label';
 import { LabelOutline } from './label-outline';

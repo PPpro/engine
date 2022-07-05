@@ -34,7 +34,7 @@ import { UBOMorph, UNIFORM_NORMAL_MORPH_TEXTURE_BINDING,
 import { warn } from '../../core/platform/debug';
 import { Morph, SubMeshMorph } from './morph';
 import { assertIsNonNullable, assertIsTrue } from '../../core/data/utils/asserts';
-import { log2, nextPow2 } from '../../core/math/bits';
+import { log2, nextPow2 } from '@cc/co';
 import { IMacroPatch } from '../../core/renderer';
 import { legacyCC } from '../../core/global-exports';
 import { PixelFormat } from '../../core/assets/asset-enum';

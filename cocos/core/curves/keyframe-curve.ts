@@ -2,7 +2,7 @@ import { binarySearchEpsilon } from '../algorithm/binary-search';
 import { CCClass } from '../data/class';
 import { ccclass, serializable } from '../data/decorators';
 import { assertIsTrue } from '../data/utils/asserts';
-import { approx } from '../math';
+import { approx } from '@cc/core/math';
 import type { CurveBase } from './curve-base';
 
 type KeyFrame<TKeyframeValue> = [number, TKeyframeValue];

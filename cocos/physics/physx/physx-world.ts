@@ -28,7 +28,7 @@ import { Ray } from '../../core/geometry';
 import { IPhysicsWorld, IRaycastOptions } from '../spec/i-physics-world';
 import { PhysicsMaterial, PhysicsRayResult, CollisionEventType, TriggerEventType } from '../framework';
 import { error, Node, RecyclePool } from '../../core';
-import { IVec3Like } from '../../core/math/type-define';
+import { IVec3Like } from '@cc/core/math';
 import { IBaseConstraint } from '../spec/i-physics-constraint';
 import { PhysXRigidBody } from './physx-rigid-body';
 import {

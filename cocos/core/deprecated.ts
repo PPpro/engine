@@ -24,7 +24,7 @@
  */
 
 import { replaceProperty, removeProperty, markAsWarning } from './utils/x-deprecated';
-import * as math from './math';
+import * as math from '@cc/math';
 import { Scheduler } from './scheduler';
 import { legacyCC } from './global-exports';
 import { SubModel } from './renderer/scene/submodel';

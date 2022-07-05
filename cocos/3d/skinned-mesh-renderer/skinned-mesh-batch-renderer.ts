@@ -34,7 +34,7 @@ import { Skeleton } from '../assets/skeleton';
 import { Texture2D } from '../../core/assets/texture-2d';
 import { CCString } from '../../core/data/utils/attribute';
 import { AttributeName, FormatInfos, Format, Type, Attribute, BufferTextureCopy } from '../../core/gfx';
-import { Mat4, Vec2, Vec3 } from '../../core/math';
+import { Mat4, Vec2, Vec3 } from '@cc/core/math';
 import { mapBuffer, readBuffer, writeBuffer } from '../misc/buffer';
 import { SkinnedMeshRenderer } from './skinned-mesh-renderer';
 import { legacyCC } from '../../core/global-exports';

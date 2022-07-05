@@ -26,7 +26,7 @@
 
 import { ccclass, help, executionOrder, menu, tooltip, displayOrder, type, visible, override, serializable, range, slide } from 'cc.decorator';
 import { InstanceMaterialType, UIRenderer } from '../framework/ui-renderer';
-import { clamp, Color, Mat4, Vec2, Vec3 } from '../../core/math';
+import { clamp, Color, Mat4, Vec2, Vec3 } from '@cc/core/math';
 import { warnID } from '../../core/platform';
 import { IBatcher } from '../renderer/i-batcher';
 import { ccenum } from '../../core/value-types/enum';

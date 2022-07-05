@@ -29,7 +29,7 @@ import { JSB } from 'internal:constants';
 import { Texture2D } from '../../core/assets';
 import { Material } from '../../core/assets/material';
 import { Mesh } from '../assets/mesh';
-import { Vec4 } from '../../core/math';
+import { Vec4 } from '@cc/core/math';
 import { scene } from '../../core/renderer';
 import { MorphModel } from '../models/morph-model';
 import { Root } from '../../core/root';

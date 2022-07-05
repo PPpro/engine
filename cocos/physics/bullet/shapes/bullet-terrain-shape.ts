@@ -24,13 +24,13 @@
  */
 
 import { BulletShape } from './bullet-shape';
-import { Vec3, warn } from '../../../core';
+import { warn } from '../../../core';
 import { TerrainCollider } from '../../../../exports/physics-framework';
 import { cocos2BulletVec3 } from '../bullet-utils';
 import { ITerrainShape } from '../../spec/i-physics-shape';
 import { ITerrainAsset } from '../../spec/i-external';
 import { CC_V3_0, BulletCache } from '../bullet-cache';
-import { IVec3Like } from '../../../core/math/type-define';
+import { IVec3Like, Vec3 } from '@cc/core/math';
 import { bt } from '../instantiated';
 
 export class BulletTerrainShape extends BulletShape implements ITerrainShape {

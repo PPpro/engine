@@ -25,10 +25,7 @@
 
 import { AABB } from '../geometry/aabb';
 import { Spline } from '../geometry/spline';
-import { Color } from '../math/color';
-import { Mat4 } from '../math/mat4';
-import { Vec3 } from '../math/vec3';
-import { Vec4 } from '../math/vec4';
+import { Color, Mat4, Vec3, Vec4, toRadian } from '@cc/core/math';
 import { SetIndex } from './define';
 import { PipelineStateManager } from './pipeline-state-manager';
 import { Attribute, AttributeName, Buffer, BufferInfo, BufferUsageBit,
@@ -36,7 +33,6 @@ import { Attribute, AttributeName, Buffer, BufferInfo, BufferUsageBit,
     InputAssemblerInfo, MemoryUsageBit, RenderPass } from '../gfx';
 import { warnID } from '../platform/debug';
 import { Frustum } from '../geometry/frustum';
-import { toRadian } from '../math/utils';
 import { PipelineSceneData } from './pipeline-scene-data';
 import { legacyCC } from '../global-exports';
 

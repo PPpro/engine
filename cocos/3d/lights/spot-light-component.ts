@@ -25,7 +25,7 @@
 
 import { ccclass, range, slide, type, editable, displayOrder, help, executeInEditMode,
     menu, tooltip, serializable, formerlySerializedAs, visible } from 'cc.decorator';
-import { toRadian } from '../../core/math';
+import { toRadian } from '@cc/core/math';
 import { scene } from '../../core/renderer';
 import { Light, PhotometricTerm } from './light-component';
 import { legacyCC } from '../../core/global-exports';

@@ -29,7 +29,7 @@ import '../data/class';
 import { MINIGAME, JSB, RUNTIME_BASED, EDITOR } from 'internal:constants';
 import { screenAdapter } from 'pal/screen-adapter';
 import { Eventify, EventTarget } from '../event';
-import { Rect, Size, Vec2 } from '../math';
+import { Rect, Size, Vec2 } from '@cc/core/math';
 import visibleRect from './visible-rect';
 import { legacyCC } from '../global-exports';
 import { errorID } from './debug';

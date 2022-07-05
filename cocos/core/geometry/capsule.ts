@@ -23,9 +23,8 @@
  THE SOFTWARE.
  */
 
-import { Vec3, Quat, Mat4, absMaxComponent } from '../math';
+import { Vec3, Quat, Mat4, absMaxComponent, IVec3Like, IQuatLike } from '@cc/core/math';
 import enums from './enums';
-import { IVec3Like, IQuatLike } from '../math/type-define';
 
 /**
  * @en

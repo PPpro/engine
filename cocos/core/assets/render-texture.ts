@@ -25,7 +25,7 @@
 
 import { ccclass } from 'cc.decorator';
 import { EDITOR, TEST } from 'internal:constants';
-import { clamp } from '../math/utils';
+import { clamp } from '@cc/core/math';
 import { Texture, ColorAttachment, DepthStencilAttachment, GeneralBarrierInfo, AccessFlagBit, RenderPassInfo, Format, deviceManager } from '../gfx';
 import { legacyCC } from '../global-exports';
 import { RenderWindow, IRenderWindowInfo } from '../renderer/core/render-window';

@@ -23,13 +23,12 @@
  THE SOFTWARE.
  */
 
-import { Vec3 } from '../../../core/math';
 import { Collider, PhysicsMaterial, PhysicsSystem } from '../../../../exports/physics-framework';
 import { BulletWorld } from '../bullet-world';
 import { EBtSharedBodyDirty } from '../bullet-enum';
 import { cocos2BulletQuat, cocos2BulletVec3 } from '../bullet-utils';
 import { IBaseShape } from '../../spec/i-physics-shape';
-import { IVec3Like } from '../../../core/math/type-define';
+import { IVec3Like, Vec3 } from '@cc/core/math';
 import { BulletSharedBody } from '../bullet-shared-body';
 import { AABB, Sphere } from '../../../core/geometry';
 import { BulletCache, CC_V3_0 } from '../bullet-cache';

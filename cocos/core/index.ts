@@ -27,7 +27,7 @@
 import { legacyCC, VERSION } from './global-exports';
 
 import * as geometry from './geometry';
-import * as math from './math';
+import * as math from '@cc/math';
 import * as memop from './memop';
 import * as gfx from './gfx';
 
@@ -39,7 +39,7 @@ legacyCC.geometry = geometry;
 
 export { math, memop, geometry, gfx, VERSION };
 
-export * from './math';
+export * from '@cc/math';
 export * from './memop';
 export * from './value-types';
 export * from './utils';

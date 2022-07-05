@@ -40,7 +40,7 @@ import { legacyCC } from '../../core/global-exports';
 import { ModelLocalBindings, UBOLocal } from '../../core/pipeline/define';
 import { SpriteFrame } from '../assets';
 import { TextureBase } from '../../core/assets/texture-base';
-import { Mat4 } from '../../core/math';
+import { Mat4 } from '@cc/core/math';
 import { IBatcher } from './i-batcher';
 import { StaticVBAccessor } from './static-vb-accessor';
 import { assertIsTrue } from '../../core/data/utils/asserts';

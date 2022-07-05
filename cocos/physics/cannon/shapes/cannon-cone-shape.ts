@@ -24,12 +24,11 @@
  */
 
 import CANNON from '@cocos/cannon';
-import { Vec3 } from '../../../core/math';
 import { CannonShape } from './cannon-shape';
 import { IConeShape } from '../../spec/i-physics-shape';
 import { ConeCollider } from '../../../../exports/physics-framework';
 import { EAxisDirection } from '../../framework/physics-enum';
-import { IVec3Like } from '../../../core/math/type-define';
+import { IVec3Like, Vec3 } from '@cc/core/math';
 import { commitShapeUpdates } from '../cannon-util';
 
 const v3_0 = new Vec3();

@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { repeat } from '../../core/math';
+import { repeat } from '@cc/core/math';
 import { AnimationCurve, evalOptCurve, OptimizedKey } from '../../core/geometry/curve';
 
 const CURVE_MODE_CONSTANT = 0;

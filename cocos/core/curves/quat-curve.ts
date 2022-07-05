@@ -1,5 +1,5 @@
 import { assertIsTrue } from '../data/utils/asserts';
-import { IQuatLike, pingPong, Quat, repeat } from '../math';
+import { IQuatLike, pingPong, Quat, repeat } from '@cc/core/math';
 import { KeyframeCurve } from './keyframe-curve';
 import { EasingMethod, ExtrapolationMode } from './curve';
 import { binarySearchEpsilon } from '../algorithm/binary-search';

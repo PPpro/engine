@@ -26,7 +26,7 @@
 import { ccclass, displayOrder, type, serializable } from 'cc.decorator';
 import { CCFloat, CCInteger } from '../../core';
 import { range, rangeStep, slide, visible } from '../../core/data/decorators/editable';
-import { Vec3 } from '../../core/math';
+import { Vec3 } from '@cc/core/math';
 import { ParticleNoise } from '../noise';
 import { Particle, PARTICLE_MODULE_NAME, ParticleModuleBase } from '../particle';
 

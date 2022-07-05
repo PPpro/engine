@@ -23,10 +23,10 @@
  THE SOFTWARE.
  */
 
-import { Mat4, Quat, random, randomRange, randomRangeInt, Vec2, Vec3 } from '../core/math';
-import { sign } from '../core/math/bits';
+import { bits, Mat4, Quat, random, randomRange, randomRangeInt, Vec2, Vec3 } from '@cc/core/math';
 import { Space } from './enum';
 
+const { sign } = bits;
 export const particleEmitZAxis = new Vec3(0, 0, -1);
 
 export function calculateTransform (systemSpace: number, moduleSpace: number, worldTransform: Mat4, outQuat: Quat) {

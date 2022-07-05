@@ -24,7 +24,7 @@
  */
 
 import { Attribute, deviceManager } from '../../gfx';
-import { Vec3 } from '../../math';
+import { Vec3 } from '@cc/core/math';
 import { legacyCC } from '../../global-exports';
 
 export interface IInstancedAttributeBlock {

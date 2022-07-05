@@ -24,7 +24,7 @@
  */
 
 import { binarySearchEpsilon as binarySearch } from '../algorithm/binary-search';
-import { lerp, Quat } from '../math';
+import { lerp, Quat } from '@cc/core/math';
 import { errorID } from '../platform/debug';
 import { ValueType } from '../value-types';
 import { bezierByTime, BezierControlPoints } from '../curves/bezier';

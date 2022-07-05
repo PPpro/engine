@@ -25,11 +25,13 @@
 
 import { BitMask, Enum } from '../value-types';
 import { legacyCC } from '../global-exports';
-import { log2 } from '../math/bits';
+import { bits } from '@cc/core/math';
 import { js } from '../utils/js';
 import { assertIsTrue } from '../data/utils/asserts';
 import { getError } from '../platform/debug';
 import { Settings, settings } from '../settings';
+
+const { log2 } = bits;
 
 // built-in layers, users can use 0~19 bits, 20~31 are system preserve bits.
 const layerList = {

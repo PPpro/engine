@@ -34,7 +34,7 @@ import { GeometryRenderer } from '../geometry-renderer';
 import { Buffer, Color, DescriptorSet, DescriptorSetLayout, DrawInfo, Format, InputAssembler, PipelineState, Rect, Sampler, Swapchain, Texture, Viewport } from '../../gfx';
 import { GlobalDSManager } from '../global-descriptor-set-manager';
 import { DescriptorBlockFlattened, DescriptorBlockIndex } from './layout-graph';
-import { Mat4, Quat, Vec2, Vec4 } from '../../math';
+import { Mat4, Quat, Vec2, Vec4 } from '@cc/core/math';
 import { MacroRecord } from '../../renderer/core/pass-utils';
 import { PipelineSceneData } from '../pipeline-scene-data';
 import { QueueHint, ResourceResidency, SceneFlags, TaskType, UpdateFrequency } from './types';

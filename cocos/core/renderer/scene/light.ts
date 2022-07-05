@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Vec3 } from '../../math';
+import { Vec3 } from '@cc/core/math';
 import { TransformBit } from '../../scene-graph/node-enum';
 import { RenderScene } from '../core/render-scene';
 import { Node } from '../../scene-graph';

@@ -24,12 +24,11 @@
  */
 
 import CANNON from '@cocos/cannon';
-import { Vec3, Quat } from '../../../core/math';
+import { Vec3, Quat, IVec3Like } from '@cc/core/math';
 import { getWrap, setWrap } from '../../utils/util';
 import { commitShapeUpdates } from '../cannon-util';
 import { PhysicsMaterial } from '../../framework/assets/physics-material';
 import { IBaseShape } from '../../spec/i-physics-shape';
-import { IVec3Like } from '../../../core/math/type-define';
 import { CannonSharedBody } from '../cannon-shared-body';
 import { CannonWorld } from '../cannon-world';
 import { TriggerEventType } from '../../framework/physics-interface';

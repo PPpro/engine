@@ -1,5 +1,5 @@
 import { assertIsTrue } from '../data/utils/asserts';
-import { approx, lerp, pingPong, repeat } from '../math';
+import { approx, lerp, pingPong, repeat, bits } from '@cc/core/math';
 import { KeyframeCurve } from './keyframe-curve';
 import { ccclass, serializable, uniquelyReferenced } from '../data/decorators';
 import { RealInterpolationMode, ExtrapolationMode, TangentWeightMode } from './real-curve-param';
@@ -10,7 +10,8 @@ import { CCClass, deserializeTag, editorExtrasTag, SerializationContext, Seriali
 import { DeserializationContext } from '../data/custom-serializable';
 import { EasingMethod, getEasingFn } from './easing-method';
 import { getOrCreateSerializationMetadata } from '../data/serialization-metadata';
-import { popCount } from '../math/bits';
+
+const { popCount } = bits;
 
 export { RealInterpolationMode, ExtrapolationMode, TangentWeightMode, EasingMethod };
 

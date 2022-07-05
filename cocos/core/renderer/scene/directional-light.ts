@@ -24,7 +24,7 @@
  */
 
 import { legacyCC } from '../../global-exports';
-import { Vec3 } from '../../math';
+import { Vec3 } from '@cc/core/math';
 import { Ambient } from './ambient';
 import { Light, LightType } from './light';
 import { CSMLevel, CSMOptimizationMode, PCFType, Shadows } from './shadows';

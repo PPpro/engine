@@ -27,7 +27,7 @@
 
 import { IScreenOptions, screenAdapter } from 'pal/screen-adapter';
 import { legacyCC } from '../global-exports';
-import { Size } from '../math';
+import { Size } from '@cc/core/math';
 import { Settings, settings } from '../settings';
 import { warnID } from './debug';
 

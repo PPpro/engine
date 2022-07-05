@@ -25,7 +25,7 @@
 
 import { ccclass, type, serializable, editable } from 'cc.decorator';
 import { EDITOR } from 'internal:constants';
-import { Color } from '../../core/math';
+import { Color } from '@cc/core/math';
 import { Enum } from '../../core/value-types';
 import Gradient, { AlphaKey, ColorKey } from './gradient';
 import { Texture2D } from '../../core';

@@ -26,7 +26,7 @@
 /* eslint-disable max-len */
 import { systemInfo } from 'pal/system-info';
 import { Color, Buffer, DescriptorSetLayout, Device, Feature, Format, FormatFeatureBit, Sampler, Swapchain, Texture, StoreOp, LoadOp, ClearFlagBit, DescriptorSet, deviceManager } from '../../gfx/index';
-import { Mat4, Quat, Vec2, Vec4 } from '../../math';
+import { Mat4, Quat, Vec2, Vec4 } from '@cc/core/math';
 import { QueueHint, ResourceDimension, ResourceFlags, ResourceResidency, SceneFlags, UpdateFrequency } from './types';
 import { AccessType, AttachmentType, Blit, ComputePass, ComputeView, CopyPair, CopyPass, Dispatch, ManagedResource, MovePair, MovePass, PresentPass, RasterPass, RasterView, RenderData, RenderGraph, RenderGraphValue, RenderQueue, RenderSwapchain, ResourceDesc, ResourceGraph, ResourceGraphValue, ResourceStates, ResourceTraits, SceneData } from './render-graph';
 import { ComputePassBuilder, ComputeQueueBuilder, CopyPassBuilder, LayoutGraphBuilder, MovePassBuilder, Pipeline, RasterPassBuilder, RasterQueueBuilder, SceneTask, SceneTransversal, SceneVisitor, Setter } from './pipeline';

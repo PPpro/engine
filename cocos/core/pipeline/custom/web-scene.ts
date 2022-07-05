@@ -25,7 +25,7 @@
 
 import { intersect, Sphere } from '../../geometry';
 import { legacyCC } from '../../global-exports';
-import { Mat4, Vec3, Color } from '../../math';
+import { Mat4, Vec3, Color } from '@cc/core/math';
 import { RenderScene } from '../../renderer';
 import { Camera, SphereLight, DirectionalLight, Model, Shadows, ShadowType, SKYBOX_FLAG, SubModel } from '../../renderer/scene';
 import { IRenderObject, IRenderPass } from '../define';

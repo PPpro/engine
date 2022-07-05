@@ -31,7 +31,7 @@ import { CCObject } from '../data/object';
 import IDGenerator from '../utils/id-generator';
 import { getClassName, value } from '../utils/js';
 import { RenderScene } from '../renderer/core/render-scene';
-import { Rect } from '../math';
+import { Rect } from '@cc/core/math';
 import * as RF from '../data/utils/requiring-frame';
 import { Node } from '../scene-graph';
 import { legacyCC } from '../global-exports';

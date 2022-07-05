@@ -27,7 +27,7 @@ import { UBOGlobal, UBOShadow, UBOCamera, UNIFORM_SHADOWMAP_BINDING,
     supportsR32FloatTexture, UNIFORM_SPOT_SHADOW_MAP_TEXTURE_BINDING } from './define';
 import { Device, BufferInfo, BufferUsageBit, MemoryUsageBit, DescriptorSet, API } from '../gfx';
 import { Camera } from '../renderer/scene/camera';
-import { Mat4, Vec3, Vec4, Color } from '../math';
+import { Mat4, Vec3, Vec4, Color } from '@cc/core/math';
 import { RenderPipeline } from './render-pipeline';
 import { legacyCC } from '../global-exports';
 import { CSMLevel, PCFType, Shadows, ShadowType } from '../renderer/scene/shadows';

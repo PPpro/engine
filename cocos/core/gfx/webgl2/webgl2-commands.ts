@@ -55,7 +55,6 @@ import {
     IWebGL2GPURenderPass,
     IWebGL2GPUTextureView,
 } from './webgl2-gpu-objects';
-import { max } from '../../math/bits';
 
 const WebGLWraps: GLenum[] = [
     0x2901, // WebGLRenderingContext.REPEAT

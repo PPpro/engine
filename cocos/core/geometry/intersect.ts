@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { EPSILON, Mat3, Vec3, Mat4 } from '../math';
+import { EPSILON, Mat3, Vec3, Mat4, IVec3Like } from '@cc/core/math';
 import { AABB } from './aabb';
 import { Capsule } from './capsule';
 import * as distance from './distance';
@@ -39,7 +39,6 @@ import { PrimitiveMode } from '../gfx';
 import { Mesh } from '../../3d/assets/mesh';
 import { IBArray, RenderingSubMesh } from '../assets/rendering-sub-mesh';
 import { IRaySubMeshOptions, ERaycastMode, IRaySubMeshResult, IRayMeshOptions, IRayModelOptions } from './spec';
-import { IVec3Like } from '../math/type-define';
 import { scene } from '../renderer';
 
 /**

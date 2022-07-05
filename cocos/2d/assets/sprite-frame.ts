@@ -27,7 +27,7 @@
 
 import { ccclass } from 'cc.decorator';
 import { EDITOR, TEST, BUILD } from 'internal:constants';
-import { Color, Mat4, Rect, Size, Vec2, Vec3 } from '../../core/math';
+import { Mat4, Rect, Size, Vec2, Vec3 } from '@cc/core/math';
 import { Asset } from '../../core/assets/asset';
 import { TextureBase } from '../../core/assets/texture-base';
 import { legacyCC } from '../../core/global-exports';

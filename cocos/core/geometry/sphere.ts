@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Mat4, Quat, Vec3 } from '../math';
+import { Mat4, Quat, Vec3 } from '@cc/core/math';
 import enums from './enums';
 import { AABB } from './aabb';
 

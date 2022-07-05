@@ -24,7 +24,7 @@
  */
 
 import { DEBUG } from 'internal:constants';
-import { Vec3, Quat } from '../../core/math';
+import { Vec3, Quat } from '@cc/core/math';
 import { Node } from '../../core/scene-graph';
 import { RuntimeBinding } from '../../core/animation/tracks/track';
 import { assertIsTrue } from '../../core/data/utils/asserts';

@@ -24,7 +24,7 @@
  */
 
 import { Enum } from '../../value-types';
-import { Color, Vec4 } from '../../math';
+import { Color, Vec4 } from '@cc/core/math';
 import { legacyCC } from '../../global-exports';
 import { FogInfo } from '../../scene-graph/scene-globals';
 import { SRGBToLinear } from '../../pipeline/pipeline-funcs';

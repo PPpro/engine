@@ -29,7 +29,7 @@ import { Label } from '../../components/label';
 import { fillMeshVertices3D } from '../utils';
 import { bmfont } from './bmfont';
 import { letterFont } from './letter-font';
-import { Color } from '../../../core/math/color';
+import { Color } from '@cc/core/math';
 
 const tempColor = new Color(255, 255, 255, 255);
 

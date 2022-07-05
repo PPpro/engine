@@ -37,7 +37,7 @@ import {
 import { EDITOR } from 'internal:constants';
 import { Component } from '../../../core/components/component';
 import { RigidBody } from './rigid-body';
-import { Vec3 } from '../../../core/math/vec3';
+import { Vec3 } from '@cc/core/math';
 import { legacyCC } from '../../../core/global-exports';
 
 /**

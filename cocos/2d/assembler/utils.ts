@@ -23,12 +23,11 @@
  THE SOFTWARE.
  */
 
-import { Color, Mat4, Vec3 } from '../../core/math';
+import { Color, Mat4, Vec3, clamp} from '@cc/core/math';
 import { RenderData } from '../renderer/render-data';
 import { IBatcher } from '../renderer/i-batcher';
 import { Node } from '../../core/scene-graph/node';
 import { FormatInfos } from '../../core/gfx';
-import { clamp } from '../../core';
 
 const vec3_temp = new Vec3();
 const _worldMatrix = new Mat4();

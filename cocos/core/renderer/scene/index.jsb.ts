@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 import { legacyCC } from '../../global-exports';
-import { Vec3 } from '../../math';
+import { Vec3 } from '@cc/core/math';
 import { Enum } from '../../value-types';
 
 export type Ambient = jsb.Ambient;

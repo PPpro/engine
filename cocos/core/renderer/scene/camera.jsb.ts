@@ -26,7 +26,7 @@ import { Ray } from '../../geometry';
 import { RenderWindow } from '../core/render-window';
 import { ClearFlagBit } from '../../gfx';
 import { _tempFloatArray, fillMat4WithTempFloatArray } from '../../scene-graph/utils.jsb';
-import { Mat4, Vec3 } from '../../math';
+import { Mat4, Vec3 } from '@cc/core/math';
 
 declare const jsb: any;
 

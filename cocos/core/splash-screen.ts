@@ -26,7 +26,6 @@
 import { EDITOR, NATIVE, PREVIEW } from 'internal:constants';
 import * as easing from './easing/easing';
 import { Material } from './assets/material';
-import { clamp01 } from './math/utils';
 import {
     Sampler, SamplerInfo, Shader, Texture, TextureInfo, Device, InputAssembler, InputAssemblerInfo, Attribute, Buffer,
     BufferInfo, Rect, Color, BufferTextureCopy, Framebuffer, CommandBuffer, BufferUsageBit, Format,
@@ -35,7 +34,7 @@ import {
 import { PipelineStateManager } from './pipeline';
 import { legacyCC } from './global-exports';
 import { SetIndex } from './pipeline/define';
-import { Mat4, Vec2 } from './math';
+import { Mat4, Vec2, clamp01 } from '@cc/core/math';
 import { Settings, settings } from './settings';
 
 const v2_0 = new Vec2();

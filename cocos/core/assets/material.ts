@@ -31,9 +31,8 @@ import { TextureBase } from './texture-base';
 import { legacyCC } from '../global-exports';
 import { IPassInfoFull, Pass, PassOverrides } from '../renderer/core/pass';
 import { MacroRecord, MaterialProperty } from '../renderer/core/pass-utils';
-import { Color } from '../math/color';
+import { Color, Vec4 } from '@cc/core/math';
 import { warnID } from '../platform/debug';
-import { Vec4 } from '../math';
 import { SRGBToLinear } from '../pipeline/pipeline-funcs';
 import { Renderer } from '../components/renderer';
 

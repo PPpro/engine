@@ -2,7 +2,7 @@ import { EDITOR, TEST } from 'internal:constants';
 import { binarySearchEpsilon } from '../../algorithm/binary-search';
 import { ccclass, serializable } from '../../data/decorators';
 import { assertIsTrue } from '../../data/utils/asserts';
-import { clamp, lerp, Quat, Vec3 } from '../../math';
+import { clamp, lerp, Quat, Vec3 } from '@cc/core/math';
 import { error } from '../../platform/debug';
 import { CLASS_NAME_PREFIX_ANIM } from '../define';
 import { Binder, RuntimeBinding, TrackBinding, TrackPath } from '../tracks/track';

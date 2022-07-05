@@ -26,7 +26,7 @@
 import { EDITOR } from 'internal:constants';
 import { ccclass, executeInEditMode, requireComponent, disallowMultiple, tooltip,
     type, displayOrder, serializable, override, visible, displayName, disallowAnimation } from 'cc.decorator';
-import { Color } from '../../core/math';
+import { Color } from '@cc/core/math';
 import { ccenum } from '../../core/value-types/enum';
 import { builtinResMgr } from '../../core/builtin';
 import { Material } from '../../core/assets';

@@ -29,7 +29,7 @@ import {
     Attribute, Device, InputAssemblerInfo, Buffer, BufferInfo, AttributeName, BufferUsageBit,
     Format, FormatInfos, MemoryUsageBit, PrimitiveMode, getTypedArrayConstructor, DrawInfo,
 } from '../gfx';
-import { Vec3 } from '../math';
+import { Vec3 } from '@cc/core/math';
 import { Mesh } from '../../3d/assets/mesh';
 
 /**

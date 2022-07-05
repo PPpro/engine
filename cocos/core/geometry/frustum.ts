@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Mat4, Vec3 } from '../math';
+import { Mat4, Vec3 } from '@cc/core/math';
 import { Camera } from '../renderer/scene';
 import enums from './enums';
 import { Plane } from './plane';

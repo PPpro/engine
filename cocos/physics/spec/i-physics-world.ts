@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { IVec3Like } from '../../core/math/type-define';
+import { IVec3Like } from '@cc/core/math';
 import { PhysicsRayResult } from '../framework/physics-ray-result';
 import { Ray } from '../../core/geometry';
 import { RecyclePool } from '../../core';

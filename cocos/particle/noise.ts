@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Vec2, Vec3 } from '../core/math';
+import { Vec2, Vec3 } from '@cc/core/math';
 
 export class ParticleNoise {
     private permutation: number[] = [151, 160, 137, 91, 90, 15,

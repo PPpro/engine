@@ -41,7 +41,7 @@ import { PlanarShadowQueue } from '../planar-shadow-queue';
 import { Material } from '../../assets/material';
 import { PipelineStateManager } from '../pipeline-state-manager';
 import { intersect, Sphere } from '../../geometry';
-import { Vec3, Vec4 } from '../../math';
+import { Vec3, Vec4 } from '@cc/core/math';
 import { DeferredPipelineSceneData } from './deferred-pipeline-scene-data';
 import { renderQueueClearFunc, RenderQueue, convertRenderQueue, renderQueueSortFunc } from '../render-queue';
 import { RenderQueueDesc } from '../pipeline-serialization';

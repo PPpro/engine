@@ -1,4 +1,4 @@
-import { Vec2 } from '../../math';
+import { Vec2 } from '@cc/core/math';
 import { property, ccclass } from '../../data/class-decorator';
 import { ccenum } from '../../value-types/enum';
 import { createEval } from './create-eval';

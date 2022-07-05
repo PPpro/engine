@@ -24,7 +24,7 @@
  */
 
 import { assertIsTrue } from '../data/utils/asserts';
-import { clamp, Vec3 } from '../math';
+import { clamp, Vec3 } from '@cc/core/math';
 import { warnID } from '../platform/debug';
 import enums from './enums';
 
