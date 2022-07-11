@@ -17,6 +17,7 @@
     "build-declaration": "npm run build-const && gulp build-declarations",
     "build-api-json": "gulp build-api-json -i index.ts -o ./3d-api-docs/tempJson",
     "build-api": "npm run build-api-json && gulp build-3d-api -i index.ts -o ./3d-api-docs -j ./3d-api-docs/tempJson",
+    "import-redirect": "node ./scripts/import-redirect.js",
     "checkout-engine-version": "node ./scripts/checkout-engine-version.js",
     "varify-engine-version": "node ./scripts/varify-engine-version.js",
     "fetch-ral": "node ./scripts/fetch-ral.js",
