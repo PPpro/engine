@@ -59,6 +59,7 @@
     "gulp-sequence": "^1.0.0",
     "gulp-zip": "^5.0.2",
     "http-server": "^0.12.3",
+    "import-redirect": "^1.0.2",
     "jest": "^28.0.2",
     "jest-environment-jsdom": "^28.0.2",
     "jest-extended": "^1.1.0",
