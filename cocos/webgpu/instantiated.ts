@@ -95,4 +95,4 @@ function waitForWebGPUInstantiation () {
     ]).then(() => Promise.resolve());
 }
 
-// game.onPreInfrastructureInitDelegate.add(waitForWebGPUInstantiation);
+game.onPreInfrastructureInitDelegate.add(waitForWebGPUInstantiation);
