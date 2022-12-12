@@ -25,8 +25,8 @@ declare namespace jsb {
         export function getNetworkType(): number; // TODO: enum type
         export function getSafeAreaEdge(): NativeSafeAreaEdge;
 
-        export function setAccelerometerEnabled(isEnabled: boolean);
-        export function setAccelerometerInterval(intervalInSeconds: number);
+        export function setAccelerometerEnabled(isEnabled: boolean): void;
+        export function setAccelerometerInterval(intervalInSeconds: number): void;
         export function getDeviceMotionValue(): DeviceMotionValue;
     }
 
@@ -156,15 +156,15 @@ declare namespace jsb {
         channelCount: number;
     }
     export namespace AudioEngine {
-        export function preload (url: string, cb: (isSuccess: boolean) => void);
+        export function preload (url: string, cb: (isSuccess: boolean) => void): void;
 
         export function play2d (url: string, loop: boolean, volume: number): number;
-        export function pause (id: number);
-        export function pauseAll ();
-        export function resume (id: number);
-        export function resumeAll ();
-        export function stop (id: number);
-        export function stopAll ();
+        export function pause (id: number): void;
+        export function pauseAll (): void;
+        export function resume (id: number): void;
+        export function resumeAll (): void;
+        export function stop (id: number): void;
+        export function stopAll (): void;
 
         export function getPlayingAudioCount (): number;
         export function getMaxAudioInstance (): number;
@@ -174,19 +174,19 @@ declare namespace jsb {
         export function isLoop (id: number): boolean;
         export function getCurrentTime (id: number): number;
 
-        export function setVolume (id: number, val: number);
-        export function setLoop (id: number, val: boolean);
-        export function setCurrentTime (id: number, val: number);
+        export function setVolume (id: number, val: number): void;
+        export function setLoop (id: number, val: boolean): void;
+        export function setCurrentTime (id: number, val: number): void;
 
-        export function uncache (url: string);
-        export function uncacheAll ();
-        export function setErrorCallback (id: number, cb: (err: any) => void);
-        export function setFinishCallback (id: number, cb: () => void);
+        export function uncache (url: string): void;
+        export function uncacheAll (): void;
+        export function setErrorCallback (id: number, cb: (err: any) => void): void;
+        export function setFinishCallback (id: number, cb: () => void): void;
 
         /**
          * Get PCM header without pcm data. if you want to get pcm data, use getOriginalPCMBuffer instead
          */
-        export function getPCMHeader (url: string) : PCMHeader;
+        export function getPCMHeader (url: string): PCMHeader;
         /**
          * Get PCM Data in decode format for example Int16Array, the format information is written in PCMHeader.
          * @param url: file relative path, for example player._path
@@ -333,5 +333,29 @@ declare namespace jsb {
          */
         setVerifyCallback (verifyCallback: (path: string, asset: ManifestAsset) => boolean): void;
         setEventCallback (eventCallback: (event: EventAssetsManager) => void): void;
+    }
+}
+
+declare namespace ns {
+
+    class NativePOD {
+        underlyingData(): ArrayBuffer;
+        _arraybuffer(): ArrayBuffer;
+    }
+    export class Line extends jsb.NativePOD {
+    }
+    export class Plane extends jsb.NativePOD {
+    }
+    export class Ray extends jsb.NativePOD {
+    }
+    export class Triangle extends jsb.NativePOD {
+    }
+    export class Sphere extends jsb.NativePOD {
+    }
+    export class AABB extends jsb.NativePOD {
+    }
+    export class Capsule extends jsb.NativePOD {
+    }
+    export class Frustum extends jsb.NativePOD {
     }
 }

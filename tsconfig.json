@@ -21,13 +21,6 @@
         ]
     },
     "types": [
-      "./@types/globals",
-      "./@types/consts",
-      "./@types/jsb",
-      "./@types/editor-extends",
-      "./@types/webGL.extras",
-      "./@types/webGL2.extras",
-      "./@types/url",
       "./node_modules/@cocos/cannon/CANNON",
       "./node_modules/@cocos/bullet/bullet",
       "./node_modules/@cocos/physx/PhysX",
@@ -44,8 +37,9 @@
     ]
   },
   "include": [
-      "exports/**/*.ts",
-      "typedoc-index.ts",
-      "pal/**/*.ts"
+    "exports/**/*.ts",
+    "typedoc-index.ts",
+    "pal/**/*.ts",
+    "node_modules/@types/internal/**/*.ts"
   ]
 }

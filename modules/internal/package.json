@@ -1,0 +1,9 @@
+{
+  "name": "@types/internal",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.d.ts"
+    }
+  }
+}

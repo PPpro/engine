@@ -34,12 +34,12 @@ interface EditorExtendsNode {
 }
 
 interface EditorExtendsPrefabUtils {
-    addPrefabInstance(node: Node);
+    addPrefabInstance(node: Node): void;
 }
 
 interface EditorExtendsComponent {
-    addMenu(component: Function, path: string, priority?: number);
-    removeMenu(component: Function);
+    addMenu(component: Function, path: string, priority?: number): void;
+    removeMenu(component: Function): void;
     getMenus(): { [uuid: string]: Object };
     add(uuid: string, component: any): any;
     remove(uuid: string): any;
@@ -51,8 +51,6 @@ interface EditorExtendsComponent {
 interface EditorExtendsAsset {
     queryAssetInfo(uuid: string, callback: Function): any;
     getAssetInfoFromUrl(url: string): EditorAssetInfo;
-    saveDataToImage(buffer: Uint8Array | null, width: number, height: number, sceneName: string, fileName: string): any;
-    bakeReflectionProbe(files: string[], isHDR: boolean, sceneName:string, probeID: number, callback: Function): any
 }
 
 interface EditorExtendsUuid {
