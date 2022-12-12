@@ -7,14 +7,20 @@
   "authors": [
     "AUTHORS.txt"
   ],
+  "cc:workspaces": [
+    "./modules/**/*"
+  ],
+  "cc:ambientTypes": "@types/internal",
   "module": "index.js",
   "scripts": {
     "server": "http-server . -p 8002 -o playground/index.html",
-    "postinstall": "gulp build-debug-infos && npm run build-declaration && npm run bundle-adapter && npm run fetch-ral && npm run install:typedoc-plugin && npm run install:native-pack-tool",
-    "build": "gulp build",
+    "postinstall": "gulp build-debug-infos && npm run build-declaration && npm run bundle-adapter && npm run fetch-ral && npm run install:typedoc-plugin && npm run install:native-pack-tool && npm run link-module",
+    "link-module": "node ./scripts/link-module.js",
+    "recast-import": "node ./scripts/recast-import",
+    "build": "node ./scripts/build.js",
     "build:dev": "gulp build-h5-source",
     "build:min": "gulp build-h5-minified",
-    "build-declaration": "npm run build-const && gulp build-declarations",
+    "build-declaration": "npm run build-const && npm run link-module && gulp build-declarations",
     "build-api-json": "gulp build-api-json -i index.ts -o ./3d-api-docs/tempJson",
     "build-api": "npm run build-api-json && gulp build-3d-api -i index.ts -o ./3d-api-docs -j ./3d-api-docs/tempJson",
     "checkout-engine-version": "node ./scripts/checkout-engine-version.js",
@@ -59,6 +65,7 @@
     "gulp-sequence": "^1.0.0",
     "gulp-zip": "^5.0.2",
     "http-server": "^0.12.3",
+    "import-redirect": "^1.0.2",
     "jest": "^28.0.2",
     "jest-environment-jsdom": "^28.0.2",
     "jest-extended": "^1.1.0",
@@ -73,7 +80,7 @@
     "ts-jest": "^26.5.4",
     "typedoc": "^0.22.13",
     "typedoc-plugin-cc": "file:scripts/typedoc-plugin",
-    "typescript": "^4.3.5",
+    "typescript": "^4.8.0",
     "vconsole": "^3.3.0",
     "which": "^2.0.2",
     "yargs": "^12.0.5",
