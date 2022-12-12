@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-namespace */
 
-import type { Color, Vec2 } from '../core';
+import type { Color, Vec2 } from '@cocos/core';
 
 // @ts-expect-error this is a virtual module
 export * from 'internal:native';

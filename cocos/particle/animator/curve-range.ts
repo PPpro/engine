@@ -23,8 +23,8 @@
  THE SOFTWARE.
  */
 
-import { ccclass } from 'cc.decorator';
-import { lerp, RealCurve, CCClass, geometry, Enum } from '../../core';
+import { ccclass } from '@cocos/core/internal';
+import { lerp, RealCurve, CCClass, geometry, Enum } from '@cocos/core';
 import { PixelFormat, Filter, WrapMode } from '../../asset/assets/asset-enum';
 import { Texture2D, ImageAsset } from '../../asset/assets';
 

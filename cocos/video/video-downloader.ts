@@ -27,7 +27,7 @@
 import downloader from '../asset/asset-manager/downloader';
 import factory from '../asset/asset-manager/factory';
 import { CompleteCallback, IDownloadParseOptions } from '../asset/asset-manager/shared';
-import { log } from '../core/platform/debug';
+import { log } from '@cocos/core';
 import { VideoClip } from './assets/video-clip';
 
 // eslint-disable-next-line consistent-return

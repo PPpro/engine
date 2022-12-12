@@ -24,16 +24,13 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executionOrder, menu, requireComponent, tooltip, type, slide, range, serializable } from 'cc.decorator';
+import { ccclass, help, executionOrder, menu, requireComponent, tooltip, type, slide, range, serializable } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { Component, EventHandler } from '../scene-graph';
 import { UITransform } from '../2d/framework';
 import { EventTouch, Touch } from '../input/types';
-import { Vec3 } from '../core/math';
-import { ccenum } from '../core/value-types/enum';
-import { clamp01 } from '../core/math/utils';
+import { Vec3, ccenum, clamp01, cclegacy } from '@cocos/core';
 import { Sprite } from '../2d/components/sprite';
-import { legacyCC } from '../core/global-exports';
 import { NodeEventType } from '../scene-graph/node-event';
 import { XrUIPressEvent, XrUIPressEventType } from '../xr/event/xr-event-handle';
 
@@ -368,4 +365,4 @@ export class Slider extends Component {
  * @param {Slider} slider - The slider component.
  */
 
-legacyCC.Slider = Slider;
+cclegacy.Slider = Slider;

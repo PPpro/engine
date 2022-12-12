@@ -26,9 +26,8 @@
 import { RenderingSubMesh } from '../../asset/assets/rendering-sub-mesh';
 import { RenderPriority, UNIFORM_REFLECTION_TEXTURE_BINDING, UNIFORM_REFLECTION_STORAGE_BINDING, INST_MAT_WORLD, INST_SH, UBOSH } from '../../rendering/define';
 import { BatchingSchemes, IMacroPatch, Pass } from '../core/pass';
-import { DescriptorSet, DescriptorSetInfo, Device, InputAssembler, Texture, TextureType, TextureUsageBit, TextureInfo,
-    Format, Sampler, Filter, Address, Shader, SamplerInfo, deviceManager, Attribute, Feature, FormatInfos, getTypedArrayConstructor } from '../../gfx';
-import { errorID, Mat4, cclegacy } from '../../core';
+import { DescriptorSet, DescriptorSetInfo, Device, InputAssembler, Texture, TextureType, TextureUsageBit, TextureInfo, Format, Sampler, Filter, Address, Shader, SamplerInfo, deviceManager, Attribute, Feature, FormatInfos, getTypedArrayConstructor } from '../../gfx';
+import { errorID, Mat4, cclegacy } from '@cocos/core';
 import { getPhaseID } from '../../rendering/pass-phase';
 import { Root } from '../../root';
 

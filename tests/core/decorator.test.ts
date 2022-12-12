@@ -1,16 +1,5 @@
-import { getSerializationMetadata } from '../../cocos/core/data/serialization-metadata';
-import { uniquelyReferenced } from '../../cocos/core/data/decorators/serializable';
-import {
-    visible,
-    editable, tooltip, ccclass, serializable, formerlySerializedAs,
-    readOnly, displayName, group, range, rangeMin, rangeMax, rangeStep,
-    slide, displayOrder, unit, radian, multiline, disallowAnimation,
-    editorOnly,
-    type,
-    float,
-} from '../../cocos/core/data/decorators';
-import { CCClass } from '../../cocos/core/data/class';
-import { property } from '../../cocos/core/data/decorators/property';
+import { getSerializationMetadata, CCClass } from '@cocos/core';
+import { uniquelyReferenced, visible, editable, tooltip, ccclass, serializable, formerlySerializedAs, readOnly, displayName, group, range, rangeMin, rangeMax, rangeStep, slide, displayOrder, unit, radian, multiline, disallowAnimation, editorOnly, type, float, property } from '@cocos/core/internal';
 
 describe('Decorators signature', () => {
     class Foo {}

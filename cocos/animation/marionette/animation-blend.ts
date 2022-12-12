@@ -1,4 +1,4 @@
-import { _decorator, EditorExtendable, editorExtrasTag } from '../../core';
+import { _decorator, EditorExtendable, editorExtrasTag } from '@cocos/core';
 import { MotionEvalContext, Motion, MotionEval, OverrideClipContext } from './motion';
 import { createEval } from './create-eval';
 import { VariableTypeMismatchedError } from './errors';

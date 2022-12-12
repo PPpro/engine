@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { deprecateModuleExportedName } from '../core';
+import { deprecateModuleExportedName } from '@cocos/core';
 
 deprecateModuleExportedName({
     SystemEventType: {

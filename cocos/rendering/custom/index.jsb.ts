@@ -27,7 +27,7 @@ declare const render: any;
 
 import { Pipeline, PipelineBuilder } from './pipeline';
 import { buildDeferredLayout, buildForwardLayout } from './effect';
-import { macro } from '../../core/platform/macro';
+import { macro } from '@cocos/core';
 import { DeferredPipelineBuilder, ForwardPipelineBuilder } from './builtin-pipelines';
 import { CustomPipelineBuilder, NativePipelineBuilder } from './custom-pipeline';
 import { EffectAsset } from '../../asset/assets/effect-asset';

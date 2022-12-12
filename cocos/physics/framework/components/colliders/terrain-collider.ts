@@ -31,7 +31,7 @@ import {
     type,
     serializable,
     tooltip,
-} from 'cc.decorator';
+} from '@cocos/core/internal';
 import { Collider } from './collider';
 import { ITerrainShape } from '../../../spec/i-physics-shape';
 import { ITerrainAsset } from '../../../spec/i-external';

@@ -25,7 +25,7 @@
 
 import {
     ccclass, serializable,
-} from 'cc.decorator';
+} from '@cocos/core/internal';
 import { scene } from '../render-scene';
 import { Layers } from '../scene-graph/layers';
 import { Renderer } from './renderer';

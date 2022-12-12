@@ -46,7 +46,7 @@ import { FixedConstraint } from './components/constraints/fixed-constraint';
 
 import { PointToPointConstraint } from './components/constraints/point-to-point-constraint';
 
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 import { selector } from './physics-selector';
 import * as utils from '../utils/util';
 

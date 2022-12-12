@@ -25,7 +25,7 @@
 
 import { EDITOR } from 'internal:constants';
 import { Armature, BaseObject, Animation, BaseFactory, DragonBones } from '@cocos/dragonbones-js';
-import { ISchedulable, Scheduler, System, cclegacy, _decorator } from '../core';
+import { ISchedulable, Scheduler, System, cclegacy, _decorator } from '@cocos/core';
 import { CCTextureAtlasData } from './CCTextureData';
 import { TextureBase } from '../asset/assets/texture-base';
 import { CCSlot } from './CCSlot';

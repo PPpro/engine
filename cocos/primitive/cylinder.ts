@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Vec3 } from '../core';
+import { Vec3 } from '@cocos/core';
 import { IGeometry, IGeometryOptions } from './define';
 
 /**

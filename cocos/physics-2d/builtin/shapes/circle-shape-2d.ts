@@ -1,5 +1,5 @@
 import { BuiltinShape2D } from './shape-2d';
-import { Vec2, Mat4, Rect } from '../../../core';
+import { Vec2, Mat4, Rect } from '@cocos/core';
 import { CircleCollider2D } from '../../framework';
 import Intersection2D from '../intersection-2d';
 

@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { ccenum } from '../core';
+import { ccenum } from '@cocos/core';
 import spine from './lib/spine-core';
 
 /**

@@ -1,6 +1,7 @@
-import { ccclass, serializable } from 'cc.decorator';
+import { ccclass, serializable } from '@cocos/core/internal';
 import { DEBUG } from 'internal:constants';
-import { js, clamp, assertIsNonNullable, assertIsTrue, EditorExtendable, move } from '../../core';
+import { js, clamp, EditorExtendable } from '@cocos/core';
+import { assertIsNonNullable, assertIsTrue, move } from '@cocos/core/internal';
 import { MotionEval, MotionEvalContext } from './motion';
 import type { Condition } from './condition';
 import { Asset } from '../../asset/assets';

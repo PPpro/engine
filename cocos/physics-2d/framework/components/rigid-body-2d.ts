@@ -1,6 +1,6 @@
 import { EDITOR } from 'internal:constants';
 import { IRigidBody2D } from '../../spec/i-rigid-body';
-import { _decorator, Vec2, IVec2Like, cclegacy } from '../../../core';
+import { _decorator, Vec2, IVec2Like, cclegacy } from '@cocos/core';
 import { ERigidBody2DType } from '../physics-types';
 import { createRigidBody } from '../physics-selector';
 import { PhysicsGroup } from '../../../physics/framework/physics-enum';

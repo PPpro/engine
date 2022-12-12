@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { js } from '../../core';
+import { js } from '@cocos/core';
 
 export interface ICache<T> {
     add (key: string, val: T): T;

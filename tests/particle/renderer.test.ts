@@ -1,7 +1,7 @@
-import { director, game } from "../../cocos/game";
-import { containerManager } from "../../cocos/core/memop/container-manager";
-import { Node, Scene } from "../../cocos/scene-graph";
-import { ParticleSystem } from "../../exports/particle";
+import { director, game } from '../../cocos/game';
+import { containerManager } from '@cocos/core/internal';
+import { Node, Scene } from '../../cocos/scene-graph';
+import { ParticleSystem } from '../../exports/particle';
 
 test('recycle pool release', () => {
     const scene = new Scene('test-scene');

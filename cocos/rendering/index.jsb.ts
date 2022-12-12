@@ -26,7 +26,7 @@
 declare const nr: any;
 
 import { getPhaseID } from './pass-phase';
-import { js } from '../core';
+import { js } from '@cocos/core';
 import * as pipeline from './define';
 export { pipeline };
 

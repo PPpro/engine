@@ -23,14 +23,14 @@
  THE SOFTWARE.
 */
 
-import { ccclass, serializable, type } from 'cc.decorator';
+import { ccclass, serializable, type } from '@cocos/core/internal';
 import { Asset } from './asset';
 import { EffectAsset } from './effect-asset';
 import { Texture, Type } from '../../gfx';
 import { TextureBase } from './texture-base';
 import { IPassInfoFull, Pass, PassOverrides } from '../../render-scene/core/pass';
 import { MacroRecord, MaterialProperty } from '../../render-scene/core/pass-utils';
-import { Color, warnID, Vec4, cclegacy } from '../../core';
+import { Color, warnID, Vec4, cclegacy } from '@cocos/core';
 import { SRGBToLinear } from '../../rendering/pipeline-funcs';
 import { Renderer } from '../../misc/renderer';
 

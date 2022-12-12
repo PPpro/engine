@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { IVec2Like, Vec2 } from '../../../core';
+import { IVec2Like, Vec2 } from '@cocos/core';
 
 // http://answers.unity3d.com/questions/977416/2d-polygon-convex-decomposition-code.html
 

@@ -24,9 +24,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executionOrder, menu, tooltip, requireComponent, executeInEditMode, serializable } from 'cc.decorator';
+import { ccclass, help, executionOrder, menu, tooltip, requireComponent, executeInEditMode, serializable } from '@cocos/core/internal';
 import { Component } from '../../scene-graph/component';
-import { Color, cclegacy } from '../../core';
+import { Color, cclegacy } from '@cocos/core';
 import { Label } from './label';
 
 /**

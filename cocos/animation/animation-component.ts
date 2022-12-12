@@ -23,10 +23,10 @@
  THE SOFTWARE.
 */
 
-import { ccclass, executeInEditMode, executionOrder, help, menu, tooltip, type, serializable } from 'cc.decorator';
+import { ccclass, executeInEditMode, executionOrder, help, menu, tooltip, type, serializable } from '@cocos/core/internal';
 import { EDITOR, TEST } from 'internal:constants';
 import { Component } from '../scene-graph/component';
-import { Eventify, warnID, js, cclegacy } from '../core';
+import { Eventify, warnID, js, cclegacy } from '@cocos/core';
 import { AnimationClip } from './animation-clip';
 import { AnimationState, EventType } from './animation-state';
 import { CrossFade } from './cross-fade';

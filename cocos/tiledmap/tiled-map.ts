@@ -23,19 +23,18 @@
  THE SOFTWARE.
  */
 
-import { ccclass, displayOrder, executeInEditMode, help, menu, requireComponent, type, serializable, editable } from 'cc.decorator';
+import { ccclass, displayOrder, executeInEditMode, help, menu, requireComponent, type, serializable, editable } from '@cocos/core/internal';
 import { EDITOR, JSB } from 'internal:constants';
 import { Component } from '../scene-graph/component';
 import { UITransform } from '../2d/framework';
-import { GID, Orientation, PropertiesInfo, Property, RenderOrder, StaggerAxis, StaggerIndex, TiledAnimationType, TiledTextureGrids, TileFlag,
-    TMXImageLayerInfo, TMXLayerInfo, TMXObjectGroupInfo, TMXObjectType, TMXTilesetInfo } from './tiled-types';
+import { GID, Orientation, PropertiesInfo, Property, RenderOrder, StaggerAxis, StaggerIndex, TiledAnimationType, TiledTextureGrids, TileFlag, TMXImageLayerInfo, TMXLayerInfo, TMXObjectGroupInfo, TMXObjectType, TMXTilesetInfo } from './tiled-types';
 import { TMXMapInfo } from './tmx-xml-parser';
 import { TiledLayer } from './tiled-layer';
 import { TiledObjectGroup } from './tiled-object-group';
 import { TiledMapAsset } from './tiled-map-asset';
 import { Sprite } from '../2d/components/sprite';
 import { fillTextureGrids } from './tiled-utils';
-import { Size, Vec2, logID, Color, sys } from '../core';
+import { Size, Vec2, logID, Color, sys } from '@cocos/core';
 import { SpriteFrame } from '../2d/assets';
 import { NodeEventType } from '../scene-graph/node-event';
 import { Node } from '../scene-graph';

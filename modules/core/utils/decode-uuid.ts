@@ -50,7 +50,7 @@ const Indices = UuidTemplate.map((x, i) => (x === '-' ? NaN : i)).filter(isFinit
  * const originalUuid = decodeUuid(uuid); // fc991dd7-0033-4b80-9d41-c8a86a702e59
  * ```
  */
-export default function decodeUuid (base64: string) {
+export function decodeUuid (base64: string) {
     const strs = base64.split('@');
     const uuid = strs[0];
     if (uuid.length !== 22) {

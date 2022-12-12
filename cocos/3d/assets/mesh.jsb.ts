@@ -22,8 +22,8 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
-import { ccclass, serializable } from 'cc.decorator';
-import { cclegacy, Vec3 } from '../../core';
+import { ccclass, serializable } from '@cocos/core/internal';
+import { cclegacy, Vec3 } from '@cocos/core';
 
 declare const jsb: any;
 

@@ -1,4 +1,4 @@
-import { Settings } from "../../cocos/core";
+import { Settings } from '@cocos/core';
 
 describe('Settings', () => {
     test('construct', () => {

@@ -1,5 +1,5 @@
 import { EDITOR } from 'internal:constants';
-import { System, Vec2, IVec2Like, Rect, Eventify, Enum, Settings, settings, cclegacy } from '../../core';
+import { System, Vec2, IVec2Like, Rect, Eventify, Enum, Settings, settings, cclegacy } from '@cocos/core';
 import { createPhysicsWorld, selector, IPhysicsSelector } from './physics-selector';
 
 import { DelayEvent } from './physics-internal-types';

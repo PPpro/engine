@@ -19,17 +19,18 @@
  THE SOFTWARE.
 */
 
-import { ccclass, editable, serializable } from 'cc.decorator';
-import { EDITOR, TEST } from "internal:constants";
-import { legacyCC } from '../core/global-exports';
+import { ccclass, editable, serializable } from '@cocos/core/internal';
+import { EDITOR, TEST } from 'internal:constants';
+import { cclegacy, assert } from '@cocos/core';
 import { Node } from './node';
-import { applyTargetOverrides, expandNestedPrefabInstanceNode } from "./prefab/utils";
-import { assert } from "../core/platform/debug";
-import { updateChildrenForDeserialize } from '../core/utils/jsb-utils';
+import { applyTargetOverrides, expandNestedPrefabInstanceNode } from './prefab/utils';
+import { jsbUtils } from '@cocos/core/internal';
+
+const { updateChildrenForDeserialize } = jsbUtils;
 
 export const Scene = jsb.Scene;
 export type Scene = jsb.Scene;
-legacyCC.Scene = Scene;
+cclegacy.Scene = Scene;
 
 const sceneProto: any = Scene.prototype;
 
@@ -120,7 +121,7 @@ sceneProto._activate = function (active: boolean) {
         // register all nodes to editor
         this._registerIfAttached!(active);
     }
-    legacyCC.director._nodeActivator.activateNode(this, active);
+    cclegacy.director._nodeActivator.activateNode(this, active);
     // The test environment does not currently support the renderer
     if (!TEST) {
         this._globals.activate(this);

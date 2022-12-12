@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { absMax, IVec3Like } from '../../../core';
+import { absMax, IVec3Like } from '@cocos/core';
 import { BulletShape } from './bullet-shape';
 import { CapsuleCollider } from '../../../../exports/physics-framework';
 import { ICapsuleShape } from '../../spec/i-physics-shape';

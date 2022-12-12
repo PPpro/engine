@@ -23,10 +23,10 @@
  THE SOFTWARE.
  */
 
-import { ccclass, help, executeInEditMode, menu, tooltip, displayOrder, type, serializable, range } from 'cc.decorator';
+import { ccclass, help, executeInEditMode, menu, tooltip, displayOrder, type, serializable, range } from '@cocos/core/internal';
 import { Material, Texture2D } from '../asset/assets';
 import { Component } from '../scene-graph';
-import { Vec3, Vec2, Vec4, cclegacy } from '../core';
+import { Vec3, Vec2, Vec4, cclegacy } from '@cocos/core';
 import { LineModel } from './models/line-model';
 import { builtinResMgr } from '../asset/asset-manager';
 import CurveRange from './animator/curve-range';

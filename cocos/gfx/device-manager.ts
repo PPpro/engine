@@ -25,7 +25,7 @@
  */
 
 import { JSB, WEBGPU } from 'internal:constants';
-import { cclegacy, error, getError, sys, screen, Settings, settings } from '../core';
+import { cclegacy, error, getError, sys, screen, Settings, settings } from '@cocos/core';
 import { BindingMappingInfo, DeviceInfo, SwapchainInfo } from './base/define';
 import { Device } from './base/device';
 import { Swapchain } from './base/swapchain';

@@ -24,7 +24,7 @@
  */
 
 import { EDITOR } from 'internal:constants';
-import { Vec3, RecyclePool, Enum, System, cclegacy, Settings, settings, geometry, warn } from '../../core';
+import { Vec3, RecyclePool, Enum, System, cclegacy, Settings, settings, geometry, warn } from '@cocos/core';
 import { IRaycastOptions } from '../spec/i-physics-world';
 import { director, Director, game } from '../../game';
 import { PhysicsMaterial } from './assets/physics-material';

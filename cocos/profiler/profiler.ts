@@ -34,7 +34,7 @@ import { Node } from '../scene-graph/node';
 import { ICounterOption } from './counter';
 import { PerfCounter } from './perf-counter';
 import { Pass } from '../render-scene';
-import { preTransforms, System, sys, cclegacy, Settings, settings } from '../core';
+import { preTransforms, System, sys, cclegacy, Settings, settings } from '@cocos/core';
 import { Root } from '../root';
 import { PipelineRuntime } from '../rendering/custom/pipeline';
 import { director } from '../game';

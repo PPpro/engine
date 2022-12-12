@@ -1,5 +1,5 @@
-import { ccclass, serializable } from 'cc.decorator';
-import { EditorExtendable } from '../../core';
+import { ccclass, serializable } from '@cocos/core/internal';
+import { EditorExtendable } from '@cocos/core';
 import type { Node } from '../../scene-graph';
 import { CLASS_NAME_PREFIX_ANIM } from '../define';
 

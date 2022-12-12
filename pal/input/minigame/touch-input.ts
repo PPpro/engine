@@ -3,11 +3,9 @@ import { minigame } from 'pal/minigame';
 import { screenAdapter } from 'pal/screen-adapter';
 import { systemInfo } from 'pal/system-info';
 import { ALIPAY, VIVO } from 'internal:constants';
-import { Size, Vec2 } from '../../../cocos/core/math';
-import { EventTarget } from '../../../cocos/core/event';
+import { Size, Vec2, EventTarget, macro } from '@cocos/core';
 import { EventTouch, Touch } from '../../../cocos/input/types';
 import { touchManager } from '../touch-manager';
-import { macro } from '../../../cocos/core/platform/macro';
 import { InputEventType } from '../../../cocos/input/types/event-enum';
 import { Feature } from '../../system-info/enum-type';
 

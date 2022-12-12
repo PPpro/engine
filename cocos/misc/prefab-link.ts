@@ -1,4 +1,4 @@
-import { _decorator } from '../core';
+import { _decorator } from '@cocos/core';
 import { Component } from '../scene-graph/component';
 import { Prefab } from '../scene-graph/prefab';
 

@@ -1,11 +1,9 @@
 import { GamepadCallback } from 'pal/input';
 import { systemInfo } from 'pal/system-info';
 import { InputEventType } from '../../../cocos/input/types/event-enum';
-import { EventTarget } from '../../../cocos/core/event/event-target';
-import legacyCC from '../../../predefine';
+import { EventTarget, cclegacy, js } from '@cocos/core';
 import { Feature } from '../../system-info/enum-type';
 import { InputSourceButton, InputSourceDpad, InputSourceStick } from '../input-source';
-import { js } from '../../../cocos/core';
 import { EventGamepad } from '../../../cocos/input/types';
 
 //#region button index alias
@@ -137,7 +135,7 @@ export class GamepadInputDevice {
     private static _ensureDirectorDefined () {
         return new Promise<void>((resolve) => {
             GamepadInputDevice._intervalId = setInterval(() => {
-                if (legacyCC.director && legacyCC.Director) {
+                if (cclegacy.director && cclegacy.Director) {
                     clearInterval(GamepadInputDevice._intervalId);
                     GamepadInputDevice._intervalId = -1;
                     resolve();
@@ -148,7 +146,7 @@ export class GamepadInputDevice {
 
     private static _registerEvent () {
         GamepadInputDevice._ensureDirectorDefined().then(() => {
-            legacyCC.director.on(legacyCC.Director.EVENT_BEGIN_FRAME, GamepadInputDevice._scanGamepads);
+            cclegacy.director.on(cclegacy.Director.EVENT_BEGIN_FRAME, GamepadInputDevice._scanGamepads);
         }).catch((e) => {});
         window.addEventListener('gamepadconnected', (e) => {
             GamepadInputDevice._cachedWebGamepads[e.gamepad.index] = e.gamepad;

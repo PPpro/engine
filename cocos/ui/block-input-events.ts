@@ -24,7 +24,7 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, menu } from 'cc.decorator';
+import { ccclass, help, menu } from '@cocos/core/internal';
 import { Component } from '../scene-graph/component';
 import { Event } from '../input/types';
 import { NodeEventType } from '../scene-graph/node-event';

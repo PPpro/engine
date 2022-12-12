@@ -25,7 +25,7 @@
 
 import { EDITOR } from 'internal:constants';
 import { Asset } from '../assets/asset';
-import { cclegacy, error, js, misc } from '../../core';
+import { cclegacy, error, js, misc } from '@cocos/core';
 import Config from './config';
 import { dependMap, nativeDependMap } from './depend-maps';
 import dependUtil from './depend-util';

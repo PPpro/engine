@@ -1,5 +1,5 @@
 import { DEBUG } from 'internal:constants';
-import { assertIsTrue } from '../../core';
+import { assertIsTrue } from '@cocos/core/internal';
 
 export const ownerSymbol = Symbol('[[Owner]]');
 

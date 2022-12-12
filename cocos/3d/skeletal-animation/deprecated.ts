@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { js, cclegacy } from '../../core';
+import { js, cclegacy } from '@cocos/core';
 import { SkeletalAnimation } from './skeletal-animation';
 /**
  * Alias of [[SkeletalAnimation]]

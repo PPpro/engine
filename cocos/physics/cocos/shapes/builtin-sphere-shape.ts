@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { geometry } from '../../../core';
+import { geometry } from '@cocos/core';
 import { BuiltinShape } from './builtin-shape';
 import { ISphereShape } from '../../spec/i-physics-shape';
 import { maxComponent } from '../../utils/util';

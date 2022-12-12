@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { RecyclePool, CachedArray } from '../core';
+import { RecyclePool, CachedArray } from '@cocos/core';
 import { IRenderObject, IRenderPass, IRenderQueueDesc, SetIndex } from './define';
 import { PipelineStateManager } from './pipeline-state-manager';
 import { RenderPass, Device, CommandBuffer } from '../gfx';

@@ -24,13 +24,12 @@
 */
 
 // @ts-check
-import { ccclass, override } from 'cc.decorator';
+import { ccclass, override } from '@cocos/core/internal';
 import { EDITOR, ALIPAY, XIAOMI, JSB, TEST, BAIDU } from 'internal:constants';
 import { Device, Format, FormatFeatureBit, deviceManager } from '../../gfx';
 import { Asset } from './asset';
 import { PixelFormat } from './asset-enum';
-import { warnID, macro, sys, cclegacy } from '../../core';
-import { Enum } from '../../core/value-types/enum';
+import { warnID, macro, sys, cclegacy, Enum } from '@cocos/core';
 
 // Compress mipmap constants
 const COMPRESSED_HEADER_LENGTH = 4;

@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Enum } from '../core';
+import { Enum } from '@cocos/core';
 
 export const Space = Enum({
     World: 0,

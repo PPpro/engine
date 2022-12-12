@@ -27,7 +27,7 @@
 import { JSB } from 'internal:constants';
 import { IAssembler, IAssemblerManager } from '../2d/renderer/base';
 import { MotionStreak } from './motion-streak-2d';
-import { Vec2, Color } from '../core';
+import { Vec2, Color } from '@cocos/core';
 import { IBatcher } from '../2d/renderer/i-batcher';
 import { RenderData } from '../2d/renderer/render-data';
 

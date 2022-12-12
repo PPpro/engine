@@ -1,6 +1,6 @@
 import { DEBUG, EDITOR, PREVIEW, TEST } from 'internal:constants';
 import { IFeatureMap } from 'pal/system-info';
-import { EventTarget } from '../../../cocos/core/event';
+import { EventTarget } from '@cocos/core';
 import { BrowserType, NetworkType, OS, Platform, Language, Feature } from '../enum-type';
 
 class SystemInfo extends EventTarget {

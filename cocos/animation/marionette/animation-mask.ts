@@ -1,7 +1,7 @@
-import { ccclass, serializable, editable, type } from 'cc.decorator';
+import { ccclass, serializable, editable, type } from '@cocos/core/internal';
 import type { Node } from '../../scene-graph/node';
 import { Asset } from '../../asset/assets/asset';
-import { js } from '../../core';
+import { js } from '@cocos/core';
 import { CLASS_NAME_PREFIX_ANIM } from '../define';
 
 interface JointMaskInfo {

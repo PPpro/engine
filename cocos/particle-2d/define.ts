@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Enum } from '../core';
+import { Enum } from '@cocos/core';
 
 /**
  * @en The Particle emitter lives forever.

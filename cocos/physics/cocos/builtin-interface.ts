@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Mat4, Vec3, IVec3Like, IQuatLike } from '../../core';
+import { Mat4, Vec3, IVec3Like, IQuatLike } from '@cocos/core';
 
 /**
  * declare interface

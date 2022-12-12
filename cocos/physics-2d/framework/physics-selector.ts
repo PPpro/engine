@@ -3,10 +3,9 @@ import { EDITOR, DEBUG, TEST } from 'internal:constants';
 import { IRigidBody2D } from '../spec/i-rigid-body';
 import { IBoxShape, ICircleShape, IPolygonShape, IBaseShape } from '../spec/i-physics-shape';
 import { IPhysicsWorld } from '../spec/i-physics-world';
-import { errorID, cclegacy } from '../../core';
-import { ECollider2DType, EJoint2DType  } from './physics-types';
-import { IJoint2D, IDistanceJoint, ISpringJoint, IFixedJoint, IMouseJoint,
-    IRelativeJoint, ISliderJoint, IWheelJoint, IHingeJoint } from '../spec/i-physics-joint';
+import { errorID, cclegacy } from '@cocos/core';
+import { ECollider2DType, EJoint2DType } from './physics-types';
+import { IJoint2D, IDistanceJoint, ISpringJoint, IFixedJoint, IMouseJoint, IRelativeJoint, ISliderJoint, IWheelJoint, IHingeJoint } from '../spec/i-physics-joint';
 
 export type IPhysicsEngineId = 'builtin' | 'box2d' | string;
 

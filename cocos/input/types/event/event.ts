@@ -24,7 +24,7 @@
  THE SOFTWARE.
 */
 
-import { cclegacy } from '../../../core';
+import { cclegacy } from '@cocos/core';
 import { SystemEventTypeUnion } from '../event-enum';
 
 /**

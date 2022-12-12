@@ -1,10 +1,5 @@
-import {
-    VariableType,
-    BindableBoolean, BindableNumber, BindContext, bindOr, validateVariableExistence,
-    bindNumericOr,
-    validateVariableTypeTriggerLike,
-} from './parametric';
-import { _decorator } from '../../core';
+import { VariableType, BindableBoolean, BindableNumber, BindContext, bindOr, validateVariableExistence, bindNumericOr, validateVariableTypeTriggerLike } from './parametric';
+import { _decorator } from '@cocos/core';
 import { CLASS_NAME_PREFIX_ANIM } from '../define';
 import { createEval } from './create-eval';
 import { VariableTypeMismatchedError } from './errors';

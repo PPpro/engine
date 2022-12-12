@@ -23,7 +23,8 @@
  THE SOFTWARE.
  */
 
-import { lerp, Quat, errorID, cclegacy, binarySearchEpsilon, ValueType, bezierByTime, BezierControlPoints, easing } from '../core';
+import { lerp, Quat, errorID, cclegacy, ValueType, bezierByTime, BezierControlPoints, easing } from '@cocos/core';
+import { binarySearchEpsilon } from '@cocos/core/internal';
 import { ILerpable, isLerpable } from './types';
 import type * as legacy from './legacy-clip-data';
 

@@ -1,4 +1,4 @@
-import { RecyclePool } from '../../../cocos/core/memop/recycle-pool';
+import { RecyclePool } from '@cocos/core';
 
 let calledTimes = 0;
 let id = 0;

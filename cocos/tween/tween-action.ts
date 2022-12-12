@@ -23,10 +23,9 @@
  THE SOFTWARE.
  */
 
-import { warnID, warn, easing } from '../core';
+import { warnID, warn, easing, VERSION } from '@cocos/core';
 import { ActionInterval } from './actions/action-interval';
 import { ITweenOption } from './export-api';
-import { VERSION } from '../core/global-exports';
 
 /** adapter */
 function TweenEasingAdapter (easingName: string) {

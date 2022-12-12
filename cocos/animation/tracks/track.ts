@@ -1,8 +1,9 @@
-import { ccclass, serializable, uniquelyReferenced } from 'cc.decorator';
+import { ccclass, serializable, uniquelyReferenced } from '@cocos/core/internal';
 import { SUPPORT_JIT } from 'internal:constants';
 import type { Component } from '../../scene-graph/component';
-import type { ObjectCurve, QuatCurve, RealCurve } from '../../core';
-import { assertIsTrue, errorID, warnID, js } from '../../core';
+import type { ObjectCurve, QuatCurve, RealCurve } from '@cocos/core';
+import { assertIsTrue } from '@cocos/core/internal';
+import { errorID, warnID, js } from '@cocos/core';
 import { Node } from '../../scene-graph';
 import { CLASS_NAME_PREFIX_ANIM, createEvalSymbol } from '../define';
 import type { AnimationMask } from '../marionette/animation-mask';

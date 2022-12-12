@@ -1,4 +1,4 @@
-import { CCClass } from '../core/data';
+import { CCClass } from '@cocos/core';
 import { Node } from './node';
 import { EventHandler } from './component-event-handler';
 

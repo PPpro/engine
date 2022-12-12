@@ -1,7 +1,8 @@
 import { Component } from '../../scene-graph/component';
 import { AnimationGraph } from './animation-graph';
 import type { AnimationGraphRunTime } from './animation-graph';
-import { _decorator, assertIsNonNullable, assertIsTrue } from '../../core';
+import { _decorator } from '@cocos/core';
+import { assertIsNonNullable, assertIsTrue } from '@cocos/core/internal';
 import { AnimationGraphEval } from './graph-eval';
 import type { MotionStateStatus, TransitionStatus, ClipStatus, ReadonlyClipOverrideMap } from './graph-eval';
 import { Value } from './variable';

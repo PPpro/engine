@@ -25,11 +25,10 @@
 */
 
 import { EDITOR, SUPPORT_JIT } from 'internal:constants';
-import { cclegacy, errorID, warn, editorExtrasTag } from '../../core';
+import { cclegacy, errorID, warn, editorExtrasTag, ValueType } from '@cocos/core';
 import { Node } from '../node';
 import { Component } from '../component';
 import { MountedChildrenInfo, PropertyOverrideInfo, MountedComponentsInfo, TargetInfo } from './prefab-info';
-import { ValueType } from '../../core/value-types';
 
 export * from './prefab-info';
 

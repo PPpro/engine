@@ -20,23 +20,16 @@
 */
 
 import { EDITOR } from 'internal:constants';
-import { ccclass, editable, serializable, type } from 'cc.decorator'
-import { legacyCC } from '../core/global-exports';
-import { errorID, getError } from '../core/platform/debug';
+import { ccclass, editable, serializable, type } from '@cocos/core/internal';
+import { cclegacy, errorID, getError, CCObject, Mat4, Quat, Vec3, editorExtrasTag, SerializationContext, SerializationOutput, serializeTag, js } from '@cocos/core';
 import { Component } from './component';
 import { NodeEventType } from './node-event';
-import { CCObject } from '../core/data/object';
 import { NodeUIProperties } from './node-ui-properties';
 import { NodeSpace, TransformBit } from './node-enum';
-import { Mat4, Quat, Vec3 } from '../core/math';
 import { Layers } from './layers';
-import { editorExtrasTag, SerializationContext, SerializationOutput, serializeTag } from '../core/data';
 import { _tempFloatArray, fillMat4WithTempFloatArray } from './utils.jsb';
-import { getClassByName, isChildClassOf } from '../core/utils/js-typed';
-import { syncNodeValues } from "../core/utils/jsb-utils";
-import { property } from '../core/data/class-decorator';
+import { jsbUtils, property } from '@cocos/core/internal';
 import { nodePolyfill } from './node-dev';
-import * as js from '../core/utils/js';
 
 const reserveContentsForAllSyncablePrefabTag = Symbol('ReserveContentsForAllSyncablePrefab');
 
@@ -45,7 +38,7 @@ declare const jsb: any;
 export const Node = jsb.Node;
 // @ts-ignore
 export type Node = jsb.Node;
-legacyCC.Node = Node;
+cclegacy.Node = Node;
 
 const NodeCls: any = Node;
 
@@ -90,7 +83,7 @@ function getConstructor<T> (typeOrClassName) {
         return null;
     }
     if (typeof typeOrClassName === 'string') {
-        return getClassByName(typeOrClassName);
+        return js.getClassByName(typeOrClassName);
     }
 
     return typeOrClassName;
@@ -158,9 +151,9 @@ nodeProto.addComponent = function (typeOrClassName) {
 
     let constructor;
     if (typeof typeOrClassName === 'string') {
-        constructor = getClassByName(typeOrClassName);
+        constructor = js.getClassByName(typeOrClassName);
         if (!constructor) {
-            if (legacyCC._RF.peek()) {
+            if (cclegacy._RF.peek()) {
                 errorID(3808, typeOrClassName);
             }
             throw TypeError(getError(3807, typeOrClassName));
@@ -177,7 +170,7 @@ nodeProto.addComponent = function (typeOrClassName) {
     if (typeof constructor !== 'function') {
         throw TypeError(getError(3809));
     }
-    if (!isChildClassOf(constructor, Component)) {
+    if (!js.isChildClassOf(constructor, Component)) {
         throw TypeError(getError(3810));
     }
 
@@ -211,7 +204,7 @@ nodeProto.addComponent = function (typeOrClassName) {
     }
     this.emit(NodeEventType.COMPONENT_ADDED, component);
     if (this._activeInHierarchy) {
-        legacyCC.director._nodeActivator.activateComp(component);
+        cclegacy.director._nodeActivator.activateComp(component);
     }
 
     return component;
@@ -400,7 +393,7 @@ nodeProto._onEditorAttached = function (attached: boolean) {
 };
 
 nodeProto._onRemovePersistRootNode = function () {
-    legacyCC.game.removePersistRootNode(this);
+    cclegacy.game.removePersistRootNode(this);
 };
 
 nodeProto._onDestroyComponents = function () {
@@ -476,7 +469,7 @@ nodeProto._onSiblingOrderChanged = function () {
 };
 
 nodeProto._onActivateNode = function (shouldActiveNow) {
-    legacyCC.director._nodeActivator.activateNode(this, shouldActiveNow);
+    cclegacy.director._nodeActivator.activateNode(this, shouldActiveNow);
 };
 
 nodeProto._onPostActivated = function (active: boolean) {
@@ -576,7 +569,7 @@ NodeCls._findChildComponents = function (children, constructor, components) {
 // @ts-ignore
 NodeCls.isNode = function (obj: unknown): obj is jsb.Node {
     // @ts-ignore
-    return obj instanceof jsb.Node && (obj.constructor === jsb.Node || !(obj instanceof legacyCC.Scene));
+    return obj instanceof jsb.Node && (obj.constructor === jsb.Node || !(obj instanceof cclegacy.Scene));
 };
 
 let _tempQuat = new Quat();
@@ -1189,7 +1182,7 @@ nodeProto[serializeTag] = function (serializationOutput: SerializationOutput, co
 };
 
 nodeProto._onActiveNode = function (shouldActiveNow: boolean) {
-    legacyCC.director._nodeActivator.activateNode(this, shouldActiveNow);
+    cclegacy.director._nodeActivator.activateNode(this, shouldActiveNow);
 };
 
 nodeProto._onBatchCreated = function (dontSyncChildPrefab: boolean) {
@@ -1205,7 +1198,7 @@ nodeProto._onBatchCreated = function (dontSyncChildPrefab: boolean) {
     }
 
     // Sync node _lpos, _lrot, _lscale to native
-    syncNodeValues(this);
+    jsbUtils.syncNodeValues(this);
 };
 
 nodeProto._onSceneUpdated = function (scene) {
@@ -1254,7 +1247,7 @@ nodeProto._onLocalPositionRotationScaleUpdated = function (px, py, pz, rx, ry, r
 
 nodeProto._instantiate = function (cloned: Node, isSyncedNode: boolean) {
     if (!cloned) {
-        cloned = legacyCC.instantiate._clone(this, this);
+        cloned = cclegacy.instantiate._clone(this, this);
     }
 
     const newPrefabInfo = cloned._prefab;
@@ -1266,7 +1259,7 @@ nodeProto._instantiate = function (cloned: Node, isSyncedNode: boolean) {
             // PrefabUtils.unlinkPrefab(cloned);
         }
     }
-    if (EDITOR && legacyCC.GAME_VIEW) {
+    if (EDITOR && cclegacy.GAME_VIEW) {
         const syncing = newPrefabInfo && cloned === newPrefabInfo.root && newPrefabInfo.sync;
         if (!syncing) {
             cloned._name += ' (Clone)';
@@ -1290,7 +1283,7 @@ nodeProto._ctor = function (name?: string) {
     this.__editorExtras__ = { editorOnly: true };
 
     this._components = [];
-    this._eventProcessor = new legacyCC.NodeEventProcessor(this);
+    this._eventProcessor = new cclegacy.NodeEventProcessor(this);
     this._uiProps = new NodeUIProperties(this);
 
     const sharedArrayBuffer = this._getSharedArrayBufferObject();

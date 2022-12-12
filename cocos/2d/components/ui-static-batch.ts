@@ -23,11 +23,11 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, menu, executionOrder, visible, override } from 'cc.decorator';
+import { ccclass, help, menu, executionOrder, visible, override } from '@cocos/core/internal';
 import { UIRenderer } from '../framework/ui-renderer';
 import { IBatcher } from '../renderer/i-batcher';
 import { DrawBatch2D } from '../renderer/draw-batch';
-import { Color, warnID } from '../../core';
+import { Color, warnID } from '@cocos/core';
 import { StaticVBAccessor } from '../renderer/static-vb-accessor';
 import { director } from '../../game';
 

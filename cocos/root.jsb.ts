@@ -1,9 +1,8 @@
-import legacyCC from '../predefine';
+import { cclegacy, settings, Settings, warnID, Pool, macro } from '@cocos/core';
 import { DataPoolManager } from './3d/skeletal-animation/data-pool-manager';
 import { Device, deviceManager } from './gfx';
 import { DebugView } from './rendering/debug-view';
 import { buildDeferredLayout, buildForwardLayout } from './rendering/custom/effect';
-import { settings, Settings, warnID, Pool, macro } from './core';
 import { ForwardPipeline } from './rendering';
 
 declare const nr: any;
@@ -29,8 +28,8 @@ export interface IRootInfo {
 const rootProto: any = Root.prototype;
 
 rootProto._createBatcher2D = function () {
-    if (!this._batcher && legacyCC.internal.Batcher2D) {
-        this._batcher = new legacyCC.internal.Batcher2D(this);
+    if (!this._batcher && cclegacy.internal.Batcher2D) {
+        this._batcher = new cclegacy.internal.Batcher2D(this);
         if (!this._batcher!.initialize()) {
             this._batcher = null;
             this.destroy();
@@ -84,7 +83,7 @@ class DummyPipelineEvent {
 
 rootProto._ctor = function (device: Device) {
     this._device = device;
-    this._dataPoolMgr = legacyCC.internal.DataPoolManager && new legacyCC.internal.DataPoolManager(device) as DataPoolManager;
+    this._dataPoolMgr = cclegacy.internal.DataPoolManager && new cclegacy.internal.DataPoolManager(device) as DataPoolManager;
     this._modelPools = new Map();
     this._lightPools = new Map();
     this._batcher = null;
@@ -178,22 +177,22 @@ rootProto.recycleLight = function (l) {
 };
 
 rootProto._onDirectorBeforeCommit = function () {
-    legacyCC.director.emit(legacyCC.Director.EVENT_BEFORE_COMMIT);
+    cclegacy.director.emit(cclegacy.Director.EVENT_BEFORE_COMMIT);
 };
 
 rootProto._onDirectorBeforeRender = function () {
-    legacyCC.director.emit(legacyCC.Director.EVENT_BEFORE_RENDER);
+    cclegacy.director.emit(cclegacy.Director.EVENT_BEFORE_RENDER);
 };
 
 const oldFrameMove = rootProto.frameMove;
 rootProto.frameMove = function (deltaTime: number) {
-    oldFrameMove.call(this, deltaTime, legacyCC.director.getTotalFrames());
+    oldFrameMove.call(this, deltaTime, cclegacy.director.getTotalFrames());
 };
 
 const oldSetPipeline = rootProto.setRenderPipeline;
 rootProto.setRenderPipeline = function (pipeline) {
     let ppl;
-    if (macro.CUSTOM_PIPELINE_NAME !== '' && legacyCC.rendering && this.usesCustomPipeline) {
+    if (macro.CUSTOM_PIPELINE_NAME !== '' && cclegacy.rendering && this.usesCustomPipeline) {
         const result = oldSetPipeline.call(this, null);
         const ppl = this.customPipeline;
         if (this.useDeferredPipeline) {

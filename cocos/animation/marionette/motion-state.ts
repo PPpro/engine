@@ -1,4 +1,4 @@
-import { ccclass, serializable } from 'cc.decorator';
+import { ccclass, serializable } from '@cocos/core/internal';
 import { Motion } from './motion';
 import { State, InteractiveState } from './state';
 import { BindableNumber } from './parametric';

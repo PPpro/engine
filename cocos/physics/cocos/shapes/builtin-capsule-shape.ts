@@ -25,7 +25,7 @@
 
 import { BuiltinShape } from './builtin-shape';
 import { ICapsuleShape } from '../../spec/i-physics-shape';
-import { geometry } from '../../../core';
+import { geometry } from '@cocos/core';
 import { EAxisDirection, CapsuleCollider } from '../../framework';
 
 export class BuiltinCapsuleShape extends BuiltinShape implements ICapsuleShape {

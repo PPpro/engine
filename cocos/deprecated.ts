@@ -23,7 +23,7 @@
  THE SOFTWARE.
 */
 
-import { replaceProperty } from './core';
+import { replaceProperty } from '@cocos/core';
 import { Root } from './root';
 
 // Root

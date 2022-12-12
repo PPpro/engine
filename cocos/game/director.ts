@@ -29,13 +29,13 @@
 
 import { DEBUG, EDITOR, BUILD, TEST } from 'internal:constants';
 import { SceneAsset } from '../asset/assets/scene-asset';
-import { System, EventTarget, Scheduler, js, errorID, error, assertID, warnID, macro, cclegacy, CCObject } from '../core';
+import { System, EventTarget, Scheduler, js, errorID, error, assertID, warnID, macro, cclegacy, CCObject } from '@cocos/core';
 import { input } from '../input';
 import { Root } from '../root';
 import { Node, Scene } from '../scene-graph';
 import { ComponentScheduler } from '../scene-graph/component-scheduler';
 import NodeActivator from '../scene-graph/node-activator';
-import { containerManager } from '../core/memop/container-manager';
+import { containerManager } from '@cocos/core/internal';
 import { uiRendererManager } from '../2d/framework/ui-renderer-manager';
 import { deviceManager } from '../gfx';
 

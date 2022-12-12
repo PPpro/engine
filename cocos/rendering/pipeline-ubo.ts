@@ -23,11 +23,10 @@
  THE SOFTWARE.
  */
 
-import { UBOGlobal, UBOShadow, UBOCamera, UNIFORM_SHADOWMAP_BINDING,
-    supportsR32FloatTexture, UNIFORM_SPOT_SHADOW_MAP_TEXTURE_BINDING, UBOCSM } from './define';
+import { UBOGlobal, UBOShadow, UBOCamera, UNIFORM_SHADOWMAP_BINDING, supportsR32FloatTexture, UNIFORM_SPOT_SHADOW_MAP_TEXTURE_BINDING, UBOCSM } from './define';
 import { Device, BufferInfo, BufferUsageBit, MemoryUsageBit, DescriptorSet } from '../gfx';
 import { Camera } from '../render-scene/scene/camera';
-import { Mat4, Vec3, Vec4, Color, toRadian, cclegacy } from '../core';
+import { Mat4, Vec3, Vec4, Color, toRadian, cclegacy } from '@cocos/core';
 import { PipelineRuntime } from './custom/pipeline';
 import { CSMLevel, PCFType, Shadows, ShadowType } from '../render-scene/scene/shadows';
 import { Light, LightType } from '../render-scene/scene/light';

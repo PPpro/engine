@@ -34,7 +34,7 @@ import type { SkyboxInfo } from '../../scene-graph/scene-globals';
 import { Root } from '../../root';
 import { GlobalDSManager } from '../../rendering/global-descriptor-set-manager';
 import { deviceManager } from '../../gfx';
-import { Enum, cclegacy } from '../../core';
+import { Enum, cclegacy } from '@cocos/core';
 
 let skybox_mesh: Mesh | null = null;
 let skybox_material: Material | null = null;

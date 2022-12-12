@@ -29,8 +29,10 @@ import { systemInfo } from 'pal/system-info';
 import { findCanvas, loadJsFile } from 'pal/env';
 import { Pacer } from 'pal/pacer';
 import { ConfigOrientation } from 'pal/screen-adapter';
-import assetManager, { IAssetManagerOptions } from '../asset/asset-manager/asset-manager';
-import { EventTarget, AsyncDelegate, sys, macro, VERSION, cclegacy, screen, Settings, settings, assert, garbageCollectionManager, DebugMode, warn, log, _resetDebugSetting } from '../core';
+import assetManager from '../asset/asset-manager/asset-manager';
+import { IAssetManagerOptions } from '../asset/asset-manager/asset-manager';
+import { EventTarget, AsyncDelegate, sys, macro, VERSION, cclegacy, screen, Settings, settings, assert, DebugMode, warn, log } from '@cocos/core';
+import { garbageCollectionManager, _resetDebugSetting, effectSettings } from '@cocos/core/internal';
 import { input } from '../input';
 import { deviceManager } from '../gfx';
 import { SplashScreen } from './splash-screen';
@@ -42,7 +44,6 @@ import { bindingMappingInfo } from '../rendering/define';
 import { IBundleOptions } from '../asset/asset-manager/shared';
 import { ICustomJointTextureLayout } from '../3d/skeletal-animation/skeletal-animation-utils';
 import { IPhysicsConfig } from '../physics/framework/physics-config';
-import { effectSettings } from '../core/effect-settings';
 
 /**
  * @zh

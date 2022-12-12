@@ -29,7 +29,7 @@
  THE SOFTWARE.
  */
 
-import { getError, logID } from '../core';
+import { getError, logID } from '@cocos/core';
 
 interface IFile {
     type: string,

@@ -24,7 +24,7 @@
  */
 
 import { Asset } from '../assets';
-import { error, cclegacy } from '../../core';
+import { error, cclegacy } from '@cocos/core';
 import packManager from './pack-manager';
 import RequestItem from './request-item';
 import { assets, CompleteCallbackNoData, fetchPipeline } from './shared';

@@ -1,4 +1,4 @@
-import { _decorator } from '../../core';
+import { _decorator } from '@cocos/core';
 import { createEval } from './create-eval';
 import { BindableNumber, bindOr, VariableType } from './parametric';
 import { MotionEvalContext } from './motion';

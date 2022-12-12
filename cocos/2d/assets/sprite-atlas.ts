@@ -25,10 +25,10 @@
 */
 
 import { EDITOR, TEST } from 'internal:constants';
-import { ccclass, serializable, editable } from 'cc.decorator';
+import { ccclass, serializable, editable } from '@cocos/core/internal';
 import { Asset } from '../../asset/assets';
 import { SpriteFrame } from './sprite-frame';
-import { cclegacy, js } from '../../core';
+import { cclegacy, js } from '@cocos/core';
 
 interface ISpriteAtlasSerializeData{
     name: string;

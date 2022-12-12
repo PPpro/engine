@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Vec3, IVec3Like, geometry } from '../../../core';
+import { Vec3, IVec3Like, geometry } from '@cocos/core';
 import { Collider, PhysicsMaterial, PhysicsSystem } from '../../../../exports/physics-framework';
 import { BulletWorld } from '../bullet-world';
 import { EBtSharedBodyDirty } from '../bullet-enum';

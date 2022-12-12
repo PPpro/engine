@@ -1,5 +1,5 @@
-import { API, } from '../../gfx';
-import { cclegacy } from '../../core';
+import { API } from '../../gfx';
+import { cclegacy } from '@cocos/core';
 
 export interface ITemplateInfo {
     gfxAttributes: Attribute[];

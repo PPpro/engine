@@ -23,17 +23,11 @@
  THE SOFTWARE.
  */
 
-import {
-    CanvasPool,
-    graphicsAssembler,
-    labelAssembler,
-    spriteAssembler,
-    earcut,
-} from './assembler';
+import { CanvasPool, graphicsAssembler, labelAssembler, spriteAssembler, earcut } from './assembler';
 import { RenderData, MeshRenderData } from './renderer/render-data';
 import { MeshBuffer } from './renderer/mesh-buffer';
 import { StencilManager } from './renderer/stencil-manager';
-import { cclegacy } from '../core';
+import { cclegacy } from '@cocos/core';
 import './event';
 
 import './renderer/batcher-2d';

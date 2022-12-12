@@ -1,5 +1,5 @@
-import { ccclass } from 'cc.decorator';
-import { RealCurve } from '../../core';
+import { ccclass } from '@cocos/core/internal';
+import { RealCurve } from '@cocos/core';
 import { CLASS_NAME_PREFIX_ANIM } from '../define';
 import { SingleChannelTrack } from './track';
 

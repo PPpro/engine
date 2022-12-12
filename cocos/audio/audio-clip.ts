@@ -23,10 +23,10 @@
  THE SOFTWARE.
  */
 
-import { ccclass, serializable, override } from 'cc.decorator';
+import { ccclass, serializable, override } from '@cocos/core/internal';
 import { AudioPlayer } from 'pal/audio';
 import { Asset } from '../asset/assets/asset';
-import { cclegacy } from '../core';
+import { cclegacy } from '@cocos/core';
 import { AudioState, AudioType } from '../../pal/audio/type';
 
 export interface AudioMeta {

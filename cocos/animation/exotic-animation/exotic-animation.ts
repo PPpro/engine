@@ -1,5 +1,6 @@
 import { EDITOR, TEST } from 'internal:constants';
-import { binarySearchEpsilon, clamp, lerp, Quat, Vec3, assertIsTrue, _decorator } from '../../core';
+import { binarySearchEpsilon, assertIsTrue } from '@cocos/core/internal';
+import { clamp, lerp, Quat, Vec3, _decorator } from '@cocos/core';
 import { CLASS_NAME_PREFIX_ANIM } from '../define';
 import { Binder, RuntimeBinding, TrackBinding, TrackPath } from '../tracks/track';
 

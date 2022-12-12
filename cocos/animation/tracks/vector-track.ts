@@ -1,5 +1,5 @@
-import { ccclass, serializable } from 'cc.decorator';
-import { RealCurve, Vec2, Vec3, Vec4 } from '../../core';
+import { ccclass, serializable } from '@cocos/core/internal';
+import { RealCurve, Vec2, Vec3, Vec4 } from '@cocos/core';
 import { CLASS_NAME_PREFIX_ANIM, createEvalSymbol } from '../define';
 import { Channel, RealChannel, RuntimeBinding, Track } from './track';
 import { maskIfEmpty } from './utils';

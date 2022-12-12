@@ -24,10 +24,11 @@
  */
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import bulletModule, { bulletType } from '@cocos/bullet';
+import bulletModule from '@cocos/bullet';
+import { bulletType } from '@cocos/bullet';
 import { WECHAT, RUNTIME_BASED } from 'internal:constants';
 import { game } from '../../game';
-import { sys } from '../../core';
+import { sys } from '@cocos/core';
 import { pageSize, pageCount, importFunc } from './bullet-env';
 
 let bulletLibs: any = bulletModule;

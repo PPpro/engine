@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Vec2, Rect } from '../../core';
+import { Vec2, Rect } from '@cocos/core';
 
 /**
  * @en Test line and line

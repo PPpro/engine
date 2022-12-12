@@ -22,11 +22,11 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
-import { ccclass, type } from 'cc.decorator';
+import { ccclass, type } from '@cocos/core/internal';
 import { ImageAsset } from './image-asset';
 import { SimpleTexture } from './simple-texture';
 import { TextureBase } from './texture-base.jsb';
-import { js, cclegacy } from '../../core';
+import { js, cclegacy } from '@cocos/core';
 import { Filter, PixelFormat, WrapMode } from './asset-enum';
 import './simple-texture';
 

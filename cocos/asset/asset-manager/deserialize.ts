@@ -27,9 +27,9 @@ import { EDITOR } from 'internal:constants';
 import { Asset } from '../assets/asset';
 import { MissingScript } from '../../misc/missing-script';
 import { deserialize, Details } from '../../serialization/deserialize';
-import { error, js } from '../../core';
+import { error, js } from '@cocos/core';
 import { dependMap, nativeDependMap } from './depend-maps';
-import { decodeUuid } from './helper';
+import { decodeUuid } from '@cocos/core/internal';
 
 const missingClass = EDITOR && EditorExtends.MissingReporter.classInstance;
 

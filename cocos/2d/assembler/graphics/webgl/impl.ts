@@ -24,7 +24,7 @@
  */
 
 import { JSB } from 'internal:constants';
-import { Color, Vec2 } from '../../../../core';
+import { Color, Vec2 } from '@cocos/core';
 import { Graphics } from '../../../components';
 import { MeshRenderData } from '../../../renderer/render-data';
 import { RenderDrawInfoType } from '../../../renderer/render-draw-info';

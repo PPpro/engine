@@ -24,7 +24,7 @@
  */
 
 import b2 from '@cocos/box2d';
-import { js } from '../../../core';
+import { js } from '@cocos/core';
 
 export class PhysicsContactListener extends b2.ContactListener {
     _contactFixtures: b2.Fixture[] = [];

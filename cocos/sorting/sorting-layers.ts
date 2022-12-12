@@ -22,9 +22,7 @@
 import { EDITOR } from 'internal:constants';
 import { director } from '../game/director';
 import { Game, game } from '../game';
-import { errorID } from '../core/platform/debug';
-import { Settings, settings } from '../core/settings';
-import { Enum } from '../core/value-types';
+import { errorID, Settings, settings, Enum } from '@cocos/core';
 
 interface SortingItem {
     id: number;

@@ -23,16 +23,8 @@
  THE SOFTWARE.
  */
 
-import { CachedArray } from '../../core';
-import {
-    WebGL2CmdBeginRenderPass,
-    WebGL2CmdBindStates,
-    WebGL2CmdCopyBufferToTexture,
-    WebGL2CmdDraw,
-    WebGL2CmdObject,
-    WebGL2CmdPackage,
-    WebGL2CmdUpdateBuffer,
-} from './webgl2-commands';
+import { CachedArray } from '@cocos/core';
+import { WebGL2CmdBeginRenderPass, WebGL2CmdBindStates, WebGL2CmdCopyBufferToTexture, WebGL2CmdDraw, WebGL2CmdObject, WebGL2CmdPackage, WebGL2CmdUpdateBuffer } from './webgl2-commands';
 
 export class WebGL2CommandPool<T extends WebGL2CmdObject> {
     private _frees: (T|null)[];

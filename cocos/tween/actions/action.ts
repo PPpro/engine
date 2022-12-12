@@ -25,7 +25,7 @@
  THE SOFTWARE.
 */
 
-import { logID, errorID } from '../../core';
+import { logID, errorID } from '@cocos/core';
 import { Node } from '../../scene-graph';
 
 /**

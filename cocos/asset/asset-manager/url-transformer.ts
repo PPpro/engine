@@ -24,9 +24,10 @@
  */
 
 import { EDITOR, PREVIEW } from 'internal:constants';
-import { warnID, js, path, cclegacy } from '../../core';
-import Config, { IAddressableInfo, IAssetInfo } from './config';
-import { decodeUuid } from './helper';
+import { warnID, js, path, cclegacy } from '@cocos/core';
+import Config from './config';
+import { IAddressableInfo, IAssetInfo } from './config';
+import { decodeUuid } from '@cocos/core/internal';
 import RequestItem from './request-item';
 import { assetsOverrideMap, bundles, presets, RequestType } from './shared';
 import Task from './task';

@@ -25,7 +25,7 @@
 */
 
 import { TEST } from 'internal:constants';
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 
 /**
  * @deprecated since v3.5.0, this is an engine private interface that will be removed in the future.

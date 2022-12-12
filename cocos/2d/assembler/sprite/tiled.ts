@@ -25,7 +25,7 @@
 
 import { JSB } from 'internal:constants';
 import { IUV, SpriteFrame } from '../../assets';
-import { Mat4, Vec3, Color } from '../../../core';
+import { Mat4, Vec3, Color } from '@cocos/core';
 import { IRenderData, RenderData } from '../../renderer/render-data';
 import { IBatcher } from '../../renderer/i-batcher';
 import { Sprite } from '../../components/sprite';

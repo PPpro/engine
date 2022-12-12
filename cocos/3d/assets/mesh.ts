@@ -23,17 +23,15 @@
  THE SOFTWARE.
 */
 
-import { ccclass, serializable } from 'cc.decorator';
+import { ccclass, serializable } from '@cocos/core/internal';
 import { Asset } from '../../asset/assets/asset';
 import { IDynamicGeometry } from '../../primitive/define';
 import { BufferBlob } from '../misc/buffer-blob';
 import { Skeleton } from './skeleton';
-import { geometry, cclegacy, sys, warnID, Mat4, Quat, Vec3, assertIsTrue, murmurhash2_32_gc } from '../../core';
+import { geometry, cclegacy, sys, warnID, Mat4, Quat, Vec3, murmurhash2_32_gc } from '@cocos/core';
+import { assertIsTrue } from '@cocos/core/internal';
 import { RenderingSubMesh } from '../../asset/assets';
-import {
-    Attribute, Device, Buffer, BufferInfo, AttributeName, BufferUsageBit, Feature, Format,
-    FormatInfos, FormatType, MemoryUsageBit, PrimitiveMode, getTypedArrayConstructor, DrawInfo, FormatInfo, deviceManager,
-} from '../../gfx';
+import { Attribute, Device, Buffer, BufferInfo, AttributeName, BufferUsageBit, Feature, Format, FormatInfos, FormatType, MemoryUsageBit, PrimitiveMode, getTypedArrayConstructor, DrawInfo, FormatInfo, deviceManager } from '../../gfx';
 import { Morph } from './morph';
 import { MorphRendering, createMorphRendering } from './morph-rendering';
 

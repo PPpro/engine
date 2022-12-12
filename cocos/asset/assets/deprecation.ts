@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { removeProperty, replaceProperty } from '../../core';
+import { removeProperty, replaceProperty } from '@cocos/core';
 import { TextureBase } from './texture-base';
 import { RenderTexture } from './render-texture';
 

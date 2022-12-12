@@ -1,5 +1,5 @@
-import { ccclass, serializable } from 'cc.decorator';
-import { errorID } from '../../core';
+import { ccclass, serializable } from '@cocos/core/internal';
+import { errorID } from '@cocos/core';
 import type { Node } from '../../scene-graph/node';
 import { AnimationClip } from '../animation-clip';
 import { AnimationState } from '../animation-state';

@@ -232,6 +232,8 @@ export const range: (values: [number, number, number] | [number, number]) => Leg
  * @zh
  * 设置该属性在编辑器中允许的最小值。
  * @param value 最小值。
+ * 
+ * @engineInternal
  */
 export const rangeMin: (value: number) => LegacyPropertyDecorator = !DEV
     ? emptyDecoratorFn

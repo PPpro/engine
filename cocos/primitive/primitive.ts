@@ -23,11 +23,11 @@
  THE SOFTWARE.
  */
 
-import { ccclass, type, serializable, editable } from 'cc.decorator';
+import { ccclass, type, serializable, editable } from '@cocos/core/internal';
 import { createMesh } from '../3d/misc';
 import { Mesh } from '../3d/assets/mesh';
 import * as primitives from '.';
-import { ccenum, cclegacy } from '../core';
+import { ccenum, cclegacy } from '@cocos/core';
 
 enum PrimitiveType {
     BOX = 0,

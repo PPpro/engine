@@ -23,8 +23,9 @@
  THE SOFTWARE.
  */
 
-import { LODGroup } from "../misc/lodgroup-component";
-import { Vec3, assertIsTrue } from '../core';
+import { LODGroup } from '../misc/lodgroup-component';
+import { Vec3 } from '@cocos/core';
+import { assertIsTrue } from '@cocos/core/internal';
 import { Camera, CameraProjection } from '../render-scene/scene';
 import { scene } from '../render-scene';
 

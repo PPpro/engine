@@ -1,12 +1,8 @@
 /* eslint-disable camelcase */
 
-import {
-    Address, BlendFactor, BlendOp, ColorMask, ComparisonFunc, CullMode, DynamicStateFlagBit,
-    Filter, Format, FormatInfos, FormatType, GetTypeSize, PolygonMode, PrimitiveMode,
-    ShadeModel, ShaderStageFlagBit, StencilOp, Type, DescriptorType, SamplerInfo, MemoryAccessBit, Sampler,
-} from '../../cocos/gfx';
+import { Address, BlendFactor, BlendOp, ColorMask, ComparisonFunc, CullMode, DynamicStateFlagBit, Filter, Format, FormatInfos, FormatType, GetTypeSize, PolygonMode, PrimitiveMode, ShadeModel, ShaderStageFlagBit, StencilOp, Type, DescriptorType, SamplerInfo, MemoryAccessBit, Sampler } from '../../cocos/gfx';
 import { RenderPassStage, RenderPriority, SetIndex } from '../../cocos/rendering/define';
-import { murmurhash2_32_gc } from '../../cocos/core';
+import { murmurhash2_32_gc } from '@cocos/core';
 
 const typeMap: Record<string, Type | string> = {};
 typeMap[typeMap.bool = Type.BOOL] = 'bool';

@@ -33,7 +33,7 @@ import { RenderInstancedQueue } from './render-instanced-queue';
 import { RenderBatchedQueue } from './render-batched-queue';
 import { ShadowType } from '../render-scene/scene/shadows';
 import { Light, LightType } from '../render-scene/scene/light';
-import { geometry } from '../core';
+import { geometry } from '@cocos/core';
 import { Model } from '../render-scene/scene/model';
 import { Camera, DirectionalLight, SpotLight } from '../render-scene/scene';
 import { shadowCulling } from './scene-culling';

@@ -28,7 +28,7 @@ import { TextureAtlasData } from '@cocos/dragonbones-js';
 import { ArmatureCache } from './ArmatureCache';
 import { ArmatureDisplay } from './ArmatureDisplay';
 import { CCFactory } from './CCFactory';
-import { cclegacy, _decorator } from '../core';
+import { cclegacy, _decorator } from '@cocos/core';
 import { Asset, Texture2D } from '../asset/assets';
 import { Node } from '../scene-graph';
 

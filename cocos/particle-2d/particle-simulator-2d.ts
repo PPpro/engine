@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Vec2, Color, js, misc } from '../core';
+import { Vec2, Color, js, misc } from '@cocos/core';
 import { vfmtPosUvColor, getComponentPerVertex } from '../2d/renderer/vertex-format';
 import { PositionType, EmitterMode, START_SIZE_EQUAL_TO_END_SIZE, START_RADIUS_EQUAL_TO_END_RADIUS } from './define';
 import { ParticleSystem2D } from './particle-system-2d';

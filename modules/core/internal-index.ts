@@ -26,10 +26,13 @@
 // This file only exports functions/classes that are only visible to engine internal.
 
 import * as jsbUtils from './utils/jsb-utils';
+import * as RF from './data/utils/requiring-frame';
 
-export { editable, tooltip, visible, displayName, displayOrder, range, rangeStep, slide, disallowAnimation } from './data/decorators/editable';
+export { editable, tooltip, visible, displayName, displayOrder, range, rangeStep, slide, disallowAnimation, rangeMin } from './data/decorators/editable';
 export { override } from './data/decorators/override';
-export { formerlySerializedAs, serializable } from './data/decorators/serializable';
+export { formerlySerializedAs, serializable, uniquelyReferenced } from './data/decorators/serializable';
+export { property, type, executeInEditMode, help, menu, ccclass, float, string, inspector } from './data/class-decorator';
+export { readOnly, group, rangeMax, unit, radian, multiline, editorOnly, requireComponent, executionOrder, disallowMultiple, playOnFocus } from './data/decorators'
 
 export * from './algorithm/binary-search';
 export { move } from './algorithm/move';
@@ -56,3 +59,18 @@ export { _resetDebugSetting } from './platform/debug';
  * @engineInternal
  */
 export  { jsbUtils };
+
+export type { EditorExtendableObject } from './data/editor-extras-tag';
+export { removeIf } from './utils/array';
+export { decodeUuid } from './utils/decode-uuid';
+export { containerManager } from './memop/container-manager';
+export { effectSettings } from './effect-settings';
+export { packRGBE } from './math/color';
+export { IDGenerator } from './utils/id-generator';
+export { extendsEnum } from './data/utils/extends-enum';
+export { partition } from './algorithm/partition';
+export { StorageUnit, ElementType, combineStorageUnitElementType, extractStorageUnitElementType } from './data/utils/compact-value-type-array';
+export { linearToSrgb8Bit, srgb8BitToLinear, srgbToLinear } from './math/color';
+export { ScalableContainer } from './memop/scalable-container';
+export { KeySharedQuatCurves, KeySharedRealCurves } from './curves/keys-shared-curves';
+export { RF };

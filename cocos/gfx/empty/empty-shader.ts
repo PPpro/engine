@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { debug } from '../../core';
+import { debug } from '@cocos/core';
 import { ShaderInfo } from '../base/define';
 import { Shader } from '../base/shader';
 

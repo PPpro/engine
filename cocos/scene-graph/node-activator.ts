@@ -24,15 +24,13 @@
 */
 
 import { EDITOR, DEV, SUPPORT_JIT, DEBUG } from 'internal:constants';
-import { CCObject, isValid } from '../core/data/object';
-import { array, Pool } from '../core/utils/js';
-import { tryCatchFunctor_EDITOR } from '../core/utils/misc';
+import { CCObject, js, misc, cclegacy, assert, errorID, getError } from '@cocos/core';
+import { isValid, assertIsTrue } from '@cocos/core/internal';
 import { invokeOnEnable, createInvokeImpl, createInvokeImplJit, OneOffInvoker, LifeCycleInvoker } from './component-scheduler';
-import { legacyCC } from '../core/global-exports';
-import { assert, errorID, getError } from '../core/platform/debug';
 import { NodeEventType } from './node-event';
-import { assertIsTrue } from '../core/data/utils/asserts';
 
+const { array, Pool } = js;
+const { tryCatchFunctor_EDITOR } = misc;
 const MAX_POOL_SIZE = 4;
 
 const IsPreloadStarted = CCObject.Flags.IsPreloadStarted;
@@ -45,7 +43,7 @@ const callOnLoadInTryCatch = EDITOR && function (c) {
     try {
         c.onLoad();
     } catch (e) {
-        legacyCC._throw(e);
+        cclegacy._throw(e);
     }
     c._objFlags |= IsOnLoadCalled;
     _onLoadInEditor(c);
@@ -131,7 +129,7 @@ function _componentCorrupted (node, comp, index) {
 }
 
 function _onLoadInEditor (comp) {
-    if (comp.onLoad && !legacyCC.GAME_VIEW) {
+    if (comp.onLoad && !cclegacy.GAME_VIEW) {
         // @ts-expect-error Editor API usage
         const focused = Editor.Selection.getLastSelected('node') === comp.node.uuid;
         if (focused) {
@@ -242,7 +240,7 @@ export default class NodeActivator {
             if (deactivatedOnLoading) {
                 return;
             }
-            legacyCC.director._compScheduler.enableComp(comp, onEnableInvoker);
+            cclegacy.director._compScheduler.enableComp(comp, onEnableInvoker);
         }
     }
 
@@ -253,7 +251,7 @@ export default class NodeActivator {
      */
     public destroyComp (comp) {
         // ensure onDisable called
-        legacyCC.director._compScheduler.disableComp(comp);
+        cclegacy.director._compScheduler.disableComp(comp);
 
         if (comp.onDestroy && (comp._objFlags & IsOnLoadCalled)) {
             comp.onDestroy();
@@ -280,7 +278,7 @@ export default class NodeActivator {
         // activate components
         for (let i = 0; i < originCount; ++i) {
             const component = node._components[i];
-            if (component instanceof legacyCC.Component) {
+            if (component instanceof cclegacy.Component) {
                 this.activateComp(component, preloadInvoker, onLoadInvoker, onEnableInvoker);
             } else {
                 _componentCorrupted(node, component, i);
@@ -314,7 +312,7 @@ export default class NodeActivator {
         for (let c = 0; c < originCount; ++c) {
             const component = node._components[c];
             if (component._enabled) {
-                legacyCC.director._compScheduler.disableComp(component);
+                cclegacy.director._compScheduler.disableComp(component);
 
                 if (node._activeInHierarchy) {
                     // reactivated from root
@@ -347,7 +345,7 @@ if (EDITOR) {
             // destroyed before activating
             return;
         }
-        if (legacyCC.GAME_VIEW || comp.constructor._executeInEditMode) {
+        if (cclegacy.GAME_VIEW || comp.constructor._executeInEditMode) {
             if (!(comp._objFlags & IsPreloadStarted)) {
                 comp._objFlags |= IsPreloadStarted;
                 if (comp.__preload) {
@@ -380,16 +378,16 @@ if (EDITOR) {
             if (deactivatedOnLoading) {
                 return;
             }
-            legacyCC.director._compScheduler.enableComp(comp, onEnableInvoker);
+            cclegacy.director._compScheduler.enableComp(comp, onEnableInvoker);
         }
     };
 
     NodeActivator.prototype.destroyComp = (comp) => {
         // ensure onDisable called
-        legacyCC.director._compScheduler.disableComp(comp);
+        cclegacy.director._compScheduler.disableComp(comp);
 
         if (comp.onDestroy && (comp._objFlags & IsOnLoadCalled)) {
-            if (legacyCC.GAME_VIEW || comp.constructor._executeInEditMode) {
+            if (cclegacy.GAME_VIEW || comp.constructor._executeInEditMode) {
                 callOnDestroyInTryCatch && callOnDestroyInTryCatch(comp);
             }
         }
@@ -400,7 +398,7 @@ if (EDITOR) {
             try {
                 comp.resetInEditor(didResetToDefault);
             } catch (e) {
-                legacyCC._throw(e);
+                cclegacy._throw(e);
             }
         }
     };

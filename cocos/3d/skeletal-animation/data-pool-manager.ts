@@ -27,7 +27,7 @@ import type { AnimationClip } from '../../animation/animation-clip';
 import type { Skeleton } from '../assets';
 import { Device } from '../../gfx';
 import { JointAnimationInfo, JointTexturePool } from './skeletal-animation-utils';
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 
 export class DataPoolManager {
     public jointTexturePool: JointTexturePool;

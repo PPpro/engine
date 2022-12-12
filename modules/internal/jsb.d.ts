@@ -10,6 +10,14 @@
  */
 declare namespace jsb {
 
+    export const Vec2: any;
+    export const Vec3: any;
+    export const Vec4: any;
+    export const Mat3: any;
+    export const Mat4: any;
+    export const Color: any;
+    export const Quat: any;
+
     type AccelerationXYZ = number;
     type AccelerationIncludingGravityXYZ = number;
     type RotationRateAlpha = number;

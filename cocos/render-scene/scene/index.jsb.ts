@@ -22,7 +22,7 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
  */
-import { Vec3, Enum, cclegacy } from '../../core';
+import { Vec3, Enum, cclegacy } from '@cocos/core';
 
 export type Ambient = jsb.Ambient;
 export const Ambient = jsb.Ambient;

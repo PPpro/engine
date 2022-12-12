@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 import { Counter, ICounterOption } from './counter';
 
 @ccclass('cc.PerfCounter')

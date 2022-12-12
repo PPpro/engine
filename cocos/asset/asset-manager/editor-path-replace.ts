@@ -23,9 +23,10 @@
  THE SOFTWARE.
  */
 import { EDITOR, NATIVE, PREVIEW, TEST } from 'internal:constants';
-import { assert, Settings, settings } from '../../core';
+import { assert, Settings, settings } from '@cocos/core';
 import { fetchPipeline, pipeline } from './shared';
-import Task, { TaskCompleteCallback } from './task';
+import Task from './task';
+import { TaskCompleteCallback } from './task';
 
 declare const Editor: any;
 if ((EDITOR || PREVIEW) && !TEST) {

@@ -1,8 +1,5 @@
 import { DEBUG } from 'internal:constants';
-import {
-    AnimationGraph, Layer, StateMachine, State, isAnimationTransition,
-    SubStateMachine, EmptyState, EmptyStateTransition, TransitionInterruptionSource,
-} from './animation-graph';
+import { AnimationGraph, Layer, StateMachine, State, isAnimationTransition, SubStateMachine, EmptyState, EmptyStateTransition, TransitionInterruptionSource } from './animation-graph';
 import { MotionEval, MotionEvalContext, OverrideClipContext } from './motion';
 import type { Node } from '../../scene-graph/node';
 import { createEval } from './create-eval';
@@ -11,7 +8,8 @@ import { BindContext, validateVariableExistence, validateVariableType, VariableT
 import { ConditionEval, TriggerCondition } from './condition';
 import { MotionState } from './motion-state';
 import { AnimationMask } from './animation-mask';
-import { warnID, assertIsTrue, assertIsNonNullable } from '../../core';
+import { warnID } from '@cocos/core';
+import { assertIsTrue, assertIsNonNullable } from '@cocos/core/internal';
 import { BlendStateBuffer, LayeredBlendStateBuffer } from '../../3d/skeletal-animation/skeletal-animation-blending';
 import { MAX_ANIMATION_LAYER } from '../../3d/skeletal-animation/limits';
 import { AnimationClip } from '../animation-clip';

@@ -24,7 +24,8 @@
  */
 
 import { DEBUG } from 'internal:constants';
-import { Vec3, Quat, assertIsTrue } from '../../core';
+import { Vec3, Quat } from '@cocos/core';
+import { assertIsTrue } from '@cocos/core/internal';
 import { Node } from '../../scene-graph';
 import { RuntimeBinding } from '../../animation/tracks/track';
 import { MAX_ANIMATION_LAYER } from './limits';

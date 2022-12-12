@@ -29,13 +29,13 @@ import webgpuUrl from 'url:native/external/emscripten/webgpu/webgpu_wasm.wasm';
 import glslangUrl from 'url:native/external/emscripten/webgpu/glslang.wasm';
 import wasmDevice from './webgpu_wasm.js';
 import glslangLoader from './glslang.js';
-import { legacyCC } from '../core/global-exports';
+import { cclegacy } from '@cocos/core';
 
 export const glslalgWasmModule: any = {
     glslang: null,
 };
 
-export const gfx: any = legacyCC.gfx = {
+export const gfx: any = cclegacy.gfx = {
     wasmBinary: null,
     nativeDevice: null,
 };
@@ -58,7 +58,7 @@ export const promiseForWebGPUInstantiation = (() => {
                     response.arrayBuffer().then((buffer) => {
                         gfx.wasmBinary = buffer;
                         wasmDevice(gfx).then(() => {
-                            legacyCC.WebGPUDevice = gfx.CCWGPUDevice;
+                            cclegacy.WebGPUDevice = gfx.CCWGPUDevice;
                             resolve();
                         });
                     });
@@ -81,8 +81,8 @@ export const promiseForWebGPUInstantiation = (() => {
 
 if (WEBGPU) {
     const intervalId = setInterval(() => {
-        if (legacyCC.game) {
-            legacyCC.game.onPreInfrastructureInitDelegate.add(() => promiseForWebGPUInstantiation);
+        if (cclegacy.game) {
+            cclegacy.game.onPreInfrastructureInitDelegate.add(() => promiseForWebGPUInstantiation);
             clearInterval(intervalId);
         }
     }, 10);

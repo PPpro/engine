@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { IVec3Like } from '../../core';
+import { IVec3Like } from '@cocos/core';
 
 export interface ICollisionMatrix {
     [x: string]: number;

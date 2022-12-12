@@ -24,12 +24,12 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, menu, executionOrder, tooltip, type, serializable } from 'cc.decorator';
+import { ccclass, help, menu, executionOrder, tooltip, type, serializable } from '@cocos/core/internal';
 import { Component } from '../scene-graph/component';
 import { EventHandler } from '../scene-graph/component-event-handler';
 import { Node } from '../scene-graph/node';
 import { Camera } from '../misc/camera-component';
-import { Vec3 } from '../core/math';
+import { Vec3 } from '@cocos/core';
 
 /**
  * @en The component that converts 3D node coordinates to UI node coordinates.

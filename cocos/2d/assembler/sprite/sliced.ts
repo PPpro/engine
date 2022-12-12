@@ -23,7 +23,7 @@
  THE SOFTWARE.
 */
 
-import { Color, Mat4, Vec3 } from '../../../core';
+import { Color, Mat4, Vec3 } from '@cocos/core';
 import { IRenderData, RenderData } from '../../renderer/render-data';
 import { IBatcher } from '../../renderer/i-batcher';
 import { Sprite } from '../../components';

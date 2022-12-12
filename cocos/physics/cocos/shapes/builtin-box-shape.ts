@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Vec3, geometry } from '../../../core';
+import { Vec3, geometry } from '@cocos/core';
 import { BuiltinShape } from './builtin-shape';
 import { IBoxShape } from '../../spec/i-physics-shape';
 import { BoxCollider } from '../../../../exports/physics-framework';

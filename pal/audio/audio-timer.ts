@@ -1,4 +1,4 @@
-import { clamp } from '../../cocos/core/math/utils';
+import { clamp } from '@cocos/core';
 
 /**
  * Tool class to calculate audio current time.

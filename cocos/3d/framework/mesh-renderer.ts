@@ -23,11 +23,12 @@
  THE SOFTWARE.
 */
 import { JSB } from 'internal:constants';
-import { displayOrder, group, range } from 'cc.decorator';
+import { displayOrder, group, range } from '@cocos/core/internal';
 import { Texture2D, TextureCube } from '../../asset/assets';
 import { Material } from '../../asset/assets/material';
 import { Mesh } from '../assets/mesh';
-import { Vec4, Enum, cclegacy, CCBoolean, CCFloat, assertIsTrue, _decorator, CCInteger, EventTarget } from '../../core';
+import { Vec4, Enum, cclegacy, CCBoolean, CCFloat, _decorator, CCInteger, EventTarget, settings, Settings } from '@cocos/core';
+import { assertIsTrue } from '@cocos/core/internal';
 import { scene } from '../../render-scene';
 import { MorphModel } from '../models/morph-model';
 import { Root } from '../../root';
@@ -37,7 +38,6 @@ import { MorphRenderingInstance } from '../assets/morph-rendering';
 import { NodeEventType } from '../../scene-graph/node-event';
 import { Texture } from '../../gfx';
 import { builtinResMgr } from '../../asset/asset-manager/builtin-res-mgr';
-import { settings, Settings } from '../../core/settings';
 
 const { property, ccclass, help, executeInEditMode, executionOrder, menu, tooltip, visible, type,
     formerlySerializedAs, serializable, editable, disallowAnimation } = _decorator;

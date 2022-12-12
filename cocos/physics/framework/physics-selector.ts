@@ -28,13 +28,10 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import { EDITOR, TEST } from 'internal:constants';
 import { IBaseConstraint, IPointToPointConstraint, IHingeConstraint, IConeTwistConstraint, IFixedConstraint } from '../spec/i-physics-constraint';
-import {
-    IBoxShape, ISphereShape, ICapsuleShape, ITrimeshShape, ICylinderShape,
-    IConeShape, ITerrainShape, ISimplexShape, IPlaneShape, IBaseShape,
-} from '../spec/i-physics-shape';
+import { IBoxShape, ISphereShape, ICapsuleShape, ITrimeshShape, ICylinderShape, IConeShape, ITerrainShape, ISimplexShape, IPlaneShape, IBaseShape } from '../spec/i-physics-shape';
 import { IPhysicsWorld } from '../spec/i-physics-world';
 import { IRigidBody } from '../spec/i-rigid-body';
-import { errorID, IVec3Like, warn, cclegacy } from '../../core';
+import { errorID, IVec3Like, warn, cclegacy } from '@cocos/core';
 import { EColliderType, EConstraintType } from './physics-enum';
 import { PhysicsMaterial } from '.';
 

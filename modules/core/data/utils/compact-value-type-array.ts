@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { ccclass, serializable } from 'cc.decorator';
+import { ccclass, serializable } from '@cocos/core/internal';
 import { Vec3, Quat, Vec4, Vec2, Mat4 } from '../../math';
 
 export enum StorageUnit {

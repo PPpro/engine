@@ -1,4 +1,4 @@
-import { binarySearch } from '../../../cocos/core/algorithm/binary-search';
+import { binarySearch } from '@cocos/core/internal';
 
 describe('Binary search', () => {
     test('Found', () => {

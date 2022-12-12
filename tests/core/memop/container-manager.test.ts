@@ -1,5 +1,4 @@
-import { ScalableContainer } from '../../../cocos/core/memop/scalable-container';
-import { containerManager } from '../../../cocos/core/memop/container-manager';
+import { ScalableContainer, containerManager } from '@cocos/core/internal';
 
 
 class TestContainer extends ScalableContainer {

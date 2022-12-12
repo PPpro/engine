@@ -24,13 +24,13 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executeInEditMode, executionOrder, menu, requireComponent, tooltip, displayOrder, type, serializable } from 'cc.decorator';
+import { ccclass, help, executeInEditMode, executionOrder, menu, requireComponent, tooltip, displayOrder, type, serializable } from '@cocos/core/internal';
 import { EDITOR, JSB, MINIGAME, RUNTIME_BASED } from 'internal:constants';
 import { UITransform } from '../../2d/framework';
 import { SpriteFrame } from '../../2d/assets/sprite-frame';
 import { Component } from '../../scene-graph/component';
 import { EventHandler as ComponentEventHandler } from '../../scene-graph/component-event-handler';
-import { Size } from '../../core/math';
+import { Size, cclegacy } from '@cocos/core';
 import { EventTouch } from '../../input/types';
 import { Node } from '../../scene-graph/node';
 import { Label, VerticalTextAlignment } from '../../2d/components/label';
@@ -38,7 +38,6 @@ import { Sprite } from '../../2d/components/sprite';
 import { EditBoxImpl } from './edit-box-impl';
 import { EditBoxImplBase } from './edit-box-impl-base';
 import { InputFlag, InputMode, KeyboardReturnType } from './types';
-import { legacyCC } from '../../core/global-exports';
 import { NodeEventType } from '../../scene-graph/node-event';
 import { XrKeyboardEventType, XrUIPressEventType } from '../../xr/event/xr-event-handle';
 
@@ -395,7 +394,7 @@ export class EditBox extends Component {
     }
 
     public onEnable () {
-        if (!EDITOR || legacyCC.GAME_VIEW) {
+        if (!EDITOR || cclegacy.GAME_VIEW) {
             this._registerEvent();
         }
         this._ensureBackgroundSprite();
@@ -411,7 +410,7 @@ export class EditBox extends Component {
     }
 
     public onDisable () {
-        if (!EDITOR || legacyCC.GAME_VIEW) {
+        if (!EDITOR || cclegacy.GAME_VIEW) {
             this._unregisterEvent();
         }
         this._unregisterBackgroundEvent();
@@ -839,4 +838,4 @@ if (typeof window === 'object' && typeof document === 'object' && !MINIGAME && !
  * @return {Boolean} whether it is the first time the destroy being called
  */
 
-legacyCC.internal.EditBox = EditBox;
+cclegacy.internal.EditBox = EditBox;

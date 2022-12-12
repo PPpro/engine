@@ -25,7 +25,7 @@
  THE SOFTWARE.
  */
 
-import { warnID } from '../../core';
+import { warnID } from '@cocos/core';
 
 /**
  * A SAX Parser

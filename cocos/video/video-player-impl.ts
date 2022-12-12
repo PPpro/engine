@@ -23,11 +23,10 @@
  THE SOFTWARE.
  */
 
-import { legacyCC } from '../core/global-exports';
+import { cclegacy, error } from '@cocos/core';
 import { UITransform } from '../2d/framework';
 import { VideoPlayer } from './video-player';
 import { EventType } from './video-player-enums';
-import { error } from '../core/platform';
 import { director } from '../game/director';
 import { Node } from '../scene-graph';
 
@@ -87,8 +86,8 @@ export abstract class VideoPlayerImpl {
             this._interrupted = false;
         };
         /* handle hide & show */
-        legacyCC.game.on(legacyCC.Game.EVENT_HIDE, this._onHide);
-        legacyCC.game.on(legacyCC.Game.EVENT_SHOW, this._onShow);
+        cclegacy.game.on(cclegacy.Game.EVENT_HIDE, this._onHide);
+        cclegacy.game.on(cclegacy.Game.EVENT_SHOW, this._onShow);
     }
 
     //
@@ -253,9 +252,9 @@ export abstract class VideoPlayerImpl {
     public destroy () {
         this.removeVideoPlayer();
         this._componentEventList.clear();
-        legacyCC.game.off(legacyCC.Game.EVENT_HIDE, this._onHide);
-        legacyCC.game.off(legacyCC.Game.EVENT_SHOW, this._onShow);
+        cclegacy.game.off(cclegacy.Game.EVENT_HIDE, this._onHide);
+        cclegacy.game.off(cclegacy.Game.EVENT_SHOW, this._onShow);
     }
 }
 
-legacyCC.internal.VideoPlayerImpl = VideoPlayerImpl;
+cclegacy.internal.VideoPlayerImpl = VideoPlayerImpl;

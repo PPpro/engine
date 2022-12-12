@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Vec3 } from '../../core/math';
+import { Vec3 } from '@cocos/core';
 import { Event } from '../../input/types';
 
 export enum DeviceType {

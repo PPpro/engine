@@ -24,13 +24,12 @@
 */
 
 import { EDITOR, TEST } from 'internal:constants';
-import { ccclass, serializable } from 'cc.decorator';
+import { ccclass, serializable } from '@cocos/core/internal';
 import { TextureType, TextureInfo, TextureViewInfo } from '../../gfx';
 import { ImageAsset } from './image-asset';
 import { PresumedGFXTextureInfo, PresumedGFXTextureViewInfo, SimpleTexture } from './simple-texture';
 import { ITexture2DCreateInfo, Texture2D } from './texture-2d';
-import { legacyCC } from '../../core/global-exports';
-import { js } from '../../core';
+import { cclegacy, js } from '@cocos/core';
 
 export type ITextureCubeCreateInfo = ITexture2DCreateInfo;
 /**
@@ -520,7 +519,7 @@ export class TextureCube extends SimpleTexture {
     }
 }
 
-legacyCC.TextureCube = TextureCube;
+cclegacy.TextureCube = TextureCube;
 
 interface ITextureCubeSerializeData {
     base: string;

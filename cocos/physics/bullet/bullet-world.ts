@@ -33,7 +33,7 @@ import { TriggerEventObject, CollisionEventObject, CC_V3_0, CC_V3_1, BulletCache
 import { bullet2CocosVec3, cocos2BulletVec3 } from './bullet-utils';
 import { IRaycastOptions, IPhysicsWorld } from '../spec/i-physics-world';
 import { PhysicsRayResult, PhysicsMaterial } from '../framework';
-import { error, RecyclePool, Vec3, js, IVec3Like, geometry } from '../../core';
+import { error, RecyclePool, Vec3, js, IVec3Like, geometry } from '@cocos/core';
 import { BulletContactData } from './bullet-contact-data';
 import { BulletConstraint } from './constraints/bullet-constraint';
 import { bt, EBulletType, EBulletTriangleRaycastFlag } from './instantiated';

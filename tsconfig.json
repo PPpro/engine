@@ -40,6 +40,7 @@
     "exports/**/*.ts",
     "typedoc-index.ts",
     "pal/**/*.ts",
-    "node_modules/@types/internal/**/*.ts"
+    "node_modules/@types/internal/**/*.ts",
+    "node_modules/@cocos/core/**/*.ts"
   ]
 }

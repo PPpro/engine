@@ -24,13 +24,12 @@
  */
 
 import { EDITOR } from 'internal:constants';
-import { CCString, Enum } from '../core';
+import { CCString, Enum, cclegacy } from '@cocos/core';
 import SkeletonCache from './skeleton-cache';
 import { Skeleton } from './skeleton';
 import { SkeletonTexture } from './skeleton-texture';
 import spine from './lib/spine-core.js';
-import { ccclass, serializable, type } from '../core/data/decorators';
-import { legacyCC } from '../core/global-exports';
+import { ccclass, serializable, type } from '@cocos/core/internal';
 import { Texture2D, Asset } from '../asset/assets';
 import { Node } from '../scene-graph';
 
@@ -167,14 +166,14 @@ export class SkeletonData extends Asset {
     public reset () {
         this._skeletonCache = null;
         this._atlasCache = null;
-        if (EDITOR && !legacyCC.GAME_VIEW) {
+        if (EDITOR && !cclegacy.GAME_VIEW) {
             this._skinsEnum = null;
             this._animsEnum = null;
         }
     }
 
     public resetEnums () {
-        if (EDITOR && !legacyCC.GAME_VIEW) {
+        if (EDITOR && !cclegacy.GAME_VIEW) {
             this._skinsEnum = null;
             this._animsEnum = null;
         }
@@ -302,4 +301,4 @@ export class SkeletonData extends Asset {
     }
 }
 
-legacyCC.internal.SpineSkeletonData = SkeletonData;
+cclegacy.internal.SpineSkeletonData = SkeletonData;

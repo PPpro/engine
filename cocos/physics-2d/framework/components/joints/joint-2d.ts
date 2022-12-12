@@ -1,5 +1,5 @@
 import { EDITOR } from 'internal:constants';
-import { Vec2, _decorator, cclegacy } from '../../../../core';
+import { Vec2, _decorator, cclegacy } from '@cocos/core';
 import { RigidBody2D } from '../rigid-body-2d';
 import { IJoint2D } from '../../../spec/i-physics-joint';
 import { EJoint2DType } from '../../physics-types';

@@ -1,4 +1,4 @@
-import { Eventify } from '../../cocos/core/event';
+import { Eventify } from '@cocos/core';
 
 test('Eventify', () => {
     class Base {

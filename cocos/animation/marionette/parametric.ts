@@ -1,4 +1,4 @@
-import { _decorator } from '../../core';
+import { _decorator } from '@cocos/core';
 import { CLASS_NAME_PREFIX_ANIM } from '../define';
 import { VariableNotDefinedError, VariableTypeMismatchedError } from './errors';
 import type { VarInstance } from './graph-eval';

@@ -1,4 +1,4 @@
-import { path } from "../../cocos/core/utils";
+import { path } from '@cocos/core';
 
 
 test('dirname', function () {

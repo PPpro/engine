@@ -195,7 +195,9 @@
             "test": "true",
             "isVirtualModule": true,
             "overrides": {
-                "internal:native": "cocos/native-binding/impl.ts"
+                "internal:native": "cocos/native-binding/impl.ts",
+                "@cocos/core": "cocos/core/index.ts",
+                "@cocos/core/internal": "cocos/core/internal-index.ts"
             }
         },
         {

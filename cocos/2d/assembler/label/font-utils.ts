@@ -24,7 +24,7 @@
  */
 
 import { FontAtlas } from '../../assets/bitmap-font';
-import { Color, macro, warnID } from '../../../core';
+import { Color, macro, warnID } from '@cocos/core';
 import { ImageAsset, Texture2D } from '../../../asset/assets';
 import { PixelFormat } from '../../../asset/assets/asset-enum';
 import { BufferTextureCopy } from '../../../gfx';

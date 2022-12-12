@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { ccclass, disallowMultiple, executeInEditMode, help, visible, type, serializable, editable, disallowAnimation } from 'cc.decorator';
+import { ccclass, disallowMultiple, executeInEditMode, help, visible, type, serializable, editable, disallowAnimation } from '@cocos/core/internal';
 import { builtinResMgr } from '../asset/asset-manager';
 import { ModelRenderer } from '../misc/model-renderer';
 import { EffectAsset, Texture2D } from '../asset/assets';
@@ -31,21 +31,17 @@ import { Filter, PixelFormat, WrapMode } from '../asset/assets/asset-enum';
 import { Material } from '../asset/assets/material';
 import { RenderingSubMesh } from '../asset/assets/rendering-sub-mesh';
 import { Component } from '../scene-graph/component';
-import { CCObject, isValid } from '../core/data/object';
+import { CCObject, clamp, Rect, Size, Vec2, Vec3, Vec4, cclegacy, CCBoolean, CCFloat } from '@cocos/core';
+import { isValid } from '@cocos/core/internal';
 import { director } from '../game/director';
 import { AttributeName, BufferUsageBit, Format, MemoryUsageBit, PrimitiveMode, Attribute, Buffer, BufferInfo, deviceManager } from '../gfx';
-import { clamp, Rect, Size, Vec2, Vec3, Vec4 } from '../core/math';
 import { MacroRecord } from '../render-scene/core/pass-utils';
 import { Pass, scene } from '../render-scene';
 import { Camera } from '../render-scene/scene/camera';
 import { Root } from '../root';
 import { HeightField } from './height-field';
-import { legacyCC } from '../core/global-exports';
 import { TerrainLod, TerrainLodKey, TERRAIN_LOD_LEVELS, TERRAIN_LOD_MAX_DISTANCE } from './terrain-lod';
-import { TerrainAsset, TerrainLayerInfo, TERRAIN_HEIGHT_BASE, TERRAIN_HEIGHT_FACTORY,
-    TERRAIN_BLOCK_TILE_COMPLEXITY, TERRAIN_BLOCK_VERTEX_SIZE, TERRAIN_BLOCK_VERTEX_COMPLEXITY,
-    TERRAIN_MAX_LAYER_COUNT, TERRAIN_HEIGHT_FMIN, TERRAIN_HEIGHT_FMAX, TERRAIN_MAX_BLEND_LAYERS, TERRAIN_DATA_VERSION5 } from './terrain-asset';
-import { CCBoolean, CCFloat } from '../core';
+import { TerrainAsset, TerrainLayerInfo, TERRAIN_HEIGHT_BASE, TERRAIN_HEIGHT_FACTORY, TERRAIN_BLOCK_TILE_COMPLEXITY, TERRAIN_BLOCK_VERTEX_SIZE, TERRAIN_BLOCK_VERTEX_COMPLEXITY, TERRAIN_MAX_LAYER_COUNT, TERRAIN_HEIGHT_FMIN, TERRAIN_HEIGHT_FMAX, TERRAIN_MAX_BLEND_LAYERS, TERRAIN_DATA_VERSION5 } from './terrain-asset';
 import { PipelineEventType } from '../rendering';
 import { Node } from '../scene-graph';
 
@@ -205,7 +201,7 @@ class TerrainRenderable extends ModelRenderer {
     public destroy () {
         // this._invalidMaterial();
         if (this._model != null) {
-            legacyCC.director.root.destroyModel(this._model);
+            cclegacy.director.root.destroyModel(this._model);
             this._model = null;
         }
 
@@ -218,7 +214,7 @@ class TerrainRenderable extends ModelRenderer {
     public _destroyModel () {
         // this._invalidMaterial();
         if (this._model != null) {
-            legacyCC.director.root.destroyModel(this._model);
+            cclegacy.director.root.destroyModel(this._model);
             this._model = null;
         }
 
@@ -401,7 +397,7 @@ export class TerrainBlock {
 
         this._renderable._meshData = new RenderingSubMesh([vertexBuffer], gfxAttributes,
             PrimitiveMode.TRIANGLE_LIST, this._terrain._getSharedIndexBuffer(), null, false);
-        this._renderable._model = (legacyCC.director.root as Root).createModel(scene.Model);
+        this._renderable._model = (cclegacy.director.root as Root).createModel(scene.Model);
         this._renderable._model.createBoundingShape(this._bbMin, this._bbMax);
         this._renderable._model.node = this._renderable._model.transform = this._node;
         // ensure the terrain node is in the scene
@@ -457,7 +453,7 @@ export class TerrainBlock {
         const getNormalTex = (layer: TerrainLayer|null) => {
             let normalTex = layer !== null ? layer.normalMap : null;
             if (normalTex === null) {
-                normalTex = legacyCC.builtinResMgr.get('normal-texture');
+                normalTex = cclegacy.builtinResMgr.get('normal-texture');
             }
 
             return normalTex;
@@ -485,9 +481,9 @@ export class TerrainBlock {
                         mtl.setProperty('normalMap0', getNormalTex(l0));
                     }
                 } else {
-                    mtl.setProperty('detailMap0', legacyCC.builtinResMgr.get('default-texture'));
+                    mtl.setProperty('detailMap0', cclegacy.builtinResMgr.get('default-texture'));
                     if (useNormalMap) {
-                        mtl.setProperty('normalMap0', legacyCC.builtinResMgr.get('normal-texture'));
+                        mtl.setProperty('normalMap0', cclegacy.builtinResMgr.get('normal-texture'));
                     }
                 }
             } else if (nlayers === 1) {
@@ -1633,7 +1629,7 @@ export class Terrain extends Component {
 
     public getEffectAsset () {
         if (this._effectAsset === null) {
-            return legacyCC.EffectAsset.get('builtin-terrain') as EffectAsset;
+            return cclegacy.EffectAsset.get('builtin-terrain') as EffectAsset;
         }
 
         return this._effectAsset;
@@ -1648,11 +1644,11 @@ export class Terrain extends Component {
             this._blocks[i].visible = true;
         }
 
-        (legacyCC.director.root as Root).pipelineEvent.on(PipelineEventType.RENDER_CAMERA_BEGIN, this.onUpdateFromCamera, this);
+        (cclegacy.director.root as Root).pipelineEvent.on(PipelineEventType.RENDER_CAMERA_BEGIN, this.onUpdateFromCamera, this);
     }
 
     public onDisable () {
-        (legacyCC.director.root as Root).pipelineEvent.off(PipelineEventType.RENDER_CAMERA_BEGIN, this.onUpdateFromCamera, this);
+        (cclegacy.director.root as Root).pipelineEvent.off(PipelineEventType.RENDER_CAMERA_BEGIN, this.onUpdateFromCamera, this);
 
         for (let i = 0; i < this._blocks.length; ++i) {
             this._blocks[i].visible = false;
@@ -2357,12 +2353,12 @@ export class Terrain extends Component {
                     const layer = new TerrainLayer();
                     const layerInfo = terrainAsset.layerBinaryInfos[i];
                     layer.tileSize = layerInfo.tileSize;
-                    legacyCC.assetManager.loadAny(layerInfo.detailMapId, (err, asset) => {
+                    cclegacy.assetManager.loadAny(layerInfo.detailMapId, (err, asset) => {
                         layer.detailMap = asset;
                     });
 
                     if (layerInfo.normalMapId !== '') {
-                        legacyCC.assetManager.loadAny(layerInfo.normalMapId, (err, asset) => {
+                        cclegacy.assetManager.loadAny(layerInfo.normalMapId, (err, asset) => {
                             layer.normalMap = asset;
                         });
                     }

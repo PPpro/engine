@@ -22,9 +22,9 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
  */
-import { ccclass, executeInEditMode, menu, playOnFocus, serializable, tooltip, type, visible } from 'cc.decorator';
+import { ccclass, executeInEditMode, menu, playOnFocus, serializable, tooltip, type, visible } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
-import { CCObject, Color, Enum, size, Vec3 } from '../core';
+import { CCObject, Color, Enum, size, Vec3 } from '@cocos/core';
 
 import { TextureCube } from '../asset/assets';
 import { scene } from '../render-scene';

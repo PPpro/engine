@@ -22,10 +22,10 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 import { Filter, PixelFormat, WrapMode } from './asset-enum';
 import dependUtil from '../asset-manager/depend-util';
-import { js, macro, cclegacy } from '../../core';
+import { js, macro, cclegacy } from '@cocos/core';
 import './texture-base';
 
 declare const jsb: any;

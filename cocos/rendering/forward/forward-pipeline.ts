@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { ccclass, displayOrder, type, serializable } from 'cc.decorator';
+import { ccclass, displayOrder, type, serializable } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { RenderPipeline, IRenderPipelineInfo } from '../render-pipeline';
 import { ForwardFlow } from './forward-flow';
@@ -34,7 +34,7 @@ import { Swapchain, RenderPass } from '../../gfx';
 import { builtinResMgr } from '../../asset/asset-manager/builtin-res-mgr';
 import { Texture2D } from '../../asset/assets/texture-2d';
 import { Camera } from '../../render-scene/scene';
-import { errorID } from '../../core/platform/debug';
+import { errorID } from '@cocos/core';
 import { PipelineSceneData } from '../pipeline-scene-data';
 import { ReflectionProbeFlow } from '../reflection-probe/reflection-probe-flow';
 

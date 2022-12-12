@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { getError } from '../../core';
+import { getError } from '@cocos/core';
 import { CompleteCallback, IBundleOptions } from './shared';
 
 const downloaded = {};

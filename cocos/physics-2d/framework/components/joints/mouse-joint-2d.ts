@@ -1,7 +1,7 @@
 import { Joint2D } from './joint-2d';
 import { IMouseJoint } from '../../../spec/i-physics-joint';
 import { EJoint2DType } from '../../physics-types';
-import { Vec2, _decorator } from '../../../../core';
+import { Vec2, _decorator } from '@cocos/core';
 
 const { ccclass, menu, property } = _decorator;
 

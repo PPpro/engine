@@ -24,12 +24,12 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executionOrder, menu, tooltip, type, visible, override, editable, serializable } from 'cc.decorator';
+import { ccclass, help, executionOrder, menu, tooltip, type, visible, override, editable, serializable } from '@cocos/core/internal';
 import { JSB } from 'internal:constants';
 import { builtinResMgr } from '../../asset/asset-manager';
 import { InstanceMaterialType, UIRenderer } from '../framework/ui-renderer';
 import { director } from '../../game/director';
-import { Color, warnID, cclegacy } from '../../core';
+import { Color, warnID, cclegacy } from '@cocos/core';
 import { scene } from '../../render-scene';
 import { IAssembler } from '../renderer/base';
 import { IBatcher } from '../renderer/i-batcher';

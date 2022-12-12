@@ -1,4 +1,5 @@
-import { assertIsTrue, Vec2, Vec3 } from '../../core';
+import { assertIsTrue } from '@cocos/core/internal';
+import { Vec2, Vec3 } from '@cocos/core';
 
 /**
  * Blends given samples using simple directional algorithm.

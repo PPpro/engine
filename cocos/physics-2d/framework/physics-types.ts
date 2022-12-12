@@ -1,6 +1,6 @@
 
 
-import { Enum, Vec2 } from '../../core';
+import { Enum, Vec2 } from '@cocos/core';
 import { Collider2D } from './components/colliders/collider-2d';
 
 export enum ERigidBody2DType {

@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Mat4 } from '../core';
+import { Mat4 } from '@cocos/core';
 import { Skeleton } from './skeleton';
 import spine from './lib/spine-core.js';
 import { FrameBoneInfo } from './skeleton-cache';

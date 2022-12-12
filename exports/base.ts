@@ -23,9 +23,9 @@
  THE SOFTWARE.
  */
 
-import { legacyCC } from '../cocos/core/global-exports';
-// has to import predefines first
-import '../predefine';
+import { cclegacy } from '@cocos/core';
+// has to predefine global vars first
+import './cocos/core/global-exports';
 
 // tslint:disable-next-line: ordered-imports
 import '../cocos/core/legacy';
@@ -34,7 +34,7 @@ import * as renderer from '../cocos/render-scene';
 import * as gfx from '../cocos/gfx';
 
 // LOAD ENGINE CORE
-export * from '../cocos/core';
+export * from '@cocos/core';
 
 export * from '../cocos/rendering';
 export * from '../cocos/rendering/custom/builtin-pipelines';
@@ -50,7 +50,7 @@ export * from '../cocos/asset/assets';
 export * from '../cocos/asset/asset-manager';
 
 export { renderer };
-legacyCC.renderer = renderer;
+cclegacy.renderer = renderer;
 
 export * from '../extensions/ccpool/node-pool';
 

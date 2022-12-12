@@ -24,12 +24,12 @@
  THE SOFTWARE.
  */
 
-import { ccclass, executeInEditMode, serializable, playOnFocus, menu, help, editable, type } from 'cc.decorator';
+import { ccclass, executeInEditMode, serializable, playOnFocus, menu, help, editable, type } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { UIRenderer } from '../2d/framework';
 import { Texture2D } from '../asset/assets/texture-2d';
 import { IBatcher } from '../2d/renderer/i-batcher';
-import { Vec2, cclegacy } from '../core';
+import { Vec2, cclegacy } from '@cocos/core';
 
 class Point {
     public point = new Vec2();

@@ -27,9 +27,10 @@ import { BUILD } from 'internal:constants';
 import { Asset } from '../assets/asset';
 import { director } from '../../game/director';
 import { game } from '../../game';
-import { getError, macro, path, removeProperty, replaceProperty, cclegacy } from '../../core';
+import { getError, macro, path, removeProperty, replaceProperty, cclegacy } from '@cocos/core';
 import Cache from './cache';
-import assetManager, { AssetManager } from './asset-manager';
+import assetManager from './asset-manager';
+import { AssetManager } from './asset-manager';
 import { resources } from './bundle';
 import dependUtil from './depend-util';
 import downloader from './downloader';
@@ -609,7 +610,7 @@ export class CCLoader {
      * @param extMap Handlers for corresponding type in a map
      * @deprecated since v3.0 loader.addLoadHandlers is deprecated, please use assetManager.parser.register instead
      */
-    public addLoadHandlers (extMap: Record<string, ({ content: any }, cb: CompleteCallback) => void>) {
+    public addLoadHandlers (extMap: Record<string, (url: { content: any }, cb: CompleteCallback) => void>) {
         const handler = Object.create(null);
         for (const type in extMap) {
             const func = extMap[type];

@@ -28,7 +28,7 @@ import { Texture, Sampler, InputAssembler, DescriptorSet, Shader } from '../../g
 import { Node } from '../../scene-graph';
 import { Model } from '../../render-scene/scene/model';
 import { Layers } from '../../scene-graph/layers';
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 import { Pass } from '../../render-scene/core/pass';
 import { IBatcher } from './i-batcher';
 

@@ -34,7 +34,7 @@ import { Camera } from '../../render-scene/scene/camera';
 import { GeometryRenderer } from '../geometry-renderer';
 import { Buffer, Color, CommandBuffer, DescriptorSet, DescriptorSetLayout, Device, DrawInfo, Format, InputAssembler, PipelineState, Rect, Sampler, Swapchain, Texture, UniformBlock, Viewport } from '../../gfx';
 import { GlobalDSManager } from '../global-descriptor-set-manager';
-import { Mat4, Quat, Vec2, Vec4 } from '../../core/math';
+import { Mat4, Quat, Vec2, Vec4 } from '@cocos/core';
 import { MacroRecord } from '../../render-scene/core/pass-utils';
 import { PipelineSceneData } from '../pipeline-scene-data';
 import { ComputeView, CopyPair, DescriptorBlockFlattened, DescriptorBlockIndex, LightInfo, MovePair, QueueHint, RasterView, ResourceResidency, SceneFlags, TaskType, UpdateFrequency } from './types';

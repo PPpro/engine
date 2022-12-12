@@ -22,9 +22,9 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 import { EDITOR, TEST } from 'internal:constants';
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 import { Filter, PixelFormat, WrapMode } from './asset-enum';
 import './asset';
 

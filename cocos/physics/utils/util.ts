@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { equals, Vec3, IVec3Like } from '../../core';
+import { equals, Vec3, IVec3Like } from '@cocos/core';
 import { Collider, CollisionEventType, IContactEquation, TriggerEventType } from '../framework';
 
 export { cylinder } from '../../primitive';

@@ -1,4 +1,4 @@
-import { js } from '../../core';
+import { js } from '@cocos/core';
 import { ICache } from './cache';
 
 declare class WeakRef<T> {

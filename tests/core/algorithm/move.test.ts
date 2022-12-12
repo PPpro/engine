@@ -1,4 +1,4 @@
-import { move } from '../../../cocos/core/algorithm/move';
+import { move } from '@cocos/core/internal';
 
 describe('Array utils', () => {
     describe('Move', () => {

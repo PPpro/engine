@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Vec4, cclegacy } from '../../core';
+import { Vec4, cclegacy } from '@cocos/core';
 import { AmbientInfo } from '../../scene-graph/scene-globals';
 
 /**

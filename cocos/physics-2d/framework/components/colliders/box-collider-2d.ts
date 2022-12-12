@@ -1,4 +1,4 @@
-import { Vec2, Size, _decorator } from '../../../../core';
+import { Vec2, Size, _decorator } from '@cocos/core';
 import { Collider2D } from './collider-2d';
 import { ECollider2DType } from '../../physics-types';
 import { IBoxShape } from '../../../spec/i-physics-shape';

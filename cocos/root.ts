@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Pool, cclegacy, warnID, settings, Settings, macro } from './core';
+import { Pool, cclegacy, warnID, settings, Settings, macro } from '@cocos/core';
 import { RenderPipeline, createDefaultPipeline, DeferredPipeline } from './rendering';
 import { DebugView } from './rendering/debug-view';
 import { Camera, Light, Model } from './render-scene/scene';

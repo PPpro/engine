@@ -1,7 +1,7 @@
 import { Joint2D } from './joint-2d';
 import { IRelativeJoint } from '../../../spec/i-physics-joint';
 import { EJoint2DType } from '../../physics-types';
-import { Vec3, Vec2, IVec2Like, Quat, _decorator } from '../../../../core';
+import { Vec3, Vec2, IVec2Like, Quat, _decorator } from '@cocos/core';
 
 const tempVec3_1 = new Vec3();
 const tempVec3_2 = new Vec3();

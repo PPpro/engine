@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Mat4, Quat, random, randomRange, randomRangeInt, Vec2, Vec3, bits } from '../core/math';
+import { Mat4, Quat, random, randomRange, randomRangeInt, Vec2, Vec3, bits } from '@cocos/core';
 import { Space } from './enum';
 
 export const particleEmitZAxis = new Vec3(0, 0, -1);

@@ -25,9 +25,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 import { EDITOR, TEST, BUILD } from 'internal:constants';
-import { Mat4, Rect, Size, Vec2, Vec3, Vec4, cclegacy, errorID, warnID, js } from '../../core';
+import { Mat4, Rect, Size, Vec2, Vec3, Vec4, cclegacy, errorID, warnID, js } from '@cocos/core';
 import { Asset } from '../../asset/assets/asset';
 import { TextureBase } from '../../asset/assets/texture-base';
 import { ImageAsset, ImageSource } from '../../asset/assets/image-asset';

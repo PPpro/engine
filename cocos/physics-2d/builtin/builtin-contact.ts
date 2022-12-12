@@ -28,7 +28,7 @@ import Intersection2D from './intersection-2d';
 import { BuiltinBoxShape } from './shapes/box-shape-2d';
 import { BuiltinPolygonShape } from './shapes/polygon-shape-2d';
 import { BuiltinCircleShape } from './shapes/circle-shape-2d';
-import { error } from '../../core';
+import { error } from '@cocos/core';
 import { Contact2DType } from '../framework';
 
 export class BuiltinContact {

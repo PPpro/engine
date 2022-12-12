@@ -23,9 +23,9 @@
  THE SOFTWARE.
  */
 
-import { ccclass, serializable } from 'cc.decorator';
+import { ccclass, serializable } from '@cocos/core/internal';
 import { Node } from '../scene-graph/node';
-import { warnID } from '../core';
+import { warnID } from '@cocos/core';
 
 /**
  * @deprecated Since V3.3, use [[TrackPath]] instead.

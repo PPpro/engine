@@ -1,8 +1,8 @@
-import { cclegacy, geometry } from '../../core';
+import { cclegacy, geometry } from '@cocos/core';
 import { Skeleton } from '../assets/skeleton';
 import { Mesh } from '../assets/mesh';
-import { Node } from '../../scene-graph/node'
-import { AnimationClip } from "../../animation";
+import { Node } from '../../scene-graph/node';
+import { AnimationClip } from '../../animation';
 import { IJointTextureHandle } from '../skeletal-animation/skeletal-animation-utils';
 
 export const BakedSkinningModel = jsb.BakedSkinningModel;

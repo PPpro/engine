@@ -23,8 +23,8 @@
  THE SOFTWARE.
  */
 
-import { ccclass, tooltip, displayOrder, range, type, serializable } from 'cc.decorator';
-import { Mat4, pseudoRandom, Quat, Vec3 } from '../../core';
+import { ccclass, tooltip, displayOrder, range, type, serializable } from '@cocos/core/internal';
+import { Mat4, pseudoRandom, Quat, Vec3 } from '@cocos/core';
 import { Space, ModuleRandSeed } from '../enum';
 import { Particle, ParticleModuleBase, PARTICLE_MODULE_NAME } from '../particle';
 import { calculateTransform } from '../particle-general-function';

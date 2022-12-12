@@ -28,10 +28,9 @@ import { Asset } from '../assets';
 import { hasNativeDep, isCompiledJson, parseUuidDependencies } from '../../serialization/deserialize';
 import Cache from './cache';
 import deserialize from './deserialize';
-import { decodeUuid } from './helper';
+import { decodeUuid, assertIsNonNullable } from '@cocos/core/internal';
 import { files, parsed } from './shared';
 import { dependMap, nativeDependMap } from './depend-maps';
-import { assertIsNonNullable } from '../../core';
 import { CCON } from '../../serialization/ccon';
 
 export interface IDependencies {

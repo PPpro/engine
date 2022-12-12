@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { Vec3, cclegacy } from '../../core';
+import { Vec3, cclegacy } from '@cocos/core';
 import { Ambient } from './ambient';
 import { Light, LightType } from './light';
 import { CSMLevel, CSMOptimizationMode, PCFType, Shadows } from './shadows';

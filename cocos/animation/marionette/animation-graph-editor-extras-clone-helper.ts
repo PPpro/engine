@@ -1,4 +1,5 @@
-import { EditorExtendableObject, editorExtrasTag } from '../../core/data/editor-extras-tag';
+import { editorExtrasTag } from '@cocos/core';
+import { EditorExtendableObject } from '@cocos/core/internal';
 
 /**
  * Clones the editor extras from an animation-graph-specific object.

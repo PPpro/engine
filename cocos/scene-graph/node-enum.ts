@@ -23,8 +23,7 @@
  THE SOFTWARE.
 */
 
-import { legacyCC } from '../core/global-exports';
-import { Enum } from '../core/value-types';
+import { cclegacy, Enum } from '@cocos/core';
 
 /**
  * @en Node's coordinate space
@@ -77,7 +76,7 @@ export enum TransformBit {
     TRS_MASK = ~TransformBit.TRS,
 }
 
-legacyCC.internal.TransformBit = TransformBit;
+cclegacy.internal.TransformBit = TransformBit;
 
 /**
  * @en Node's mobility

@@ -27,7 +27,7 @@ import { EDITOR } from 'internal:constants';
 import { Material } from '../asset/assets/material';
 import { Component } from '../scene-graph';
 import { IMaterialInstanceInfo, MaterialInstance } from '../render-scene/core/material-instance';
-import { warnID, _decorator } from '../core';
+import { warnID, _decorator } from '@cocos/core';
 
 const _matInsInfo: IMaterialInstanceInfo = {
     parent: null!,

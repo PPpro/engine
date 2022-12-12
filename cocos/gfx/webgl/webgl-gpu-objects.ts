@@ -23,13 +23,8 @@
  THE SOFTWARE.
  */
 
-import { nextPow2 } from '../../core';
-import {
-    DescriptorType, BufferUsage, Format, MemoryUsage, SampleCount, DynamicStateFlagBit,
-    ShaderStageFlagBit, TextureFlags, TextureType, TextureUsage, Type,
-    Attribute, ColorAttachment, DepthStencilAttachment,
-    UniformBlock, UniformSamplerTexture, DescriptorSetLayoutBinding, DrawInfo, UniformInputAttachment,
-} from '../base/define';
+import { nextPow2 } from '@cocos/core';
+import { DescriptorType, BufferUsage, Format, MemoryUsage, SampleCount, DynamicStateFlagBit, ShaderStageFlagBit, TextureFlags, TextureType, TextureUsage, Type, Attribute, ColorAttachment, DepthStencilAttachment, UniformBlock, UniformSamplerTexture, DescriptorSetLayoutBinding, DrawInfo, UniformInputAttachment } from '../base/define';
 import { BlendState, DepthStencilState, RasterizerState } from '../base/pipeline-state';
 
 export class WebGLIndirectDrawInfos {

@@ -25,7 +25,7 @@
 
 import { DEBUG } from 'internal:constants';
 import { Material } from '../../asset/assets/material';
-import { Color, Mat4, Vec3, Vec2, Enum, assert, geometry, cclegacy } from '../../core';
+import { Color, Mat4, Vec3, Vec2, Enum, assert, geometry, cclegacy } from '@cocos/core';
 import type { ShadowsInfo } from '../../scene-graph/scene-globals';
 import { IMacroPatch } from '../core/pass';
 import { Shader } from '../../gfx';

@@ -24,9 +24,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass, inspector, editorOnly, serializable } from 'cc.decorator';
+import { ccclass, inspector, editorOnly, serializable } from '@cocos/core/internal';
 import { Component } from '../scene-graph/component';
-import { warnID, error, js, cclegacy  } from '../core';
+import { warnID, error, js, cclegacy } from '@cocos/core';
 
 /**
  * @en

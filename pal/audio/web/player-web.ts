@@ -1,12 +1,10 @@
 import { EDITOR } from 'internal:constants';
 import { systemInfo } from 'pal/system-info';
 import { AudioPCMDataView, AudioEvent, AudioState, AudioType } from '../type';
-import { EventTarget } from '../../../cocos/core/event';
-import { clamp01 } from '../../../cocos/core';
+import { EventTarget, clamp01, cclegacy } from '@cocos/core';
 import { enqueueOperation, OperationInfo, OperationQueueable } from '../operation-queue';
 import AudioTimer from '../audio-timer';
 import { audioBufferManager } from '../audio-buffer-manager';
-import legacyCC from '../../../predefine';
 
 // NOTE: fix CI
 const AudioContextClass = (window.AudioContext || window.webkitAudioContext || window.mozAudioContext);
@@ -160,7 +158,7 @@ export class OneShotAudioWeb {
     }
 
     public play (): void {
-        if (EDITOR && !legacyCC.GAME_VIEW) {
+        if (EDITOR && !cclegacy.GAME_VIEW) {
             return;
         }
         this._bufferSourceNode.start();
@@ -344,7 +342,7 @@ export class AudioPlayerWeb implements OperationQueueable {
     @enqueueOperation
     play (): Promise<void> {
         audioContextAgent!.offRunning();
-        if (EDITOR && !legacyCC.GAME_VIEW) {
+        if (EDITOR && !cclegacy.GAME_VIEW) {
             return Promise.resolve();
         }
         return this._doPlay();

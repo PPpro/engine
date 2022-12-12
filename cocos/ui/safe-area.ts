@@ -23,15 +23,14 @@
  THE SOFTWARE.
  */
 
-import { ccclass, help, executionOrder, menu, executeInEditMode, requireComponent } from 'cc.decorator';
+import { ccclass, help, executionOrder, menu, executeInEditMode, requireComponent } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { screenAdapter } from 'pal/screen-adapter';
 import { Component } from '../scene-graph/component';
 import { UITransform } from '../2d/framework';
-import { sys } from '../core/platform';
+import { sys, cclegacy } from '@cocos/core';
 import { Widget } from './widget';
 import { widgetManager } from './widget-manager';
-import { legacyCC } from '../core/global-exports';
 import { view } from './view';
 
 /**
@@ -117,4 +116,4 @@ export class SafeArea extends Component {
     }
 }
 
-legacyCC.SafeArea = SafeArea;
+cclegacy.SafeArea = SafeArea;

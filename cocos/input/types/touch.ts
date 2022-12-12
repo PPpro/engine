@@ -24,7 +24,7 @@
  THE SOFTWARE.
 */
 
-import { Vec2, cclegacy } from '../../core';
+import { Vec2, cclegacy } from '@cocos/core';
 
 const _vec2 = new Vec2();
 /**

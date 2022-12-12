@@ -1,6 +1,6 @@
 import { GamepadCallback } from 'pal/input';
 import { InputEventType } from '../../../cocos/input/types/event-enum';
-import { EventTarget } from '../../../cocos/core/event/event-target';
+import { EventTarget } from '@cocos/core';
 import { InputSourceButton, InputSourceDpad, InputSourceStick } from '../input-source';
 
 export class GamepadInputDevice {

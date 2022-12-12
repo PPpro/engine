@@ -24,7 +24,7 @@
  */
 
 import { IRigidBody } from '../spec/i-rigid-body';
-import { IVec3Like } from '../../core';
+import { IVec3Like } from '@cocos/core';
 import { RigidBody, PhysicsSystem, ERigidBodyType } from '../framework';
 import { BuiltinSharedBody } from './builtin-shared-body';
 import { BuiltInWorld } from './builtin-world';

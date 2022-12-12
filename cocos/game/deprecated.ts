@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { removeProperty, markAsWarning } from '../core';
+import { removeProperty, markAsWarning } from '@cocos/core';
 import { Director } from './director';
 import { game } from './game';
 

@@ -23,12 +23,11 @@
  THE SOFTWARE.
  */
 
-import { ccclass, disallowMultiple, editable, executeInEditMode, menu, range, serializable, type } from 'cc.decorator';
-import { clamp } from '../core/math';
+import { ccclass, disallowMultiple, editable, executeInEditMode, menu, range, serializable, type } from '@cocos/core/internal';
+import { clamp, warnID } from '@cocos/core';
 import { SortingLayers } from './sorting-layers';
 import { Component } from '../scene-graph/component';
 import { ModelRenderer } from '../misc/model-renderer';
-import { warnID } from '../core/platform/debug';
 
 const MAX_INT16 = (1 << 15) - 1;
 const MIN_INT16 = -1 << 15;

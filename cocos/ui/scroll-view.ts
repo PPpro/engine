@@ -24,20 +24,18 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executionOrder, menu, requireComponent, tooltip, displayOrder, range, type, serializable } from 'cc.decorator';
+import { ccclass, help, executionOrder, menu, requireComponent, tooltip, displayOrder, range, type, serializable } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { EventHandler as ComponentEventHandler } from '../scene-graph/component-event-handler';
 import { UITransform } from '../2d/framework';
 import { Event, EventMouse, EventTouch, Touch, SystemEventType, EventHandle, EventGamepad } from '../input/types';
-import { logID } from '../core/platform/debug';
-import { Size, Vec2, Vec3 } from '../core/math';
+import { logID, Size, Vec2, Vec3, cclegacy } from '@cocos/core';
 import { Layout } from './layout';
 import { ScrollBar } from './scroll-bar';
 import { ViewGroup } from './view-group';
 import { Node } from '../scene-graph/node';
 import { director, Director } from '../game/director';
 import { TransformBit } from '../scene-graph/node-enum';
-import { legacyCC } from '../core/global-exports';
 import { NodeEventType } from '../scene-graph/node-event';
 import { Input, input } from '../input/input';
 import { DeviceType, XrUIPressEvent, XrUIPressEventType } from '../xr/event/xr-event-handle';
@@ -964,7 +962,7 @@ export class ScrollView extends ViewGroup {
     }
 
     public onEnable () {
-        if (!EDITOR || legacyCC.GAME_VIEW) {
+        if (!EDITOR || cclegacy.GAME_VIEW) {
             this._registerEvent();
             if (this._content) {
                 this._content.on(NodeEventType.SIZE_CHANGED, this._calculateBoundary, this);
@@ -987,7 +985,7 @@ export class ScrollView extends ViewGroup {
     }
 
     public onDisable () {
-        if (!EDITOR || legacyCC.GAME_VIEW) {
+        if (!EDITOR || cclegacy.GAME_VIEW) {
             this._unregisterEvent();
             if (this._content) {
                 this._content.off(NodeEventType.SIZE_CHANGED, this._calculateBoundary, this);
@@ -2024,4 +2022,4 @@ export class ScrollView extends ViewGroup {
  * @param {ScrollView} scrollView - The ScrollView component.
  */
 
-legacyCC.ScrollView = ScrollView;
+cclegacy.ScrollView = ScrollView;

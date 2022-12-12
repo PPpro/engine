@@ -24,7 +24,7 @@
  */
 
 import CANNON from '@cocos/cannon';
-import { clamp, Vec3 } from '../../../core';
+import { clamp, Vec3 } from '@cocos/core';
 import { commitShapeUpdates } from '../cannon-util';
 import { CannonShape } from './cannon-shape';
 import { IBoxShape } from '../../spec/i-physics-shape';

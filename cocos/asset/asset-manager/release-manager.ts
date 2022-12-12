@@ -25,7 +25,8 @@
 
 import { EDITOR, TEST } from 'internal:constants';
 import { Asset } from '../assets/asset';
-import { isValid, js, misc } from '../../core';
+import { isValid } from '@cocos/core/internal';
+import { js, misc } from '@cocos/core';
 import { Node, Scene } from '../../scene-graph';
 import Cache from './cache';
 import dependUtil from './depend-util';

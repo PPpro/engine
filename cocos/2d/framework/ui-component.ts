@@ -23,7 +23,7 @@
  THE SOFTWARE.
 */
 
-import { ccclass, disallowMultiple, executeInEditMode, executionOrder, requireComponent } from 'cc.decorator';
+import { ccclass, disallowMultiple, executeInEditMode, executionOrder, requireComponent } from '@cocos/core/internal';
 import { IBatcher } from '../renderer/i-batcher';
 import { Component } from '../../scene-graph/component';
 import { UITransform } from './ui-transform';

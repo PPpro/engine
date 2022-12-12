@@ -24,15 +24,15 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, requireComponent, executionOrder, menu, tooltip, displayOrder, type, serializable } from 'cc.decorator';
+import { ccclass, help, requireComponent, executionOrder, menu, tooltip, displayOrder, type, serializable } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { EventHandler as ComponentEventHandler } from '../scene-graph/component-event-handler';
 import { UITransform } from '../2d/framework';
 import { Sprite } from '../2d/components/sprite';
 import { ToggleContainer } from './toggle-container';
-import { extendsEnum } from '../core/data/utils/extends-enum';
+import { extendsEnum } from '@cocos/core/internal';
 import { EventType as ButtonEventType, Button } from './button';
-import { legacyCC } from '../core/global-exports';
+import { cclegacy } from '@cocos/core';
 
 enum EventType {
     TOGGLE = 'toggle',
@@ -103,7 +103,7 @@ export class Toggle extends Button {
      */
     get _toggleContainer () {
         const parent = this.node.parent!;
-        if (legacyCC.Node.isNode(parent)) {
+        if (cclegacy.Node.isNode(parent)) {
             return parent.getComponent('cc.ToggleContainer') as ToggleContainer;
         }
         return null;
@@ -173,14 +173,14 @@ export class Toggle extends Button {
     public onEnable () {
         super.onEnable();
         this.playEffect();
-        if (!EDITOR || legacyCC.GAME_VIEW) {
+        if (!EDITOR || cclegacy.GAME_VIEW) {
             this.node.on(Toggle.EventType.CLICK, this._internalToggle, this);
         }
     }
 
     public onDisable () {
         super.onDisable();
-        if (!EDITOR || legacyCC.GAME_VIEW) {
+        if (!EDITOR || cclegacy.GAME_VIEW) {
             this.node.off(Toggle.EventType.CLICK, this._internalToggle, this);
         }
     }
@@ -211,4 +211,4 @@ export class Toggle extends Button {
  * @param toggle @en The Toggle component @zh 切换键组件
  */
 
-legacyCC.Toggle = Toggle;
+cclegacy.Toggle = Toggle;

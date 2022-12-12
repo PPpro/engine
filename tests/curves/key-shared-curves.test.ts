@@ -1,8 +1,6 @@
 
-import { ExtrapolationMode, RealCurve, RealInterpolationMode } from '../../cocos/core/curves/curve';
-import { KeySharedQuatCurves, KeySharedRealCurves } from '../../cocos/core/curves/keys-shared-curves';
-import { QuatCurve, QuatInterpolationMode } from '../../cocos/core/curves/quat-curve';
-import { Quat } from '../../cocos/core/math';
+import { ExtrapolationMode, RealCurve, RealInterpolationMode, QuatCurve, QuatInterpolationMode, Quat } from '@cocos/core';
+import { KeySharedQuatCurves, KeySharedRealCurves } from '@cocos/core/internal';
 
 describe('Keys shared real curves', () => {
     test('Enabling', () => {

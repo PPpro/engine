@@ -1,5 +1,5 @@
 import { EDITOR } from 'internal:constants';
-import { editorExtrasTag } from '../../core';
+import { editorExtrasTag } from '@cocos/core';
 
 import { AnimationBlend } from './animation-blend';
 import { ClipMotion } from './clip-motion';

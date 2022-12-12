@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { removeProperty, replaceProperty } from '../core';
+import { removeProperty, replaceProperty } from '@cocos/core';
 import { Device } from './base/device';
 import { Feature, ColorAttachment, DepthStencilAttachment } from './base/define';
 

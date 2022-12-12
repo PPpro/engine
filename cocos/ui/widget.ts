@@ -24,11 +24,11 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executeInEditMode, executionOrder, menu, requireComponent, tooltip, type, editorOnly, editable, serializable, visible } from 'cc.decorator';
+import { ccclass, help, executeInEditMode, executionOrder, menu, requireComponent, tooltip, type, editorOnly, editable, serializable, visible } from '@cocos/core/internal';
 import { EDITOR, DEV } from 'internal:constants';
 import { Component } from '../scene-graph/component';
 import { UITransform } from '../2d/framework/ui-transform';
-import { Size, Vec2, Vec3, visibleRect, ccenum, errorID, cclegacy } from '../core';
+import { Size, Vec2, Vec3, visibleRect, ccenum, errorID, cclegacy } from '@cocos/core';
 import { View } from './view';
 import { Scene } from '../scene-graph';
 import { Node } from '../scene-graph/node';

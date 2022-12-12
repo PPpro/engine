@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { IVec3Like, Quat, Vec3 } from '../../../core';
+import { IVec3Like, Quat, Vec3 } from '@cocos/core';
 import { PlaneCollider } from '../../framework';
 import { IPlaneShape } from '../../spec/i-physics-shape';
 import { getTempTransform, PX, _trans } from '../physx-adapter';

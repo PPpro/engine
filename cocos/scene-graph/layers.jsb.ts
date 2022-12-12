@@ -23,8 +23,8 @@
  THE SOFTWARE.
  */
 
-import { legacyCC } from '../core/global-exports';
+import { cclegacy } from '@cocos/core';
 
 export const Layers = jsb.Layers;
 export type Layers = jsb.Layers;
-legacyCC.Layers = Layers;
+cclegacy.Layers = Layers;

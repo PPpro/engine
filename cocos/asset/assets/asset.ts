@@ -25,7 +25,7 @@
 */
 
 import { EDITOR, PREVIEW } from 'internal:constants';
-import { _decorator, Eventify, path, debug, getError, CCObject, cclegacy } from '../../core';
+import { _decorator, Eventify, path, debug, getError, CCObject, cclegacy } from '@cocos/core';
 import { getUrlWithUuid } from '../asset-manager/helper';
 import { Node } from '../../scene-graph';
 

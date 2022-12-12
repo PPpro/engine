@@ -28,7 +28,7 @@ import { CannonConstraint } from './cannon-constraint';
 import { IHingeConstraint } from '../../spec/i-physics-constraint';
 import { HingeConstraint } from '../../framework';
 import { CannonRigidBody } from '../cannon-rigid-body';
-import { IVec3Like, Vec3 } from '../../../core';
+import { IVec3Like, Vec3 } from '@cocos/core';
 
 const v3_0 = new Vec3();
 

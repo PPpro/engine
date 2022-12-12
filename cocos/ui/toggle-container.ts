@@ -24,10 +24,10 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executeInEditMode, executionOrder, menu, tooltip, type, serializable } from 'cc.decorator';
+import { ccclass, help, executeInEditMode, executionOrder, menu, tooltip, type, serializable } from '@cocos/core/internal';
 import { Component, EventHandler as ComponentEventHandler } from '../scene-graph';
 import { Toggle } from './toggle';
-import { legacyCC } from '../core/global-exports';
+import { cclegacy } from '@cocos/core';
 import { NodeEventType } from '../scene-graph/node-event';
 
 /**
@@ -141,7 +141,7 @@ export class ToggleContainer extends Component {
         }
 
         if (this.checkEvents) {
-            legacyCC.Component.EventHandler.emitEvents(this.checkEvents, toggle);
+            cclegacy.Component.EventHandler.emitEvents(this.checkEvents, toggle);
         }
     }
 
@@ -167,4 +167,4 @@ export class ToggleContainer extends Component {
     }
 }
 
-legacyCC.ToggleContainer = ToggleContainer;
+cclegacy.ToggleContainer = ToggleContainer;

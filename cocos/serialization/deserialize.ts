@@ -24,7 +24,7 @@
 */
 
 import { EDITOR, TEST, PREVIEW, DEBUG, JSB, DEV } from 'internal:constants';
-import { cclegacy, ValueType, Vec2, Vec3, Vec4, Color, Size, Rect, Quat, Mat4, errorID, getError, js } from '../core';
+import { cclegacy, ValueType, Vec2, Vec3, Vec4, Color, Size, Rect, Quat, Mat4, errorID, getError, js } from '@cocos/core';
 
 import { deserializeDynamic, parseUuidDependenciesDynamic } from './deserialize-dynamic';
 import { Asset } from '../asset/assets/asset';

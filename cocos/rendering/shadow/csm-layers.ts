@@ -20,12 +20,11 @@
  */
 
 import { DirectionalLight, Camera, Shadows, CSMLevel, CSMOptimizationMode } from '../../render-scene/scene';
-import { Mat4, Vec3, Vec2, Vec4 } from '../../core/math';
-import { Frustum, AABB } from '../../core/geometry';
+import { Mat4, Vec3, Vec2, Vec4, geometry, CachedArray, cclegacy } from '@cocos/core';
 import { IRenderObject } from '../define';
 import { PipelineSceneData } from '../pipeline-scene-data';
-import { CachedArray } from '../../core/memop/cached-array';
-import { cclegacy } from '../../core';
+
+const { Frustum, AABB } = geometry;
 
 const _mat4Trans = new Mat4();
 const _matShadowTrans = new Mat4();
@@ -57,12 +56,12 @@ export class ShadowLayerVolume {
     protected _matShadowProj: Mat4 = new Mat4();
     protected _matShadowViewProj: Mat4 = new Mat4();
 
-    protected _validFrustum: Frustum = new Frustum();
+    protected _validFrustum: geometry.Frustum = new Frustum();
 
     // geometry renderer value
-    protected _splitFrustum: Frustum = new Frustum();
-    protected _lightViewFrustum: Frustum = new Frustum();
-    protected _castLightViewBoundingBox: AABB = new AABB();
+    protected _splitFrustum: geometry.Frustum = new Frustum();
+    protected _lightViewFrustum: geometry.Frustum = new Frustum();
+    protected _castLightViewBoundingBox: geometry.AABB = new AABB();
 
     constructor (level: number) {
         this._level = level;
@@ -105,23 +104,23 @@ export class ShadowLayerVolume {
         this._matShadowViewProj = val;
     }
 
-    get validFrustum (): Readonly<Frustum> {
+    get validFrustum (): Readonly<geometry.Frustum> {
         return this._validFrustum;
     }
 
-    get splitFrustum (): Readonly<Frustum> {
+    get splitFrustum (): Readonly<geometry.Frustum> {
         return this._splitFrustum;
     }
 
-    get lightViewFrustum (): Readonly<Frustum> {
+    get lightViewFrustum (): Readonly<geometry.Frustum> {
         return this._lightViewFrustum;
     }
 
-    get castLightViewBoundingBox (): Readonly<AABB> {
+    get castLightViewBoundingBox (): Readonly<geometry.AABB> {
         return this._castLightViewBoundingBox;
     }
 
-    public copyToValidFrustum (validFrustum: Readonly<Frustum>) {
+    public copyToValidFrustum (validFrustum: Readonly<geometry.Frustum>) {
         Frustum.copy(this._validFrustum, validFrustum);
     }
 

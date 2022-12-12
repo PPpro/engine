@@ -24,12 +24,11 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, disallowMultiple, executeInEditMode,
-    executionOrder, menu, tooltip, type, serializable } from 'cc.decorator';
+import { ccclass, help, disallowMultiple, executeInEditMode, executionOrder, menu, tooltip, type, serializable } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { Camera } from '../../misc/camera-component';
 import { Widget } from '../../ui/widget';
-import { Vec3, screen, Enum, cclegacy, visibleRect } from '../../core';
+import { Vec3, screen, Enum, cclegacy, visibleRect } from '@cocos/core';
 import { view } from '../../ui/view';
 import { RenderRoot2D } from './render-root-2d';
 import { NodeEventType } from '../../scene-graph/node-event';

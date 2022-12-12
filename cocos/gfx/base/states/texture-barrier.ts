@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { murmurhash2_32_gc } from '../../../core';
+import { murmurhash2_32_gc } from '@cocos/core';
 import { GFXObject, ObjectType, TextureBarrierInfo } from '../define';
 
 /**

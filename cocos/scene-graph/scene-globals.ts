@@ -20,12 +20,10 @@
  THE SOFTWARE.
 */
 
-import { ccclass, visible, type, displayOrder, readOnly, slide, range, rangeStep,
-    editable, serializable, rangeMin, tooltip, formerlySerializedAs, displayName } from 'cc.decorator';
+import { ccclass, visible, type, displayOrder, readOnly, slide, range, rangeStep, editable, serializable, rangeMin, tooltip, formerlySerializedAs, displayName } from '@cocos/core/internal';
 import { BAIDU } from 'internal:constants';
 import { TextureCube } from '../asset/assets/texture-cube';
-import { CCFloat, CCInteger } from '../core/data/utils/attribute';
-import { Color, Quat, Vec3, Vec2, Vec4 } from '../core/math';
+import { CCFloat, CCInteger, Color, Quat, Vec3, Vec2, Vec4, cclegacy, warnID } from '@cocos/core';
 import { Ambient } from '../render-scene/scene/ambient';
 import { Shadows, ShadowType, ShadowSize } from '../render-scene/scene/shadows';
 import { Skybox, EnvironmentLightingType } from '../render-scene/scene/skybox';
@@ -33,11 +31,8 @@ import { Octree } from '../render-scene/scene/octree';
 import { Fog, FogType } from '../render-scene/scene/fog';
 import { LightProbesData, LightProbes } from '../gi/light-probe/light-probe';
 import { Node } from './node';
-import { legacyCC } from '../core/global-exports';
 import { Root } from '../root';
-import { warnID } from '../core/platform/debug';
 import { Material } from '../asset/assets/material';
-import { cclegacy } from '../core';
 import { Scene } from './scene';
 
 const _up = new Vec3(0, 1, 0);
@@ -114,7 +109,7 @@ export class AmbientInfo {
      * @zh 编辑器中可配置的天空光照颜色（通过颜色拾取器）
      */
     @visible(() => {
-        const scene = legacyCC.director.getScene();
+        const scene = cclegacy.director.getScene();
         const skybox = scene.globals.skybox;
         if (skybox.useIBL && skybox.applyDiffuseMap) {
             return false;
@@ -126,7 +121,7 @@ export class AmbientInfo {
     @tooltip('i18n:ambient.skyLightingColor')
     set skyLightingColor (val: Color) {
         _v4.set(val.x, val.y, val.z, val.w);
-        if ((legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR) {
+        if ((cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR) {
             this._skyColorHDR.set(_v4);
         } else {
             this._skyColorLDR.set(_v4);
@@ -134,7 +129,7 @@ export class AmbientInfo {
         if (this._resource) { this._resource.skyColor.set(_v4); }
     }
     get skyLightingColor () {
-        const isHDR = (legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR;
+        const isHDR = (cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR;
         _v4.set(isHDR ? this._skyColorHDR : this._skyColorLDR);
         normalizeHDRColor(_v4);
         return _col.set(_v4.x * 255, _v4.y * 255, _v4.z * 255, 255);
@@ -144,7 +139,7 @@ export class AmbientInfo {
      * @internal
      */
     set skyColor (val: Vec4) {
-        if ((legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR) {
+        if ((cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR) {
             this._skyColorHDR.set(val);
         } else {
             this._skyColorLDR.set(val);
@@ -160,7 +155,7 @@ export class AmbientInfo {
     @type(CCFloat)
     @tooltip('i18n:ambient.skyIllum')
     set skyIllum (val: number) {
-        if ((legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR) {
+        if ((cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR) {
             this._skyIllumHDR = val;
         } else {
             this._skyIllumLDR = val;
@@ -169,7 +164,7 @@ export class AmbientInfo {
         if (this._resource) { this._resource.skyIllum = val; }
     }
     get skyIllum () {
-        if ((legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR) {
+        if ((cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR) {
             return this._skyIllumHDR;
         } else {
             return this._skyIllumLDR;
@@ -181,7 +176,7 @@ export class AmbientInfo {
      * @zh 编辑器中可配置的地面光照颜色（通过颜色拾取器）
      */
     @visible(() => {
-        const scene = legacyCC.director.getScene();
+        const scene = cclegacy.director.getScene();
         const skybox = scene.globals.skybox;
         if (skybox.useIBL && skybox.applyDiffuseMap) {
             return false;
@@ -193,7 +188,7 @@ export class AmbientInfo {
     @tooltip('i18n:ambient.groundLightingColor')
     set groundLightingColor (val: Color) {
         _v4.set(val.x, val.y, val.z, val.w);
-        if ((legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR) {
+        if ((cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR) {
             this._groundAlbedoHDR.set(_v4);
         } else {
             this._groundAlbedoLDR.set(_v4);
@@ -201,7 +196,7 @@ export class AmbientInfo {
         if (this._resource) { this._resource.groundAlbedo.set(_v4); }
     }
     get groundLightingColor () {
-        const isHDR = (legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR;
+        const isHDR = (cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR;
         _v4.set(isHDR ? this._groundAlbedoHDR : this._groundAlbedoLDR);
         normalizeHDRColor(_v4);
         return _col.set(_v4.x * 255, _v4.y * 255, _v4.z * 255, 255);
@@ -211,7 +206,7 @@ export class AmbientInfo {
      * @internal
      */
     set groundAlbedo (val: Vec4) {
-        if ((legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR) {
+        if ((cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR) {
             this._groundAlbedoHDR.set(val);
         } else {
             this._groundAlbedoLDR.set(val);
@@ -248,7 +243,7 @@ export class AmbientInfo {
         this._resource.initialize(this);
     }
 }
-legacyCC.AmbientInfo = AmbientInfo;
+cclegacy.AmbientInfo = AmbientInfo;
 
 /**
  * @en Skybox related configuration
@@ -342,7 +337,7 @@ export class SkyboxInfo {
     @editable
     @tooltip('i18n:skybox.useHDR')
     set useHDR (val) {
-        (legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR = val;
+        (cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR = val;
         this._useHDR = val;
 
         // Switch UI to and from LDR/HDR textures depends on HDR state
@@ -363,7 +358,7 @@ export class SkyboxInfo {
         }
     }
     get useHDR () {
-        (legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR = this._useHDR;
+        (cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR = this._useHDR;
         return this._useHDR;
     }
 
@@ -375,7 +370,7 @@ export class SkyboxInfo {
     @type(TextureCube)
     @tooltip('i18n:skybox.envmap')
     set envmap (val) {
-        const isHDR = (legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR;
+        const isHDR = (cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR;
         if (isHDR) {
             this._envmapHDR = val;
             this._reflectionHDR = null;
@@ -404,7 +399,7 @@ export class SkyboxInfo {
         }
     }
     get envmap () {
-        const isHDR = (legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR;
+        const isHDR = (cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR;
         if (isHDR) {
             return this._envmapHDR;
         } else {
@@ -444,7 +439,7 @@ export class SkyboxInfo {
     @type(TextureCube)
     @displayOrder(100)
     set diffuseMap (val : TextureCube | null) {
-        const isHDR = (legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR;
+        const isHDR = (cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR;
         if (isHDR) {
             this._diffuseMapHDR = val;
         } else {
@@ -456,7 +451,7 @@ export class SkyboxInfo {
         }
     }
     get diffuseMap () {
-        const isHDR = (legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR;
+        const isHDR = (cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR;
         if (isHDR) {
             return this._diffuseMapHDR;
         } else {
@@ -479,7 +474,7 @@ export class SkyboxInfo {
     @type(TextureCube)
     @displayOrder(100)
     set reflectionMap (val: TextureCube | null) {
-        const isHDR = (legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR;
+        const isHDR = (cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR;
         if (isHDR) {
             this._reflectionHDR = val;
         } else {
@@ -490,7 +485,7 @@ export class SkyboxInfo {
         }
     }
     get reflectionMap () {
-        const isHDR = (legacyCC.director.root as Root).pipeline.pipelineSceneData.isHDR;
+        const isHDR = (cclegacy.director.root as Root).pipeline.pipelineSceneData.isHDR;
         if (isHDR) {
             return this._reflectionHDR;
         } else {
@@ -565,7 +560,7 @@ export class SkyboxInfo {
         this._resource.activate(); // update global DS first
     }
 }
-legacyCC.SkyboxInfo = SkyboxInfo;
+cclegacy.SkyboxInfo = SkyboxInfo;
 
 /**
  * @zh 全局雾相关配置
@@ -955,7 +950,7 @@ export class ShadowsInfo {
         this._resource.activate();
     }
 }
-legacyCC.ShadowsInfo = ShadowsInfo;
+cclegacy.ShadowsInfo = ShadowsInfo;
 
 export const DEFAULT_WORLD_MIN_POS = new Vec3(-1024.0, -1024.0, -1024.0);
 export const DEFAULT_WORLD_MAX_POS = new Vec3(1024.0, 1024.0, 1024.0);
@@ -1054,7 +1049,7 @@ export class OctreeInfo {
         this._resource.initialize(this);
     }
 }
-legacyCC.OctreeInfo = OctreeInfo;
+cclegacy.OctreeInfo = OctreeInfo;
 
 export interface ILightProbeNode {
     node: Node;
@@ -1448,7 +1443,7 @@ export class SceneGlobals {
      * @zh 启用和初始化场景全局配置，不需要手动调用
      */
     public activate (scene: Scene) {
-        const sceneData = (legacyCC.director.root as Root).pipeline.pipelineSceneData;
+        const sceneData = (cclegacy.director.root as Root).pipeline.pipelineSceneData;
         this.skybox.activate(sceneData.skybox);
         this.ambient.activate(sceneData.ambient);
 
@@ -1459,8 +1454,8 @@ export class SceneGlobals {
             this.lightProbeInfo.activate(scene, sceneData.lightProbes);
         }
 
-        const root = legacyCC.director.root as Root;
+        const root = cclegacy.director.root as Root;
         root.onGlobalPipelineStateChanged();
     }
 }
-legacyCC.SceneGlobals = SceneGlobals;
+cclegacy.SceneGlobals = SceneGlobals;

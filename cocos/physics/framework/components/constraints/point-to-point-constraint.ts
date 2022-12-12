@@ -23,16 +23,10 @@
  THE SOFTWARE.
  */
 
-import {
-    ccclass,
-    help,
-    menu,
-    type,
-    serializable,
-} from 'cc.decorator';
+import { ccclass, help, menu, type, serializable } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { Constraint } from './constraint';
-import { Vec3, IVec3Like, cclegacy } from '../../../../core';
+import { Vec3, IVec3Like, cclegacy } from '@cocos/core';
 import { EConstraintType } from '../../physics-enum';
 import { IPointToPointConstraint } from '../../../spec/i-physics-constraint';
 

@@ -23,10 +23,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass, disallowMultiple, executeInEditMode,
-    executionOrder, menu, requireComponent } from 'cc.decorator';
+import { ccclass, disallowMultiple, executeInEditMode, executionOrder, menu, requireComponent } from '@cocos/core/internal';
 import { Component } from '../../scene-graph/component';
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 import { UITransform } from './ui-transform';
 
 @ccclass('cc.RenderRoot2D')

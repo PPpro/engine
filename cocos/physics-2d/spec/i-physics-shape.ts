@@ -1,4 +1,4 @@
-import { Rect, Vec2 } from '../../core';
+import { Rect, Vec2 } from '@cocos/core';
 import { ILifecycle } from '../../physics/spec/i-lifecycle';
 import { Collider2D, RigidBody2D } from '../../../exports/physics-2d-framework';
 

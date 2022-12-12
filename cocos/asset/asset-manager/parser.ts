@@ -24,7 +24,7 @@
  */
 
 import { ImageAsset, IMemoryImageSource } from '../assets/image-asset';
-import { js } from '../../core';
+import { js } from '@cocos/core';
 import Cache from './cache';
 import deserialize from './deserialize';
 import { isScene } from './helper';

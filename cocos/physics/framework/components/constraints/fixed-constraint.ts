@@ -23,20 +23,12 @@
  THE SOFTWARE.
  */
 
-import {
-    ccclass,
-    help,
-    menu,
-    serializable,
-    formerlySerializedAs,
-    type,
-} from 'cc.decorator';
+import { ccclass, help, menu, serializable, formerlySerializedAs, type } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { Constraint } from './constraint';
-import { IVec3Like, Vec3 } from '../../../../core';
+import { IVec3Like, Vec3, cclegacy } from '@cocos/core';
 import { EConstraintType } from '../../physics-enum';
 import { IFixedConstraint } from '../../../spec/i-physics-constraint';
-import { legacyCC } from '../../../../core/global-exports';
 
 @ccclass('cc.FixedConstraint')
 @help('i18n:cc.FixedConstraint')
@@ -55,7 +47,7 @@ export class FixedConstraint extends Constraint {
 
     set breakForce (v: number) {
         this._breakForce = v;
-        if (!EDITOR || legacyCC.GAME_VIEW) {
+        if (!EDITOR || cclegacy.GAME_VIEW) {
             this.constraint.setBreakForce(v);
         }
     }
@@ -73,7 +65,7 @@ export class FixedConstraint extends Constraint {
 
     set breakTorque (v: number) {
         this._breakTorque = v;
-        if (!EDITOR || legacyCC.GAME_VIEW) {
+        if (!EDITOR || cclegacy.GAME_VIEW) {
             this.constraint.setBreakTorque(v);
         }
     }

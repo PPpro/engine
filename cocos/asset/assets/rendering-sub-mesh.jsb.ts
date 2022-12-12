@@ -1,5 +1,5 @@
-import { Vec3 } from "../../core";
-import { Attribute, PrimitiveMode, Buffer } from "../../gfx";
+import { Vec3 } from '@cocos/core';
+import { Attribute, PrimitiveMode, Buffer } from '../../gfx';
 
 /**
  * @en Array views for index buffer

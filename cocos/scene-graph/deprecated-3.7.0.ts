@@ -1,4 +1,4 @@
-import { deprecateModuleExportedName } from '../core/utils/x-deprecated';
+import { deprecateModuleExportedName } from '@cocos/core';
 
 deprecateModuleExportedName({
     BaseNode: {

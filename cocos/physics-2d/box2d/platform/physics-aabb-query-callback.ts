@@ -24,7 +24,7 @@
  */
 
 import b2 from '@cocos/box2d';
-import { Vec2 } from '../../../core';
+import { Vec2 } from '@cocos/core';
 
 export class PhysicsAABBQueryCallback extends b2.QueryCallback {
     _point = new b2.Vec2();

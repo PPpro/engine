@@ -26,7 +26,7 @@
 import { BulletShape } from './bullet-shape';
 import { CylinderCollider } from '../../../../exports/physics-framework';
 import { ICylinderShape } from '../../spec/i-physics-shape';
-import { IVec3Like, absMax } from '../../../core';
+import { IVec3Like, absMax } from '@cocos/core';
 import { BulletCache } from '../bullet-cache';
 import { bt } from '../instantiated';
 

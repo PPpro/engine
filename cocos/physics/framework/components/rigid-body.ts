@@ -25,21 +25,9 @@
  THE SOFTWARE.
  */
 
-import {
-    ccclass,
-    help,
-    disallowMultiple,
-    executeInEditMode,
-    menu,
-    executionOrder,
-    tooltip,
-    displayOrder,
-    visible,
-    type,
-    serializable,
-} from 'cc.decorator';
+import { ccclass, help, disallowMultiple, executeInEditMode, menu, executionOrder, tooltip, displayOrder, visible, type, serializable } from '@cocos/core/internal';
 import { DEBUG } from 'internal:constants';
-import { Vec3, error, warn } from '../../../core';
+import { Vec3, error, warn } from '@cocos/core';
 import { Component } from '../../../scene-graph';
 import { IRigidBody } from '../../spec/i-rigid-body';
 import { selector, createRigidBody } from '../physics-selector';

@@ -24,11 +24,10 @@
  THE SOFTWARE.
  */
 
-import { ccclass, editable, type, displayOrder, menu,
-    executeInEditMode, serializable, playOnFocus, tooltip, visible, formerlySerializedAs } from 'cc.decorator';
+import { ccclass, editable, type, displayOrder, menu, executeInEditMode, serializable, playOnFocus, tooltip, visible, formerlySerializedAs } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { UIRenderer } from '../2d/framework/ui-renderer';
-import { Color, Vec2, warnID, errorID, error, path, cclegacy  } from '../core';
+import { Color, Vec2, warnID, errorID, error, path, cclegacy } from '@cocos/core';
 import { Simulator } from './particle-simulator-2d';
 import { SpriteFrame } from '../2d/assets/sprite-frame';
 import { ImageAsset } from '../asset/assets/image-asset';

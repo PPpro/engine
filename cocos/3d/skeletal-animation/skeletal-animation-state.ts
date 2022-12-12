@@ -24,7 +24,7 @@
 */
 
 import { JSB } from 'internal:constants';
-import { Mat4, Quat, Vec3, cclegacy } from '../../core';
+import { Mat4, Quat, Vec3, cclegacy } from '@cocos/core';
 import { IAnimInfo, JointAnimationInfo } from './skeletal-animation-utils';
 import { Node } from '../../scene-graph/node';
 import type { AnimationClip } from '../../animation/animation-clip';

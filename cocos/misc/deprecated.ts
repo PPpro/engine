@@ -27,7 +27,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 
 import { Camera } from './camera-component';
-import { replaceProperty, cclegacy, js } from '../core';
+import { replaceProperty, cclegacy, js } from '@cocos/core';
 import { ModelRenderer } from './model-renderer';
 
 replaceProperty(Camera, 'Camera', [

@@ -25,7 +25,7 @@
  */
 
 import { MeshRenderer, ReflectionProbeType } from '../3d/framework/mesh-renderer';
-import { Vec3, geometry } from '../core';
+import { Vec3, geometry } from '@cocos/core';
 import { Texture } from '../gfx';
 import { Camera, Model } from '../render-scene/scene';
 import { ProbeType, ReflectionProbe } from '../render-scene/scene/reflection-probe';

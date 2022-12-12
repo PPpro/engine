@@ -91,7 +91,7 @@ jest.mock('serialization-test-helper/run-test', () => {
 });
 
 import '../exports/base';
-import { DebugMode } from "../cocos/core/platform/debug";
+import { DebugMode } from '@cocos/core';
 import { EffectAsset, Game, game, IGameConfig } from '../exports/base';
 import './asset-manager/init';
 import '../cocos/gfx/empty/empty-device';

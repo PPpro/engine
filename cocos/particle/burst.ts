@@ -23,8 +23,8 @@
  THE SOFTWARE.
  */
 
-import { ccclass, type, serializable, editable, range } from 'cc.decorator';
-import { repeat } from '../core/math';
+import { ccclass, type, serializable, editable, range } from '@cocos/core/internal';
+import { repeat } from '@cocos/core';
 import CurveRange from './animator/curve-range';
 
 @ccclass('cc.Burst')

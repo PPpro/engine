@@ -24,7 +24,7 @@
  */
 
 import { BulletShape } from './bullet-shape';
-import { Vec3, warn, IVec3Like } from '../../../core';
+import { Vec3, warn, IVec3Like } from '@cocos/core';
 import { TerrainCollider } from '../../../../exports/physics-framework';
 import { cocos2BulletVec3 } from '../bullet-utils';
 import { ITerrainShape } from '../../spec/i-physics-shape';

@@ -23,14 +23,12 @@
  THE SOFTWARE.
 ****************************************************************************/
 import { Buffer, Framebuffer, Texture, Viewport } from '../../gfx';
-import { assert } from '../../core';
+import { assert } from '@cocos/core';
 import { VectorGraphColorMap } from './effect';
 import { DefaultVisitor, depthFirstSearch, ReferenceGraphView } from './graph';
 import { LayoutGraphData } from './layout-graph';
 import { Pipeline } from './pipeline';
-import { Blit, ClearView, ComputePass, CopyPass, Dispatch, ManagedBuffer, ManagedResource, ManagedTexture, MovePass,
-    PresentPass, RasterPass, RaytracePass, RenderGraph, RenderGraphVisitor,
-    RenderQueue, RenderSwapchain, ResourceGraph, ResourceGraphVisitor, SceneData } from './render-graph';
+import { Blit, ClearView, ComputePass, CopyPass, Dispatch, ManagedBuffer, ManagedResource, ManagedTexture, MovePass, PresentPass, RasterPass, RaytracePass, RenderGraph, RenderGraphVisitor, RenderQueue, RenderSwapchain, ResourceGraph, ResourceGraphVisitor, SceneData } from './render-graph';
 import { AccessType, RasterView, ResourceResidency } from './types';
 
 class PassVisitor implements RenderGraphVisitor {

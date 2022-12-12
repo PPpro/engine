@@ -24,7 +24,7 @@
  */
 
 import b2 from '@cocos/box2d';
-import { Vec2 } from '../../core';
+import { Vec2 } from '@cocos/core';
 import { PHYSICS_2D_PTM_RATIO } from '../framework/physics-types';
 import { Collider2D, Contact2DType, PhysicsSystem2D } from '../framework';
 import { b2Shape2D } from './shapes/shape-2d';

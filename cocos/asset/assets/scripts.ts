@@ -24,9 +24,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 import { Asset } from './asset';
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 
 /**
  * @en The script asset base class

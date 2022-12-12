@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { IMat4Like, Mat4 } from '../core/math';
+import { IMat4Like, Mat4 } from '@cocos/core';
 
 declare const jsb: any;
 

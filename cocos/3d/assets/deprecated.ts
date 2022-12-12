@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-import { removeProperty, replaceProperty } from '../../core';
+import { removeProperty, replaceProperty } from '@cocos/core';
 import { Mesh } from './mesh';
 
 replaceProperty(Mesh.prototype, 'Mesh.prototype', [

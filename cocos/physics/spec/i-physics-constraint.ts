@@ -25,7 +25,7 @@
 
 import { ILifecycle } from './i-lifecycle';
 import { Constraint, RigidBody } from '../framework';
-import { IVec3Like } from '../../core';
+import { IVec3Like } from '@cocos/core';
 
 export interface IBaseConstraint extends ILifecycle {
     readonly impl: any;

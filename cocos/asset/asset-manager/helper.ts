@@ -22,14 +22,14 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
  */
-import { cclegacy, error } from '../../core';
+import { cclegacy, error } from '@cocos/core';
 import RequestItem from './request-item';
 import { bundles, Request, IOptions, transformPipeline } from './shared';
 import Task from './task';
 
 const _uuidRegex = /.*[/\\][0-9a-fA-F]{2}[/\\]([0-9a-fA-F-@]{8,}).*/;
 
-export { default as decodeUuid } from '../../core/utils/decode-uuid';
+export { decodeUuid } from '@cocos/core/internal';
 
 /**
  * @en

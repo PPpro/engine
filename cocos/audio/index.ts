@@ -26,7 +26,7 @@ THE SOFTWARE.
 import './audio-downloader';
 
 import { AudioSource } from './audio-source';
-import { cclegacy, js } from '../core';
+import { cclegacy, js } from '@cocos/core';
 import './deprecated';
 
 export { AudioClip } from './audio-clip';

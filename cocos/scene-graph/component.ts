@@ -24,20 +24,18 @@
  THE SOFTWARE.
 */
 
-import { ccclass, tooltip, displayName, type, serializable, disallowAnimation } from 'cc.decorator';
+import { ccclass, tooltip, displayName, type, serializable, disallowAnimation } from '@cocos/core/internal';
 import { EDITOR, TEST } from 'internal:constants';
 import { Script } from '../asset/assets/scripts';
-import { CCObject } from '../core/data/object';
-import { IDGenerator } from '../core/utils/id-generator';
-import { getClassName, value } from '../core/utils/js';
+import { CCObject, js, Rect, cclegacy, errorID, warnID, assertID } from '@cocos/core';
+import { IDGenerator } from '@cocos/core/internal';
 import { RenderScene } from '../render-scene/core/render-scene';
-import { Rect } from '../core/math';
-import * as RF from '../core/data/utils/requiring-frame';
+import { RF } from '@cocos/core/internal';
 import { Node } from './node';
-import { legacyCC } from '../core/global-exports';
-import { errorID, warnID, assertID } from '../core/platform/debug';
 import { CompPrefabInfo } from './prefab/prefab-info';
 import { EventHandler } from './component-event-handler';
+
+const { getClassName, value } = js;
 
 const idGenerator = new IDGenerator('Comp');
 const IsOnLoadCalled = CCObject.Flags.IsOnLoadCalled;
@@ -120,7 +118,7 @@ class Component extends CCObject {
         if (this._enabled !== value) {
             this._enabled = value;
             if (this.node.activeInHierarchy) {
-                const compScheduler = legacyCC.director._compScheduler;
+                const compScheduler = cclegacy.director._compScheduler;
                 if (value) {
                     compScheduler.enableComp(this);
                 } else {
@@ -370,7 +368,7 @@ class Component extends CCObject {
         }
         if (super.destroy()) {
             if (this._enabled && this.node.activeInHierarchy) {
-                legacyCC.director._compScheduler.disableComp(this);
+                cclegacy.director._compScheduler.disableComp(this);
             }
             return true;
         }
@@ -385,7 +383,7 @@ class Component extends CCObject {
         this.unscheduleAllCallbacks();
 
         // onDestroy
-        legacyCC.director._nodeActivator.destroyComp(this);
+        cclegacy.director._nodeActivator.destroyComp(this);
 
         // do remove component
         this.node._removeComponent(this);
@@ -396,7 +394,7 @@ class Component extends CCObject {
      */
     public _instantiate (cloned?: Component) {
         if (!cloned) {
-            cloned = legacyCC.instantiate._clone(this, this);
+            cloned = cclegacy.instantiate._clone(this, this);
         }
 
         if (cloned) {
@@ -425,16 +423,16 @@ class Component extends CCObject {
      * this.schedule((dt) => void log(`time: ${dt}`), 1);
      * ```
      */
-    public schedule (callback, interval = 0, repeat: number = legacyCC.macro.REPEAT_FOREVER, delay = 0) {
+    public schedule (callback, interval = 0, repeat: number = cclegacy.macro.REPEAT_FOREVER, delay = 0) {
         assertID(callback, 1619);
 
         interval = interval || 0;
         assertID(interval >= 0, 1620);
 
-        repeat = Number.isNaN(repeat) ? legacyCC.macro.REPEAT_FOREVER : repeat;
+        repeat = Number.isNaN(repeat) ? cclegacy.macro.REPEAT_FOREVER : repeat;
         delay = delay || 0;
 
-        const scheduler = legacyCC.director.getScheduler();
+        const scheduler = cclegacy.director.getScheduler();
 
         // should not use enabledInHierarchy to judge whether paused,
         // because enabledInHierarchy is assigned after onEnable.
@@ -476,7 +474,7 @@ class Component extends CCObject {
             return;
         }
 
-        legacyCC.director.getScheduler().unschedule(callback_fn, this);
+        cclegacy.director.getScheduler().unschedule(callback_fn, this);
     }
 
     /**
@@ -488,7 +486,7 @@ class Component extends CCObject {
      * ```
      */
     public unscheduleAllCallbacks () {
-        legacyCC.director.getScheduler().unscheduleAllForTarget(this);
+        cclegacy.director.getScheduler().unscheduleAllForTarget(this);
     }
 
     // LIFECYCLE METHODS
@@ -700,7 +698,7 @@ if (EDITOR || TEST) {
     // COMPONENT HELPERS
 
     // TODO Keep temporarily, compatible with old version
-    legacyCC._componentMenuItems = [];
+    cclegacy._componentMenuItems = [];
 }
 
 // we make this non-enumerable, to prevent inherited by sub classes.
@@ -778,5 +776,5 @@ value(Component, '_registerEditorProps', (cls, props) => {
     }
 });
 
-legacyCC.Component = Component;
+cclegacy.Component = Component;
 export { Component };

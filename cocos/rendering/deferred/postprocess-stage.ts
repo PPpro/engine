@@ -26,7 +26,7 @@
 /**
  * @category pipeline
  */
-import { ccclass, displayOrder, type, serializable } from 'cc.decorator';
+import { ccclass, displayOrder, type, serializable } from '@cocos/core/internal';
 import { Camera } from '../../render-scene/scene';
 import { SetIndex, UBOLocal } from '../define';
 import { Color, Rect, PipelineState, ClearFlagBit, DescriptorSetInfo, BufferInfo, BufferUsageBit, MemoryUsageBit } from '../../gfx';

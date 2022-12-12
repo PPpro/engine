@@ -1,6 +1,5 @@
 
-import { ccclass } from '../../../cocos/core/data/decorators';
-import { property } from '../../../cocos/core/data/decorators/property';
+import { ccclass, property } from '@cocos/core/internal';
 import { deserialize } from '../../../cocos/serialization/deserialize';
 
 @ccclass('Foo')

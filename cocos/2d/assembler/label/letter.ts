@@ -23,7 +23,7 @@
  THE SOFTWARE.
 */
 
-import { js, Color } from '../../../core';
+import { js, Color } from '@cocos/core';
 import { IBatcher } from '../../renderer/i-batcher';
 import { Label } from '../../components/label';
 import { fillMeshVertices3D } from '../utils';

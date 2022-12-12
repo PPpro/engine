@@ -24,7 +24,7 @@
 */
 
 import * as utils from './misc';
-import { legacyCC } from '../core/global-exports';
+import { cclegacy } from '@cocos/core';
 
 export * from './misc/batch-utils';
 export * from './assets';
@@ -35,4 +35,4 @@ export * from './skinned-mesh-renderer';
 export {
     utils,
 };
-legacyCC.utils = utils;
+cclegacy.utils = utils;

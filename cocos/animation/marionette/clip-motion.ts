@@ -1,4 +1,4 @@
-import { editorExtrasTag, _decorator, EditorExtendable } from '../../core';
+import { editorExtrasTag, _decorator, EditorExtendable } from '@cocos/core';
 import { AnimationClip } from '../animation-clip';
 import { AnimationState } from '../animation-state';
 import { cloneAnimationGraphEditorExtrasFrom } from './animation-graph-editor-extras-clone-helper';
