@@ -23,9 +23,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 import { BitmapFont } from './bitmap-font';
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 /**
  * @en Class for LabelAtlas handling.
  * @zh 艺术数字字体资源类。

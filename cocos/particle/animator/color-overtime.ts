@@ -22,8 +22,8 @@
  THE SOFTWARE.
 */
 
-import { ccclass, displayOrder, type, serializable } from 'cc.decorator';
-import { pseudoRandom } from '../../core';
+import { ccclass, displayOrder, type, serializable } from '@cocos/core/internal';
+import { pseudoRandom } from '@cocos/core';
 import { Particle, PARTICLE_MODULE_NAME, ParticleModuleBase } from '../particle';
 import GradientRange from './gradient-range';
 import { ModuleRandSeed } from '../enum';

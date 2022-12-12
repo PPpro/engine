@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { approx } from '../core';
+import { approx } from '@cocos/core';
 
 /**
  * Removes keys which are linear interpolations of surrounding keys.

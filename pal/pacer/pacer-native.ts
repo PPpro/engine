@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { assertIsTrue } from '../../cocos/core/data/utils/asserts';
+import { assertIsTrue } from '@cocos/core/internal';
 
 declare const jsb: any;
 export class Pacer {

@@ -23,7 +23,7 @@
 */
 
 import { Collider, TriggerEventType, CollisionEventType, IContactEquation } from '../../../exports/physics-framework';
-import { Vec3, Quat, Mat4 } from '../../core';
+import { Vec3, Quat, Mat4 } from '@cocos/core';
 import { bt } from './instantiated';
 
 export const TriggerEventObject = {

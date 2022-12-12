@@ -28,7 +28,7 @@ import { Camera, CSMLevel, DirectionalLight, Light, LightType, ReflectionProbe, 
 import { supportsR32FloatTexture } from '../define';
 import { Pipeline } from './pipeline';
 import { AccessType, AttachmentType, ComputeView, LightInfo, QueueHint, RasterView, ResourceResidency, SceneFlags } from './types';
-import { Vec4, macro, geometry, toRadian, cclegacy } from '../../core';
+import { Vec4, macro, geometry, toRadian, cclegacy } from '@cocos/core';
 import { Material } from '../../asset/assets';
 import { SRGBToLinear } from '../pipeline-funcs';
 import { RenderWindow } from '../../render-scene/core/render-window';

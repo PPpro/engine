@@ -22,13 +22,10 @@
  THE SOFTWARE.
 */
 
-import { BitMask, Enum } from '../core/value-types';
-import { legacyCC } from '../core/global-exports';
-import { log2 } from '../core/math/bits';
-import { js } from '../core';
-import { assertIsTrue } from '../core/data/utils/asserts';
-import { getError } from '../core/platform/debug';
-import { Settings, settings } from '../core/settings';
+import { BitMask, Enum, cclegacy, bits, js, getError, Settings, settings } from '@cocos/core';
+import { assertIsTrue } from '@cocos/core/internal';
+
+const { log2 } = bits;
 
 // built-in layers, users can use 0~19 bits, 20~31 are system preserve bits.
 const layerList = {
@@ -183,4 +180,4 @@ export declare namespace Layers {
     export type BitMask = EnumAlias<typeof Layers.BitMask>;
 }
 
-legacyCC.Layers = Layers;
+cclegacy.Layers = Layers;

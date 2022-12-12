@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { Vec3, Enum } from '../../core';
+import { Vec3, Enum } from '@cocos/core';
 
 export const PlaceMethod = Enum({
     UNIFORM: 0,

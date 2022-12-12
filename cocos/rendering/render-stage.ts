@@ -22,8 +22,8 @@
  THE SOFTWARE.
 */
 
-import { ccclass, displayOrder, serializable } from 'cc.decorator';
-import { cclegacy } from '../core';
+import { ccclass, displayOrder, serializable } from '@cocos/core/internal';
+import { cclegacy } from '@cocos/core';
 import { RenderPipeline } from './render-pipeline';
 import { RenderFlow } from './render-flow';
 import { RenderQueueDesc } from './pipeline-serialization';

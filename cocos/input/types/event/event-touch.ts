@@ -24,7 +24,7 @@
 */
 
 import { Event } from './event';
-import { Vec2 } from '../../../core';
+import { Vec2 } from '@cocos/core';
 import { Touch } from '../touch';
 import { SystemEventTypeUnion } from '../event-enum';
 

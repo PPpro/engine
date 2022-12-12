@@ -22,9 +22,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 import { EDITOR, TEST } from 'internal:constants';
-import { clamp, cclegacy, errorID } from '../../core';
+import { clamp, cclegacy, errorID } from '@cocos/core';
 import { Texture, ColorAttachment, DepthStencilAttachment, GeneralBarrierInfo, AccessFlagBit, RenderPassInfo, Format, deviceManager, BufferTextureCopy } from '../../gfx';
 import { RenderWindow, IRenderWindowInfo } from '../../render-scene/core/render-window';
 import { Root } from '../../root';

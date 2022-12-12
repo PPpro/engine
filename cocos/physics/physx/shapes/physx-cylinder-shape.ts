@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { Quat, Vec3 } from '../../../core';
+import { Quat, Vec3 } from '@cocos/core';
 import cylinder from '../../../primitive/cylinder';
 import { CylinderCollider, EAxisDirection } from '../../framework';
 import { ICylinderShape } from '../../spec/i-physics-shape';

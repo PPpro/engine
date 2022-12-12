@@ -26,7 +26,7 @@ import { JSB } from 'internal:constants';
 import { SpriteFrame } from '../../assets';
 import { Texture2D } from '../../../asset/assets';
 import { fragmentText, safeMeasureText, getBaselineOffset, BASELINE_RATIO } from '../../utils/text-utils';
-import { Color, Size, Vec2, Rect, logID, cclegacy } from '../../../core';
+import { Color, Size, Vec2, Rect, logID, cclegacy } from '@cocos/core';
 import { HorizontalTextAlignment, Label, LabelOutline, VerticalTextAlignment, LabelShadow } from '../../components';
 import { ISharedLabelData, LetterRenderTexture } from './font-utils';
 import { UITransform } from '../../framework/ui-transform';

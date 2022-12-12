@@ -23,7 +23,7 @@
 */
 import { BUILD, EDITOR, PREVIEW } from 'internal:constants';
 import { Asset } from '../assets/asset';
-import { error, cclegacy } from '../../core';
+import { error, cclegacy } from '@cocos/core';
 import packManager from './pack-manager';
 import parser from './parser';
 import { Pipeline } from './pipeline';

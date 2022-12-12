@@ -22,13 +22,10 @@
  THE SOFTWARE.
 */
 
-import { systemInfo } from 'pal/system-info';
+import { systemInfo, Platform } from '@pal/system-info';
 import { AudioType, AudioState, AudioEvent, AudioPCMDataView, AudioBufferView } from '../type';
-import { EventTarget } from '../../../cocos/core/event';
-import { legacyCC } from '../../../cocos/core/global-exports';
-import { clamp, clamp01 } from '../../../cocos/core';
+import { EventTarget, cclegacy, clamp, clamp01 } from '@cocos/core';
 import { enqueueOperation, OperationInfo, OperationQueueable } from '../operation-queue';
-import { Platform } from '../../system-info/enum-type';
 import { Game, game } from '../../../cocos/game';
 
 const urlCount: Record<string, number> = {};
@@ -340,4 +337,4 @@ export class AudioPlayer implements OperationQueueable {
 }
 
 // REMOVE_ME
-legacyCC.AudioPlayer = AudioPlayer;
+cclegacy.AudioPlayer = AudioPlayer;

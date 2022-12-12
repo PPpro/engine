@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { CachedArray } from '../../core';
+import { CachedArray } from '@cocos/core';
 import { TextureBase } from '../../asset/assets/texture-base';
 import { Device, Attribute } from '../../gfx';
 import { Camera } from '../../render-scene/scene/camera';

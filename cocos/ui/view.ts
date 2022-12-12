@@ -28,12 +28,9 @@
 import '../core/data/class';
 import { MINIGAME, JSB, RUNTIME_BASED, EDITOR } from 'internal:constants';
 import { screenAdapter } from 'pal/screen-adapter';
-import { Eventify } from '../core/event';
-import { Rect, Size, Vec2 } from '../core/math';
-import { visibleRect, cclegacy, errorID, screen, macro, System } from '../core';
+import { Eventify, Rect, Size, Vec2, visibleRect, cclegacy, errorID, screen, macro, System, Settings, settings } from '@cocos/core';
 import { Orientation } from '../../pal/screen-adapter/enum-type';
 import { director } from '../game/director';
-import { Settings, settings } from '../core/settings';
 
 /**
  * @en View represents the game window.<br/>

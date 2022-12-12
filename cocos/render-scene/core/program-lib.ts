@@ -36,7 +36,7 @@ import {
 } from '../../gfx';
 import { genHandles, getActiveAttributes, getShaderInstanceName, getSize,
     getVariantKey, IMacroInfo, populateMacros, prepareDefines } from './program-utils';
-import { debug, cclegacy } from '../../core';
+import { debug, cclegacy } from '@cocos/core';
 
 const _dsLayoutInfo = new DescriptorSetLayoutInfo();
 

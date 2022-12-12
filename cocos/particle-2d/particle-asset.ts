@@ -25,7 +25,7 @@
 
 import { Asset } from '../asset/assets/asset';
 import { SpriteFrame } from '../2d/assets/sprite-frame';
-import { cclegacy, _decorator } from '../core';
+import { cclegacy, _decorator } from '@cocos/core';
 
 const { ccclass, serializable, editable } = _decorator;
 

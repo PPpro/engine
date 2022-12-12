@@ -29,7 +29,7 @@ import { ForwardFlow } from '../../rendering/forward/forward-flow';
 import { ForwardPipeline } from '../../rendering/forward/forward-pipeline';
 import { Camera, CameraProjection } from '../../render-scene/scene';
 import { WebGL2Device } from '../../gfx/webgl2/webgl2-device';
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 import { Root } from '../../root';
 import { RenderWindow } from '../../render-scene/core/render-window';
 import { WebGL2Framebuffer } from '../../gfx/webgl2/webgl2-framebuffer';

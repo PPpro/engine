@@ -1,4 +1,5 @@
-import { EasingMethod, RealCurve, RealInterpolationMode, RealKeyframeValue, TangentWeightMode } from "../../cocos/core/curves/curve";
+import { EasingMethod } from '@cocos/core/internal';
+import { RealCurve, RealInterpolationMode, RealKeyframeValue, TangentWeightMode } from '@cocos/core';
 
 export function createRealKeyframeValueLike (value: Partial<RealKeyframeValue>): RealKeyframeValue {
     const curve = new RealCurve();

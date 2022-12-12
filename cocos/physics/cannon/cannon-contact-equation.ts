@@ -23,7 +23,7 @@
 */
 
 import { IContactEquation, ICollisionEvent } from '../framework';
-import { IVec3Like, Quat, Vec3 } from '../../core';
+import { IVec3Like, Quat, Vec3 } from '@cocos/core';
 import { CannonShape } from './shapes/cannon-shape';
 
 const quat = new Quat();

@@ -24,12 +24,12 @@
 */
 
 import { EDITOR, TEST } from 'internal:constants';
-import { ccclass, type } from 'cc.decorator';
+import { ccclass, type } from '@cocos/core/internal';
 import { TextureType, TextureInfo, TextureViewInfo } from '../../gfx';
 import { Filter, PixelFormat } from './asset-enum';
 import { ImageAsset } from './image-asset';
 import { PresumedGFXTextureInfo, PresumedGFXTextureViewInfo, SimpleTexture } from './simple-texture';
-import { js, cclegacy } from '../../core';
+import { js, cclegacy } from '@cocos/core';
 
 const compressedImageAsset: ImageAsset[] = [];
 

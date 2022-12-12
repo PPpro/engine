@@ -22,10 +22,11 @@
  THE SOFTWARE.
 */
 
-import { ccclass, type, serializable, editable } from 'cc.decorator';
+import { ccclass, type, serializable, editable } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
-import { Color, Enum, cclegacy } from '../../core';
-import Gradient, { AlphaKey, ColorKey } from './gradient';
+import { Color, Enum, cclegacy } from '@cocos/core';
+import Gradient from './gradient';
+import { AlphaKey, ColorKey } from './gradient';
 import { Texture2D } from '../../asset/assets';
 import { PixelFormat, Filter, WrapMode } from '../../asset/assets/asset-enum';
 

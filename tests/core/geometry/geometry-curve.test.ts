@@ -1,6 +1,5 @@
-import { WrapModeMask } from '../../../cocos/core/geometry';
-import { ExtrapolationMode, RealCurve, RealInterpolationMode, TangentWeightMode } from '../../../cocos/core/curves';
-import { AnimationCurve, Keyframe } from '../../../cocos/core/geometry/curve';
+import { geometry, ExtrapolationMode, RealCurve, RealInterpolationMode, TangentWeightMode } from '@cocos/core';
+const { WrapModeMask, AnimationCurve, Keyframe } = geometry;
 
 describe('geometry.AnimationCurve', () => {
     describe('Constructor', () => {
@@ -9,7 +8,7 @@ describe('geometry.AnimationCurve', () => {
             expect(curve.keyFrames).toStrictEqual([
                 createLegacyKeyframe({ time: 0.0, value: 1.0 }),
                 createLegacyKeyframe({ time: 1.0, value: 1.0 }),
-            ] as Keyframe[]);
+            ] as geometry.Keyframe[]);
         });
 
         test('new AnimationCurve(keyframes)', () => {
@@ -20,7 +19,7 @@ describe('geometry.AnimationCurve', () => {
             expect(curve.keyFrames).toStrictEqual([
                 createLegacyKeyframe({ time: 2.0, value: 8.0, inTangent: -3.3, outTangent: 1.75 }),
                 createLegacyKeyframe({ time: 3.0, value: 9.0, inTangent: 4.2, outTangent: -7.1 }),
-            ] as Keyframe[]);
+            ] as geometry.Keyframe[]);
         });
 
         test('new AnimationCurve(realCurve)(INTERNAL)', () => {
@@ -55,7 +54,7 @@ describe('geometry.AnimationCurve', () => {
                 createLegacyKeyframe({ time: 0.1, value: 0.1, inTangent: 0.2, outTangent: 0.3 }),
                 createLegacyKeyframe({ time: 0.2, value: 0.1, inTangent: 0.0, outTangent: 0.0 }),
                 createLegacyKeyframe({ time: 0.3, value: 0.1, inTangent: 0.2, outTangent: 0.3 }),
-            ] as Keyframe[]);
+            ] as geometry.Keyframe[]);
         });
 
         test.each([
@@ -172,7 +171,7 @@ describe('geometry.AnimationCurve', () => {
             createLegacyKeyframe({ time: 0.1, value: 0.1, inTangent: 0.2, outTangent: 0.3 }),
             createLegacyKeyframe({ time: 0.2, value: 0.1, inTangent: 0.0, outTangent: 0.0 }),
             createLegacyKeyframe({ time: 0.3, value: 0.1, inTangent: 0.2, outTangent: 0.3 }),
-        ] as Keyframe[]);
+        ] as geometry.Keyframe[]);
     });
 });
 

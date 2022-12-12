@@ -24,12 +24,8 @@
 
 import { EDITOR, TAOBAO } from 'internal:constants';
 import { Material } from '../asset/assets/material';
-import { clamp01, Mat4, Vec2, Settings, settings, sys, cclegacy, easing } from '../core';
-import {
-    Sampler, SamplerInfo, Shader, Texture, TextureInfo, Device, InputAssembler, InputAssemblerInfo, Attribute, Buffer,
-    BufferInfo, Rect, Color, BufferTextureCopy, CommandBuffer, BufferUsageBit, Format,
-    MemoryUsageBit, TextureType, TextureUsageBit, Address, SurfaceTransform, Swapchain,
-} from '../gfx';
+import { clamp01, Mat4, Vec2, Settings, settings, sys, cclegacy, easing } from '@cocos/core';
+import { Sampler, SamplerInfo, Shader, Texture, TextureInfo, Device, InputAssembler, InputAssemblerInfo, Attribute, Buffer, BufferInfo, Rect, Color, BufferTextureCopy, CommandBuffer, BufferUsageBit, Format, MemoryUsageBit, TextureType, TextureUsageBit, Address, SurfaceTransform, Swapchain } from '../gfx';
 import { PipelineStateManager } from '../rendering';
 import { SetIndex } from '../rendering/define';
 import { ccwindow } from '../core/global-exports';

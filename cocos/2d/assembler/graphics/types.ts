@@ -23,7 +23,7 @@
  THE SOFTWARE.
 */
 
-import { ccenum } from '../../../core';
+import { ccenum } from '@cocos/core';
 
 /**
  * @en Enum for LineCap.

@@ -22,10 +22,10 @@
  THE SOFTWARE.
 */
 
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 import { DEV } from 'internal:constants';
 import { TextureFlagBit, TextureUsageBit, API, Texture, TextureInfo, TextureViewInfo, Device, BufferTextureCopy } from '../../gfx';
-import { assertID, error, js, macro, cclegacy } from '../../core';
+import { assertID, error, js, macro, cclegacy } from '@cocos/core';
 import { Filter } from './asset-enum';
 import { ImageAsset } from './image-asset';
 import { TextureBase } from './texture-base';

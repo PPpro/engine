@@ -22,8 +22,8 @@
  THE SOFTWARE.
 */
 
-import { ccclass, editable, editorOnly, serializable } from 'cc.decorator';
-import{ cclegacy } from '../../core';
+import { ccclass, editable, editorOnly, serializable } from '@cocos/core/internal';
+import { cclegacy } from '@cocos/core';
 import './asset';
 
 export type EffectAsset = jsb.EffectAsset;

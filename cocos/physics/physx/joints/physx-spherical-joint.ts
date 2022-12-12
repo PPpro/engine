@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { IVec3Like, Quat, Vec3 } from '../../../core';
+import { IVec3Like, Quat, Vec3 } from '@cocos/core';
 import { PointToPointConstraint } from '../../framework';
 import { IPointToPointConstraint } from '../../spec/i-physics-constraint';
 import { PX, _trans, getTempTransform, _pxtrans } from '../physx-adapter';

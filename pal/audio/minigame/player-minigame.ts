@@ -23,13 +23,11 @@
 */
 
 import { minigame } from 'pal/minigame';
-import { systemInfo } from 'pal/system-info';
 import { TAOBAO } from 'internal:constants';
-import { EventTarget } from '../../../cocos/core/event';
+import { systemInfo, OS } from '@pal/system-info';
+import { EventTarget, clamp, clamp01 } from '@cocos/core';
 import { AudioEvent, AudioPCMDataView, AudioState, AudioType } from '../type';
-import { clamp, clamp01 } from '../../../cocos/core';
 import { enqueueOperation, OperationInfo, OperationQueueable } from '../operation-queue';
-import { OS } from '../../system-info/enum-type';
 import { Game, game } from '../../../cocos/game';
 
 export class OneShotAudioMinigame {

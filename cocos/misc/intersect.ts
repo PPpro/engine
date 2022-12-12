@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { Vec3, Mat4, IVec3Like, geometry } from '../core';
+import { Vec3, Mat4, IVec3Like, geometry } from '@cocos/core';
 import { PrimitiveMode } from '../gfx';
 import { Mesh } from '../3d/assets/mesh';
 import { IBArray, RenderingSubMesh } from '../asset/assets/rendering-sub-mesh';
@@ -251,6 +251,9 @@ const rayModel = (function () {
     };
 }());
 
+// @ts-expect-error unknown type of model
 geometry.intersect.rayModel = rayModel;
+// @ts-expect-error unknown type of subMesh
 geometry.intersect.raySubMesh = raySubMesh;
+// @ts-expect-error unknown type of mesh
 geometry.intersect.rayMesh = rayMesh;

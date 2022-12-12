@@ -1,0 +1,9 @@
+{
+  "name": "@pal/system-info",
+  "description": "",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts"
+    }
+  }
+}

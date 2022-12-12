@@ -1,18 +1,14 @@
 
-import { AnimationClip } from "../../../cocos/animation/animation-clip";
-import { AnimationBlend1D } from "../../../cocos/animation/marionette/animation-blend-1d";
-import { AnimationBlend2D } from "../../../cocos/animation/marionette/animation-blend-2d";
-import { AnimationBlendDirect } from "../../../cocos/animation/marionette/animation-blend-direct";
-import { AnimationController } from "../../../cocos/animation/marionette/animation-controller";
-import {
-    StateMachine,
-    SubStateMachine,
-    AnimationGraph,
-} from "../../../cocos/animation/marionette/animation-graph";
-import { ClipMotion } from "../../../cocos/animation/marionette/clip-motion";
-import { Motion } from "../../../cocos/animation/marionette/motion";
-import { MotionState } from "../../../cocos/animation/marionette/motion-state";
-import { EditorExtendableObject } from "../../../cocos/core/data/editor-extras-tag";
+import { AnimationClip } from '../../../cocos/animation/animation-clip';
+import { AnimationBlend1D } from '../../../cocos/animation/marionette/animation-blend-1d';
+import { AnimationBlend2D } from '../../../cocos/animation/marionette/animation-blend-2d';
+import { AnimationBlendDirect } from '../../../cocos/animation/marionette/animation-blend-direct';
+import { AnimationController } from '../../../cocos/animation/marionette/animation-controller';
+import { StateMachine, SubStateMachine, AnimationGraph } from '../../../cocos/animation/marionette/animation-graph';
+import { ClipMotion } from '../../../cocos/animation/marionette/clip-motion';
+import { Motion } from '../../../cocos/animation/marionette/motion';
+import { MotionState } from '../../../cocos/animation/marionette/motion-state';
+import { EditorExtendableObject } from '@cocos/core/internal';
 
 export function* visitAnimationGraphEditorExtras(animationGraph: AnimationGraph): Generator<EditorExtendableObject> {
     for (const layer of animationGraph.layers) {

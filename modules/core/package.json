@@ -1,0 +1,12 @@
+{
+  "name": "@cocos/core",
+  "description": "",
+  "exports": {
+    ".": {
+      "default": "./index.ts"
+    },
+    "./internal": {
+      "default": "./internal-index.ts"
+    }
+  }
+}

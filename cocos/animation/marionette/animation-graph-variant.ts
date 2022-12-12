@@ -22,8 +22,8 @@
  THE SOFTWARE.
 */
 
-import { ccclass, editable, serializable, type } from 'cc.decorator';
-import { removeIf } from '../../core/utils/array';
+import { ccclass, editable, serializable, type } from '@cocos/core/internal';
+import { removeIf } from '@cocos/core/internal';
 import { AnimationClip } from '../animation-clip';
 import { CLASS_NAME_PREFIX_ANIM } from '../define';
 import { AnimationGraph } from './animation-graph';

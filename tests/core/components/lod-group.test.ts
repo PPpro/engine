@@ -1,7 +1,7 @@
 import { LODGroup, LOD } from '../../../cocos/3d/lod';
-import { Node, NodeActivator } from "../../../cocos/scene-graph"
+import { Node, NodeActivator } from '../../../cocos/scene-graph';
 import { MeshRenderer } from '../../../cocos/3d/framework/mesh-renderer';
-import { Vec3, cclegacy  } from '../../../cocos/core';
+import { Vec3, cclegacy } from '@cocos/core';
 const fs = require('fs-extra');
 
 describe('LOD', () => {

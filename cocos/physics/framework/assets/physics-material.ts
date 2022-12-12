@@ -24,9 +24,9 @@
 
 // @ts-check
 
-import { ccclass, editable, serializable } from 'cc.decorator';
+import { ccclass, editable, serializable } from '@cocos/core/internal';
 import { Asset } from '../../../asset/assets/asset';
-import { math } from '../../../core';
+import { math } from '@cocos/core';
 
 /**
  * @en

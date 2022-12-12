@@ -21,8 +21,8 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
-import { ccclass, editable, serializable } from 'cc.decorator';
-import { cclegacy } from '../../core';
+import { ccclass, editable, serializable } from '@cocos/core/internal';
+import { cclegacy } from '@cocos/core';
 import './asset';
 
 export const SceneAsset = jsb.SceneAsset;

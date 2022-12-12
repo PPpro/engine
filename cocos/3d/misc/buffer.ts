@@ -23,7 +23,7 @@
 */
 
 import { Format, FormatInfos, FormatType, FormatInfo } from '../../gfx';
-import { sys } from '../../core';
+import { sys } from '@cocos/core';
 
 const _typeMap: Record<string, string> = {
     [FormatType.UNORM]: 'Uint',

@@ -46,7 +46,7 @@ import {
     IWebGL2GPUUniformSamplerTexture,
     IWebGL2GPURenderPass,
 } from './webgl2-gpu-objects';
-import { CachedArray, error, errorID, debug, cclegacy } from '../../core';
+import { CachedArray, error, errorID, debug, cclegacy } from '@cocos/core';
 
 const WebGLWraps: GLenum[] = [
     0x2901, // WebGLRenderingContext.REPEAT

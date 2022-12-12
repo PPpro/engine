@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { CachedArray } from '../../core';
+import { CachedArray } from '@cocos/core';
 import {
     WebGL2CmdBeginRenderPass,
     WebGL2CmdBindStates,

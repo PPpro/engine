@@ -23,10 +23,9 @@
 */
 
 import { AccelerometerCallback } from 'pal/input';
-import { systemInfo } from 'pal/system-info';
+import { systemInfo, BrowserType, OS } from '@pal/system-info';
 import { screenAdapter } from 'pal/screen-adapter';
-import { EventTarget } from '../../../cocos/core/event/event-target';
-import { BrowserType, OS } from '../../system-info/enum-type';
+import { EventTarget } from '@cocos/core';
 import { EventAcceleration, Acceleration } from '../../../cocos/input/types';
 import { InputEventType } from '../../../cocos/input/types/event-enum';
 
@@ -119,8 +118,9 @@ export class AccelerometerInputSource {
     }
 
     public start () {
-        // for iOS 13+, safari
+        // @ts-expect-error for iOS 13+, safari
         if (window.DeviceMotionEvent && typeof DeviceMotionEvent.requestPermission === 'function') {
+            // @ts-expect-error for iOS 13+, safari
             DeviceMotionEvent.requestPermission().then((response) => {
                 if (response === 'granted') {
                     this._registerEvent();

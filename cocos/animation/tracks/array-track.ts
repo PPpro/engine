@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { _decorator, RealCurve } from '../../core';
+import { _decorator, RealCurve } from '@cocos/core';
 import { CLASS_NAME_PREFIX_ANIM, createEvalSymbol } from '../define';
 import { Channel, RealChannel, RuntimeBinding, Track, TrackEval } from './track';
 

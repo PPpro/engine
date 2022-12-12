@@ -22,10 +22,10 @@
  THE SOFTWARE.
 */
 
-import { ccclass, displayOrder, serializable, type } from 'cc.decorator';
+import { ccclass, displayOrder, serializable, type } from '@cocos/core/internal';
 import { RenderStage } from './render-stage';
 import { RenderPipeline } from './render-pipeline';
-import { cclegacy } from '../core';
+import { cclegacy } from '@cocos/core';
 import { Camera } from '../render-scene/scene';
 
 /**

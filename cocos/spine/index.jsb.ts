@@ -22,8 +22,7 @@
  THE SOFTWARE.
 */
 
-import { ccenum } from '../core';
-import { legacyCC } from '../core/global-exports';
+import { ccenum, cclegacy } from '@cocos/core';
 
 /**
  * @en
@@ -111,5 +110,5 @@ export enum AnimationEventType {
 }
 ccenum(AnimationEventType);
 
-legacyCC.internal.SpineAnimationEventType = AnimationEventType;
+cclegacy.internal.SpineAnimationEventType = AnimationEventType;
 

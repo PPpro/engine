@@ -24,7 +24,7 @@
 
 import { EDITOR } from 'internal:constants';
 
-import { Vec2, Rect, _decorator, Eventify, cclegacy } from '../../../../core';
+import { Vec2, Rect, _decorator, Eventify, cclegacy } from '@cocos/core';
 import { PhysicsGroup } from '../../../../physics/framework/physics-enum';
 
 import { RigidBody2D } from '../rigid-body-2d';

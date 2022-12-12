@@ -23,16 +23,13 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executeInEditMode, executionOrder, menu, requireComponent, tooltip, type, displayOrder, serializable, visible } from 'cc.decorator';
+import { ccclass, help, executeInEditMode, executionOrder, menu, requireComponent, tooltip, type, displayOrder, serializable, visible } from '@cocos/core/internal';
 import { Component } from '../scene-graph/component';
-import { Size, Vec2, Vec3 } from '../core/math';
-import { ccenum } from '../core/value-types/enum';
+import { Size, Vec2, Vec3, ccenum, warn, cclegacy } from '@cocos/core';
 import { UITransform } from '../2d/framework/ui-transform';
 import { director, Director } from '../game/director';
 import { TransformBit } from '../scene-graph/node-enum';
-import { warn } from '../core';
 import { NodeEventType } from '../scene-graph/node-event';
-import { legacyCC } from '../core/global-exports';
 import { Node } from '../scene-graph/node';
 
 /**
@@ -1155,4 +1152,4 @@ export class Layout extends Component {
     }
 }
 
-legacyCC.Layout = Layout;
+cclegacy.Layout = Layout;

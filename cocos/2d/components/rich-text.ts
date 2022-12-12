@@ -23,11 +23,11 @@
  THE SOFTWARE.
 */
 
-import { ccclass, executeInEditMode, executionOrder, help, menu, tooltip, multiline, type, displayOrder, serializable } from 'cc.decorator';
+import { ccclass, executeInEditMode, executionOrder, help, menu, tooltip, multiline, type, displayOrder, serializable } from '@cocos/core/internal';
 import { DEBUG, DEV, EDITOR } from 'internal:constants';
 import { Font, SpriteAtlas, TTFFont, SpriteFrame } from '../assets';
 import { EventTouch } from '../../input/types';
-import { assert, warnID, Color, Vec2, CCObject, cclegacy, js } from '../../core';
+import { assert, warnID, Color, Vec2, CCObject, cclegacy, js } from '@cocos/core';
 import { BASELINE_RATIO, fragmentText, isUnicodeCJK, isUnicodeSpace, getEnglishWordPartAtFirst, getEnglishWordPartAtLast } from '../utils/text-utils';
 import { HtmlTextParser, IHtmlTextParserResultObj, IHtmlTextParserStack } from '../utils/html-text-parser';
 import { Node } from '../../scene-graph';

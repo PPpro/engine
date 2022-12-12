@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { editorExtrasTag, _decorator, EditorExtendable } from '../../core';
+import { editorExtrasTag, _decorator, EditorExtendable, geometry } from '@cocos/core';
 import { additiveSettingsTag, AnimationClip } from '../animation-clip';
 import { cloneAnimationGraphEditorExtrasFrom } from './animation-graph-editor-extras-clone-helper';
 import { createEval } from './create-eval';
@@ -33,9 +33,9 @@ import { wrap } from '../wrap';
 import { calculateDeltaPose, Pose } from '../core/pose';
 import { AnimationGraphEvaluationContext, AnimationGraphLayerWideBindingContext } from './animation-graph-context';
 import { WrappedInfo } from '../types';
-import { WrapModeMask } from '../../core/geometry';
 import { AnimationClipAGEvaluation } from './animation-graph-animation-clip-binding';
 
+const { WrapModeMask } = geometry;
 const { ccclass, type } = _decorator;
 
 @ccclass('cc.animation.ClipMotion')

@@ -23,7 +23,7 @@
 */
 
 import { AudioSource } from './audio-source';
-import { replaceProperty, markAsWarning } from '../core';
+import { replaceProperty, markAsWarning } from '@cocos/core';
 import { AudioClip } from './audio-clip';
 
 // remove AudioClip static property

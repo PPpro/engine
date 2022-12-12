@@ -22,17 +22,10 @@
  THE SOFTWARE.
 */
 
-import {
-    ccclass,
-    help,
-    menu,
-    serializable,
-    formerlySerializedAs,
-    type,
-} from 'cc.decorator';
+import { ccclass, help, menu, serializable, formerlySerializedAs, type } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { Constraint } from './constraint';
-import { Vec3, cclegacy } from '../../../../core';
+import { Vec3, cclegacy } from '@cocos/core';
 import { EConstraintType } from '../../physics-enum';
 import { IHingeConstraint } from '../../../spec/i-physics-constraint';
 

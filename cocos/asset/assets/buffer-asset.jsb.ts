@@ -21,8 +21,8 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
-import { ccclass, override } from 'cc.decorator';
-import { cclegacy } from '../../core';
+import { ccclass, override } from '@cocos/core/internal';
+import { cclegacy } from '@cocos/core';
 import './asset';
 
 export type BufferAsset = jsb.BufferAsset;

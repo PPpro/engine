@@ -20,8 +20,9 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
-*/
-import { sys } from "../core";
+ */
+
+import { sys } from '@cocos/core';
 import { NATIVE } from 'internal:constants';
 const globalJsb = globalThis.jsb ?? {};
 if (NATIVE) {

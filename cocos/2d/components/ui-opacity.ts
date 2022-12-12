@@ -22,10 +22,10 @@
  THE SOFTWARE.
 */
 
-import { ccclass, disallowMultiple, editable, executeInEditMode, executionOrder, help, menu, serializable, tooltip } from 'cc.decorator';
+import { ccclass, disallowMultiple, editable, executeInEditMode, executionOrder, help, menu, serializable, tooltip } from '@cocos/core/internal';
 import { JSB } from 'internal:constants';
 import { Component } from '../../scene-graph/component';
-import { misc } from '../../core';
+import { misc } from '@cocos/core';
 import { UIRenderer } from '../framework/ui-renderer';
 import { Node } from '../../scene-graph';
 

@@ -22,8 +22,8 @@
  THE SOFTWARE.
 */
 
-import { getError } from '../../core';
-import { ccwindow } from '../../core/global-exports';
+import { getError } from '@cocos/core';
+import { ccwindow } from '@cocos/core/internal';
 import { CompleteCallback, IBundleOptions } from './shared';
 
 const ccdocument = ccwindow.document;

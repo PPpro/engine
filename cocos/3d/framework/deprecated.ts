@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { removeProperty, js, cclegacy } from '../../core';
+import { removeProperty, js, cclegacy } from '@cocos/core';
 import { MeshRenderer } from './mesh-renderer';
 
 removeProperty(MeshRenderer.prototype, 'MeshRenderer.prototype', [

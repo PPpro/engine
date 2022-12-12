@@ -22,17 +22,8 @@
  THE SOFTWARE.
 */
 
-import {
-    ccclass,
-    help,
-    executeInEditMode,
-    menu,
-    tooltip,
-    type,
-    editable,
-    serializable,
-} from 'cc.decorator';
-import { Vec3 } from '../../../../core';
+import { ccclass, help, executeInEditMode, menu, tooltip, type, editable, serializable } from '@cocos/core/internal';
+import { Vec3 } from '@cocos/core';
 import { Collider } from './collider';
 import { IPlaneShape } from '../../../spec/i-physics-shape';
 import { EColliderType } from '../../physics-enum';

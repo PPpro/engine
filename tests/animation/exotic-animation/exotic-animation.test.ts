@@ -1,8 +1,9 @@
-import { lerp, Quat, Vec3 } from '../../../cocos/core';
+import { lerp, Quat, Vec3, misc } from '@cocos/core';
 import { ExoticAnimation } from '../../../cocos/animation/exotic-animation/exotic-animation';
 import { Binder, RuntimeBinding, TrackBinding } from '../../../cocos/animation/tracks/track';
-import { degreesToRadians } from '../../../cocos/core/utils/misc';
 import '../../utils/matcher-deep-close-to';
+
+const { degreesToRadians } = misc;
 
 describe(`Split`, () => {
     describe(`Vec3 split`, () => {

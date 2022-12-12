@@ -32,7 +32,7 @@
 
 import { PhysX } from './physx.asmjs';
 import { BYTEDANCE, DEBUG, EDITOR, TEST } from 'internal:constants';
-import { IQuatLike, IVec3Like, Quat, RecyclePool, Vec3, cclegacy, geometry, Settings, settings } from '../../core';
+import { IQuatLike, IVec3Like, Quat, RecyclePool, Vec3, cclegacy, geometry, Settings, settings } from '@cocos/core';
 import { shrinkPositions } from '../utils/util';
 import { IRaycastOptions } from '../spec/i-physics-world';
 import { IPhysicsConfig, PhysicsRayResult, PhysicsSystem } from '../framework';

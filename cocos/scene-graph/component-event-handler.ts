@@ -23,9 +23,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass, serializable, editable, tooltip } from 'cc.decorator';
+import { ccclass, serializable, editable, tooltip } from '@cocos/core/internal';
 import type { Node } from './node';
-import { legacyCC } from '../core/global-exports';
+import { cclegacy } from '@cocos/core';
 
 /**
  * @en
@@ -155,13 +155,13 @@ export class EventHandler {
      */
     public emit (params: any[]) {
         const target = this.target;
-        if (!legacyCC.isValid(target)) { return; }
+        if (!cclegacy.isValid(target)) { return; }
 
         this._genCompIdIfNeeded();
-        const compType = legacyCC.js.getClassById(this._componentId);
+        const compType = cclegacy.js.getClassById(this._componentId);
 
         const comp = target!.getComponent(compType);
-        if (!legacyCC.isValid(comp)) { return; }
+        if (!cclegacy.isValid(comp)) { return; }
 
         const handler = comp![this.handler];
         if (typeof (handler) !== 'function') { return; }
@@ -175,13 +175,13 @@ export class EventHandler {
     }
 
     private _compName2Id (compName) {
-        const comp = legacyCC.js.getClassByName(compName);
-        return legacyCC.js.getClassId(comp);
+        const comp = cclegacy.js.getClassByName(compName);
+        return cclegacy.js.getClassId(comp);
     }
 
     private _compId2Name (compId) {
-        const comp = legacyCC.js.getClassById(compId);
-        return legacyCC.js.getClassName(comp);
+        const comp = cclegacy.js.getClassById(compId);
+        return cclegacy.js.getClassName(comp);
     }
 
     // to be deprecated in the future

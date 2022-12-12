@@ -22,11 +22,10 @@
  THE SOFTWARE.
 */
 
-import { ccclass, serializable, editable, type } from 'cc.decorator';
+import { ccclass, serializable, editable, type } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
-import { cclegacy } from '../../core';
+import { cclegacy, CCObject } from '@cocos/core';
 import { Prefab } from './prefab';
-import { CCObject } from '../../core/data';
 import { Component } from '../component';
 import { Node } from '../node';
 

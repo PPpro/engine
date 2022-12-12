@@ -23,13 +23,11 @@
  THE SOFTWARE.
 */
 
-import {
-    ccclass, editable, type, displayOrder, menu,
-    executeInEditMode, serializable, playOnFocus, tooltip, visible, formerlySerializedAs, override,
-} from 'cc.decorator';
+import { ccclass, editable, type, displayOrder, menu, executeInEditMode, serializable, playOnFocus, tooltip, visible, formerlySerializedAs } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { UIRenderer } from '../2d/framework/ui-renderer';
-import { Color, Vec2, warnID, errorID, error, path, cclegacy  } from '../core';
+import { Color, Vec2, warnID, errorID, error, path, cclegacy } from '@cocos/core';
+import { ccwindow } from '@cocos/core/internal';
 import { Simulator } from './particle-simulator-2d';
 import { SpriteFrame } from '../2d/assets/sprite-frame';
 import { ImageAsset } from '../asset/assets/image-asset';
@@ -41,7 +39,6 @@ import codec from '../../external/compression/ZipUtils';
 import { IBatcher } from '../2d/renderer/i-batcher';
 import { assetManager, builtinResMgr } from '../asset/asset-manager';
 import { PositionType, EmitterMode, DURATION_INFINITY, START_RADIUS_EQUAL_TO_END_RADIUS, START_SIZE_EQUAL_TO_END_SIZE } from './define';
-import { ccwindow } from '../core/global-exports';
 
 /**
  * Image formats

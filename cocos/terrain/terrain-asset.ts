@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { ccclass, serializable } from 'cc.decorator';
+import { ccclass, serializable } from '@cocos/core/internal';
 import { Asset, Texture2D } from '../asset/assets';
 
 export const TERRAIN_MAX_LEVELS = 4;

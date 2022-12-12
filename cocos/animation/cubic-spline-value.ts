@@ -22,8 +22,8 @@
  THE SOFTWARE.
 */
 
-import { ccclass, serializable } from 'cc.decorator';
-import { Quat, Vec2, Vec3, Vec4 } from '../core';
+import { ccclass, serializable } from '@cocos/core/internal';
+import { Quat, Vec2, Vec3, Vec4 } from '@cocos/core';
 import { ILerpable } from './types';
 
 interface ICubicSplineValue<T> extends ILerpable {

@@ -25,7 +25,7 @@
 import { EDITOR } from 'internal:constants';
 import { Asset } from '../asset/assets';
 import { ArmatureCache } from './ArmatureCache';
-import { Enum, cclegacy, _decorator } from '../core';
+import { Enum, cclegacy, _decorator } from '@cocos/core';
 import { CCFactory } from './CCFactory';
 import { Node } from '../scene-graph';
 

@@ -22,8 +22,8 @@
  THE SOFTWARE.
 */
 
-import { ccclass, tooltip, displayOrder, type, serializable, range, visible } from 'cc.decorator';
-import { pseudoRandom, Vec3 } from '../../core';
+import { ccclass, tooltip, displayOrder, type, serializable, range, visible } from '@cocos/core/internal';
+import { pseudoRandom, Vec3 } from '@cocos/core';
 import { Particle, ParticleModuleBase, PARTICLE_MODULE_NAME } from '../particle';
 import CurveRange from './curve-range';
 import { ModuleRandSeed } from '../enum';

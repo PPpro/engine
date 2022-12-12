@@ -1,7 +1,7 @@
-import { Vec3 } from "../../cocos/core";
-import { physics } from "../../exports/physics-framework";
-import { Node } from "../../cocos/scene-graph";
-import { director } from "../../cocos/game";
+import { Vec3 } from '@cocos/core';
+import { physics } from '../../exports/physics-framework';
+import { Node } from '../../cocos/scene-graph';
+import { director } from '../../cocos/game';
 
 /**
  * This function is used to test stability of the physics

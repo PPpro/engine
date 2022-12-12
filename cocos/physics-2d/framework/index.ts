@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 
 import * as PolygonSeparator from './utils/polygon-separator';
 import * as PolygonPartition from './utils/polygon-partition';

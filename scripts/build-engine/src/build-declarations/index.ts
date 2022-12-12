@@ -7,7 +7,7 @@ import { StatsQuery } from '../stats-query';
 const DEBUG = false;
 const REMOVE_OLD = !DEBUG;
 const RECOMPILE = !DEBUG;
-const REMOVE_UNBUNDLED_CACHE = !DEBUG;
+const REMOVE_UNBUNDLED_CACHE = false;
 
 export async function build (options: {
     engine: string;
@@ -140,13 +140,23 @@ export async function build (options: {
         );
     }
 
-    const types = parsedCommandLine.options.types?.map((typeFile) => `${typeFile}.d.ts`);
-    if (types) {
-        for (const file of types) {
-            const destPath = ps.join(unbundledOutDirNormalized, ps.isAbsolute(file) ? ps.basename(file) : file);
-            await fs.ensureDir(ps.dirname(destPath));
-            await fs.copyFile(file, destPath);
-        }
+    let types = parsedCommandLine.options.types?.map((typeFile) => `${ps.join(engine, typeFile)}.d.ts`);
+    types ??= [];
+    // resolve referenced ambient types
+    const ambientTypesPkgName = fs.readJsonSync(ps.join(engine, 'package.json'))['cc:ambientTypes'];
+    const ambientIndexFile = require.resolve(ambientTypesPkgName);
+    const ambientTypesIndexContent = fs.readFileSync(ambientIndexFile, 'utf8');
+    const referenceRegExp = /\/\/\/ <reference path=["'](.*?)["']\/>/;
+    const ambientTypesPaths = ambientTypesIndexContent.split('\n')
+        .map(path => referenceRegExp.exec(path)?.[1])
+        .filter(relativePath => !!relativePath)
+        .map(relativePath => ps.join(ps.dirname(ambientIndexFile), relativePath as string));
+    types = types.concat(ambientTypesPaths);
+    for (const file of types) {
+        // resolve as types in node modules or ambient types
+        const destPath = ps.join(unbundledOutDirNormalized, file.includes('node_modules') ? '' : '@types', ps.relative(ps.dirname(ambientIndexFile), file));
+        await fs.ensureDir(ps.dirname(destPath));
+        await fs.copyFile(file, destPath);
     }
 
     const giftInputs: string[] = [];

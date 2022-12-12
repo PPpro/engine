@@ -1,5 +1,5 @@
 
-import { lerp, Vec3, warnID } from '../../cocos/core';
+import { lerp, Vec3, warnID } from '@cocos/core';
 import { AnimationBlend1D, AnimationBlend2D, Condition, InvalidTransitionError, VariableNotDefinedError, ClipMotion, AnimationBlendDirect, VariableType, AnimationMask, AnimationGraphVariant } from '../../cocos/animation/marionette/asset-creation';
 import { AnimationGraph, StateMachine, Transition, isAnimationTransition, AnimationTransition, TransitionInterruptionSource, State, Layer } from '../../cocos/animation/marionette/animation-graph';
 import { VariableTypeMismatchedError } from '../../cocos/animation/marionette/errors';
@@ -21,7 +21,7 @@ import { AnimationController } from '../../cocos/animation/marionette/animation-
 import { StateMachineComponent } from '../../cocos/animation/marionette/state-machine-component';
 import { VectorTrack } from '../../cocos/animation/animation';
 import 'jest-extended';
-import { assertIsTrue } from '../../cocos/core/data/utils/asserts';
+import { assertIsTrue } from '@cocos/core/internal';
 import { AnimationClip } from '../../cocos/animation/animation-clip';
 import { TriggerResetMode } from '../../cocos/animation/marionette/variable';
 import { MotionState } from '../../cocos/animation/marionette/motion-state';

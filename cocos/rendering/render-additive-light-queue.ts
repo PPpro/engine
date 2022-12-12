@@ -25,9 +25,8 @@
 import { BatchingSchemes, Pass } from '../render-scene/core/pass';
 import { Model } from '../render-scene/scene/model';
 import { PipelineStateManager } from './pipeline-state-manager';
-import { Vec3, nextPow2, Mat4, Color, Pool, geometry, cclegacy } from '../core';
-import { Device, RenderPass, Buffer, BufferUsageBit, MemoryUsageBit,
-    BufferInfo, BufferViewInfo, CommandBuffer } from '../gfx';
+import { Vec3, nextPow2, Mat4, Color, Pool, geometry, cclegacy } from '@cocos/core';
+import { Device, RenderPass, Buffer, BufferUsageBit, MemoryUsageBit, BufferInfo, BufferViewInfo, CommandBuffer } from '../gfx';
 import { RenderBatchedQueue } from './render-batched-queue';
 import { RenderInstancedQueue } from './render-instanced-queue';
 import { SphereLight } from '../render-scene/scene/sphere-light';

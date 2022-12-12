@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { cclegacy } from '../core';
+import { cclegacy } from '@cocos/core';
 export const RenderPipeline = nr.RenderPipeline;
 // Do not delete, for the class detection of editor
 cclegacy.RenderPipeline = RenderPipeline;

@@ -22,8 +22,8 @@
  THE SOFTWARE.
 */
 
-import { ccclass, serializable } from 'cc.decorator';
-import { RealCurve, Size } from '../../core';
+import { ccclass, serializable } from '@cocos/core/internal';
+import { RealCurve, Size } from '@cocos/core';
 import { CLASS_NAME_PREFIX_ANIM, createEvalSymbol } from '../define';
 import { Channel, RealChannel, RuntimeBinding, Track, TrackEval } from './track';
 import { maskIfEmpty } from './utils';

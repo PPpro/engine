@@ -24,24 +24,20 @@
  THE SOFTWARE.
 */
 
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 
 import { EDITOR } from 'internal:constants';
 import { UIRenderer } from '../2d/framework/ui-renderer';
 import { SpriteFrame } from '../2d/assets/sprite-frame';
 import { Component, Node } from '../scene-graph';
 import { TMXMapInfo } from './tmx-xml-parser';
-import { Color, IVec2Like, Mat4, Size, Vec2, Vec3, warn, logID } from '../core';
+import { Color, IVec2Like, Mat4, Size, Vec2, Vec3, warn, logID, cclegacy } from '@cocos/core';
 import { TiledTile } from './tiled-tile';
 import { RenderData } from '../2d/renderer/render-data';
 import { IBatcher } from '../2d/renderer/i-batcher.js';
-import {
-    MixedGID, GID, Orientation, TiledTextureGrids, TMXTilesetInfo, RenderOrder, StaggerAxis, StaggerIndex, TileFlag,
-    GIDFlags, TiledAnimationType, PropertiesInfo, TMXLayerInfo,
-} from './tiled-types';
+import { MixedGID, GID, Orientation, TiledTextureGrids, TMXTilesetInfo, RenderOrder, StaggerAxis, StaggerIndex, TileFlag, GIDFlags, TiledAnimationType, PropertiesInfo, TMXLayerInfo } from './tiled-types';
 import { fillTextureGrids } from './tiled-utils';
 import { NodeEventType } from '../scene-graph/node-event';
-import { legacyCC } from '../core/global-exports';
 import { RenderEntity, RenderEntityType } from '../2d/renderer/render-entity';
 import { RenderDrawInfo, RenderDrawInfoType } from '../2d/renderer/render-draw-info';
 import { Texture2D } from '../asset/assets';
@@ -849,7 +845,7 @@ export class TiledLayer extends UIRenderer {
     }
 
     public updateCulling () {
-        if (EDITOR && !legacyCC.GAME_VIEW) {
+        if (EDITOR && !cclegacy.GAME_VIEW) {
             this.enableCulling = false;
         } else if (this._enableCulling) {
             this.node.updateWorldTransform();

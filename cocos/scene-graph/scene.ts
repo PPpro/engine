@@ -22,13 +22,11 @@
  THE SOFTWARE.
 */
 
-import { ccclass, serializable, editable } from 'cc.decorator';
+import { ccclass, serializable, editable } from '@cocos/core/internal';
 import { EDITOR, TEST } from 'internal:constants';
-import { CCObject } from '../core/data/object';
-import { assert, getError } from '../core/platform/debug';
+import { CCObject, assert, getError, cclegacy } from '@cocos/core';
 import { RenderScene } from '../render-scene/core/render-scene';
 import { Node } from './node';
-import { legacyCC } from '../core/global-exports';
 import { Component } from './component';
 import { SceneGlobals } from './scene-globals';
 import { applyTargetOverrides, expandNestedPrefabInstanceNode } from './prefab/utils';
@@ -88,10 +86,10 @@ export class Scene extends Node {
     constructor (name: string) {
         super(name);
         this._activeInHierarchy = false;
-        if (legacyCC.director && legacyCC.director.root) {
-            this._renderScene = legacyCC.director.root.createScene({});
+        if (cclegacy.director && cclegacy.director.root) {
+            this._renderScene = cclegacy.director.root.createScene({});
         }
-        this._inited = legacyCC.game ? !legacyCC.game._isCloning : true;
+        this._inited = cclegacy.game ? !cclegacy.game._isCloning : true;
     }
 
     /**
@@ -106,7 +104,7 @@ export class Scene extends Node {
                 children[i].active = false;
             }
         }
-        if (this._renderScene) legacyCC.director.root.destroyScene(this._renderScene);
+        if (this._renderScene) cclegacy.director.root.destroyScene(this._renderScene);
         this._active = false;
         this._activeInHierarchy = false;
         return success;
@@ -183,7 +181,7 @@ export class Scene extends Node {
             // @ts-expect-error Polyfilled functions in node-dev.ts
             this._registerIfAttached!(active);
         }
-        legacyCC.director._nodeActivator.activateNode(this, active);
+        cclegacy.director._nodeActivator.activateNode(this, active);
         // The test environment does not currently support the renderer
         if (!TEST) {
             this._globals.activate(this);
@@ -191,4 +189,4 @@ export class Scene extends Node {
     }
 }
 
-legacyCC.Scene = Scene;
+cclegacy.Scene = Scene;

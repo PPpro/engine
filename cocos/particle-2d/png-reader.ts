@@ -26,8 +26,8 @@
  THE SOFTWARE.
 */
 
-import { getError } from '../core';
-import  zlib  from '../../external/compression/zlib.min';
+import { getError } from '@cocos/core';
+import zlib from '../../external/compression/zlib.min';
 
 /**
  * A png file reader

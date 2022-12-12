@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 import { Color, Rect, Framebuffer, DescriptorSet } from '../../gfx';
 import { IRenderStageInfo, RenderStage } from '../render-stage';
 import { ForwardStagePriority } from '../enum';

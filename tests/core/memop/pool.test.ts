@@ -1,4 +1,4 @@
-import { Pool } from '../../../cocos/core/memop/pool';
+import { Pool } from '@cocos/core';
 
 class Test {
     public tag: number;

@@ -27,7 +27,7 @@
  * @category pipeline.deferred
  */
 
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 import { Camera } from '../../render-scene/scene';
 import { PIPELINE_FLOW_MAIN } from '../define';
 import { IRenderFlowInfo, RenderFlow } from '../render-flow';

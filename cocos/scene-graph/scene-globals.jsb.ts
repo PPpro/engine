@@ -20,26 +20,11 @@
  THE SOFTWARE.
 */
 
-import {
-    displayName,
-    editable,
-    formerlySerializedAs,
-    range,
-    readOnly,
-    serializable,
-    tooltip,
-    type,
-    visible
-    // @ts-ignore
-} from 'cc.decorator';
-import { legacyCC } from '../core/global-exports';
-import { CCFloat, CCInteger } from '../core/data';
+import { cclegacy, CCFloat, CCInteger, Enum, Vec2, Vec3, Color, Vec4 } from '@cocos/core';
+import { displayName, editable, formerlySerializedAs, range, readOnly, serializable, tooltip, type, visible, ccclass, displayOrder, rangeMin, rangeStep, slide } from '@cocos/core/internal';
 import { TextureCube } from '../asset/assets/texture-cube';
-import { Enum } from '../core/value-types';
-import { ccclass, displayOrder, rangeMin, rangeStep, slide } from '../core/data/decorators';
 import { Ambient, EnvironmentLightingType } from '../render-scene/scene';
 import { Material } from '../asset/assets/material';
-import { Vec2, Vec3, Color, Vec4 } from '../core/math';
 
 export const DEFAULT_WORLD_MIN_POS = new Vec3(-1024.0, -1024.0, -1024.0);
 export const DEFAULT_WORLD_MAX_POS = new Vec3(1024.0, 1024.0, 1024.0);
@@ -149,33 +134,33 @@ export const ShadowType = Enum({
 
 // @ts-ignore
 export const AmbientInfo = jsb.AmbientInfo;
-legacyCC.AmbientInfo = AmbientInfo;
+cclegacy.AmbientInfo = AmbientInfo;
 
 // @ts-ignore
 export const SkyboxInfo = jsb.SkyboxInfo;
-legacyCC.SkyboxInfo = SkyboxInfo;
+cclegacy.SkyboxInfo = SkyboxInfo;
 
 
 // @ts-ignore
 export const FogInfo = jsb.FogInfo;
-legacyCC.FogInfo = FogInfo;
+cclegacy.FogInfo = FogInfo;
 FogInfo.FogType = FogType;
 
 // @ts-ignore
 export const ShadowsInfo = jsb.ShadowsInfo;
-legacyCC.ShadowsInfo = ShadowsInfo;
+cclegacy.ShadowsInfo = ShadowsInfo;
 
 // @ts-ignore
 export const OctreeInfo = jsb.OctreeInfo;
-legacyCC.OctreeInfo = OctreeInfo;
+cclegacy.OctreeInfo = OctreeInfo;
 
 // @ts-ignore
 export const LightProbeInfo = jsb.LightProbeInfo;
-//legacyCC.LightProbeInfo = LightProbeInfo;
+//cclegacy.LightProbeInfo = LightProbeInfo;
 
 // @ts-ignore
 export const SceneGlobals = jsb.SceneGlobals;
-legacyCC.SceneGlobals = SceneGlobals;
+cclegacy.SceneGlobals = SceneGlobals;
 
 (function () {
     const sceneGlobalsProto: any = SceneGlobals.prototype;
@@ -276,7 +261,7 @@ legacyCC.SceneGlobals = SceneGlobals;
 
 
 function ambientSkyLightEnable() {
-    const scene = legacyCC.director.getScene();
+    const scene = cclegacy.director.getScene();
     const skybox = scene.globals.skybox;
     if (skybox.useIBL && skybox.applyDiffuseMap) {
         return false;

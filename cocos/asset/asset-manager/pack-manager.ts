@@ -25,7 +25,7 @@
 import { ImageAsset } from '../assets/image-asset';
 import { Texture2D } from '../assets/texture-2d';
 import { packCustomObjData, unpackJSONs } from '../../serialization/deserialize';
-import { error, errorID, js } from '../../core';
+import { error, errorID, js } from '@cocos/core';
 import Cache from './cache';
 import downloader from './downloader';
 import { transform } from './helper';

@@ -22,11 +22,12 @@
  THE SOFTWARE.
 */
 
-import { ccclass, serializable } from 'cc.decorator';
+import { ccclass, serializable } from '@cocos/core/internal';
 import { DEBUG } from 'internal:constants';
 import { Asset } from '../asset/assets/asset';
 import { SpriteFrame } from '../2d/assets/sprite-frame';
-import { errorID, warnID, cclegacy, js, geometry, approx, clamp, Mat4, Quat, Vec3, murmurhash2_32_gc, binarySearchEpsilon, assertIsTrue } from '../core';
+import { errorID, warnID, cclegacy, js, geometry, approx, clamp, Mat4, Quat, Vec3, murmurhash2_32_gc } from '@cocos/core';
+import { binarySearchEpsilon, assertIsTrue } from '@cocos/core/internal';
 import { SkelAnimDataHub } from '../3d/skeletal-animation/skeletal-animation-data-hub';
 import { WrapMode as AnimationWrapMode, WrapMode } from './types';
 import { Node } from '../scene-graph/node';

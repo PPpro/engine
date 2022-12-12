@@ -23,9 +23,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass, serializable, editable } from 'cc.decorator';
+import { ccclass, serializable, editable } from '@cocos/core/internal';
 import { Asset } from './asset';
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 
 /**
  * @en Class for text file.

@@ -23,7 +23,7 @@
 */
 
 import CANNON from '@cocos/cannon';
-import { Vec3, Quat, IVec3Like, geometry } from '../../../core';
+import { Vec3, Quat, IVec3Like, geometry } from '@cocos/core';
 import { getWrap, setWrap } from '../../utils/util';
 import { commitShapeUpdates } from '../cannon-util';
 import { PhysicsMaterial } from '../../framework/assets/physics-material';

@@ -24,7 +24,7 @@
 
 import { OwnedBy, ownerSymbol } from './ownership';
 import type { Layer, StateMachine, TransitionInternal } from './animation-graph';
-import { EditorExtendable, js, editorExtrasTag, _decorator } from '../../core';
+import { EditorExtendable, js, editorExtrasTag, _decorator } from '@cocos/core';
 import { CLASS_NAME_PREFIX_ANIM } from '../define';
 import { StateMachineComponent } from './state-machine-component';
 import { instantiate } from '../../serialization/instantiate';

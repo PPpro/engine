@@ -26,7 +26,7 @@ import { JSB } from 'internal:constants';
 import { IConfig, FontLetterDefinition, FontAtlas } from '../../assets/bitmap-font';
 import { SpriteFrame } from '../../assets/sprite-frame';
 import { isUnicodeCJK, isUnicodeSpace } from '../../utils/text-utils';
-import { Rect, Size, Vec2 } from '../../../core';
+import { Rect, Size, Vec2 } from '@cocos/core';
 import { HorizontalTextAlignment, VerticalTextAlignment, Label, Overflow, CacheMode } from '../../components/label';
 import { UITransform } from '../../framework/ui-transform';
 import { LetterAtlas, shareLabelInfo } from './font-utils';

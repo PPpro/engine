@@ -20,8 +20,9 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
-*/
-import { Mat3, EPSILON, Vec3, _decorator } from '../../core';
+ */
+
+import { Mat3, EPSILON, Vec3, _decorator } from '@cocos/core';
 
 const { ccclass, serializable } = _decorator;
 

@@ -23,7 +23,7 @@
 */
 
 import { AudioPlayer, OneShotAudio } from 'pal/audio';
-import { js } from '../core';
+import { js } from '@cocos/core';
 
 type ManagedAudio = AudioPlayer | OneShotAudio;
 interface AudioInfo<T> {

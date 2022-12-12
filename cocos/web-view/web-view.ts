@@ -22,14 +22,14 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executeInEditMode, menu, tooltip, type, displayOrder, serializable, requireComponent } from 'cc.decorator';
+import { ccclass, help, executeInEditMode, menu, tooltip, type, displayOrder, serializable, requireComponent } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { UITransform } from '../2d/framework';
 import { Component, EventHandler as ComponentEventHandler } from '../scene-graph';
 import { WebViewImplManager } from './web-view-impl-manager';
 import { EventType } from './web-view-enums';
-import { legacyCC } from '../core/global-exports';
-import type { WebViewImpl  } from './web-view-impl';
+import { cclegacy } from '@cocos/core';
+import type { WebViewImpl } from './web-view-impl';
 
 /**
  * @en
@@ -162,7 +162,7 @@ export class WebView extends Component {
     }
 
     public __preload () {
-        if (EDITOR && !legacyCC.GAME_VIEW) {
+        if (EDITOR && !cclegacy.GAME_VIEW) {
             return;
         }
         this._impl = WebViewImplManager.getImpl(this);
@@ -215,4 +215,4 @@ export class WebView extends Component {
 }
 
 // TODO Since jsb adapter does not support import cc, put it on internal first and adjust it later.
-legacyCC.internal.WebView = WebView;
+cclegacy.internal.WebView = WebView;

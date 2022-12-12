@@ -24,7 +24,7 @@
 
 declare const gfx: any;
 
-import { cclegacy } from '../core';
+import { cclegacy } from '@cocos/core';
 import * as defines from './base/define';
 import * as pso from './base/pipeline-state';
 

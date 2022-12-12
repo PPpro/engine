@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 import { CLASS_NAME_PREFIX_ANIM } from '../define';
 import type { AnimationController, MotionStateStatus } from './animation-controller';
 

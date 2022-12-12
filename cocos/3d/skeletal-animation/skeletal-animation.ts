@@ -22,11 +22,10 @@
  THE SOFTWARE.
 */
 
-import {
-    ccclass, executeInEditMode, executionOrder, help, menu, tooltip, type, serializable, editable,
-} from 'cc.decorator';
+import { ccclass, executeInEditMode, executionOrder, help, menu, tooltip, type, serializable, editable } from '@cocos/core/internal';
 import { SkinnedMeshRenderer } from '../skinned-mesh-renderer';
-import { Mat4, cclegacy, js, assertIsTrue } from '../../core';
+import { Mat4, cclegacy, js } from '@cocos/core';
+import { assertIsTrue } from '@cocos/core/internal';
 import { DataPoolManager } from './data-pool-manager';
 import { Node } from '../../scene-graph/node';
 import { AnimationClip } from '../../animation/animation-clip';

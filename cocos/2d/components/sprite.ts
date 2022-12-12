@@ -23,11 +23,11 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executionOrder, menu, tooltip, displayOrder, type, range, editable, serializable, visible } from 'cc.decorator';
+import { ccclass, help, executionOrder, menu, tooltip, displayOrder, type, range, editable, serializable, visible } from '@cocos/core/internal';
 import { BUILD, EDITOR } from 'internal:constants';
 import { SpriteAtlas } from '../assets/sprite-atlas';
 import { SpriteFrame } from '../assets/sprite-frame';
-import { Vec2, cclegacy, ccenum, clamp } from '../../core';
+import { Vec2, cclegacy, ccenum, clamp } from '@cocos/core';
 import { IBatcher } from '../renderer/i-batcher';
 import { UIRenderer, InstanceMaterialType } from '../framework/ui-renderer';
 import { PixelFormat } from '../../asset/assets/asset-enum';

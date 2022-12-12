@@ -23,7 +23,7 @@
 */
 
 import { DEBUG } from 'internal:constants';
-import { assert, js } from '../../core';
+import { assert, js } from '@cocos/core';
 import { UIMeshRenderer } from '../components';
 import { UIRenderer } from './ui-renderer';
 

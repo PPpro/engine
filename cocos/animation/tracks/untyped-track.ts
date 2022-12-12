@@ -22,8 +22,8 @@
  THE SOFTWARE.
 */
 
-import { ccclass, serializable } from 'cc.decorator';
-import { RealCurve, Color, Size, Vec2, Vec3, Vec4, getError } from '../../core';
+import { ccclass, serializable } from '@cocos/core/internal';
+import { RealCurve, Color, Size, Vec2, Vec3, Vec4, getError } from '@cocos/core';
 import { CLASS_NAME_PREFIX_ANIM, createEvalSymbol } from '../define';
 import { IValueProxyFactory } from '../value-proxy';
 import { ColorTrack, ColorTrackEval } from './color-track';

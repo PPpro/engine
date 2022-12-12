@@ -25,7 +25,7 @@
 import { Joint2D } from './joint-2d';
 import { IDistanceJoint } from '../../../spec/i-physics-joint';
 import { EJoint2DType } from '../../physics-types';
-import { Vec3, _decorator } from '../../../../core';
+import { Vec3, _decorator } from '@cocos/core';
 
 const { ccclass, menu, property } = _decorator;
 

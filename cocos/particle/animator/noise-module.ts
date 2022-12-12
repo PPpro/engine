@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { CCFloat, CCInteger, _decorator, Vec3 } from '../../core';
+import { CCFloat, CCInteger, _decorator, Vec3 } from '@cocos/core';
 import { ParticleNoise } from '../noise';
 import { Particle, PARTICLE_MODULE_NAME, ParticleModuleBase } from '../particle';
 

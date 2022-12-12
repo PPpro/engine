@@ -1,1 +1,1 @@
-export * from '../../cocos/core/platform/macro';
+export { macro, type Macro } from '@cocos/core';

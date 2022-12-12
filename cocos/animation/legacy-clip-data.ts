@@ -24,8 +24,8 @@
 
 import { ComponentPath, HierarchyPath, TargetPath } from './target-path';
 import { IValueProxyFactory } from './value-proxy';
-import { easing, QuatCurve, QuatInterpolationMode, RealCurve, RealInterpolationMode, RealKeyframeValue, TangentWeightMode,
-    warnID, Color, Quat, Size, Vec2, Vec3, Vec4, assertIsTrue, EasingMethod, BezierControlPoints, CompactValueTypeArray } from '../core';
+import { easing, QuatCurve, QuatInterpolationMode, RealCurve, RealInterpolationMode, RealKeyframeValue, TangentWeightMode, warnID, Color, Quat, Size, Vec2, Vec3, Vec4, BezierControlPoints, CompactValueTypeArray } from '@cocos/core';
+import { assertIsTrue, EasingMethod } from '@cocos/core/internal';
 import { AnimCurve, RatioSampler } from './animation-curve';
 import { Track, TrackPath } from './tracks/track';
 import { UntypedTrack } from './tracks/untyped-track';

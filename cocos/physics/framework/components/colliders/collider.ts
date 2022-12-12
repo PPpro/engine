@@ -23,9 +23,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass, tooltip, displayOrder, displayName, readOnly, type, serializable } from 'cc.decorator';
+import { ccclass, tooltip, displayOrder, displayName, readOnly, type, serializable } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
-import { Eventify, Vec3, error, geometry } from '../../../../core';
+import { Eventify, Vec3, error, geometry } from '@cocos/core';
 import { CollisionEventType, TriggerEventType } from '../../physics-interface';
 import { RigidBody } from '../rigid-body';
 import { PhysicsMaterial } from '../../assets/physics-material';

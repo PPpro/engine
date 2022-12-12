@@ -23,9 +23,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 import { Asset } from '../../asset/assets';
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 
 /**
  * @en Class for Font handling.

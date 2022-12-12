@@ -23,7 +23,7 @@
 */
 
 import { director } from '../game/director';
-import { System, cclegacy } from '../core';
+import { System, cclegacy } from '@cocos/core';
 import { ArmatureDisplay } from './ArmatureDisplay';
 
 export class ArmatureSystem extends System {

@@ -22,8 +22,8 @@
  THE SOFTWARE.
 */
 
-import { ccclass } from 'cc.decorator';
-import { System, errorID, cclegacy, js } from '../core';
+import { ccclass } from '@cocos/core/internal';
+import { System, errorID, cclegacy, js } from '@cocos/core';
 import { director, Director } from '../game/director';
 import { Node } from '../scene-graph';
 import { LegacyBlendStateBuffer } from '../3d/skeletal-animation/skeletal-animation-blending';

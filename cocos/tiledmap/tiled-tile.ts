@@ -33,10 +33,10 @@
  * @extends Component
  */
 
-import { ccclass, executeInEditMode, help, menu, requireComponent, type } from 'cc.decorator';
+import { ccclass, executeInEditMode, help, menu, requireComponent, type } from '@cocos/core/internal';
 import { Component } from '../scene-graph/component';
 import { TiledLayer } from './tiled-layer';
-import { CCInteger, warn } from '../core';
+import { CCInteger, warn } from '@cocos/core';
 import { UITransform } from '../2d/framework';
 import { NodeEventType } from '../scene-graph/node-event';
 

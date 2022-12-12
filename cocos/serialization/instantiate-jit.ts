@@ -26,7 +26,8 @@
 // Some helper methods for compile instantiation code
 
 import { TEST } from 'internal:constants';
-import { CCClass, isCCClassOrFastDefined, js, CCObject, isCCObject, cclegacy, flattenCodeArray } from '../core';
+import { CCClass, isCCClassOrFastDefined, js, CCObject, cclegacy } from '@cocos/core';
+import { isCCObject, flattenCodeArray } from '@cocos/core/internal';
 
 const Destroyed = CCObject.Flags.Destroyed;
 const PersistentMask = CCObject.Flags.PersistentMask;

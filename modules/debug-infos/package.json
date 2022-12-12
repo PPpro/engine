@@ -1,0 +1,12 @@
+{
+    "name": "@cocos/debug-infos",
+    "description": "This is a temporary module",
+    "scripts": {
+        "build": "node ./scripts/buildDebugInfos.js"
+    },
+    "exports": {
+        ".": {
+            "default": "./index.ts"
+        }
+    }
+}

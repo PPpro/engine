@@ -22,15 +22,11 @@
  THE SOFTWARE.
 */
 
-import { ccclass, displayOrder, serializable, type } from 'cc.decorator';
-import { systemInfo } from 'pal/system-info';
+import { ccclass, displayOrder, serializable, type } from '@cocos/core/internal';
+import { systemInfo, OS } from '@pal/system-info';
 import { sceneCulling, validPunctualLightsCulling } from './scene-culling';
 import { Asset } from '../asset/assets/asset';
-import { AccessFlagBit, Attribute, Buffer, BufferInfo, BufferUsageBit, ClearFlagBit, ClearFlags, ColorAttachment, CommandBuffer,
-    DepthStencilAttachment, DescriptorSet, Device, Feature, Format, FormatFeatureBit, Framebuffer, FramebufferInfo, InputAssembler,
-    InputAssemblerInfo, LoadOp, MemoryUsageBit, Rect, RenderPass, RenderPassInfo, Sampler, StoreOp, SurfaceTransform, Swapchain,
-    Texture, TextureInfo, TextureType, TextureUsageBit, Viewport, GeneralBarrierInfo, deviceManager,
-} from '../gfx';
+import { AccessFlagBit, Attribute, Buffer, BufferInfo, BufferUsageBit, ClearFlagBit, ClearFlags, ColorAttachment, CommandBuffer, DepthStencilAttachment, DescriptorSet, Device, Feature, Format, FormatFeatureBit, Framebuffer, FramebufferInfo, InputAssembler, InputAssemblerInfo, LoadOp, MemoryUsageBit, Rect, RenderPass, RenderPassInfo, Sampler, StoreOp, SurfaceTransform, Swapchain, Texture, TextureInfo, TextureType, TextureUsageBit, Viewport, GeneralBarrierInfo, deviceManager } from '../gfx';
 import { MacroRecord } from '../render-scene/core/pass-utils';
 import { RenderWindow } from '../render-scene/core/render-window';
 import { Camera, SKYBOX_FLAG } from '../render-scene/scene/camera';
@@ -42,8 +38,7 @@ import { PipelineUBO } from './pipeline-ubo';
 import { RenderFlow } from './render-flow';
 import { IPipelineEvent, PipelineEventProcessor, PipelineEventType } from './pipeline-event';
 import { decideProfilerCamera } from './pipeline-funcs';
-import { OS } from '../../pal/system-info/enum-type';
-import { macro, murmurhash2_32_gc, cclegacy } from '../core';
+import { macro, murmurhash2_32_gc, cclegacy } from '@cocos/core';
 import { UBOSkinning } from './define';
 import { PipelineRuntime } from './custom/pipeline';
 

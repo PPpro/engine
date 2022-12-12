@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 import { EDITOR } from 'internal:constants';
-import { ccclass } from 'cc.decorator';
+import { ccclass } from '@cocos/core/internal';
 import { IRenderFlowInfo, RenderFlow } from '../render-flow';
 import { ReflectionProbeStage } from './reflection-probe-stage';
 import { RenderFlowTag } from '../pipeline-serialization';

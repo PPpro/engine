@@ -23,10 +23,10 @@
  THE SOFTWARE.
 */
 
-import { ccclass, type, serializable, editable } from 'cc.decorator';
+import { ccclass, type, serializable, editable } from '@cocos/core/internal';
 import { Font } from './font';
 import { SpriteFrame } from './sprite-frame';
-import { cclegacy, js, warn } from '../../core';
+import { cclegacy, js, warn } from '@cocos/core';
 
 export interface IConfig {
     [key: string]: any;

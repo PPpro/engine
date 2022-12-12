@@ -22,15 +22,8 @@
  THE SOFTWARE.
 */
 
-import { murmurhash2_32_gc } from '../../core';
-import {
-    GFXObject,
-    ObjectType,
-    ColorAttachment,
-    DepthStencilAttachment,
-    SubpassInfo,
-    RenderPassInfo,
-} from './define';
+import { murmurhash2_32_gc } from '@cocos/core';
+import { GFXObject, ObjectType, ColorAttachment, DepthStencilAttachment, SubpassInfo, RenderPassInfo } from './define';
 
 /**
  * @en GFX render pass.

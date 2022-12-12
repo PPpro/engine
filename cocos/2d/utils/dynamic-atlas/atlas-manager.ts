@@ -23,7 +23,7 @@
 */
 
 import { EDITOR } from 'internal:constants';
-import { System, macro, js, cclegacy } from '../../../core';
+import { System, macro, js, cclegacy } from '@cocos/core';
 import { Filter } from '../../../asset/assets/asset-enum';
 import { Atlas } from './atlas';
 import { director } from '../../../game';

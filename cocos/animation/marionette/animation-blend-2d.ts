@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { Vec2, _decorator, ccenum } from '../../core';
+import { Vec2, _decorator, ccenum } from '@cocos/core';
 import { createEval } from './create-eval';
 import { AnimationBlend, AnimationBlendEval, AnimationBlendItem } from './animation-blend';
 import { MotionEvalContext } from './motion';

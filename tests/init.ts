@@ -27,7 +27,7 @@ jest.mock(
 );
 
 jest.mock(
-    'pal/system-info',
+    '@pal/system-info',
     () => jest.requireActual('../pal/system-info/web/system-info'),
     { virtual: true, },
 );
@@ -91,7 +91,7 @@ jest.mock('serialization-test-helper/run-test', () => {
 });
 
 import '../exports/base';
-import { DebugMode } from "../cocos/core/platform/debug";
+import { DebugMode } from '@cocos/core';
 import { EffectAsset, Game, game, IGameConfig } from '../exports/base';
 import './asset-manager/init';
 import '../cocos/gfx/empty/empty-device';

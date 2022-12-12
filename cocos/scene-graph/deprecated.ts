@@ -23,15 +23,10 @@
 */
 
 import { EDITOR } from 'internal:constants';
-import { ccclass } from 'cc.decorator';
-import { replaceProperty, removeProperty } from '../core/utils/x-deprecated';
+import { ccclass } from '@cocos/core/internal';
+import { replaceProperty, removeProperty, Vec2, Size, cclegacy, CCObject, warnID } from '@cocos/core';
 import { Layers } from './layers';
 import { Node } from './node';
-import { Vec2 } from '../core/math/vec2';
-import { Size } from '../core/math/size';
-import { legacyCC } from '../core/global-exports';
-import { CCObject } from '../core/data/object';
-import { warnID } from '../core/platform/debug';
 import { SceneGlobals } from './scene-globals';
 import { SystemEventType } from '../input/types';
 import { SystemEvent } from '../input';
@@ -365,4 +360,4 @@ replaceProperty(Node.EventType, 'Node.EventType', [
     },
 ]);
 
-legacyCC.PrivateNode = PrivateNode;
+cclegacy.PrivateNode = PrivateNode;

@@ -23,9 +23,10 @@
 */
 import { EDITOR, TEST } from 'internal:constants';
 import { Asset } from '../assets';
-import { js, cclegacy } from '../../core';
+import { js, cclegacy } from '@cocos/core';
 import Cache from './cache';
-import { decodeUuid, normalize } from './helper';
+import { decodeUuid } from '@cocos/core/internal';
+import { normalize } from './helper';
 import { AssetType } from './shared';
 
 export interface IConfigOption {

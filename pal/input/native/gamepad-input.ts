@@ -24,13 +24,11 @@
 
 /* eslint-disable brace-style */
 import { GamepadCallback } from 'pal/input';
-import { systemInfo } from 'pal/system-info';
+import { systemInfo, Feature } from '@pal/system-info';
 import { InputEventType } from '../../../cocos/input/types/event-enum';
-import { Feature } from '../../system-info/enum-type';
-import { EventTarget } from '../../../cocos/core/event/event-target';
+import { EventTarget, js } from '@cocos/core';
 import { EventGamepad } from '../../../cocos/input/types';
 import { InputSourceButton, InputSourceDpad, InputSourceStick } from '../input-source';
-import { js } from '../../../cocos/core';
 
 enum Button {
     BUTTON_SOUTH,

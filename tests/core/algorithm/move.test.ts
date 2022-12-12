@@ -1,4 +1,4 @@
-import { shift } from '../../../cocos/core/algorithm/move';
+import { shift } from '@cocos/core/internal';
 
 describe('Array utils', () => {
     describe('Shift', () => {

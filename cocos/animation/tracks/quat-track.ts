@@ -22,8 +22,8 @@
  THE SOFTWARE.
 */
 
-import { ccclass } from 'cc.decorator';
-import { QuatCurve, Quat } from '../../core';
+import { ccclass } from '@cocos/core/internal';
+import { QuatCurve, Quat } from '@cocos/core';
 import { CLASS_NAME_PREFIX_ANIM, createEvalSymbol } from '../define';
 import { SingleChannelTrack, TrackEval } from './track';
 

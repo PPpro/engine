@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { debug, error, errorID, CachedArray, cclegacy } from '../../core';
+import { debug, error, errorID, CachedArray, cclegacy } from '@cocos/core';
 import { WebGLCommandAllocator } from './webgl-command-allocator';
 import { WebGLEXT } from './webgl-define';
 import { WebGLDevice } from './webgl-device';
@@ -37,7 +37,6 @@ import {
     IndirectBuffer, DynamicStates, Extent, getTypedArrayConstructor, formatAlignment, Offset, alignTo,
     TextureBlit, Filter,
 } from '../base/define';
-import { WebGLStateCache } from './webgl-state-cache';
 
 export function GFXFormatToWebGLType (format: Format, gl: WebGLRenderingContext): GLenum {
     switch (format) {

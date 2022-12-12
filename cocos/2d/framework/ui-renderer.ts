@@ -23,11 +23,8 @@
 */
 
 import { DEBUG, EDITOR, JSB } from 'internal:constants';
-import {
-    ccclass, executeInEditMode, requireComponent, tooltip,
-    type, displayOrder, serializable, override, visible, displayName, disallowAnimation,
-} from 'cc.decorator';
-import { Color, assert, ccenum, cclegacy } from '../../core';
+import { ccclass, executeInEditMode, requireComponent, tooltip, type, displayOrder, serializable, override, visible, displayName, disallowAnimation } from '@cocos/core/internal';
+import { Color, assert, ccenum, cclegacy } from '@cocos/core';
 import { builtinResMgr } from '../../asset/asset-manager';
 import { Material } from '../../asset/assets';
 import { BlendFactor } from '../../gfx';

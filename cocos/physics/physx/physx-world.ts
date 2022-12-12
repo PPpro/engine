@@ -25,13 +25,10 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import { IPhysicsWorld, IRaycastOptions } from '../spec/i-physics-world';
 import { PhysicsMaterial, PhysicsRayResult, CollisionEventType, TriggerEventType } from '../framework';
-import { error, RecyclePool, js, IVec3Like, geometry } from '../../core';
+import { error, RecyclePool, js, IVec3Like, geometry } from '@cocos/core';
 import { IBaseConstraint } from '../spec/i-physics-constraint';
 import { PhysXRigidBody } from './physx-rigid-body';
-import {
-    addActorToScene, raycastAll, simulateScene, initializeWorld, raycastClosest,
-    gatherEvents, getWrapShape, PX, getContactDataOrByteOffset,
-} from './physx-adapter';
+import { addActorToScene, raycastAll, simulateScene, initializeWorld, raycastClosest, gatherEvents, getWrapShape, PX, getContactDataOrByteOffset } from './physx-adapter';
 import { PhysXSharedBody } from './physx-shared-body';
 import { TupleDictionary } from '../utils/tuple-dictionary';
 import { PhysXContactEquation } from './physx-contact-equation';

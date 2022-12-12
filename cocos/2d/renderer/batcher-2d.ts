@@ -27,9 +27,9 @@ import { Camera, Model } from '../../render-scene/scene';
 import type { UIStaticBatch } from '../components/ui-static-batch';
 import { Material } from '../../asset/assets/material';
 import { RenderRoot2D, UIRenderer } from '../framework';
-import { Texture, Device, Attribute, Sampler, DescriptorSetInfo, Buffer,
-    BufferInfo, BufferUsageBit, MemoryUsageBit, DescriptorSet, InputAssembler, deviceManager, PrimitiveMode } from '../../gfx';
-import { CachedArray, Pool, Mat4, cclegacy, assertIsTrue } from '../../core';
+import { Texture, Device, Attribute, Sampler, DescriptorSetInfo, Buffer, BufferInfo, BufferUsageBit, MemoryUsageBit, DescriptorSet, InputAssembler, deviceManager, PrimitiveMode } from '../../gfx';
+import { CachedArray, Pool, Mat4, cclegacy } from '@cocos/core';
+import { assertIsTrue } from '@cocos/core/internal';
 import { Root } from '../../root';
 import { Node } from '../../scene-graph';
 import { Stage, StencilManager } from './stencil-manager';

@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import {  Mat4, errorID } from '../../../core';
+import { Mat4, errorID } from '@cocos/core';
 import { IRenderData, RenderData } from '../../renderer/render-data';
 import { IBatcher } from '../../renderer/i-batcher';
 import { Sprite } from '../../components';

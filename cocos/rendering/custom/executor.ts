@@ -29,15 +29,10 @@
  */
 /* eslint-disable max-len */
 import { getPhaseID, InstancedBuffer, PipelineStateManager } from '..';
-import { assert, cclegacy } from '../../core';
-import intersect from '../../core/geometry/intersect';
-import { Sphere } from '../../core/geometry/sphere';
+import { assert, geometry, cclegacy, Vec3, Vec4 } from '@cocos/core';
 import { AccessFlagBit, Attribute, Buffer, BufferInfo, BufferUsageBit, BufferViewInfo, Color, ColorAttachment, CommandBuffer, DepthStencilAttachment, DescriptorSet, DescriptorSetInfo, Device, deviceManager, Format, Framebuffer,
     FramebufferInfo, GeneralBarrierInfo, InputAssemblerInfo, LoadOp, MemoryUsageBit, PipelineState, Rect, RenderPass, RenderPassInfo, Sampler, SamplerInfo, StoreOp, SurfaceTransform, Swapchain, Texture, TextureInfo,
     TextureType, TextureUsageBit, Viewport } from '../../gfx';
-import { legacyCC } from '../../core/global-exports';
-import { Vec3 } from '../../core/math/vec3';
-import { Vec4 } from '../../core/math/vec4';
 import { BatchingSchemes } from '../../render-scene';
 import { Camera } from '../../render-scene/scene/camera';
 import { ShadowType } from '../../render-scene/scene/shadows';
@@ -48,9 +43,7 @@ import { PipelineSceneData } from '../pipeline-scene-data';
 import { PipelineInputAssemblerData } from '../render-pipeline';
 import { LayoutGraphData, PipelineLayoutData, RenderPhaseData, RenderStageData } from './layout-graph';
 import { Pipeline, SceneVisitor } from './pipeline';
-import { Blit, ClearView, ComputePass, CopyPass, Dispatch, ManagedBuffer, ManagedResource, ManagedTexture, MovePass, PresentPass,
-    RasterPass, RaytracePass, RenderData, RenderGraph, RenderGraphVisitor, RenderQueue, RenderSwapchain, ResourceDesc,
-    ResourceGraph, ResourceGraphVisitor, ResourceTraits, SceneData } from './render-graph';
+import { Blit, ClearView, ComputePass, CopyPass, Dispatch, ManagedBuffer, ManagedResource, ManagedTexture, MovePass, PresentPass, RasterPass, RaytracePass, RenderData, RenderGraph, RenderGraphVisitor, RenderQueue, RenderSwapchain, ResourceDesc, ResourceGraph, ResourceGraphVisitor, ResourceTraits, SceneData } from './render-graph';
 import { AttachmentType, ComputeView, QueueHint, ResourceDimension, ResourceFlags, SceneFlags, UpdateFrequency } from './types';
 import { PipelineUBO } from '../pipeline-ubo';
 import { RenderInfo, RenderObject, WebSceneTask, WebSceneTransversal } from './web-scene';
@@ -65,6 +58,8 @@ import { VectorGraphColorMap } from './effect';
 import { getDescBindingFromName, getRenderArea, updateGlobalDescBinding } from './define';
 import { RenderReflectionProbeQueue } from '../render-reflection-probe-queue';
 import { ReflectionProbeManager } from '../reflection-probe-manager';
+
+const { Sphere, intersect } = geometry;
 
 class DeviceResource {
     protected _context: ExecutorContext;
@@ -1385,7 +1380,7 @@ class ExecutorContext {
         this.pipelineSceneData = pipeline.pipelineSceneData;
         this.resourceGraph = resourceGraph;
         this.renderGraph = renderGraph;
-        this.root = legacyCC.director.root;
+        this.root = cclegacy.director.root;
         this.ubo = ubo;
         this.layoutGraph = layoutGraph;
         this.width = width;

@@ -25,7 +25,8 @@
 
 import { Light } from './light-component';
 import { scene } from '../../render-scene';
-import { cclegacy, clamp, warnID, CCBoolean, CCFloat, _decorator, settings, Settings, override } from '../../core';
+import { cclegacy, clamp, warnID, CCBoolean, CCFloat, _decorator, settings, Settings } from '@cocos/core';
+import { override } from '@cocos/core/internal';
 import { Camera, PCFType, Shadows, ShadowType, CSMOptimizationMode, CSMLevel } from '../../render-scene/scene';
 import { Root } from '../../root';
 

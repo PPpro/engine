@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { replaceProperty } from '../core/utils/x-deprecated';
+import { replaceProperty } from '@cocos/core';
 import { VideoPlayer } from './video-player';
 
 replaceProperty(VideoPlayer.prototype, 'VideoPlayer.prototype', [

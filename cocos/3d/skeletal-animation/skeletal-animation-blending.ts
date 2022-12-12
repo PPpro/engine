@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { Vec3, Quat } from '../../core';
+import { Vec3, Quat } from '@cocos/core';
 import { Node } from '../../scene-graph';
 import { RuntimeBinding } from '../../animation/tracks/track';
 

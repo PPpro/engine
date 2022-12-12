@@ -28,9 +28,8 @@ import { SkelAnimDataHub } from './skeletal-animation-data-hub';
 import { getWorldTransformUntilRoot } from '../../animation/transform-utils';
 import { Mesh } from '../assets/mesh';
 import { Skeleton } from '../assets/skeleton';
-import { geometry, Mat4, Quat, Vec3 } from '../../core';
-import { BufferUsageBit, Format, FormatInfos,
-    MemoryUsageBit, Device, Buffer, BufferInfo, FormatFeatureBit } from '../../gfx';
+import { geometry, Mat4, Quat, Vec3 } from '@cocos/core';
+import { BufferUsageBit, Format, FormatInfos, MemoryUsageBit, Device, Buffer, BufferInfo, FormatFeatureBit } from '../../gfx';
 import { UBOSkinningAnimation } from '../../rendering/define';
 import { Node } from '../../scene-graph';
 import { ITextureBufferHandle, TextureBufferPool } from '../../render-scene/core/texture-buffer-pool';

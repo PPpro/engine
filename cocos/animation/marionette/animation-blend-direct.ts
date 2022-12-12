@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { _decorator } from '../../core';
+import { _decorator } from '@cocos/core';
 import { createEval } from './create-eval';
 import { MotionEvalContext } from './motion';
 import { AnimationBlend, AnimationBlendEval, AnimationBlendItem } from './animation-blend';

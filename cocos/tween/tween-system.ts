@@ -23,7 +23,7 @@
 */
 
 import { EDITOR } from 'internal:constants';
-import { System, cclegacy } from '../core';
+import { System, cclegacy } from '@cocos/core';
 import { ActionManager } from './actions/action-manager';
 import { Director, director } from '../game';
 

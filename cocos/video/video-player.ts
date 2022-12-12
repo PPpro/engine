@@ -22,16 +22,14 @@
  THE SOFTWARE.
 */
 
-import { ccclass, displayOrder, executeInEditMode, help, menu, slide, range, requireComponent, tooltip, type, serializable } from 'cc.decorator';
+import { ccclass, displayOrder, executeInEditMode, help, menu, slide, range, requireComponent, tooltip, type, serializable } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
-import { warn } from '../core/platform';
+import { warn, clamp, cclegacy } from '@cocos/core';
 import { Component, EventHandler as ComponentEventHandler } from '../scene-graph';
 import { UITransform } from '../2d/framework';
-import { clamp } from '../core/math';
 import { VideoClip } from './assets/video-clip';
 import { VideoPlayerImplManager } from './video-player-impl-manager';
 import { EventType, ResourceType } from './video-player-enums';
-import { legacyCC } from '../core/global-exports';
 import { VideoPlayerImplWeb } from './video-player-impl-web';
 
 /**
@@ -242,7 +240,7 @@ export class VideoPlayer extends Component {
      */
     @tooltip('i18n:videoplayer.fullScreenOnAwake')
     get fullScreenOnAwake () {
-        if (!EDITOR || legacyCC.GAME_VIEW) {
+        if (!EDITOR || cclegacy.GAME_VIEW) {
             if (this._impl) {
                 this._fullScreenOnAwake = this._impl.fullScreenOnAwake;
                 return this._fullScreenOnAwake;
@@ -377,7 +375,7 @@ export class VideoPlayer extends Component {
     }
 
     public __preload () {
-        if (EDITOR && !legacyCC.GAME_VIEW) {
+        if (EDITOR && !cclegacy.GAME_VIEW) {
             return;
         }
         this._impl = VideoPlayerImplManager.getImpl(this);
@@ -525,4 +523,4 @@ export class VideoPlayer extends Component {
 }
 
 // TODO Since jsb adapter does not support import cc, put it on internal first and adjust it later.
-legacyCC.internal.VideoPlayer = VideoPlayer;
+cclegacy.internal.VideoPlayer = VideoPlayer;

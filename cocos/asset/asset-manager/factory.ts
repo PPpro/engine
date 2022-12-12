@@ -28,15 +28,13 @@ import JsonAsset from '../assets/json-asset';
 import TextAsset from '../assets/text-asset';
 import { Asset } from '../assets/asset';
 import { BufferAsset } from '../assets/buffer-asset';
-import Bundle, { resources } from './bundle';
+import Bundle from './bundle';
+import { resources } from './bundle';
 import Cache from './cache';
 import { IConfigOption } from './config';
-import {
-    assets, BuiltinBundleName, bundles, CompleteCallback, IRemoteOptions,
-    IDownloadParseOptions,
-} from './shared';
+import { assets, BuiltinBundleName, bundles, CompleteCallback, IRemoteOptions, IDownloadParseOptions } from './shared';
 import { cache } from './utilities';
-import { js } from '../../core';
+import { js } from '@cocos/core';
 
 export type CreateHandler = (id: string, data: any, options: IDownloadParseOptions, onComplete: CompleteCallback<Asset|Bundle>) => void;
 

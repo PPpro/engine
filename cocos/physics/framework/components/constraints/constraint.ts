@@ -23,11 +23,11 @@
  THE SOFTWARE.
 */
 
-import { ccclass, requireComponent, displayOrder, type, readOnly, serializable } from 'cc.decorator';
+import { ccclass, requireComponent, displayOrder, type, readOnly, serializable } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { Component } from '../../../../scene-graph';
 import { RigidBody } from '../rigid-body';
-import { Eventify, cclegacy } from '../../../../core';
+import { Eventify, cclegacy } from '@cocos/core';
 import { IBaseConstraint } from '../../../spec/i-physics-constraint';
 import { selector, createConstraint } from '../../physics-selector';
 import { EConstraintType } from '../../physics-enum';

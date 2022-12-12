@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { ccclass, serializable } from 'cc.decorator';
+import { ccclass, serializable } from '@cocos/core/internal';
 import { MeshRenderer } from '../../3d/framework/mesh-renderer';
 import { IValueProxyFactory } from '../value-proxy';
 

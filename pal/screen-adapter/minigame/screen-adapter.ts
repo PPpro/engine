@@ -25,11 +25,8 @@
 import { ALIPAY, BAIDU, COCOSPLAY, RUNTIME_BASED, VIVO, WECHAT } from 'internal:constants';
 import { minigame } from 'pal/minigame';
 import { ConfigOrientation, IScreenOptions, SafeAreaEdge } from 'pal/screen-adapter';
-import { systemInfo } from 'pal/system-info';
-import { warnID } from '../../../cocos/core/platform/debug';
-import { EventTarget } from '../../../cocos/core/event/event-target';
-import { Size } from '../../../cocos/core/math';
-import { OS } from '../../system-info/enum-type';
+import { systemInfo, OS } from '@pal/system-info';
+import { warnID, EventTarget, Size } from '@cocos/core';
 import { Orientation } from '../enum-type';
 
 // HACK: In some platform like CocosPlay or Alipay iOS end

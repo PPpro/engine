@@ -21,11 +21,11 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
-import { ccclass, override } from 'cc.decorator';
+import { ccclass, override } from '@cocos/core/internal';
 import { ALIPAY, XIAOMI, JSB, TEST, BAIDU } from 'internal:constants';
 import { Format, FormatFeatureBit, deviceManager } from '../../gfx';
 import { PixelFormat } from './asset-enum';
-import { sys, macro, warnID, cclegacy } from '../../core';
+import { sys, macro, warnID, cclegacy } from '@cocos/core';
 import './asset';
 
 export type ImageAsset = jsb.ImageAsset;

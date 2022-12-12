@@ -24,8 +24,8 @@
 
 /* eslint-disable max-len */
 import { Viewport } from '../../gfx';
-import { assert } from '../../core';
-import { DefaultVisitor, ReferenceGraphView, ED} from './graph';
+import { assert } from '@cocos/core';
+import { DefaultVisitor, ReferenceGraphView, ED } from './graph';
 import { Blit, ClearView, ComputePass, CopyPass, Dispatch, getRenderGraphValueName, MovePass, PresentPass, RasterPass, RaytracePass, RenderGraph, RenderGraphVisitor, RenderQueue, SceneData } from './render-graph';
 import { getQueueHintName } from './types';
 

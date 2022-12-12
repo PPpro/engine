@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { ccenum, geometry } from '../core';
+import { ccenum, geometry } from '@cocos/core';
 
 /**
  * 动画使用的循环模式。

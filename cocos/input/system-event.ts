@@ -23,7 +23,7 @@
  THE SOFTWARE.
 */
 
-import { EventTarget, cclegacy } from '../core';
+import { EventTarget, cclegacy } from '@cocos/core';
 import { EventAcceleration, EventKeyboard, EventMouse, EventTouch, SystemEventType, Touch } from './types';
 import { input } from './input';
 import { InputEventType } from './types/event-enum';

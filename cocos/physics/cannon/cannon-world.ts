@@ -23,7 +23,7 @@
 */
 
 import CANNON from '@cocos/cannon';
-import { Vec3, RecyclePool, error, js, geometry, IVec3Like } from '../../core';
+import { Vec3, RecyclePool, error, js, geometry, IVec3Like } from '@cocos/core';
 import { fillRaycastResult, toCannonRaycastOptions } from './cannon-util';
 import { CannonConstraint } from './constraints/cannon-constraint';
 import { CannonShape } from './shapes/cannon-shape';

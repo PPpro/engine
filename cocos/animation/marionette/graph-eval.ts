@@ -35,7 +35,8 @@ import { BindContext, validateVariableExistence, validateVariableType, VariableT
 import { ConditionEval, TriggerCondition } from './condition';
 import { MotionState } from './motion-state';
 import { AnimationMask } from './animation-mask';
-import { warnID, assertIsTrue, assertIsNonNullable } from '../../core';
+import { warnID } from '@cocos/core';
+import { assertIsTrue, assertIsNonNullable } from '@cocos/core/internal';
 import { MAX_ANIMATION_LAYER } from '../../3d/skeletal-animation/limits';
 import { AnimationClip } from '../animation-clip';
 import type { AnimationController } from './animation-controller';

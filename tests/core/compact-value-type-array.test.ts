@@ -1,4 +1,4 @@
-import { StorageUnit, ElementType, combineStorageUnitElementType, extractStorageUnitElementType } from '../../cocos/core/data/utils/compact-value-type-array';
+import { StorageUnit, ElementType, combineStorageUnitElementType, extractStorageUnitElementType } from '@cocos/core/internal';
 
 test('Combine storage unit & element type', () => {
     const storageUnits = Object.values(StorageUnit).filter((e) => typeof e === 'number') as StorageUnit[];

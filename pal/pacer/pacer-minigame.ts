@@ -23,7 +23,7 @@
 */
 
 import { minigame } from 'pal/minigame';
-import { assertIsTrue } from '../../cocos/core/data/utils/asserts';
+import { assertIsTrue } from '@cocos/core/internal';
 
 export class Pacer {
     private _rafHandle = 0;

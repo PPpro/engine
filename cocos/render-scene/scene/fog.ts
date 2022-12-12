@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { Enum, Color, Vec4, cclegacy } from '../../core';
+import { Enum, Color, Vec4, cclegacy } from '@cocos/core';
 import { FogInfo } from '../../scene-graph/scene-globals';
 import { SRGBToLinear } from '../../rendering/pipeline-funcs';
 

@@ -22,8 +22,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass, override } from 'cc.decorator';
-import { assertIsNonNullable, cclegacy } from '../../core';
+import { ccclass, override } from '@cocos/core/internal';
+import { assertIsNonNullable } from '@cocos/core/internal';
+import { cclegacy } from '@cocos/core';
 import { Asset } from './asset';
 
 @ccclass('cc.BufferAsset')

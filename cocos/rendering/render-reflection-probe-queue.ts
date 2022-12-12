@@ -34,7 +34,7 @@ import { PipelineRuntime } from './custom/pipeline';
 import { IMacroPatch, RenderScene } from '../render-scene';
 import { RenderInstancedQueue } from './render-instanced-queue';
 import { RenderBatchedQueue } from './render-batched-queue';
-import { cclegacy, geometry } from '../core';
+import { cclegacy, geometry } from '@cocos/core';
 import { Layers } from '../scene-graph/layers';
 
 // eslint-disable-next-line max-len

@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { CCClass, Color, lerp, repeat, Enum } from '../../core';
+import { CCClass, Color, lerp, repeat, Enum } from '@cocos/core';
 
 const Mode = Enum({
     Blend: 0,

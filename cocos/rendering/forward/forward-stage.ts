@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { ccclass, displayOrder, type, serializable } from 'cc.decorator';
+import { ccclass, displayOrder, type, serializable } from '@cocos/core/internal';
 import { SetIndex } from '../define';
 import { getPhaseID } from '../pass-phase';
 import { renderQueueClearFunc, RenderQueue, convertRenderQueue, renderQueueSortFunc } from '../render-queue';

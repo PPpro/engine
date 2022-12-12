@@ -37,9 +37,9 @@
  * 请参考 ScrollView 的实现来获取更多信息。
  */
 
-import { ccclass, executionOrder } from 'cc.decorator';
+import { ccclass, executionOrder } from '@cocos/core/internal';
 import { Component } from '../scene-graph/component';
-import { legacyCC } from '../core/global-exports';
+import { cclegacy } from '@cocos/core';
 
 @ccclass('cc.ViewGroup')
 @executionOrder(110)
@@ -47,4 +47,4 @@ export class ViewGroup extends Component {
 
 }
 
-legacyCC.ViewGroup = ViewGroup;
+cclegacy.ViewGroup = ViewGroup;

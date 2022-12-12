@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { Vec3, cclegacy, geometry } from '../../core';
+import { Vec3, cclegacy, geometry } from '@cocos/core';
 import { Light, LightType, nt2lm } from './light';
 
 /**

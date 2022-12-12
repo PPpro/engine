@@ -22,21 +22,11 @@
  THE SOFTWARE.
 */
 
-import {
-    ccclass,
-    help,
-    executeInEditMode,
-    menu,
-    requireComponent,
-    disallowMultiple,
-    tooltip,
-    displayOrder,
-    serializable,
-} from 'cc.decorator';
+import { ccclass, help, executeInEditMode, menu, requireComponent, disallowMultiple, tooltip, displayOrder, serializable } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { Component } from '../../../scene-graph/component';
 import { RigidBody } from './rigid-body';
-import { Vec3, geometry, cclegacy } from '../../../core';
+import { Vec3, geometry, cclegacy } from '@cocos/core';
 
 /**
  * @en

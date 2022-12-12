@@ -1,5 +1,4 @@
-import { Vec2 } from '../../../cocos/core/math/vec2';
-import { Vec3 } from '../../../cocos/core/math/vec3';
+import { Vec2, Vec3 } from '@cocos/core';
 
 // test Vec2
 describe('Test Vec2', () => {

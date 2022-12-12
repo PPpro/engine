@@ -1,9 +1,10 @@
-import { ccclass } from 'cc.decorator';
-import { warnID } from '../../cocos/core';
-import { float, property } from '../../cocos/core/data/class-decorator';
+import { ccclass } from '@cocos/core/internal';
+import { warnID, js } from '@cocos/core';
+import { float, property } from '@cocos/core/internal';
 import * as requiringFrame from '../../cocos/core/data/utils/requiring-frame';
-import { getClassName, unregisterClass, getClassId } from '../../cocos/core/utils/js-typed';
-import { Component } from '../../cocos/scene-graph/component'
+import { Component } from '../../cocos/scene-graph/component';
+
+const { getClassName, unregisterClass, getClassId } = js;
 
 /**
  * Happened when:

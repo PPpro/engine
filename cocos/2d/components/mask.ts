@@ -23,9 +23,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executionOrder, menu, tooltip, displayOrder, type, visible, serializable, range, slide, executeInEditMode } from 'cc.decorator';
+import { ccclass, help, executionOrder, menu, tooltip, displayOrder, type, visible, serializable, range, slide, executeInEditMode } from '@cocos/core/internal';
 import { JSB } from 'internal:constants';
-import { clamp, Color, Mat4, Vec2, Vec3, warnID, cclegacy, ccenum } from '../../core';
+import { clamp, Color, Mat4, Vec2, Vec3, warnID, cclegacy, ccenum } from '@cocos/core';
 import { Graphics } from './graphics';
 import { TransformBit } from '../../scene-graph/node-enum';
 import { Stage } from '../renderer/stencil-manager';

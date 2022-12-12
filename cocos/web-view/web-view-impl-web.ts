@@ -24,14 +24,13 @@
 
 import { screenAdapter } from 'pal/screen-adapter';
 import { EventType } from './web-view-enums';
-import { error, warn } from '../core/platform';
+import { error, warn, mat4, misc } from '@cocos/core';
 import { WebViewImpl } from './web-view-impl';
 import { game } from '../game';
-import { mat4 } from '../core/math';
-import { contains } from '../core/utils/misc';
-import { ccwindow } from '../core/global-exports';
+import { ccwindow } from '@cocos/core/internal';
 
 const ccdocument = ccwindow.document;
+const { contains } = misc;
 
 const _mat4_temp = mat4();
 

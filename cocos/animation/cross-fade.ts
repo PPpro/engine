@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { clamp01, js } from '../core';
+import { clamp01, js } from '@cocos/core';
 import { AnimationState } from './animation-state';
 import { Playable } from './playable';
 import { getGlobalAnimationManager } from './global-animation-manager';

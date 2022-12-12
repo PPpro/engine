@@ -25,7 +25,7 @@
 import type { AnimationClip } from '../../animation/animation-clip';
 import { Mesh } from '../assets/mesh';
 import { Skeleton } from '../assets/skeleton';
-import { geometry, cclegacy } from '../../core';
+import { geometry, cclegacy } from '@cocos/core';
 import { BufferUsageBit, MemoryUsageBit, Attribute, DescriptorSet, Buffer, BufferInfo } from '../../gfx';
 import { INST_JOINT_ANIM_INFO, UBOSkinningAnimation, UBOSkinningTexture, UNIFORM_JOINT_TEXTURE_BINDING } from '../../rendering/define';
 import { Node } from '../../scene-graph';

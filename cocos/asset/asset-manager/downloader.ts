@@ -23,7 +23,7 @@
 */
 
 import { BUILD, EDITOR } from 'internal:constants';
-import { sys, js, misc, path, cclegacy } from '../../core';
+import { sys, js, misc, path, cclegacy } from '@cocos/core';
 import Cache from './cache';
 import downloadDomImage from './download-dom-image';
 import downloadFile from './download-file';

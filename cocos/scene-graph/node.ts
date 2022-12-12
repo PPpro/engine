@@ -22,20 +22,15 @@
  THE SOFTWARE.
 */
 
-import { ccclass, editable, serializable, type } from 'cc.decorator';
+import { ccclass, editable, serializable, type } from '@cocos/core/internal';
 import { DEV, DEBUG, EDITOR } from 'internal:constants';
 import { Layers } from './layers';
 import { NodeUIProperties } from './node-ui-properties';
-import { legacyCC } from '../core/global-exports';
+import { cclegacy, ISchedulable, approx, EPSILON, Mat3, Mat4, Quat, Vec3, CustomSerializable, editorExtrasTag, SerializationContext, SerializationOutput, serializeTag, errorID, warnID, error, log, getError, CCObject, js } from '@cocos/core';
 import { nodePolyfill } from './node-dev';
-import { ISchedulable } from '../core/scheduler';
-import { approx, EPSILON, Mat3, Mat4, Quat, Vec3 } from '../core/math';
 import { MobilityMode, NodeSpace, TransformBit } from './node-enum';
-import { CustomSerializable, editorExtrasTag, SerializationContext, SerializationOutput, serializeTag } from '../core/data';
-import { errorID, warnID, error, log, getError } from '../core/platform/debug';
 import { Component } from './component';
-import { property } from '../core/data/decorators/property';
-import { CCObject, js } from '../core';
+import { property } from '@cocos/core/internal';
 import type { Scene } from './scene';
 import { PrefabInfo } from './prefab/prefab-info';
 import { NodeEventType } from './node-event';
@@ -190,7 +185,7 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
             if (parent) {
                 const couldActiveInScene = parent._activeInHierarchy;
                 if (couldActiveInScene) {
-                    legacyCC.director._nodeActivator.activateNode(this, isActive);
+                    cclegacy.director._nodeActivator.activateNode(this, isActive);
                 }
             }
         }
@@ -357,7 +352,7 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
 
     protected _name: string;
 
-    protected _eventProcessor: any = new legacyCC.NodeEventProcessor(this);
+    protected _eventProcessor: any = new cclegacy.NodeEventProcessor(this);
     protected _eventMask = 0;
 
     protected _siblingIndex = 0;
@@ -931,7 +926,7 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
         if (typeof typeOrClassName === 'string') {
             constructor = js.getClassByName(typeOrClassName) as Constructor<T> | undefined;
             if (!constructor) {
-                if (legacyCC._RF.peek()) {
+                if (cclegacy._RF.peek()) {
                     errorID(3808, typeOrClassName);
                 }
                 throw TypeError(getError(3807, typeOrClassName));
@@ -948,7 +943,7 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
         if (typeof constructor !== 'function') {
             throw TypeError(getError(3809));
         }
-        if (!js.isChildClassOf(constructor, legacyCC.Component)) {
+        if (!js.isChildClassOf(constructor, cclegacy.Component)) {
             throw TypeError(getError(3810));
         }
 
@@ -994,7 +989,7 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
         }
         this.emit(NodeEventType.COMPONENT_ADDED, component);
         if (this._activeInHierarchy) {
-            legacyCC.director._nodeActivator.activateComp(component);
+            cclegacy.director._nodeActivator.activateComp(component);
         }
 
         return component;
@@ -1270,7 +1265,7 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
 
     protected _instantiate (cloned, isSyncedNode) {
         if (!cloned) {
-            cloned = legacyCC.instantiate._clone(this, this);
+            cloned = cclegacy.instantiate._clone(this, this);
         }
 
         const newPrefabInfo = cloned._prefab;
@@ -1293,15 +1288,15 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
 
     protected _onHierarchyChangedBase (oldParent: this | null) {
         const newParent = this._parent;
-        if (this._persistNode && !(newParent instanceof legacyCC.Scene)) {
-            legacyCC.game.removePersistRootNode(this);
+        if (this._persistNode && !(newParent instanceof cclegacy.Scene)) {
+            cclegacy.game.removePersistRootNode(this);
             if (EDITOR) {
                 warnID(1623);
             }
         }
 
         if (EDITOR) {
-            const scene = legacyCC.director.getScene() as this | null;
+            const scene = cclegacy.director.getScene() as this | null;
             const inCurrentSceneBefore = oldParent && oldParent.isChildOf(scene);
             const inCurrentSceneNow = newParent && newParent.isChildOf(scene);
             if (!inCurrentSceneBefore && inCurrentSceneNow) {
@@ -1320,7 +1315,7 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
 
         const shouldActiveNow = this._active && !!(newParent && newParent._activeInHierarchy);
         if (this._activeInHierarchy !== shouldActiveNow) {
-            legacyCC.director._nodeActivator.activateNode(this, shouldActiveNow);
+            cclegacy.director._nodeActivator.activateNode(this, shouldActiveNow);
         }
     }
 
@@ -1338,7 +1333,7 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
 
         // remove from persist
         if (this._persistNode) {
-            legacyCC.game.removePersistRootNode(this);
+            cclegacy.game.removePersistRootNode(this);
         }
 
         if (!destroyByParent) {
@@ -1490,7 +1485,7 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
      * @zh 指定对象是否是普通的节点？如果传入 [[Scene]] 会返回 false。
      */
     public static isNode (obj: unknown): obj is Node {
-        return obj instanceof Node && (obj.constructor === Node || !(obj instanceof legacyCC.Scene));
+        return obj instanceof Node && (obj.constructor === Node || !(obj instanceof cclegacy.Scene));
     }
 
     protected _onPreDestroy () {
@@ -2531,7 +2526,7 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
     public getPathInHierarchy (): string {
         let result = this.name;
         let curNode: Node | null = this.parent;
-        while (curNode && !(curNode instanceof legacyCC.Scene)) {
+        while (curNode && !(curNode instanceof cclegacy.Scene)) {
             result = `${curNode.name}/${result}`;
             curNode = curNode.parent;
         }
@@ -2542,4 +2537,4 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
 
 nodePolyfill(Node);
 
-legacyCC.Node = Node;
+cclegacy.Node = Node;

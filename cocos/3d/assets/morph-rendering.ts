@@ -22,16 +22,14 @@
  THE SOFTWARE.
 */
 
-import {
-    AttributeName, Buffer, BufferUsageBit, Device, MemoryUsageBit, DescriptorSet, BufferInfo, FormatFeatureBit, Format,
-} from '../../gfx';
+import { AttributeName, Buffer, BufferUsageBit, Device, MemoryUsageBit, DescriptorSet, BufferInfo, FormatFeatureBit, Format } from '../../gfx';
 import { Mesh } from './mesh';
 import { Texture2D } from '../../asset/assets/texture-2d';
 import { ImageAsset } from '../../asset/assets/image-asset';
-import { UBOMorph, UNIFORM_NORMAL_MORPH_TEXTURE_BINDING,
-    UNIFORM_POSITION_MORPH_TEXTURE_BINDING, UNIFORM_TANGENT_MORPH_TEXTURE_BINDING } from '../../rendering/define';
+import { UBOMorph, UNIFORM_NORMAL_MORPH_TEXTURE_BINDING, UNIFORM_POSITION_MORPH_TEXTURE_BINDING, UNIFORM_TANGENT_MORPH_TEXTURE_BINDING } from '../../rendering/define';
 import { Morph, SubMeshMorph } from './morph';
-import { assertIsNonNullable, assertIsTrue, warn, bits, nextPow2, cclegacy } from '../../core';
+import { assertIsNonNullable, assertIsTrue } from '@cocos/core/internal';
+import { warn, bits, nextPow2, cclegacy } from '@cocos/core';
 import { IMacroPatch } from '../../render-scene';
 import { PixelFormat } from '../../asset/assets/asset-enum';
 

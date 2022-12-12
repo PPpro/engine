@@ -25,7 +25,7 @@
 
 import { EDITOR } from 'internal:constants';
 import { MeshRenderer, ReflectionProbeType } from '../3d/framework/mesh-renderer';
-import { Vec3, geometry, cclegacy } from '../core';
+import { Vec3, geometry, cclegacy } from '@cocos/core';
 import { director, Director } from '../game';
 import { Texture } from '../gfx';
 import { Camera, Model } from '../render-scene/scene';

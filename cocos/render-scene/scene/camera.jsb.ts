@@ -20,12 +20,11 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
-*/
-import { geometry } from '../../core';
+ */
+import { geometry, Mat4, Vec3 } from '@cocos/core';
 import { RenderWindow } from '../core/render-window';
 import { ClearFlagBit } from '../../gfx';
 import { _tempFloatArray, fillMat4WithTempFloatArray } from '../../scene-graph/utils.jsb';
-import { Mat4, Vec3 } from '../../core';
 
 
 declare const jsb: any;

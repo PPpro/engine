@@ -23,8 +23,8 @@
 */
 
 import { EDITOR, TEST } from 'internal:constants';
-import { binarySearchEpsilon, clamp, lerp, Quat, Vec3, _decorator } from '../../core';
-import { assertIsTrue } from '../../core/data/utils/asserts';
+import { clamp, lerp, Quat, Vec3, _decorator } from '@cocos/core';
+import { assertIsTrue, binarySearchEpsilon } from '@cocos/core/internal';
 import { AnimationClipGraphBindingContext } from '../marionette/animation-graph-animation-clip-binding';
 import { TransformHandle } from '../core/animation-handle';
 import { Pose } from '../core/pose';

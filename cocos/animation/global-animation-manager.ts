@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { cclegacy } from '../core';
+import { cclegacy } from '@cocos/core';
 import type { AnimationManager } from './animation-manager';
 
 export function getGlobalAnimationManager () {

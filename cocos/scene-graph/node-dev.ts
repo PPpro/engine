@@ -23,14 +23,12 @@
 */
 
 import { EDITOR, DEV, TEST } from 'internal:constants';
-import { CCObject } from '../core/data/object';
-import * as js from '../core/utils/js';
-import { legacyCC } from '../core/global-exports';
-import { error, errorID, getError } from '../core/platform/debug';
+import { CCObject, cclegacy, error, errorID, getError } from '@cocos/core';
+import { js } from '@cocos/core';
 import { Component } from './component';
 
 const Destroying = CCObject.Flags.Destroying;
-const IS_PREVIEW = !!legacyCC.GAME_VIEW;
+const IS_PREVIEW = !!cclegacy.GAME_VIEW;
 
 export function nodePolyfill (Node) {
     if (EDITOR || TEST) {
@@ -54,7 +52,7 @@ export function nodePolyfill (Node) {
             const dependant: Component[] = [];
             for (let i = 0; i < this._components.length; i++) {
                 const comp = this._components[i];
-                if (comp !== depended && comp.isValid && !legacyCC.Object._willDestroy(comp)) {
+                if (comp !== depended && comp.isValid && !cclegacy.Object._willDestroy(comp)) {
                     const reqComps = comp.constructor._requireComponent;
                     if (reqComps) {
                         if (Array.isArray(reqComps)) {
@@ -83,7 +81,7 @@ export function nodePolyfill (Node) {
             if (this._objFlags & Destroying) {
                 return error('isDestroying');
             }
-            if (!(comp instanceof legacyCC.Component)) {
+            if (!(comp instanceof cclegacy.Component)) {
                 return errorID(3811);
             }
             if (index > this._components.length) {
@@ -121,7 +119,7 @@ export function nodePolyfill (Node) {
                 }
             }
             if (this._activeInHierarchy) {
-                legacyCC.director._nodeActivator.activateComp(comp);
+                cclegacy.director._nodeActivator.activateComp(comp);
             }
             return undefined;
         };
@@ -130,7 +128,7 @@ export function nodePolyfill (Node) {
             // check activity state
             const shouldActiveNow = this._active && !!(this._parent && this._parent._activeInHierarchy);
             if (this._activeInHierarchy !== shouldActiveNow) {
-                legacyCC.director._nodeActivator.activateNode(this, shouldActiveNow);
+                cclegacy.director._nodeActivator.activateNode(this, shouldActiveNow);
             }
         };
 

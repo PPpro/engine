@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { IVec3Like, RecyclePool, geometry } from '../../core';
+import { IVec3Like, RecyclePool, geometry } from '@cocos/core';
 import { PhysicsRayResult } from '../framework/physics-ray-result';
 import { PhysicsMaterial } from '../framework';
 

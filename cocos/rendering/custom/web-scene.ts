@@ -22,8 +22,7 @@
  THE SOFTWARE.
 ****************************************************************************/
 
-import { Frustum, intersect } from '../../core/geometry';
-import { Vec3 } from '../../core/math';
+import { geometry, Vec3 } from '@cocos/core';
 import { RenderScene } from '../../render-scene';
 import { Camera, Model, ShadowType, SKYBOX_FLAG } from '../../render-scene/scene';
 import { IRenderObject, IRenderPass, UBOShadow } from '../define';
@@ -31,6 +30,8 @@ import { PipelineSceneData } from '../pipeline-scene-data';
 import { SceneTask, SceneTransversal, SceneVisitor } from './pipeline';
 import { TaskType } from './types';
 import { PipelineUBO } from '../pipeline-ubo';
+
+const { Frustum, intersect } = geometry;
 
 export class RenderObject implements IRenderObject {
     public model: Model;

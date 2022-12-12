@@ -1,5 +1,5 @@
-import { Vec4 } from '../../../cocos/core';
-import { Color, linearToSrgb8Bit, srgb8BitToLinear, srgbToLinear } from '../../../cocos/core/math/color';
+import { Vec4, Color } from '@cocos/core';
+import { linearToSrgb8Bit, srgb8BitToLinear, srgbToLinear } from '@cocos/core/internal';
 
 // test Color
 describe('Test Color', () => {

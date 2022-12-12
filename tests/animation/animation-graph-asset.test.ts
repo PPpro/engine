@@ -1,14 +1,14 @@
-import { Vec2 } from "../../cocos/core";
-import { AnimationClip } from "../../cocos/animation/animation-clip";
-import { AnimationBlend1D } from "../../cocos/animation/marionette/animation-blend-1d";
-import { AnimationBlend2D } from "../../cocos/animation/marionette/animation-blend-2d";
-import { AnimationGraph, AnimationTransition, EmptyState, EmptyStateTransition, StateMachine, SubStateMachine, Transition } from "../../cocos/animation/marionette/animation-graph";
-import { ClipMotion } from "../../cocos/animation/marionette/clip-motion";
-import { BinaryCondition, Condition, TriggerCondition, UnaryCondition } from "../../cocos/animation/marionette/condition";
-import { Motion } from "../../cocos/animation/marionette/motion";
-import { MotionState } from "../../cocos/animation/marionette/motion-state";
-import { Bindable } from "../../cocos/animation/marionette/parametric";
-import { assertIsTrue } from "../../cocos/core/data/utils/asserts";
+import { Vec2 } from '@cocos/core';
+import { AnimationClip } from '../../cocos/animation/animation-clip';
+import { AnimationBlend1D } from '../../cocos/animation/marionette/animation-blend-1d';
+import { AnimationBlend2D } from '../../cocos/animation/marionette/animation-blend-2d';
+import { AnimationGraph, AnimationTransition, EmptyState, EmptyStateTransition, StateMachine, SubStateMachine, Transition } from '../../cocos/animation/marionette/animation-graph';
+import { ClipMotion } from '../../cocos/animation/marionette/clip-motion';
+import { BinaryCondition, Condition, TriggerCondition, UnaryCondition } from '../../cocos/animation/marionette/condition';
+import { Motion } from '../../cocos/animation/marionette/motion';
+import { MotionState } from '../../cocos/animation/marionette/motion-state';
+import { Bindable } from '../../cocos/animation/marionette/parametric';
+import { assertIsTrue } from '@cocos/core/internal';
 
 describe('Animation graph asset', () => {
     test('Asset operation: clone or copy', () => {

@@ -31,7 +31,7 @@ import {
     editable,
     serializable,
     tooltip,
-} from 'cc.decorator';
+} from '@cocos/core/internal';
 import { Collider } from './collider';
 import { Mesh } from '../../../../3d/assets';
 import { ITrimeshShape } from '../../../spec/i-physics-shape';

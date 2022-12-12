@@ -30,7 +30,7 @@ import {
     tooltip,
     type,
     serializable,
-} from 'cc.decorator';
+} from '@cocos/core/internal';
 import { Collider } from './collider';
 import { IConeShape } from '../../../spec/i-physics-shape';
 import { EAxisDirection, EColliderType } from '../../physics-enum';

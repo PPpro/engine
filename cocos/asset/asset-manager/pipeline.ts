@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { warnID } from '../../core';
+import { warnID } from '@cocos/core';
 import { CompleteCallbackNoData } from './shared';
 import Task from './task';
 

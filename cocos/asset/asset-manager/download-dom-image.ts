@@ -23,8 +23,8 @@
  THE SOFTWARE.
 */
 
-import { getError } from '../../core';
-import { ccwindow } from '../../core/global-exports';
+import { getError } from '@cocos/core';
+import { ccwindow } from '@cocos/core/internal';
 import { CompleteCallback, IDownloadParseOptions } from './shared';
 
 export default function downloadDomImage (

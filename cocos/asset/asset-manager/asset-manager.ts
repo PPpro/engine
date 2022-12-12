@@ -24,9 +24,10 @@
 
 import { BUILD, EDITOR, PREVIEW } from 'internal:constants';
 import { Asset } from '../assets/asset';
-import { error, sys, Settings, settings, path, cclegacy } from '../../core';
+import { error, sys, Settings, settings, path, cclegacy } from '@cocos/core';
 import Bundle from './bundle';
-import Cache, { ICache } from './cache';
+import Cache from './cache';
+import { ICache } from './cache';
 import CacheManager from './cache-manager';
 import dependUtil from './depend-util';
 import downloader from './downloader';
@@ -40,17 +41,7 @@ import { IPipe, Pipeline } from './pipeline';
 import preprocess from './preprocess';
 import releaseManager from './release-manager';
 import RequestItem from './request-item';
-import {
-    CompleteCallbackWithData,
-    ProgressCallback,
-    IBundleOptions,
-    IOptions,
-    IRemoteOptions,
-    presets,
-    Request,
-    references,
-    IJsonAssetOptions,
-    assets, BuiltinBundleName, bundles, fetchPipeline, files, parsed, pipeline, transformPipeline, assetsOverrideMap } from './shared';
+import { CompleteCallbackWithData, ProgressCallback, IBundleOptions, IOptions, IRemoteOptions, presets, Request, references, IJsonAssetOptions, assets, BuiltinBundleName, bundles, fetchPipeline, files, parsed, pipeline, transformPipeline, assetsOverrideMap } from './shared';
 
 import Task from './task';
 import { combine, parse, replaceOverrideAsset } from './url-transformer';

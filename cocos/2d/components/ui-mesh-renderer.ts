@@ -23,7 +23,7 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executionOrder, menu, executeInEditMode } from 'cc.decorator';
+import { ccclass, help, executionOrder, menu, executeInEditMode } from '@cocos/core/internal';
 import { DEBUG, JSB } from 'internal:constants';
 import { ModelRenderer } from '../../misc/model-renderer';
 import { RenderPriority } from '../../rendering/define';
@@ -34,7 +34,7 @@ import { NativeUIModelProxy } from '../renderer/native-2d';
 import { uiRendererManager } from '../framework/ui-renderer-manager';
 import { RenderEntity, RenderEntityType } from '../renderer/render-entity';
 import { MeshRenderData, RenderData } from '../renderer/render-data';
-import { assert, cclegacy } from '../../core';
+import { assert, cclegacy } from '@cocos/core';
 import { RenderDrawInfoType } from '../renderer/render-draw-info';
 
 /**

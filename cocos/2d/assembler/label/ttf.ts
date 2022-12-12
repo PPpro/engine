@@ -27,7 +27,7 @@
  * @module ui-assembler
  */
 
-import { Color, js } from '../../../core';
+import { Color, js } from '@cocos/core';
 import { IBatcher } from '../../renderer/i-batcher';
 import { Label } from '../../components/label';
 import { IAssembler } from '../../renderer/base';

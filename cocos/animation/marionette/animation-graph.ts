@@ -22,9 +22,9 @@
  THE SOFTWARE.
 */
 
-import { ccclass, serializable } from 'cc.decorator';
+import { js, clamp, EditorExtendable } from '@cocos/core';
+import { ccclass, serializable, assertIsNonNullable, assertIsTrue, shift } from '@cocos/core/internal';
 import { DEBUG } from 'internal:constants';
-import { js, clamp, assertIsNonNullable, assertIsTrue, EditorExtendable, shift } from '../../core';
 import { MotionEval, MotionEvalContext } from './motion';
 import type { Condition } from './condition';
 import { OwnedBy, assertsOwnedBy, own, markAsDangling, ownerSymbol } from './ownership';

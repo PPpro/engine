@@ -23,7 +23,7 @@
  THE SOFTWARE.
 */
 
-import { Vec2, Vec3, Quat } from '../../cocos/core/math';
+import { Vec2, Vec3, Quat } from '@cocos/core';
 
 /**
  * @en The abstract class for input source, which is used to control the input signal of a mono input source

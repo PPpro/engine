@@ -23,16 +23,15 @@
  THE SOFTWARE.
 */
 
-import {
-    ccclass, executeInEditMode, executionOrder, help, menu, tooltip, type,
-} from 'cc.decorator';
+import { ccclass, executeInEditMode, executionOrder, help, menu, tooltip, type } from '@cocos/core/internal';
 import type { AnimationClip } from '../../animation/animation-clip';
 import { Material } from '../../asset/assets';
 import { Skeleton } from '../assets/skeleton';
 import { Node } from '../../scene-graph/node';
 import { MeshRenderer } from '../framework/mesh-renderer';
 import type { SkeletalAnimation } from '../skeletal-animation';
-import { cclegacy, assertIsTrue } from '../../core';
+import { cclegacy } from '@cocos/core';
+import { assertIsTrue } from '@cocos/core/internal';
 import { SkinningModel } from '../models/skinning-model';
 import { BakedSkinningModel } from '../models/baked-skinning-model';
 

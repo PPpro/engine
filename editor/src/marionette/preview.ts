@@ -2,10 +2,8 @@ import { Node } from '../../../cocos/scene-graph';
 import { Motion, MotionEval, MotionPort } from '../../../cocos/animation/marionette/motion';
 import { createEval } from '../../../cocos/animation/marionette/create-eval';
 import { VarInstance, Value, VariableType } from '../../../cocos/animation/marionette/variable';
-import { assertIsNonNullable } from '../../../cocos/core/data/utils/asserts';
-import {
-    AnimationBlendEval,
-} from '../../../cocos/animation/marionette/animation-blend';
+import { assertIsNonNullable } from '@cocos/core/internal';
+import { AnimationBlendEval } from '../../../cocos/animation/marionette/animation-blend';
 import type { RuntimeID } from '../../../cocos/animation/marionette/graph-debug';
 import {
     AnimationGraphBindingContext, AnimationGraphEvaluationContext, AnimationGraphPoseLayoutMaintainer, defaultTransformsTag, MetaValueRegistry,

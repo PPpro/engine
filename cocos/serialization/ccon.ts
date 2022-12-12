@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { getError, cclegacy } from '../core';
+import { getError, cclegacy } from '@cocos/core';
 
 const VERSION = 1;
 

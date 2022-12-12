@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { Enum } from '../../core';
+import { Enum } from '@cocos/core';
 
 export enum ERigidBodyType {
     DYNAMIC = 1,

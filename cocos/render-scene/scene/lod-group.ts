@@ -22,7 +22,8 @@
  THE SOFTWARE.
 */
 import { Model } from './model';
-import { Vec3, assertIsTrue } from '../../core';
+import { Vec3 } from '@cocos/core';
+import { assertIsTrue } from '@cocos/core/internal';
 import { RenderScene } from '..';
 import { Device, deviceManager } from '../../gfx';
 import { Node } from '../../scene-graph';

@@ -1,7 +1,5 @@
-import { editorExtrasTag, toRadian } from '../../cocos/core';
-import { RealCurve, RealInterpolationMode } from '../../cocos/core/curves';
-import { EasingMethod, RealKeyframeValue } from '../../cocos/core/curves/curve';
-import { ExtrapolationMode, TangentWeightMode } from '../../cocos/core/curves/real-curve-param';
+import { editorExtrasTag, toRadian, RealCurve, RealInterpolationMode, RealKeyframeValue, ExtrapolationMode, TangentWeightMode } from '@cocos/core';
+import { EasingMethod } from '@cocos/core/internal';
 import { serializeAndDeserialize } from './serialize-and-deserialize-curve';
 import { createRealKeyframeValueLike } from './curve-test-utils';
 

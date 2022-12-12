@@ -26,10 +26,9 @@ declare const nr: any;
 declare const jsb: any;
 
 import { getPhaseID } from './pass-phase';
-import { ccenum, CCString, js } from '../core';
+import { ccenum, CCString, cclegacy } from '@cocos/core';
+import { ccclass, serializable, editable, type, visible } from '@cocos/core/internal';
 import * as pipeline from './define';
-import { ccclass, serializable, editable, type, visible } from '../core/data/class-decorator';
-import { legacyCC } from '../core/global-exports';
 export { pipeline };
 
 nr.getPhaseID = getPhaseID;
@@ -328,9 +327,9 @@ postProcessStageProto.init = function (pipeline) {
 }
 
 
-legacyCC.RenderFlow = RenderFlow;
-legacyCC.RenderStage = RenderStage;
-legacyCC.RenderPipeline = RenderPipeline;
+cclegacy.RenderFlow = RenderFlow;
+cclegacy.RenderStage = RenderStage;
+cclegacy.RenderPipeline = RenderPipeline;
 
 
 const RenderTexture: any = jsb.RenderTexture;

@@ -22,10 +22,10 @@
  THE SOFTWARE.
 */
 
-import { ccclass, executeInEditMode, executionOrder, help, menu, serializable, type, visible } from 'cc.decorator';
+import { ccclass, executeInEditMode, executionOrder, help, menu, serializable, type, visible } from '@cocos/core/internal';
 import { builtinResMgr } from '../../asset/asset-manager';
 import { Material } from '../../asset/assets';
-import { Color, Vec2, cclegacy } from '../../core';
+import { Color, Vec2, cclegacy } from '@cocos/core';
 import { ModelLocalBindings } from '../../rendering/define';
 import { Model } from '../../render-scene/scene';
 import { Root } from '../../root';

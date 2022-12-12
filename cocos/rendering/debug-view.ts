@@ -23,7 +23,7 @@
 */
 
 import { JSB } from 'internal:constants';
-import { cclegacy } from '../core';
+import { cclegacy } from '@cocos/core';
 import { Root } from '../root';
 
 const enum RenderingDebugViewType {

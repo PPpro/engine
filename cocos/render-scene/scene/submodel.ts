@@ -29,7 +29,7 @@ import { BatchingSchemes, IMacroPatch, Pass } from '../core/pass';
 import { DescriptorSet, DescriptorSetInfo, Device, InputAssembler, Texture, TextureType, TextureUsageBit, TextureInfo,
     Format, Sampler, Filter, Address, Shader, SamplerInfo, deviceManager,
     Attribute, Feature, FormatInfos, getTypedArrayConstructor } from '../../gfx';
-import { errorID, Mat4, cclegacy } from '../../core';
+import { errorID, Mat4, cclegacy } from '@cocos/core';
 import { getPhaseID } from '../../rendering/pass-phase';
 import { Root } from '../../root';
 

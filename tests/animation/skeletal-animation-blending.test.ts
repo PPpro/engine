@@ -1,6 +1,5 @@
-
 import { BlendStateWriterHost, LegacyBlendStateBuffer } from '../../cocos/3d/skeletal-animation/skeletal-animation-blending';
-import { Quat, toRadian, Vec3 } from '../../cocos/core';
+import { Quat, toRadian, Vec3 } from '@cocos/core';
 import { Node } from '../../cocos/scene-graph';
 import '../utils/matcher-deep-close-to';
 

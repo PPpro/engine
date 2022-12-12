@@ -21,9 +21,10 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
-import { ccclass, serializable } from 'cc.decorator';
+import { ccclass, serializable } from '@cocos/core/internal';
 
-import { cclegacy, js, _decorator, path, jsbUtils, CallbacksInvoker, applyMixins } from '../../core';
+import { cclegacy, js, _decorator, path } from '@cocos/core';
+import { jsbUtils, CallbacksInvoker, applyMixins } from '@cocos/core/internal';
 import { getUrlWithUuid } from '../asset-manager/helper';
 
 declare const jsb: any;

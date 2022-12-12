@@ -23,18 +23,15 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executionOrder, menu, requireComponent, tooltip, displayOrder, type, rangeMin, rangeMax, serializable, executeInEditMode } from 'cc.decorator';
+import { ccclass, help, executionOrder, menu, requireComponent, tooltip, displayOrder, type, rangeMin, rangeMax, serializable, executeInEditMode } from '@cocos/core/internal';
 import { EDITOR } from 'internal:constants';
 import { SpriteFrame } from '../2d/assets';
 import { Component, EventHandler as ComponentEventHandler } from '../scene-graph';
 import { UITransform, UIRenderer } from '../2d/framework';
 import { EventMouse, EventTouch } from '../input/types';
-import { Color, Vec3 } from '../core/math';
-import { ccenum } from '../core/value-types/enum';
-import { lerp } from '../core/math/utils';
+import { Color, Vec3, ccenum, lerp, cclegacy } from '@cocos/core';
 import { Node } from '../scene-graph/node';
 import { Sprite } from '../2d/components/sprite';
-import { legacyCC } from '../core/global-exports';
 import { TransformBit } from '../scene-graph/node-enum';
 import { NodeEventType } from '../scene-graph/node-event';
 import { XrUIPressEventType } from '../xr/event/xr-event-handle';
@@ -584,7 +581,7 @@ export class Button extends Component {
     public onEnable () {
         // check sprite frames
         //
-        if (!EDITOR || legacyCC.GAME_VIEW) {
+        if (!EDITOR || cclegacy.GAME_VIEW) {
             this._registerNodeEvent();
         } else {
             this.node.on(Sprite.EventType.SPRITE_FRAME_CHANGED, (comp: Sprite) => {
@@ -604,7 +601,7 @@ export class Button extends Component {
     public onDisable () {
         this._resetState();
 
-        if (!EDITOR || legacyCC.GAME_VIEW) {
+        if (!EDITOR || cclegacy.GAME_VIEW) {
             this._unregisterNodeEvent();
         } else {
             this.node.off(Sprite.EventType.SPRITE_FRAME_CHANGED);
@@ -701,7 +698,7 @@ export class Button extends Component {
     }
 
     protected _registerTargetEvent (target) {
-        if (EDITOR && !legacyCC.GAME_VIEW) {
+        if (EDITOR && !cclegacy.GAME_VIEW) {
             target.on(Sprite.EventType.SPRITE_FRAME_CHANGED, this._onTargetSpriteFrameChanged, this);
             target.on(NodeEventType.COLOR_CHANGED, this._onTargetColorChanged, this);
         }
@@ -724,7 +721,7 @@ export class Button extends Component {
     }
 
     protected _unregisterTargetEvent (target) {
-        if (EDITOR && !legacyCC.GAME_VIEW) {
+        if (EDITOR && !cclegacy.GAME_VIEW) {
             target.off(Sprite.EventType.SPRITE_FRAME_CHANGED);
             target.off(NodeEventType.COLOR_CHANGED);
         }
@@ -1023,4 +1020,4 @@ export class Button extends Component {
     }
 }
 
-legacyCC.Button = Button;
+cclegacy.Button = Button;

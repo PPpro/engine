@@ -23,7 +23,7 @@
 */
 
 import { instantiate } from '../serialization';
-import { CCObject, Pool } from '../core';
+import { CCObject, Pool } from '@cocos/core';
 import { Director, director } from '../game/director';
 import { Node } from '../scene-graph';
 import { ParticleSystem } from './particle-system';

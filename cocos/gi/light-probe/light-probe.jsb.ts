@@ -21,7 +21,8 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
-import { _decorator } from '../../core';
+
+import { _decorator } from '@cocos/core';
 import { Tetrahedron, Vertex } from './delaunay';
 
 const { ccclass, serializable, type } = _decorator;

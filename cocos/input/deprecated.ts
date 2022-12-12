@@ -24,7 +24,7 @@
 
 import './deprecated-3.3.0';
 import './deprecated-3.4.0';
-import { markAsWarning, replaceProperty, macro } from '../core';
+import { markAsWarning, replaceProperty, macro } from '@cocos/core';
 import { Event, EventMouse, EventTouch, SystemEventType } from './types';
 import { SystemEvent } from './system-event';
 

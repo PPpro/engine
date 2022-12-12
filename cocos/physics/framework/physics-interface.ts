@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { IVec3Like } from '../../core';
+import { IVec3Like } from '@cocos/core';
 import { Collider } from './components/colliders/collider';
 
 /**

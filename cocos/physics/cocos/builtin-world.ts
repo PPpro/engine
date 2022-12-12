@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { Vec3, RecyclePool, error, js, IVec3Like, geometry } from '../../core';
+import { Vec3, RecyclePool, error, js, IVec3Like, geometry } from '@cocos/core';
 import { PhysicsRayResult } from '../framework/physics-ray-result';
 import { BuiltinSharedBody } from './builtin-shared-body';
 import { BuiltinShape } from './shapes/builtin-shape';

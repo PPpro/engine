@@ -23,10 +23,10 @@
  THE SOFTWARE.
 */
 
-import { ccclass, help, executeInEditMode, menu, tooltip, type, displayOrder, serializable, formerlySerializedAs } from 'cc.decorator';
+import { ccclass, help, executeInEditMode, menu, tooltip, type, displayOrder, serializable, formerlySerializedAs } from '@cocos/core/internal';
 import { scene } from '../../render-scene';
 import { Light, PhotometricTerm } from './light-component';
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 import { Camera } from '../../render-scene/scene';
 import { Root } from '../../root';
 

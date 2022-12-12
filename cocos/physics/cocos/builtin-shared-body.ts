@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { Mat4, Quat, Vec3, js, geometry } from '../../core';
+import { Mat4, Quat, Vec3, js, geometry } from '@cocos/core';
 import { BuiltInWorld } from './builtin-world';
 import { BuiltinObject } from './object/builtin-object';
 import { BuiltinShape } from './shapes/builtin-shape';

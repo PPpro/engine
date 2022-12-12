@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { clamp } from '../core/math';
+import { clamp } from '@cocos/core';
 
 export class HeightField {
     public data: Uint16Array = new Uint16Array();

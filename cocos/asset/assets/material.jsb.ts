@@ -26,8 +26,8 @@ import { EffectAsset } from './effect-asset';
 import { Texture } from '../../gfx';
 import { TextureBase } from './texture-base';
 import { PassOverrides, MacroRecord, MaterialProperty } from '../../render-scene';
-import { Color, Mat3, Mat4, Quat, Vec2, Vec3, Vec4, cclegacy } from '../../core';
-import { type, serializable, ccclass } from '../../core/data/decorators';
+import { Color, Mat3, Mat4, Quat, Vec2, Vec3, Vec4, _decorator, cclegacy } from '@cocos/core';
+import { type, serializable, ccclass } from '@cocos/core/internal';
 import './asset';
 
 /**

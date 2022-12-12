@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { geometry } from '../core';
+import { geometry } from '@cocos/core';
 import { SetIndex } from './define';
 import { CommandBuffer, Device, RenderPass } from '../gfx';
 import { PipelineStateManager } from './pipeline-state-manager';

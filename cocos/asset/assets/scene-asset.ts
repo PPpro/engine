@@ -23,10 +23,10 @@
  THE SOFTWARE.
 */
 
-import { ccclass, editable, serializable } from 'cc.decorator';
+import { ccclass, editable, serializable } from '@cocos/core/internal';
 import { Scene } from '../../scene-graph/scene';
 import { Asset } from './asset';
-import { cclegacy } from '../../core';
+import { cclegacy } from '@cocos/core';
 
 /**
  * @en Class for scene loading.

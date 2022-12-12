@@ -22,7 +22,7 @@
  THE SOFTWARE.
 */
 
-import { EventTarget } from '../core';
+import { EventTarget } from '@cocos/core';
 
 export enum PipelineEventType {
     /**

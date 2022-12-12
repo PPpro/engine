@@ -1,14 +1,6 @@
-import {
-    EmptyStateTransition,
-    State,
-    StateMachine,
-    Transition,
-    isAnimationTransition,
-    EmptyState,
-    SubStateMachine,
-} from "../../../cocos/animation/marionette/animation-graph";
-import { MotionState } from "../../../cocos/animation/marionette/motion-state";
-import { assertIsTrue } from "../../../cocos/core/data/utils/asserts";
+import { EmptyStateTransition, State, StateMachine, Transition, isAnimationTransition, EmptyState, SubStateMachine } from '../../../cocos/animation/marionette/animation-graph';
+import { MotionState } from '../../../cocos/animation/marionette/motion-state';
+import { assertIsTrue } from '@cocos/core/internal';
 
 function copyTransitionConditions(lhs: Transition, rhs: Transition) {
     lhs.conditions = rhs.conditions.map((condition) => condition.clone());

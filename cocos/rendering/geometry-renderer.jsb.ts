@@ -21,7 +21,7 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
-import { cclegacy } from '../core';
+import { cclegacy } from '@cocos/core';
 
 export const GeometryRenderer = jsb.GeometryRenderer;
 cclegacy.GeometryRenderer = jsb.GeometryRenderer;

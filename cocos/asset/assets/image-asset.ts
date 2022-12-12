@@ -22,16 +22,12 @@
  THE SOFTWARE.
 */
 
-// @ts-check
-import { ccclass, override } from 'cc.decorator';
+import { warnID, macro, sys, cclegacy, Enum } from '@cocos/core';
+import { ccclass, override, ccwindow } from '@cocos/core/internal';
 import { EDITOR, ALIPAY, XIAOMI, JSB, TEST, BAIDU } from 'internal:constants';
 import { Device, Format, FormatFeatureBit, deviceManager } from '../../gfx';
 import { Asset } from './asset';
 import { PixelFormat } from './asset-enum';
-import { warnID, macro, sys, cclegacy } from '../../core';
-import { ccwindow } from '../../core/global-exports';
-import { Enum } from '../../core/value-types/enum';
-
 // Compress mipmap constants
 const COMPRESSED_HEADER_LENGTH = 4;
 const COMPRESSED_MIPMAP_DATA_SIZE_LENGTH = 4;

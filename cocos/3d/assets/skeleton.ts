@@ -22,8 +22,8 @@
  THE SOFTWARE.
 */
 
-import { ccclass, type, serializable } from 'cc.decorator';
-import { CCString, Mat4, cclegacy, murmurhash2_32_gc } from '../../core';
+import { ccclass, type, serializable } from '@cocos/core/internal';
+import { CCString, Mat4, cclegacy, murmurhash2_32_gc } from '@cocos/core';
 import type { DataPoolManager } from '../skeletal-animation/data-pool-manager';
 import { Asset } from '../../asset/assets/asset';
 

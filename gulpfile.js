@@ -34,8 +34,9 @@ const fs = require('fs-extra');
 const ps = require('path');
 const cp = require('child_process');
 
-gulp.task('build-debug-infos', async () => {
-    return await Promise.resolve(require('./gulp/tasks/buildDebugInfos')());
+gulp.task('build-debug-infos', (done) => {
+    cp.spawnSync(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['run', 'build']);
+    done();
 });
 
 gulp.task('build-source', async () => {
