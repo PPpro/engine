@@ -1,7 +1,8 @@
 const Fs = require('fs');
+const ps = require('path');
 
-module.exports = function buildDebugInfos () {
-    let readContent = Fs.readFileSync('EngineErrorMap.md', 'utf-8');
+function buildDebugInfos () {
+    let readContent = Fs.readFileSync(ps.join(__dirname, '../EngineErrorMap.md').replace(/\\/g, '/'), 'utf-8');
     let titleRegExp = /### \d+/g;
     let debugInfos = {};
 
@@ -25,5 +26,7 @@ module.exports = function buildDebugInfos () {
     }
 
     let writeContent = JSON.stringify(debugInfos, null, 4);
-    Fs.writeFileSync('DebugInfos.json', writeContent);
+    Fs.writeFileSync(ps.join(__dirname, '../debug-infos.json').replace(/\\/g, '/'), writeContent);
 };
+
+buildDebugInfos();

@@ -14,7 +14,7 @@
   "module": "index.js",
   "scripts": {
     "server": "http-server . -p 8002 -o playground/index.html",
-    "postinstall": "gulp build-debug-infos && npm run build-declaration && npm run bundle-adapter && npm run fetch-ral && npm run install:typedoc-plugin && npm run install:native-pack-tool && npm run link-module",
+    "postinstall": "npm run build && npm run build-declaration && npm run bundle-adapter && npm run fetch-ral && npm run install:typedoc-plugin && npm run install:native-pack-tool && npm run link-module",
     "link-module": "node ./scripts/link-module.js",
     "recast-import": "node ./scripts/recast-import",
     "build": "node ./scripts/build.js",

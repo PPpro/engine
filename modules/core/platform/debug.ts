@@ -25,10 +25,10 @@
 
 /* eslint-disable no-console */
 import { EDITOR, JSB, DEV, DEBUG } from 'internal:constants';
-import debugInfos from '../../../DebugInfos';
+import { debugInfos } from '@cocos/debug-infos';
 import { legacyCC } from '../global-exports';
 
-const ERROR_MAP_URL = 'https://github.com/cocos-creator/engine/blob/develop/EngineErrorMap.md';
+const ERROR_MAP_URL = 'https://github.com/cocos-creator/engine/blob/develop/modules/debug-infos/EngineErrorMap.md';
 
 // The html element displays log in web page (DebugMode.INFO_FOR_WEB_PAGE)
 let logList: HTMLTextAreaElement | null = null;
