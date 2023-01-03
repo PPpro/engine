@@ -7,7 +7,7 @@ import { StatsQuery } from '../stats-query';
 const DEBUG = false;
 const REMOVE_OLD = !DEBUG;
 const RECOMPILE = !DEBUG;
-const REMOVE_UNBUNDLED_CACHE = !DEBUG;
+const REMOVE_UNBUNDLED_CACHE = false;
 
 export async function build (options: {
     engine: string;
