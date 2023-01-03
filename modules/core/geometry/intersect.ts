@@ -36,10 +36,11 @@ import { Ray } from './ray';
 import { Sphere } from './sphere';
 import { Triangle } from './triangle';
 import { IVec3Like } from '../math/type-define';
-import type { RenderingSubMesh }  from '../../asset/assets';
 import type { IRaySubMeshOptions, IRayModelOptions, IRayMeshOptions } from './spec';
-import type { Model } from '../../render-scene/scene';
-import type { Mesh } from '../../3d';
+// TODO: we don't have these modules for now
+// import type { RenderingSubMesh } from '@cocos/asset/assets';
+// import type { Model } from '@cocos/render-scene/scene';
+// import type { Mesh } from '@cocos/3d';
 
 /**
  * @en
@@ -1217,11 +1218,15 @@ const intersect = {
     rayTriangle,
     rayCapsule,
 
+    // TODO: we don't have these modules for now
     // As these functions depends on upper modules, so move the implementation to misc/intersect.ts.
     // These functions are defined here to keep compatibility, they will be override in misc/intersect.ts.
-    raySubMesh: null as unknown as (ray: Ray, submesh: RenderingSubMesh, options?: IRaySubMeshOptions) => number,
-    rayMesh: null as unknown as (ray: Ray, mesh: Mesh, options?: IRayMeshOptions) => number,
-    rayModel: null as unknown as (r: Ray, model: Model, options?: IRayModelOptions) => number,
+    // raySubMesh: null as unknown as (ray: Ray, submesh: RenderingSubMesh, options?: IRaySubMeshOptions) => number,
+    // rayMesh: null as unknown as (ray: Ray, mesh: Mesh, options?: IRayMeshOptions) => number,
+    // rayModel: null as unknown as (r: Ray, model: Model, options?: IRayModelOptions) => number,
+    raySubMesh: null as unknown as (ray: Ray, submesh: unknown, options?: IRaySubMeshOptions) => number,
+    rayMesh: null as unknown as (ray: Ray, mesh: unknown, options?: IRayMeshOptions) => number,
+    rayModel: null as unknown as (r: Ray, model: unknown, options?: IRayModelOptions) => number,
 
     lineSphere,
     lineAABB,

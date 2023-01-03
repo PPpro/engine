@@ -252,6 +252,9 @@ const rayModel = (function () {
     };
 }());
 
+// @ts-expect-error unknown type of model
 geometry.intersect.rayModel = rayModel;
+// @ts-expect-error unknown type of subMesh
 geometry.intersect.raySubMesh = raySubMesh;
+// @ts-expect-error unknown type of mesh
 geometry.intersect.rayMesh = rayMesh;

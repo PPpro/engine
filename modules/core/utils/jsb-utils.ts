@@ -1,4 +1,4 @@
-import type { Node } from '../../scene-graph';
+// import type { Node } from '@cocos/scene-graph';  // TODO: we don't have this module for now
 
 // export interface IArrayProxy {
 //     owner: any,
@@ -84,34 +84,29 @@ import type { Node } from '../../scene-graph';
 //     });
 // }
 
-export function syncNodeValues (node: Node) {
-    // @ts-expect-error: jsb related codes.
+// TODO: we don't have '@cocos/scene-graph' module for now
+// export function syncNodeValues (node: Node) {
+export function syncNodeValues (node: any) {
     const lpos = node._lpos;
-    // @ts-expect-error: jsb related codes.
     node.setPositionForJS(lpos.x, lpos.y, lpos.z);
 
-    // @ts-expect-error: jsb related codes.
     const lscale = node._lscale;
-    // @ts-expect-error: jsb related codes.
     node.setScaleForJS(lscale.x, lscale.y, lscale.z);
 
-    // @ts-expect-error: jsb related codes.
     const lrot = node._lrot;
-    // @ts-expect-error: jsb related codes.
     node.setRotationForJS(lrot.x, lrot.y, lrot.z, lrot.w);
 
-    // @ts-expect-error: jsb related codes.
     const euler = node._euler;
-    // @ts-expect-error: jsb related codes.
     node.setRotationFromEulerForJS(euler.x, euler.y, euler.z);
 }
 
-export function updateChildrenForDeserialize (node: Node) {
+// TODO: we don't have '@cocos/scene-graph' module for now
+// export function updateChildrenForDeserialize (node: Node) {
+export function updateChildrenForDeserialize (node: any) {
     if (!node) {
         return;
     }
 
-    // @ts-expect-error: jsb related codes.
     const children = node._children;
     if (!children) {
         return;
@@ -122,7 +117,6 @@ export function updateChildrenForDeserialize (node: Node) {
         return;
     }
 
-    // @ts-expect-error: jsb related codes.
     node._setChildren(children);
 
     for (let i = 0; i < len; ++i) {

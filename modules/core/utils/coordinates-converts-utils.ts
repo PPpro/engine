@@ -23,9 +23,10 @@
  THE SOFTWARE.
  */
 
-import { Camera } from '../../misc/camera-component';
+// TODO: we don't have these modules for now
+// import type { Camera } from '@cocos/misc/camera-component';
+// import type { Node } from '@cocos/scene-graph';
 import { Vec3 } from '../math';
-import { Node } from '../../scene-graph';
 import { replaceProperty } from './x-deprecated';
 import { legacyCC } from '../global-exports';
 
@@ -41,8 +42,10 @@ const _vec3 = new Vec3();
  * @param wpos @en The world space location. @zh 世界空间位置。
  * @param uiNode @en The UI node. @zh UI 节点。
  * @param out @en The output local position in UI @zh 返回 UI 节点局部坐标。
+ * 
+ * TODO: we don't have these modules for now
  */
-export function WorldNode3DToLocalNodeUI (mainCamera: Camera, wpos: Vec3, uiNode: Node, out?: Vec3) {
+export function WorldNode3DToLocalNodeUI (mainCamera: any, wpos: Vec3, uiNode: any, out?: Vec3) {
     if (!out) {
         out = new Vec3();
     }
@@ -62,8 +65,10 @@ export function WorldNode3DToLocalNodeUI (mainCamera: Camera, wpos: Vec3, uiNode
  * @param mainCamera @en The main camera @zh 主相机
  * @param wpos @en The world space location. @zh 世界空间位置。
  * @param out @en The output world position in UI @zh 返回 UI 空间世界坐标。
+ * 
+ * TODO: we don't have these modules for now
  */
-export function WorldNode3DToWorldNodeUI (mainCamera: Camera, wpos: Vec3, out?: Vec3) {
+export function WorldNode3DToWorldNodeUI (mainCamera: any, wpos: Vec3, out?: Vec3) {
     if (!out) {
         out = new Vec3();
     }
@@ -93,7 +98,9 @@ replaceProperty(legacyCC.pipelineUtils, 'cc.pipelineUtils', [
         newName: 'convertToUINode',
         targetName: 'cc.Camera.prototype',
         customFunction (...args: any[]) {
-            const camera = args[0] as Camera;
+            // TODO: we don't have these modules for now
+            // const camera = args[0] as Camera;
+            const camera = args[0] as any;
             const out = args[3] || _vec3;
             camera.convertToUINode(args[1], args[2], out);
             out.add(args[2].position);
