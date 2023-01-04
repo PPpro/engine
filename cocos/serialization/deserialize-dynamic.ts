@@ -27,9 +27,9 @@
 import { EDITOR, TEST, DEV, DEBUG, JSB, PREVIEW, SUPPORT_JIT } from 'internal:constants';
 import { cclegacy, js, misc, CCClass, sys, error, CustomSerializable, deserializeTag, SerializationInput } from '@cocos/core';
 import { ENUM_TAG, BITMASK_TAG, assertIsTrue, DeserializationContext } from '@cocos/core/internal';
+import { Platform } from '@pal/system-info';
 import { MissingScript } from '../misc/missing-script';
 import { Details } from './deserialize';
-import { Platform } from '../../pal/system-info/enum-type';
 import type { deserialize, CCClassConstructor } from './deserialize';
 import { CCON } from './ccon';
 import { Asset } from '../asset/assets';

@@ -24,7 +24,7 @@
  */
 
 import { ALIPAY, RUNTIME_BASED, BYTEDANCE, WECHAT, LINKSURE, QTT, COCOSPLAY, HUAWEI, EDITOR, VIVO } from 'internal:constants';
-import { systemInfo } from 'pal/system-info';
+import { systemInfo, BrowserType, OS } from '@pal/system-info';
 import { WebGLCommandAllocator } from './webgl-command-allocator';
 import { WebGLStateCache } from './webgl-state-cache';
 import { WebGLTexture } from './webgl-texture';
@@ -32,7 +32,6 @@ import { Format, TextureInfo, TextureFlagBit, TextureType, TextureUsageBit, Buff
 import { Swapchain } from '../base/swapchain';
 import { IWebGLExtensions, WebGLDeviceManager } from './webgl-define';
 import { macro, warnID, warn, debug } from '@cocos/core';
-import { BrowserType, OS } from '../../../pal/system-info/enum-type';
 
 const eventWebGLContextLost = 'webglcontextlost';
 

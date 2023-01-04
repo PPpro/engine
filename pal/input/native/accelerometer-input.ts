@@ -1,8 +1,7 @@
 import { AccelerometerCallback } from 'pal/input';
-import { systemInfo } from 'pal/system-info';
+import { systemInfo, OS } from '@pal/system-info';
 import { screenAdapter } from 'pal/screen-adapter';
 import { EventTarget } from '@cocos/core';
-import { OS } from '../../system-info/enum-type';
 import { Orientation } from '../../screen-adapter/enum-type';
 import { Acceleration, EventAcceleration } from '../../../cocos/input/types';
 import { InputEventType } from '../../../cocos/input/types/event-enum';

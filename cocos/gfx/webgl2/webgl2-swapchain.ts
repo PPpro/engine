@@ -24,14 +24,13 @@
  */
 
 import { EDITOR } from 'internal:constants';
-import { systemInfo } from 'pal/system-info';
+import { systemInfo, OS } from '@pal/system-info';
 import { warnID, warn, debug, macro } from '@cocos/core';
 import { WebGL2StateCache } from './webgl2-state-cache';
 import { WebGL2Texture } from './webgl2-texture';
 import { Format, TextureInfo, TextureFlagBit, TextureType, TextureUsageBit, BufferTextureCopy, SwapchainInfo, SurfaceTransform } from '../base/define';
 import { Swapchain } from '../base/swapchain';
 import { IWebGL2Extensions, WebGL2DeviceManager } from './webgl2-define';
-import { OS } from '../../../pal/system-info/enum-type';
 
 const eventWebGLContextLost = 'webglcontextlost';
 

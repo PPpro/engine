@@ -24,14 +24,13 @@
  THE SOFTWARE.
 */
 
-import { systemInfo } from 'pal/system-info';
+import { systemInfo, NetworkType, Language, OS, Platform, BrowserType, Feature } from '@pal/system-info';
 import { screenAdapter } from 'pal/screen-adapter';
 import { WECHAT } from 'internal:constants';
 import { legacyCC } from '../global-exports';
 import { Rect } from '../math/rect';
 import { Vec2 } from '../math/vec2';
 import { warnID, log } from './debug';
-import { NetworkType, Language, OS, Platform, BrowserType, Feature } from '../../../pal/system-info/enum-type';
 import { screen } from './screen';
 
 export declare namespace sys {

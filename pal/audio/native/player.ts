@@ -1,8 +1,7 @@
-import { systemInfo } from 'pal/system-info';
+import { systemInfo, Platform } from '@pal/system-info';
 import { AudioType, AudioState, AudioEvent, AudioPCMDataView, AudioBufferView } from '../type';
 import { EventTarget, cclegacy, clamp, clamp01 } from '@cocos/core';
 import { enqueueOperation, OperationInfo, OperationQueueable } from '../operation-queue';
-import { Platform } from '../../system-info/enum-type';
 
 const urlCount: Record<string, number> = {};
 const audioEngine = jsb.AudioEngine;

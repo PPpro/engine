@@ -1,5 +1,5 @@
 import { minigame } from 'pal/minigame';
-import { systemInfo } from 'pal/system-info';
+import { systemInfo } from '@pal/system-info';
 import { EventTarget, clamp, clamp01 } from '@cocos/core';
 import { AudioEvent, AudioPCMDataView, AudioState, AudioType } from '../type';
 import { enqueueOperation, OperationInfo, OperationQueueable } from '../operation-queue';

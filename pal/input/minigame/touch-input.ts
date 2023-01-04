@@ -1,13 +1,12 @@
 import { TouchCallback } from 'pal/input';
 import { minigame } from 'pal/minigame';
 import { screenAdapter } from 'pal/screen-adapter';
-import { systemInfo } from 'pal/system-info';
+import { systemInfo, Feature } from '@pal/system-info';
 import { ALIPAY, VIVO } from 'internal:constants';
 import { Size, Vec2, EventTarget, macro } from '@cocos/core';
 import { EventTouch, Touch } from '../../../cocos/input/types';
 import { touchManager } from '../touch-manager';
 import { InputEventType } from '../../../cocos/input/types/event-enum';
-import { Feature } from '../../system-info/enum-type';
 
 export class TouchInputSource {
     private _eventTarget: EventTarget = new EventTarget();

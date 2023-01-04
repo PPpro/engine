@@ -24,7 +24,7 @@
 ****************************************************************************/
 
 /* eslint-disable max-len */
-import { systemInfo } from 'pal/system-info';
+import { systemInfo, OS } from '@pal/system-info';
 import { Color, Buffer, DescriptorSetLayout, Device, Feature, Format, FormatFeatureBit, Sampler, Swapchain, Texture, ClearFlagBit, DescriptorSet, deviceManager, Viewport, API, CommandBuffer, Type, SamplerInfo, Filter, Address } from '../../gfx';
 import { Mat4, Quat, toRadian, Vec2, Vec3, Vec4, assert, macro, cclegacy } from '@cocos/core';
 import { ComputeView, CopyPair, LightInfo, LightingMode, MovePair, QueueHint, RasterView, ResourceDimension, ResourceFlags, ResourceResidency, SceneFlags, UpdateFrequency } from './types';
@@ -39,7 +39,6 @@ import { RenderWindow } from '../../render-scene/core/render-window';
 import { MacroRecord, RenderScene } from '../../render-scene';
 import { GlobalDSManager } from '../global-descriptor-set-manager';
 import { supportsR32FloatTexture, UBOSkinning } from '../define';
-import { OS } from '../../../pal/system-info/enum-type';
 import { Compiler } from './compiler';
 import { PipelineUBO } from '../pipeline-ubo';
 import { builtinResMgr } from '../../asset/asset-manager';

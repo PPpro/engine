@@ -1,7 +1,8 @@
 import { DEBUG, EDITOR, PREVIEW, TEST } from 'internal:constants';
-import { IFeatureMap } from 'pal/system-info';
 import { EventTarget } from '@cocos/core';
-import { BrowserType, NetworkType, OS, Platform, Language, Feature } from '../enum-type';
+import { BrowserType, NetworkType, OS, Platform, Language, Feature, IFeatureMap } from '../enum-type';
+
+export * from '../enum-type';
 
 class SystemInfo extends EventTarget {
     public readonly networkType: NetworkType;

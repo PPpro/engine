@@ -1,6 +1,7 @@
-import { IFeatureMap } from 'pal/system-info';
 import { EventTarget } from '@cocos/core';
-import { BrowserType, NetworkType, OS, Platform, Language, Feature } from '../enum-type';
+import { BrowserType, NetworkType, OS, Platform, Language, Feature, IFeatureMap } from '../enum-type';
+
+export * from '../enum-type';
 
 const networkTypeMap: Record<string, NetworkType> = {
     0: NetworkType.NONE,

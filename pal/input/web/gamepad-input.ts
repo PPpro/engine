@@ -1,8 +1,7 @@
 import { GamepadCallback } from 'pal/input';
-import { systemInfo } from 'pal/system-info';
+import { systemInfo, Feature } from '@pal/system-info';
 import { InputEventType } from '../../../cocos/input/types/event-enum';
 import { EventTarget, cclegacy, js } from '@cocos/core';
-import { Feature } from '../../system-info/enum-type';
 import { InputSourceButton, InputSourceDpad, InputSourceStick } from '../input-source';
 import { EventGamepad } from '../../../cocos/input/types';
 

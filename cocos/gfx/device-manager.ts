@@ -24,12 +24,12 @@
  THE SOFTWARE.
  */
 
+import { BrowserType } from '@pal/system-info';
 import { JSB, WEBGPU } from 'internal:constants';
 import { cclegacy, error, getError, sys, screen, Settings, settings } from '@cocos/core';
 import { BindingMappingInfo, DeviceInfo, SwapchainInfo } from './base/define';
 import { Device } from './base/device';
 import { Swapchain } from './base/swapchain';
-import { BrowserType } from '../../pal/system-info/enum-type';
 
 /**
  * @en

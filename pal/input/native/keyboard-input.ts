@@ -1,5 +1,5 @@
 import { KeyboardCallback } from 'pal/input';
-import { systemInfo } from 'pal/system-info';
+import { systemInfo } from '@pal/system-info';
 import { KeyCode, EventKeyboard } from '../../../cocos/input/types';
 import { EventTarget } from '@cocos/core';
 import { InputEventType } from '../../../cocos/input/types/event-enum';

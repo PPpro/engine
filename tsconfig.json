@@ -27,7 +27,6 @@
       "./node_modules/@types/jest/index",
 
       // pal
-      "./@types/pal/system-info",
       "./@types/pal/screen-adapter",
       "./@types/pal/minigame",
       "./@types/pal/audio",
@@ -42,6 +41,7 @@
     "pal/**/*.ts",
     "node_modules/@types/internal/**/*.ts",
     "node_modules/@cocos/core/**/*.ts",
-    "node_modules/@cocos/debug-infos/**/*.ts"
+    "node_modules/@cocos/debug-infos/**/*.ts",
+    "node_modules/@pal/system-info/**/*.ts"
   ]
 }

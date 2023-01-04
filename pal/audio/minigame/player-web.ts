@@ -1,5 +1,5 @@
 import { minigame } from 'pal/minigame';
-import { systemInfo } from 'pal/system-info';
+import { systemInfo } from '@pal/system-info';
 import { clamp01, EventTarget } from '@cocos/core';
 import { audioBufferManager } from '../audio-buffer-manager';
 import AudioTimer from '../audio-timer';

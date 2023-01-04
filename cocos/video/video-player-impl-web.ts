@@ -25,11 +25,11 @@
 
 import { screenAdapter } from 'pal/screen-adapter';
 import { mat4, visibleRect, sys, screen, warn, misc } from '@cocos/core';
+import { BrowserType, OS } from '@pal/system-info';
 import { game } from '../game';
 import { EventType, READY_STATE } from './video-player-enums';
 import { VideoPlayerImpl } from './video-player-impl';
 import { ClearFlagBit } from '../gfx';
-import { BrowserType, OS } from '../../pal/system-info/enum-type';
 
 const { contains } = misc;
 

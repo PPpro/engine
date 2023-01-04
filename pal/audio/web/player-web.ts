@@ -1,5 +1,5 @@
 import { EDITOR } from 'internal:constants';
-import { systemInfo } from 'pal/system-info';
+import { systemInfo } from '@pal/system-info';
 import { AudioPCMDataView, AudioEvent, AudioState, AudioType } from '../type';
 import { EventTarget, clamp01, cclegacy } from '@cocos/core';
 import { enqueueOperation, OperationInfo, OperationQueueable } from '../operation-queue';

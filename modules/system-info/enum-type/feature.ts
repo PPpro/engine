@@ -1,3 +1,7 @@
+export type IFeatureMap = {
+    [feature in Feature]: boolean;
+};
+
 export enum Feature {
     /**
      * @en Feature to support Webp.
