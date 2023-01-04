@@ -25,5 +25,5 @@
 */
 
 export { EventTarget } from './event-target';
-export { Eventify } from './eventify';
+export { Eventify, type IEventified } from './eventify';
 export { AsyncDelegate } from './async-delegate';

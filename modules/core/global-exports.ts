@@ -25,6 +25,8 @@
 
 import { DEV } from 'internal:constants';
 
+declare let global: any;  // For NodeJS enviroment.
+
 const _global = typeof window === 'undefined' ? global : window;
 
 /**
