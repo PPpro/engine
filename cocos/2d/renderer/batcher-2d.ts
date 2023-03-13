@@ -792,7 +792,6 @@ export class Batcher2D implements IBatcher {
         const selfOpacity = render && render.color ? render.color.a / 255 : 1;
         this._pOpacity = opacity *= selfOpacity * uiProps.localOpacity;
         // TODO Set opacity to ui property's opacity before remove it
-        // @ts-expect-error temporary force set, will be removed with ui property's opacity
         uiProps._opacity = opacity;
         if (uiProps.colorDirty) {
             // Cascade color dirty state
@@ -1017,7 +1016,6 @@ class LocalDescriptorSet  {
 
     public uploadLocalData () {
         const node = this._transform!;
-        // @ts-expect-error TS2445
         if (node.hasChangedFlags || node._dirtyFlags) {
             node.updateWorldTransform();
             this._transformUpdate = true;

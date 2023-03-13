@@ -169,8 +169,9 @@ export class SkinningModel extends MorphModel {
      * @param stamp @en The update time stamp @zh 更新的时间戳
      */
     public updateTransform (stamp: number) {
-        const root = this.transform;
-        // @ts-expect-error TS2445
+        // TODO: should not access private properties
+        // workaround: mark root as any
+        const root: any = this.transform;
         if (root.hasChangedFlags || root._dirtyFlags) {
             root.updateWorldTransform();
             this._localDataUpdated = true;
@@ -190,8 +191,7 @@ export class SkinningModel extends MorphModel {
         const worldBounds = this._worldBounds;
         if (this._modelBounds && worldBounds) {
             geometry.AABB.fromPoints(this._modelBounds, v3_min, v3_max);
-            // @ts-expect-error TS2445
-            this._modelBounds.transform(root._mat, root._pos, root._rot, root._scale, this._worldBounds);
+            this._modelBounds.transform(root._mat, root._pos, root._rot, root._scale, this._worldBounds!);
         }
     }
 
