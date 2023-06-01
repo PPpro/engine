@@ -133,7 +133,7 @@ class RuntimeStashRecord implements RuntimeStash {
     ) {
     }
 
-    public set (stash: PoseGraphStash, context: AnimationGraphBindingContext) {
+    public set (stash: PoseGraphStash, context: AnimationGraphBindingContext): void {
         assertIsTrue(this._state === StashRecordState.UNINITIALIZED, `The stash has already been set.`);
         const instantiatedPoseGraph = instantiatePoseGraph(stash.graph, context);
         instantiatedPoseGraph.bind(context);
@@ -141,7 +141,7 @@ class RuntimeStashRecord implements RuntimeStash {
         this._state = StashRecordState.UNSETTLED;
     }
 
-    public settle (context: AnimationGraphSettleContext) {
+    public settle (context: AnimationGraphSettleContext): void {
         assertIsTrue(
             this._state === StashRecordState.UNSETTLED // First time settle
             || this._state === StashRecordState.SETTLED, // Resettle

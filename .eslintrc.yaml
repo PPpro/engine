@@ -110,7 +110,7 @@ rules:
     '@typescript-eslint/no-unused-expressions': warn
 
     # TODO: this is just too much work
-    '@typescript-eslint/explicit-module-boundary-types': off
+    # '@typescript-eslint/explicit-module-boundary-types': off
 
     # TODO: sadly we still rely heavily on legacyCC
     '@typescript-eslint/no-unsafe-assignment': off
@@ -143,3 +143,6 @@ rules:
 
     # Prefer the interface style.
     '@typescript-eslint/consistent-type-definitions': [error, interface]
+
+    '@typescript-eslint/explicit-function-return-type': [error]
+    "@typescript-eslint/explicit-module-boundary-types": ["error", { "allowArgumentsExplicitlyTypedAsAny": true }]
