@@ -22,6 +22,10 @@
  THE SOFTWARE.
 */
 
+import { a } from 'config'
+
+
+jsb.AssetsManager
 export function findCanvas (): { frame: HTMLDivElement, container: HTMLDivElement, canvas: HTMLCanvasElement } {
     const frame = document.querySelector('#GameDiv') as HTMLDivElement;
     const container = document.querySelector('#Cocos3dGameContainer') as HTMLDivElement;
