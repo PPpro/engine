@@ -86,9 +86,12 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
+    "-": "0.0.1",
     "@cocos/box2d": "1.0.1",
     "@cocos/cannon": "1.2.8",
     "@cocos/ccbuild": "^1.0.0-alpha.7",
-    "@cocos/dragonbones-js": "^1.0.1"
+    "@cocos/dragonbones-js": "^1.0.1",
+    "g": "^2.0.1",
+    "turbo": "^1.10.2"
   }
 }
