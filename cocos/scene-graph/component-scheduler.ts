@@ -180,7 +180,7 @@ class ReusableInvoker extends LifeCycleInvoker {
         }
     }
 
-    public invoke (dt): void {
+    public invoke (dt: number): void {
         if (this._neg.array.length > 0) {
             this._invoke(this._neg, dt);
         }
@@ -221,7 +221,7 @@ export function createInvokeImplJit (code: string, useDt?, ensureFlag?): (iterat
     return createInvokeImpl(singleInvoke, fastPath, ensureFlag);
 }
 export function createInvokeImpl (singleInvoke, fastPath, ensureFlag?): (iterator: any, dt: any) => void {
-    return (iterator, dt): void => {
+    return (iterator, dt: number): void => {
         try {
             fastPath(iterator, dt);
         } catch (e) {
@@ -265,10 +265,10 @@ const invokeStart = SUPPORT_JIT ? createInvokeImplJit(`c.start();c._objFlags|=${
 
 const invokeUpdate = SUPPORT_JIT ? createInvokeImplJit('c.update(dt)', true)
     : createInvokeImpl(
-        (c, dt): void => {
+        (c, dt: number): void => {
             c.update(dt);
         },
-        (iterator, dt): void => {
+        (iterator, dt: number): void => {
             const array = iterator.array;
             for (iterator.i = 0; iterator.i < array.length; ++iterator.i) {
                 array[iterator.i].update(dt);
@@ -278,10 +278,10 @@ const invokeUpdate = SUPPORT_JIT ? createInvokeImplJit('c.update(dt)', true)
 
 const invokeLateUpdate = SUPPORT_JIT ? createInvokeImplJit('c.lateUpdate(dt)', true)
     : createInvokeImpl(
-        (c, dt): void => {
+        (c, dt: number): void => {
             c.lateUpdate(dt);
         },
-        (iterator, dt): void => {
+        (iterator, dt: number): void => {
             const array = iterator.array;
             for (iterator.i = 0; iterator.i < array.length; ++iterator.i) {
                 array[iterator.i].lateUpdate(dt);
