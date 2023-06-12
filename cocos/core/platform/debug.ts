@@ -58,12 +58,12 @@ let ccDebug = ccLog;
  */
 function formatString (message?: string, ...optionalParams: LogParamType[]): string {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return legacyCC.js.formatStr.apply(null, ([message] as LogParamType[]).concat(optionalParams));
+    return legacyCC.js.formatStr.apply(null, [message, ...optionalParams]);
 }
 
 /**
- * @en Outputs a message to the console. The message may be a single string (with optional substitution values), or it may be any one or more JavaScript objects.
- * @zh 向控制台输出一条信息。这条信息可能是单个字符串（包括可选的替代字符串），也可能是一个或多个对象。
+ * @en Outputs a log message to the console. The message may be a single string (with optional substitution values), or it may be any one or more JavaScript objects.
+ * @zh 向控制台输出一条日志信息。这条信息可能是单个字符串（包括可选的替代字符串），也可能是一个或多个对象。
  */
 export function log (...data: any[]): void {
     return ccLog(...data);
@@ -78,29 +78,23 @@ export function log (...data: any[]): void {
  * 向控制台输出一条警告信息。这条信息可能是单个字符串（包括可选的替代字符串），也可能是一个或多个对象。
  * - 在 Cocos Creator 中，警告信息显示是黄色的。<br/>
  * - 在 Chrome 中，警告信息有着黄色的图标以及黄色的消息文本。<br/>
- * @param message @zh 包含零个或多个需要替换的JavaScript字符串。@en JavaScript objects to replace substitution strings in msg.
- * @param optionalParams  @zh 用来替换在message中需要替换的JavaScript对象。@en JavaScript objects with which to replace substitution strings within msg.
- * This gives you additional control over the format of the output.
  */
-export function warn (message?: any, ...optionalParams: any[]): void {
-    return ccWarn(message, ...optionalParams);
+export function warn (...data: any[]): void {
+    return ccWarn(...data);
 }
 
 /**
  * @en
- * Outputs an error message to the Cocos Creator Console (editor) or Web Console (runtime).<br/>
+ * Outputs an error message to the console. The message may be a single string (with optional substitution values), or it may be any one or more JavaScript objects.
  * - In Cocos Creator, error is red.<br/>
  * - In Chrome, error have a red icon along with red message text.<br/>
  * @zh
- * 输出错误消息到 Cocos Creator 编辑器的 Console 或运行时页面端的 Console 中。<br/>
+ * 向控制台输出一条错误信息。这条信息可能是单个字符串（包括可选的替代字符串），也可能是一个或多个对象。
  * - 在 Cocos Creator 中，错误信息显示是红色的。<br/>
  * - 在 Chrome 中，错误信息有红色的图标以及红色的消息文本。<br/>
- * @param message @zh 包含零个或多个需要替换的JavaScript字符串。@en JavaScript objects to replace substitution strings in msg.
- * @param optionalParams  @zh 用来替换在message中需要替换的JavaScript对象。@en JavaScript objects with which to replace substitution strings within msg.
- * This gives you additional control over the format of the output.
  */
-export function error (message?: any, ...optionalParams: any[]): void {
-    return ccError(message, ...optionalParams);
+export function error (...data: any[]): void {
+    return ccError(...data);
 }
 
 /**
@@ -113,7 +107,7 @@ export function error (message?: any, ...optionalParams: any[]): void {
  * @param optionalParams  @zh 用来替换在message中需要替换的JavaScript对象。@en JavaScript objects with which to replace substitution strings within msg.
  * This gives you additional control over the format of the output.
  */
-export function assert (value: any, message?: string, ...optionalParams: any[]): asserts value {
+export function assert (value: boolean, message?: string, ...optionalParams: LogParamType[]): asserts value {
     return ccAssert(value, message, ...optionalParams);
 }
 
