@@ -23,7 +23,7 @@
 */
 
 import { EDITOR, DEV, TEST } from 'internal:constants';
-import { warnID, error, errorID } from '../platform/debug';
+import { warnID, error, errorID, LogParamType } from '../platform/debug';
 import { IDGenerator }  from './id-generator';
 
 const tempCIDGenerator = new IDGenerator('TmpCId.');
@@ -348,7 +348,7 @@ const REGEXP_STR = /%s/;
  * js.formatStr(a, b, c);
  * ```
  */
-export function formatStr (msg: string, ...subst: any[]): string {
+export function formatStr (msg: string, ...subst: LogParamType[]): string {
     if (arguments.length === 0) {
         return '';
     }

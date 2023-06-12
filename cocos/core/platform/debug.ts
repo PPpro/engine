@@ -31,6 +31,8 @@ const ccdocument = ccwindow.document;
 
 const ERROR_MAP_URL = 'https://github.com/cocos-creator/engine/blob/develop/EngineErrorMap.md';
 
+export type LogParamType = number | string;
+
 // The html element displays log in web page (DebugMode.INFO_FOR_WEB_PAGE)
 let logList: HTMLTextAreaElement | null = null;
 
@@ -40,7 +42,7 @@ let ccWarn = ccLog;
 
 let ccError = ccLog;
 
-let ccAssert = (condition: any, message?: any, ...optionalParams: any[]): void => {
+let ccAssert = (condition: boolean, message?: string, ...optionalParams: LogParamType[]): void => {
     if (!condition) {
         console.log(`ASSERT: ${formatString(message, ...optionalParams)}`);
     }
@@ -54,28 +56,26 @@ let ccDebug = ccLog;
  * @param message @zh 包含零个或多个需要替换的JavaScript字符串。@en JavaScript objects to replace substitution strings in msg.
  * @param optionalParams  @zh 用来替换在message中需要替换的JavaScript对象。@en JavaScript objects with which to replace substitution strings within msg.
  */
-function formatString (message?: any, ...optionalParams: any[]): any {
+function formatString (message?: string, ...optionalParams: LogParamType[]): string {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return legacyCC.js.formatStr.apply(null, [message].concat(optionalParams));
+    return legacyCC.js.formatStr.apply(null, ([message] as LogParamType[]).concat(optionalParams));
 }
 
 /**
- * @en Outputs a message to the Cocos Creator Console (editor) or Web Console (runtime). This gives you additional control over the format of the output.
- * @zh 输出一条消息到 Cocos Creator 编辑器的 Console 或运行时 Web 端的 Console 中。这为你提供了对输出格式的额外控制。
- * @param message @zh 包含零个或多个需要替换的JavaScript字符串。@en JavaScript objects to replace substitution strings in msg.
- * @param optionalParams  @zh 用来替换在message中需要替换的JavaScript对象。@en JavaScript objects with which to replace substitution strings within msg.
+ * @en Outputs a message to the console. The message may be a single string (with optional substitution values), or it may be any one or more JavaScript objects.
+ * @zh 向控制台输出一条信息。这条信息可能是单个字符串（包括可选的替代字符串），也可能是一个或多个对象。
  */
-export function log (message?: any, ...optionalParams: any[]): void {
-    return ccLog(message, ...optionalParams);
+export function log (...data: any[]): void {
+    return ccLog(...data);
 }
 
 /**
  * @en
- * Outputs a warning message to the Cocos Creator Console (editor) or Web Console (runtime).
+ * Outputs a warning message to the console. The message may be a single string (with optional substitution values), or it may be any one or more JavaScript objects.
  * - In Cocos Creator, warning is yellow.
  * - In Chrome, warning have a yellow warning icon with the message text.
  * @zh
- * 输出警告消息到 Cocos Creator 编辑器的 Console 或运行时 Web 端的 Console 中。<br/>
+ * 向控制台输出一条警告信息。这条信息可能是单个字符串（包括可选的替代字符串），也可能是一个或多个对象。
  * - 在 Cocos Creator 中，警告信息显示是黄色的。<br/>
  * - 在 Chrome 中，警告信息有着黄色的图标以及黄色的消息文本。<br/>
  * @param message @zh 包含零个或多个需要替换的JavaScript字符串。@en JavaScript objects to replace substitution strings in msg.
@@ -281,22 +281,22 @@ function getTypedFormatter (type: 'Log' | 'Warning' | 'Error' | 'Assert'): (id: 
 }
 
 const logFormatter = getTypedFormatter('Log');
-export function logID (id: number, ...optionalParams: any[]): void {
+export function logID (id: number, ...optionalParams: LogParamType[]): void {
     log(logFormatter(id, ...optionalParams));
 }
 
 const warnFormatter = getTypedFormatter('Warning');
-export function warnID (id: number, ...optionalParams: any[]): void {
+export function warnID (id: number, ...optionalParams: LogParamType[]): void {
     warn(warnFormatter(id, ...optionalParams));
 }
 
 const errorFormatter = getTypedFormatter('Error');
-export function errorID (id: number, ...optionalParams: any[]): void {
+export function errorID (id: number, ...optionalParams: LogParamType[]): void {
     error(errorFormatter(id, ...optionalParams));
 }
 
 const assertFormatter = getTypedFormatter('Assert');
-export function assertID (condition: any, id: number, ...optionalParams: any[]): void {
+export function assertID (condition: boolean, id: number, ...optionalParams: LogParamType[]): void {
     if (condition) {
         return;
     }
@@ -363,7 +363,7 @@ export enum DebugMode {
  * @param errorId @zh 错误的ID。@en Error id.
  * @param param @zh 输出日志。@en Output log.
  */
-export function getError (errorId: number, ...param: any[]): string {
+export function getError (errorId: number, ...param: LogParamType[]): string {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return errorFormatter(errorId, ...param);
 }
