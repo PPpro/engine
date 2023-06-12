@@ -110,18 +110,20 @@ rules:
     '@typescript-eslint/no-unused-expressions': warn
 
     # TODO: this is just too much work
-    '@typescript-eslint/explicit-module-boundary-types': off
+    # '@typescript-eslint/explicit-module-boundary-types': off
 
     # NOTE: We don't want to rely on TS automatic type inference
     '@typescript-eslint/no-inferrable-types': off
+    '@typescript-eslint/explicit-member-types': [error]
 
     # TODO: sadly we still rely heavily on legacyCC
-    '@typescript-eslint/no-unsafe-assignment': off
-    '@typescript-eslint/no-unsafe-call': off
-    '@typescript-eslint/no-unsafe-member-access': off
+    # '@typescript-eslint/no-unsafe-assignment': off
+    # '@typescript-eslint/no-unsafe-call': off
+    # '@typescript-eslint/no-unsafe-member-access': off
 
+    '@typescript-eslint/no-unsafe-argument': [error]
     '@typescript-eslint/unbound-method': off # we exploit prototype methods sometimes to acheive better performace
-    '@typescript-eslint/no-explicit-any': off # still relevant for some heavily templated usages
+    # '@typescript-eslint/no-explicit-any': off # still relevant for some heavily templated usages
     '@typescript-eslint/no-empty-function': off # may become useful in some parent classes
     '@typescript-eslint/no-unused-vars': off # may become useful in some parent classes
     '@typescript-eslint/no-non-null-assertion': off # sometimes we just know better than the compiler
