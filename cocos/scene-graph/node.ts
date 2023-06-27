@@ -1096,6 +1096,10 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
     // EVENT PROCESSING
 
     /**
+     * @deprecated since 3.8.1, please register Node-related event listener with `Node.EventType` and use `EventTarget` for custom event instead.
+     */
+    public on (type: string, callback: AnyFunction, target?: unknown, useCapture?: boolean): void
+    /**
      * @en
      * Register a callback of a specific event type on Node.
      * Use this method to register touch or mouse event permit propagation based on scene graph,
@@ -1132,7 +1136,8 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
      * node.on(NodeEventType.TOUCH_END, callback, this);
      * ```
      */
-    public on (type: string | NodeEventType, callback: AnyFunction, target?: unknown, useCapture: any = false): void {
+    public on (type: NodeEventType, callback: AnyFunction, target?: unknown, useCapture?: boolean): void
+    public on (type: string | NodeEventType, callback: AnyFunction, target?: unknown, useCapture: boolean = false): void {
         switch (type) {
         case NodeEventType.TRANSFORM_CHANGED:
             this._eventMask |= TRANSFORM_ON;
@@ -1143,6 +1148,10 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
         this._eventProcessor.on(type as NodeEventType, callback, target, useCapture);
     }
 
+    /**
+     * @deprecated since 3.8.1, please unregister Node-related event listener with `Node.EventType` and use `EventTarget` for custom event instead.
+     */
+    public off (type: string, callback?: AnyFunction, target?: unknown, useCapture?: boolean): void
     /**
      * @en
      * Removes the callback previously registered with the same type, callback, target and or useCapture.
@@ -1159,7 +1168,8 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
      * node.off(NodeEventType.TOUCH_START, callback, this.node);
      * ```
      */
-    public off (type: string, callback?: AnyFunction, target?: unknown, useCapture: any = false): void {
+    public off (type: NodeEventType, callback?: AnyFunction, target?: unknown, useCapture?: boolean): void
+    public off (type: string | NodeEventType, callback?: AnyFunction, target?: unknown, useCapture: boolean = false): void {
         this._eventProcessor.off(type as NodeEventType, callback, target, useCapture);
 
         const hasListeners = this._eventProcessor.hasEventListener(type);
@@ -1176,6 +1186,10 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
     }
 
     /**
+     * @deprecated since 3.8.1, please register Node-related event listener with `Node.EventType` and use `EventTarget` for custom event instead.
+     */
+    public once (type: string, callback: AnyFunction, target?: unknown, useCapture?: boolean): void
+    /**
      * @en
      * Register an callback of a specific event type on the Node,
      * the callback will remove itself after the first time it is triggered.
@@ -1187,10 +1201,15 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
      *                              The callback is ignored if it is a duplicate (the callbacks are unique).
      * @param target - The target (this object) to invoke the callback, can be null
      */
-    public once (type: string, callback: AnyFunction, target?: unknown, useCapture?: any): void {
+    public once (type: NodeEventType, callback: AnyFunction, target?: unknown, useCapture?: boolean): void
+    public once (type: string | NodeEventType, callback: AnyFunction, target?: unknown, useCapture?: boolean): void {
         this._eventProcessor.once(type as NodeEventType, callback, target, useCapture);
     }
 
+    /**
+     * @deprecated since 3.8.1, please emit Node-related event with `Node.EventType` and emit custom event with `EventTarget` instead.
+     */
+    public emit (type: string, arg0?: any, arg1?: any, arg2?: any, arg3?: any, arg4?: any): void;
     /**
      * @en
      * Trigger an event directly with the event name and necessary arguments.
@@ -1208,7 +1227,8 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
      * eventTarget.emit('fire', message, emitter);
      * ```
      */
-    public emit (type: string, arg0?: any, arg1?: any, arg2?: any, arg3?: any, arg4?: any): void {
+    public emit (type: NodeEventType, arg0?: any, arg1?: any, arg2?: any, arg3?: any, arg4?: any): void;
+    public emit (type: string | NodeEventType, arg0?: any, arg1?: any, arg2?: any, arg3?: any, arg4?: any): void {
         this._eventProcessor.emit(type, arg0, arg1, arg2, arg3, arg4);
     }
 
@@ -1224,6 +1244,10 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
     }
 
     /**
+     * @deprecated since 3.8.1, please query Node-related event with `Node.EventType` instead.
+     */
+    public hasEventListener (type: string, callback?: AnyFunction, target?: unknown): boolean;
+    /**
      * @en Checks whether the EventTarget object has any callback registered for a specific type of event.
      * @zh 检查事件目标对象是否有为特定类型的事件注册的回调。
      * @param type - The type of event.
@@ -1231,7 +1255,8 @@ export class Node extends CCObject implements ISchedulable, CustomSerializable {
      * @param target - The callback callee of the event listener
      * @return True if a callback of the specified type is registered; false otherwise.
      */
-    public hasEventListener (type: string, callback?: AnyFunction, target?: unknown): any {
+    public hasEventListener (type: NodeEventType, callback?: AnyFunction, target?: unknown): boolean;
+    public hasEventListener (type: string | NodeEventType, callback?: AnyFunction, target?: unknown): boolean {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-return
         return this._eventProcessor.hasEventListener(type, callback, target);
     }
