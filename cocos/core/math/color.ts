@@ -305,7 +305,7 @@ export class Color extends ValueType {
         return this._val & 0x000000ff;
     }
 
-    set r (red) {
+    set r (red: number) {
         red = ~~clamp(red, 0, 255);
         this._val = ((this._val & 0xffffff00) | red) >>> 0;
     }
@@ -318,7 +318,7 @@ export class Color extends ValueType {
         return (this._val & 0x0000ff00) >> 8;
     }
 
-    set g (green) {
+    set g (green: number) {
         green = ~~clamp(green, 0, 255);
         this._val = ((this._val & 0xffff00ff) | (green << 8)) >>> 0;
     }
@@ -331,7 +331,7 @@ export class Color extends ValueType {
         return (this._val & 0x00ff0000) >> 16;
     }
 
-    set b (blue) {
+    set b (blue: number) {
         blue = ~~clamp(blue, 0, 255);
         this._val = ((this._val & 0xff00ffff) | (blue << 16)) >>> 0;
     }
@@ -343,7 +343,7 @@ export class Color extends ValueType {
         return (this._val & 0xff000000) >>> 24;
     }
 
-    set a (alpha) {
+    set a (alpha: number) {
         alpha = ~~clamp(alpha, 0, 255);
         this._val = ((this._val & 0x00ffffff) | (alpha << 24)) >>> 0;
     }
