@@ -350,13 +350,13 @@ export class Color extends ValueType {
 
     // compatibility with vector interfaces
     get x (): number { return this.r * toFloat; }
-    set x (value) { this.r = value * 255; }
+    set x (value: number) { this.r = value * 255; }
     get y (): number { return this.g * toFloat; }
-    set y (value) { this.g = value * 255; }
+    set y (value: number) { this.g = value * 255; }
     get z (): number { return this.b * toFloat; }
-    set z (value) { this.b = value * 255; }
+    set z (value: number) { this.b = value * 255; }
     get w (): number { return this.a * toFloat; }
-    set w (value) { this.a = value * 255; }
+    set w (value: number) { this.a = value * 255; }
 
     /**
      * @deprecated since v3.5.0, this is an engine private interface that will be removed in the future.
@@ -366,9 +366,9 @@ export class Color extends ValueType {
     /**
      * @en Construct a same color from the given color
      * @zh 构造与指定颜色相等的颜色。
-     * @param other Specified color
+     * @param color Specified color
      */
-    constructor (other: Color);
+    constructor (color: Color);
 
     /**
      * @en Construct a color form the hex color string
@@ -737,7 +737,8 @@ export class Color extends ValueType {
 CCClass.fastDefine('cc.Color', Color, { r: 0, g: 0, b: 0, a: 255 });
 legacyCC.Color = Color;
 
-export function color (other: Color | string): Color;
+export function color (color: Color): Color;
+export function color (hexString: string): Color;
 export function color (r?: number, g?: number, b?: number, a?: number): Color;
 
 export function color (r?: number | Color | string, g?: number, b?: number, a?: number): Color {
