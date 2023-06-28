@@ -33,6 +33,7 @@ import { NodeEventType } from './node-event';
 import { assertIsTrue } from '../core/data/utils/asserts';
 import type { Component } from './component';
 import type { Node } from './node';
+import type { Director } from '../game';
 
 const MAX_POOL_SIZE = 4;
 
@@ -296,7 +297,7 @@ export default class NodeActivator {
         for (let c = 0; c < originCount; ++c) {
             const component = node.components[c];
             if (component._enabled) {
-                legacyCC.director._compScheduler.disableComp(component);
+                (legacyCC.director as Director)._compScheduler.disableComp(component);
 
                 if (node.activeInHierarchy) {
                     // reactivated from root

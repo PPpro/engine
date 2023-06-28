@@ -190,12 +190,12 @@ function mergePropertyOptions (
     propertyStash: PropertyStash,
     ctor,
     propertyKey: Parameters<LegacyPropertyDecorator>[1],
-    options,
+    options: IPropertyOptions | PropertyType | null,
     descriptorOrInitializer: Parameters<LegacyPropertyDecorator>[2] | undefined,
 ): void {
     let fullOptions;
-    const isGetset = descriptorOrInitializer && typeof descriptorOrInitializer !== 'function'
-        && (descriptorOrInitializer.get || descriptorOrInitializer.set);
+    const isGetset = Boolean(descriptorOrInitializer && typeof descriptorOrInitializer !== 'function'
+        && (descriptorOrInitializer.get || descriptorOrInitializer.set));
     if (options) {
         fullOptions = getFullFormOfProperty(options, isGetset);
     }

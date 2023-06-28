@@ -28,6 +28,7 @@ import { error, errorID, warn, warnID } from '../../platform/debug';
 import * as js from '../../utils/js';
 import { PrimitiveType } from './attribute';
 import { legacyCC } from '../../global-exports';
+import type { IPropertyOptions, PropertyType } from '../decorators/property';
 
 // 增加预处理属性这个步骤的目的是降低 CCClass 的实现难度，将比较稳定的通用逻辑和一些需求比较灵活的属性需求分隔开。
 
@@ -171,7 +172,7 @@ function _wrapOptions (isGetset: boolean, _default, type?: Function | Function[]
     return res;
 }
 
-export function getFullFormOfProperty (options, isGetset): {
+export function getFullFormOfProperty (options: IPropertyOptions | PropertyType | null, isGetset: boolean): {
     default?: any;
     _short?: boolean | undefined;
     type?: any;

@@ -131,7 +131,7 @@ export default class CurveRange  {
         return this._curve ??= new geometry.AnimationCurve(this.spline);
     }
 
-    set curve (value) {
+    set curve (value: geometry.AnimationCurve) {
         this._curve = value;
         this.spline = value._internalCurve;
     }
@@ -145,7 +145,7 @@ export default class CurveRange  {
         return this._curveMin ??= new geometry.AnimationCurve(this.splineMin);
     }
 
-    set curveMin (value) {
+    set curveMin (value: geometry.AnimationCurve) {
         this._curveMin = value;
         this.splineMin = value._internalCurve;
     }
@@ -159,7 +159,7 @@ export default class CurveRange  {
         return this._curveMax ??= new geometry.AnimationCurve(this.splineMax);
     }
 
-    set curveMax (value) {
+    set curveMax (value: geometry.AnimationCurve) {
         this._curveMax = value;
         this.splineMax = value._internalCurve;
     }
@@ -263,7 +263,7 @@ export default class CurveRange  {
     /**
      * @deprecated since v3.5.0, this is an engine private interface that will be removed in the future.
      */
-    public _onBeforeSerialize (props): readonly ['mode', 'constant', 'multiplier'] | readonly ['mode', 'spline', 'multiplier'] | readonly ['mode', 'splineMin', 'splineMax', 'multiplier'] | readonly ['mode', 'constantMin', 'constantMax', 'multiplier'] {
+    public _onBeforeSerialize (props: unknown[]): readonly ['mode', 'constant', 'multiplier'] | readonly ['mode', 'spline', 'multiplier'] | readonly ['mode', 'splineMin', 'splineMax', 'multiplier'] | readonly ['mode', 'constantMin', 'constantMax', 'multiplier'] {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-return
         return SerializableTable[this._mode];
     }
