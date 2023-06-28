@@ -23,12 +23,12 @@
 */
 
 import { Material } from '../../asset/assets/material';
-import { Texture, Sampler, InputAssembler, DescriptorSet, Shader } from '../../gfx';
+import { Texture, Sampler, InputAssembler, DescriptorSet, Shader, DepthStencilState } from '../../gfx';
 import { Node } from '../../scene-graph';
 import { Model } from '../../render-scene/scene/model';
 import { Layers } from '../../scene-graph/layers';
 import { cclegacy } from '../../core';
-import { Pass } from '../../render-scene/core/pass';
+import { IMacroPatch, Pass } from '../../render-scene/core/pass';
 import { IBatcher } from './i-batcher';
 
 const UI_VIS_FLAG = Layers.Enum.NONE | Layers.Enum.UI_3D;
@@ -52,7 +52,7 @@ export class DrawBatch2D {
     public get visFlags (): number {
         return this._visFlags;
     }
-    public set visFlags (vis) {
+    public set visFlags (vis: number) {
         this._visFlags = vis;
     }
 
@@ -102,7 +102,10 @@ export class DrawBatch2D {
     }
 
     // object version
-    public fillPasses (mat: Material | null, dss, dssHash, patches): void {
+    public fillPasses (mat: Material | null,
+        dss: DepthStencilState | undefined | null,
+        dssHash: number,
+        patches: Readonly<IMacroPatch[] | null>): void {
         if (mat) {
             const passes = mat.passes;
             if (!passes) { return; }

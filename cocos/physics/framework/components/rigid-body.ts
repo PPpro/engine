@@ -122,7 +122,7 @@ export class RigidBody extends Component {
         return this._mass;
     }
 
-    public set mass (value) {
+    public set mass (value: number) {
         if (DEBUG && value <= 0) warn('[Physics]: The mass should be greater than zero.');
         if (this._mass === value) return;
         value = value <= 0 ? 0.0001 : value;
@@ -161,7 +161,7 @@ export class RigidBody extends Component {
         return this._linearDamping;
     }
 
-    public set linearDamping (value) {
+    public set linearDamping (value: number) {
         if (DEBUG && (value < 0 || value > 1)) warn('[Physics]: The damping should be between zero to one.');
         this._linearDamping = value;
         if (this._body) this._body.setLinearDamping(value);
@@ -180,7 +180,7 @@ export class RigidBody extends Component {
         return this._angularDamping;
     }
 
-    public set angularDamping (value) {
+    public set angularDamping (value: number) {
         if (DEBUG && (value < 0 || value > 1)) warn('[Physics]: The damping should be between zero to one.');
         this._angularDamping = value;
         if (this._body) this._body.setAngularDamping(value);
@@ -199,7 +199,7 @@ export class RigidBody extends Component {
         return this._useGravity;
     }
 
-    public set useGravity (value) {
+    public set useGravity (value: boolean) {
         this._useGravity = value;
         if (this._body) this._body.useGravity(value);
     }

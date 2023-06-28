@@ -64,9 +64,9 @@ export class Size extends ValueType {
     }
 
     // compatibility with vector interfaces
-    set x (val) { this.width = val; }
+    set x (val: number) { this.width = val; }
     get x (): number { return this.width; }
-    set y (val) { this.height = val; }
+    set y (val: number) { this.height = val; }
     get y (): number { return this.height; }
 
     public declare width: number;

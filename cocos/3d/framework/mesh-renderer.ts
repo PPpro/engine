@@ -158,7 +158,7 @@ class ModelBakeSettings extends EventTarget {
         return this._bakeable;
     }
 
-    set bakeable (val) {
+    set bakeable (val: boolean) {
         this._bakeable = val;
     }
 
@@ -172,7 +172,7 @@ class ModelBakeSettings extends EventTarget {
         return this._castShadow;
     }
 
-    set castShadow (val) {
+    set castShadow (val: boolean) {
         this._castShadow = val;
     }
 
@@ -186,7 +186,7 @@ class ModelBakeSettings extends EventTarget {
         return this._receiveShadow;
     }
 
-    set receiveShadow (val) {
+    set receiveShadow (val: boolean) {
         this._receiveShadow = val;
     }
 
@@ -202,7 +202,7 @@ class ModelBakeSettings extends EventTarget {
         return this._lightmapSize;
     }
 
-    set lightmapSize (val) {
+    set lightmapSize (val: number) {
         this._lightmapSize = val;
     }
 
@@ -217,7 +217,7 @@ class ModelBakeSettings extends EventTarget {
         return this._useLightProbe;
     }
 
-    set useLightProbe (val) {
+    set useLightProbe (val: boolean) {
         this._useLightProbe = val;
         this.emit(ModelBakeSettings.USE_LIGHT_PROBE_CHANGED);
     }
@@ -233,7 +233,7 @@ class ModelBakeSettings extends EventTarget {
         return this._bakeToLightProbe;
     }
 
-    set bakeToLightProbe (val) {
+    set bakeToLightProbe (val: boolean) {
         this._bakeToLightProbe = val;
     }
 
@@ -247,7 +247,7 @@ class ModelBakeSettings extends EventTarget {
         return this._reflectionProbeType;
     }
 
-    set reflectionProbe (val) {
+    set reflectionProbe (val: ReflectionProbeType) {
         this._reflectionProbeType = val;
         this.emit(ModelBakeSettings.REFLECTION_PROBE_CHANGED);
     }
@@ -262,7 +262,7 @@ class ModelBakeSettings extends EventTarget {
         return this._bakeToReflectionProbe;
     }
 
-    set bakeToReflectionProbe (val) {
+    set bakeToReflectionProbe (val: boolean) {
         this._bakeToReflectionProbe = val;
         this.emit(ModelBakeSettings.BAKE_TO_REFLECTION_PROBE_CHANGED);
     }
@@ -345,7 +345,7 @@ export class MeshRenderer extends ModelRenderer {
         return this._shadowBias;
     }
 
-    set shadowBias (val) {
+    set shadowBias (val: number) {
         this._shadowBias = val;
         this._updateShadowBias();
         this._onUpdateLocalShadowBiasAndProbeId();
@@ -363,7 +363,7 @@ export class MeshRenderer extends ModelRenderer {
         return this._shadowNormalBias;
     }
 
-    set shadowNormalBias (val) {
+    set shadowNormalBias (val: number) {
         this._shadowNormalBias = val;
         this._updateShadowNormalBias();
         this._onUpdateLocalShadowBiasAndProbeId();
@@ -382,7 +382,7 @@ export class MeshRenderer extends ModelRenderer {
         return this._shadowCastingMode;
     }
 
-    set shadowCastingMode (val) {
+    set shadowCastingMode (val: number) {
         this._shadowCastingMode = val;
         this._updateCastShadow();
     }
@@ -394,7 +394,7 @@ export class MeshRenderer extends ModelRenderer {
     get shadowCastingModeForInspector (): boolean {
         return this.shadowCastingMode === ModelShadowCastingMode.ON;
     }
-    set shadowCastingModeForInspector (val) {
+    set shadowCastingModeForInspector (val: boolean) {
         this.shadowCastingMode = val === true ? ModelShadowCastingMode.ON : ModelShadowCastingMode.OFF;
     }
 
@@ -426,7 +426,7 @@ export class MeshRenderer extends ModelRenderer {
     get receiveShadow (): number {
         return this._shadowReceivingMode;
     }
-    set receiveShadow (val) {
+    set receiveShadow (val: number) {
         this._shadowReceivingMode = val;
         this._updateReceiveShadow();
     }
@@ -456,7 +456,7 @@ export class MeshRenderer extends ModelRenderer {
         return this._mesh;
     }
 
-    set mesh (val) {
+    set mesh (val: Mesh | null) {
         const old = this._mesh;
         const mesh = this._mesh = val;
         mesh?.initialize();
@@ -499,7 +499,7 @@ export class MeshRenderer extends ModelRenderer {
         return this._enableMorph;
     }
 
-    set enableMorph (value) {
+    set enableMorph (value: boolean) {
         this._enableMorph = value;
     }
 
@@ -514,7 +514,7 @@ export class MeshRenderer extends ModelRenderer {
         return this._enabledGlobalStandardSkinObject;
     }
 
-    set isGlobalStandardSkinObject (val) {
+    set isGlobalStandardSkinObject (val: boolean) {
         (cclegacy.director.root as Root).pipeline.pipelineSceneData.standardSkinMeshRenderer = val ? this : null;
         this._enabledGlobalStandardSkinObject = val;
     }
@@ -708,6 +708,7 @@ export class MeshRenderer extends ModelRenderer {
         }
 
         if (JSB) {
+            // TODO
             (this.model as any)._setInstancedAttribute(name, value);
         } else {
             const subModels = this.model.subModels;

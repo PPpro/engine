@@ -188,7 +188,7 @@ export function getOrCreatePropertyStash (
 function mergePropertyOptions (
     cache: ClassStash,
     propertyStash: PropertyStash,
-    ctor,
+    ctor: Constructor<unknown>,
     propertyKey: Parameters<LegacyPropertyDecorator>[1],
     options: IPropertyOptions | PropertyType | null,
     descriptorOrInitializer: Parameters<LegacyPropertyDecorator>[2] | undefined,

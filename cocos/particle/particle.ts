@@ -59,7 +59,7 @@ export class Particle {
     public frameIndex: number;
     public startRow: number;
 
-    constructor (particleSystem: any) {
+    constructor (particleSystem: ParticleSystem) {
         this.particleSystem = particleSystem;
         this.position = new Vec3(0, 0, 0);
         this.velocity = new Vec3(0, 0, 0);

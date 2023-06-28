@@ -62,7 +62,7 @@ export class BoxCollider extends Collider {
         return this._size;
     }
 
-    public set size (value) {
+    public set size (value: Vec3) {
         if (Vec3.strictEquals(this._size, value)) return;
         Vec3.copy(this._size, value);
         absolute(this._size);

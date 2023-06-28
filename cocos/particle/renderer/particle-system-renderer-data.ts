@@ -30,7 +30,8 @@ import ParticleSystemRendererCPU from './particle-system-renderer-cpu';
 import ParticleSystemRendererGPU from './particle-system-renderer-gpu';
 import { director } from '../../game/director';
 import { Device, Format, FormatFeatureBit } from '../../gfx';
-import { errorID, warnID, cclegacy } from '../../core';
+import { errorID, warnID, warn } from '../../core';
+import type { ParticleSystem } from '../particle-system';
 
 function isSupportGPUParticle (): boolean {
     const device: Device = director.root!.device;
@@ -39,7 +40,7 @@ function isSupportGPUParticle (): boolean {
         return true;
     }
 
-    cclegacy.warn('Maybe the device has restrictions on vertex textures or does not support float textures.');
+    warn('Maybe the device has restrictions on vertex textures or does not support float textures.');
     return false;
 }
 
@@ -55,7 +56,7 @@ export default class ParticleSystemRenderer {
         return this._renderMode;
     }
 
-    public set renderMode (val) {
+    public set renderMode (val: number) {
         if (this._renderMode === val) {
             return;
         }
@@ -74,7 +75,7 @@ export default class ParticleSystemRenderer {
         return this._velocityScale;
     }
 
-    public set velocityScale (val) {
+    public set velocityScale (val: number) {
         this._velocityScale = val;
         if (this._particleSystem) {
             this._particleSystem.processor.updateMaterialParams();
@@ -91,7 +92,7 @@ export default class ParticleSystemRenderer {
         return this._lengthScale;
     }
 
-    public set lengthScale (val) {
+    public set lengthScale (val: number) {
         this._lengthScale = val;
         if (this._particleSystem) {
             this._particleSystem.processor.updateMaterialParams();
@@ -122,7 +123,7 @@ export default class ParticleSystemRenderer {
         return this._mesh;
     }
 
-    public set mesh (val) {
+    public set mesh (val: Mesh | null) {
         this._mesh = val;
         if (this._particleSystem) {
             this._particleSystem.processor.setVertexAttributes();
@@ -237,7 +238,7 @@ export default class ParticleSystemRenderer {
         return this._mainTexture;
     }
 
-    public set mainTexture (val) {
+    public set mainTexture (val: Texture2D | null) {
         this._mainTexture = val;
     }
 
@@ -250,7 +251,7 @@ export default class ParticleSystemRenderer {
         return this._useGPU;
     }
 
-    public set useGPU (val) {
+    public set useGPU (val: boolean) {
         if (this._useGPU === val) {
             return;
         }
@@ -275,8 +276,9 @@ export default class ParticleSystemRenderer {
         return this._alignSpace;
     }
 
-    public set alignSpace (val) {
+    public set alignSpace (val: number) {
         this._alignSpace = val;
+        // TODO
         this._particleSystem.processor.updateAlignSpace(this._alignSpace);
     }
 
@@ -285,9 +287,9 @@ export default class ParticleSystemRenderer {
 
     public static AlignmentSpace = AlignmentSpace;
 
-    private _particleSystem: any = null!; // ParticleSystem
+    private _particleSystem: ParticleSystem = null!; // ParticleSystem
 
-    create (ps): void {
+    create (ps: ParticleSystem): void {
         // if particle system is null we run the old routine
         // else if particle system is not null we do nothing
         if (this._particleSystem === null) {
@@ -297,11 +299,12 @@ export default class ParticleSystemRenderer {
         }
     }
 
-    onInit (ps): void {
+    onInit (ps: ParticleSystem): void {
         this.create(ps);
         const useGPU = this._useGPU && isSupportGPUParticle();
         if (!this._particleSystem.processor) {
             this._particleSystem.processor = useGPU ? new ParticleSystemRendererGPU(this) : new ParticleSystemRendererCPU(this);
+            // TODO
             this._particleSystem.processor.updateAlignSpace(this.alignSpace);
             this._particleSystem.processor.onInit(ps);
         } else {
@@ -335,9 +338,11 @@ export default class ParticleSystemRenderer {
             this.particleMaterial = this.gpuMaterial;
         }
         this._particleSystem.processor = useGPU ? new ParticleSystemRendererGPU(this) : new ParticleSystemRendererCPU(this);
+        // TODO
         this._particleSystem.processor.updateAlignSpace(this.alignSpace);
         this._particleSystem.processor.onInit(this._particleSystem);
         this._particleSystem.processor.onEnable();
+        // TODO
         this._particleSystem.bindModule();
     }
 }

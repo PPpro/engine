@@ -30,6 +30,7 @@ import { ArcMode, EmitLocation, ShapeType } from '../enum';
 import { fixedAngleUnitVector2, particleEmitZAxis, randomPointBetweenCircleAtFixedAngle, randomPointBetweenSphere,
     randomPointInCube, randomSign, randomSortArray, randomUnitVector } from '../particle-general-function';
 import { ParticleSystem } from '../particle-system';
+import type { Particle } from '../particle';
 
 const _intermediVec = new Vec3(0, 0, 0);
 const _intermediArr: number[] = [];
@@ -376,7 +377,7 @@ export default class ShapeModule {
 
     private mat: Mat4;
     private quat: Quat;
-    private particleSystem: any;
+    private particleSystem: ParticleSystem | null;
     private lastTime: number;
     private totalAngle: number;
 
@@ -397,7 +398,7 @@ export default class ShapeModule {
     public onInit (ps: ParticleSystem): void {
         this.particleSystem = ps;
         this.constructMat();
-        this.lastTime = this.particleSystem._time;
+        this.lastTime = this.particleSystem.time;
     }
 
     /**
@@ -406,7 +407,7 @@ export default class ShapeModule {
      * @param p @en Particle emitted. @zh 发射出来的粒子。
      * @internal
      */
-    public emit (p): void {
+    public emit (p: Particle): void {
         switch (this.shapeType) {
         case ShapeType.Box:
             boxEmit(this.emitFrom, this.boxThickness, p.position, p.velocity);
@@ -437,7 +438,7 @@ export default class ShapeModule {
             const sphericalVel = Vec3.normalize(_intermediVec, p.position);
             Vec3.lerp(p.velocity, p.velocity, sphericalVel, this.sphericalDirectionAmount);
         }
-        this.lastTime = this.particleSystem._time;
+        this.lastTime = this.particleSystem!.time;
     }
 
     private constructMat (): void {
@@ -449,7 +450,7 @@ export default class ShapeModule {
         if (this.arcMode === ArcMode.Random) {
             return randomRange(0, this._arc);
         }
-        let angle = this.totalAngle + 2 * Math.PI * this.arcSpeed.evaluate(this.particleSystem._time, 1)! * (this.particleSystem._time - this.lastTime);
+        let angle = this.totalAngle + 2 * Math.PI * this.arcSpeed.evaluate(this.particleSystem!.time, 1)! * (this.particleSystem!.time - this.lastTime);
         this.totalAngle = angle;
         if (this.arcSpread !== 0) {
             angle = Math.floor(angle / (this._arc * this.arcSpread)) * this._arc * this.arcSpread;
@@ -533,7 +534,7 @@ function coneEmit (emitFrom, radius, radiusThickness, theta, angle, length, pos,
     }
 }
 
-function boxEmit (emitFrom, boxThickness, pos, dir): void {
+function boxEmit (emitFrom: number, boxThickness: Vec3, pos: Vec3, dir: Vec3): void {
     switch (emitFrom) {
     case EmitLocation.Volume:
         randomPointInCube(pos, _unitBoxExtent);
@@ -563,7 +564,7 @@ function boxEmit (emitFrom, boxThickness, pos, dir): void {
     Vec3.copy(dir, particleEmitZAxis);
 }
 
-function circleEmit (radius, radiusThickness, theta, pos, dir): void {
+function circleEmit (radius: number, radiusThickness: number, theta: number, pos: Vec3, dir: Vec3): void {
     randomPointBetweenCircleAtFixedAngle(pos, radius * (1 - radiusThickness), radius, theta);
     Vec3.normalize(dir, pos);
 }

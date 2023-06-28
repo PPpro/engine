@@ -215,8 +215,8 @@ export const set = ((): (object: Record<string | number, any>, propertyName: str
  * @zh 对新创建的地图对象应用删除操作。这将让V8将对象置于 "字典模式"，并禁止创建隐藏类。这将提高那些不断变化形状对象的性能。
  * @returns @en A newly map object. @zh 一个新的 map 对象。
  */
-export function createMap (forceDictMode?: boolean): any {
-    const map = Object.create(null);
+export function createMap (forceDictMode?: boolean): Record<string | number, unknown> {
+    const map = Object.create(null) as Record<string | number, unknown>;
     if (forceDictMode) {
         const INVALID_IDENTIFIER_1 = '.';
         const INVALID_IDENTIFIER_2 = '/';

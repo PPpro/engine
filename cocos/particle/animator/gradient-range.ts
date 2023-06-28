@@ -83,7 +83,7 @@ export default class GradientRange {
         return this._mode;
     }
 
-    set mode (m) {
+    set mode (m: number) {
         if (EDITOR_NOT_IN_PREVIEW) {
             if (m === Mode.RandomColor) {
                 if (this.gradient.colorKeys.length === 0) {
@@ -184,7 +184,7 @@ export default class GradientRange {
     /**
      * @deprecated since v3.5.0, this is an engine private interface that will be removed in the future.
      */
-    public _onBeforeSerialize (props: any): any {
+    public _onBeforeSerialize (props: unknown): unknown {
         return SerializableTable[this._mode];
     }
 }

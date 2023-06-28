@@ -77,7 +77,7 @@ class RealKeyframeValue extends EditorExtendable {
         return (this._flags & REAL_KEYFRAME_VALUE_FLAGS_INTERPOLATION_MODE_MASK) >> REAL_KEYFRAME_VALUE_FLAGS_INTERPOLATION_MODE_START;
     }
 
-    set interpolationMode (value) {
+    set interpolationMode (value: RealInterpolationMode) {
         this._flags &= ~REAL_KEYFRAME_VALUE_FLAGS_INTERPOLATION_MODE_MASK;
         this._flags |= (value << REAL_KEYFRAME_VALUE_FLAGS_INTERPOLATION_MODE_START);
     }
@@ -94,7 +94,7 @@ class RealKeyframeValue extends EditorExtendable {
         return (this._flags & REAL_KEYFRAME_VALUE_FLAGS_TANGENT_WEIGHT_MODE_MASK) >> REAL_KEYFRAME_VALUE_FLAGS_TANGENT_WEIGHT_MODE_START;
     }
 
-    set tangentWeightMode (value) {
+    set tangentWeightMode (value: TangentWeightMode) {
         this._flags &= ~REAL_KEYFRAME_VALUE_FLAGS_TANGENT_WEIGHT_MODE_MASK;
         this._flags |= (value << REAL_KEYFRAME_VALUE_FLAGS_TANGENT_WEIGHT_MODE_START);
     }
@@ -154,7 +154,7 @@ class RealKeyframeValue extends EditorExtendable {
         return (this._flags & REAL_KEYFRAME_VALUE_FLAGS_EASING_METHOD_MASK) >> REAL_KEYFRAME_VALUE_FLAGS_EASING_METHOD_START;
     }
 
-    set easingMethod (value) {
+    set easingMethod (value: EasingMethod) {
         this._flags &= ~REAL_KEYFRAME_VALUE_FLAGS_EASING_METHOD_MASK;
         this._flags |= (value << REAL_KEYFRAME_VALUE_FLAGS_EASING_METHOD_START);
     }
@@ -456,7 +456,7 @@ export class RealCurve extends KeyframeCurve<RealKeyframeValue> {
         if (values !== undefined) {
             assertIsTrue(Array.isArray(times));
             this.setKeyframes(
-                times.slice(),
+                (times as number[]).slice(),
                 values.map((value) => createRealKeyframeValue(value)),
             );
         } else {

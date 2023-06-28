@@ -358,6 +358,7 @@ const ENTIRE_SHAPE: IEntireShape = {
 
 export function createShape (type: EColliderType): IBaseShape {
     initColliderProxy();
+    // TODO
     return CREATE_COLLIDER_PROXY[type]();
 }
 

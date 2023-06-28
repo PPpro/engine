@@ -35,6 +35,7 @@ import GradientRange from '../animator/gradient-range';
 import { Space, TextureMode, TrailMode } from '../enum';
 import { Particle } from '../particle';
 import { TransformBit } from '../../scene-graph/node-enum';
+import type { ParticleSystem } from '../particle-system';
 
 const PRE_TRIANGLE_INDEX = 1;
 const NEXT_TRIANGLE_INDEX = 1 << 2;
@@ -170,7 +171,7 @@ export default class TrailModule {
         return this._enable;
     }
 
-    public set enable (val) {
+    public set enable (val: boolean) {
         if (val === this._enable && this._trailModel) {
             return;
         }
@@ -231,7 +232,7 @@ export default class TrailModule {
         return this._minParticleDistance;
     }
 
-    public set minParticleDistance (val) {
+    public set minParticleDistance (val: number) {
         this._minParticleDistance = val;
         this._minSquaredDistance = val * val;
     }
@@ -314,7 +315,7 @@ export default class TrailModule {
     private _space = Space.World;
 
     @serializable
-    private _particleSystem: any = null;
+    private _particleSystem: ParticleSystem = null!;
 
     private _minSquaredDistance = 0;
     private _vertSize: number;
@@ -361,7 +362,7 @@ export default class TrailModule {
         this._inited = false;
     }
 
-    public onInit (ps): void {
+    public onInit (ps: ParticleSystem): void {
         this._particleSystem = ps;
         this.minParticleDistance = this._minParticleDistance;
         let burstCount = 0;
@@ -447,6 +448,7 @@ export default class TrailModule {
 
     public updateMaterial (): void {
         if (this._particleSystem) {
+            // TODO
             this._material = this._particleSystem.getMaterialInstance(1) || this._particleSystem.processor._defaultTrailMat;
             if (this._trailModel) {
                 this._trailModel.setSubModelMaterial(0, this._material!);
@@ -455,7 +457,8 @@ export default class TrailModule {
     }
 
     public update (): void {
-        this._trailLifetime = this.lifeTime.evaluate(this._particleSystem._time, 1)!;
+        this._trailLifetime = this.lifeTime.evaluate(this._particleSystem.time, 1)!;
+        // TODO
         if (this.space === Space.World && this._particleSystem._simulationSpace === Space.Local) {
             this._needTransform = true;
             this._particleSystem.node.getWorldMatrix(this._psTransform);

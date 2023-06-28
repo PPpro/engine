@@ -26,6 +26,7 @@ import { UIRenderer } from '../2d/framework/ui-renderer';
 import { UITransform } from '../2d/framework/ui-transform';
 import { warnID } from '../core/platform/debug';
 import { UIMeshRenderer } from '../2d';
+import type { Node } from './node';
 
 /**
  * @en Node's UI properties abstraction
@@ -82,23 +83,23 @@ export class NodeUIProperties {
      */
     private _localOpacity = 1;
     get localOpacity (): number { return this._localOpacity; }
-    set localOpacity (val) {
+    set localOpacity (val: number) {
         this._localOpacity = val;
         this.colorDirty = true;
     }
 
     public colorDirty = true;
     protected _uiTransformComp: UITransform | null = null;
-    private _node: any;
+    private _node: Node;
 
-    constructor (node: any) {
+    constructor (node: Node) {
         this._node = node;
     }
 
     /**
      * @deprecated since v3.4
      */
-    public applyOpacity (effectOpacity): void {
+    public applyOpacity (effectOpacity: number): void {
         this._opacity = this._localOpacity * effectOpacity;
     }
 
@@ -107,5 +108,5 @@ export class NodeUIProperties {
      * @zh 为结点树的透明度状态设置脏标签，不再有效果
      * @deprecated since v3.4
      */
-    public static markOpacityTree (node, isDirty = true): void {}
+    public static markOpacityTree (node: Node, isDirty = true): void {}
 }
