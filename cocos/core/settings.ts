@@ -50,6 +50,8 @@ enum Category {
     XR = 'xr',
 }
 
+type SettingsMap = SafeRecord<string, SafeRecord<string, unknown>>;
+
 /**
  * @zh
  * 配置模块用于获取 settings.json 配置文件中的配置信息，同时你可以覆盖一些配置从而影响引擎的启动和运行，可参考 [game.init] 的参数选项说明。你可以通过 [settings] 访问此模块单例。
@@ -65,7 +67,7 @@ export class Settings {
      * Initialization
      * @internal
      */
-    init (path = '', overrides: Record<string, any> = {}): Promise<void> {
+    init (path = '', overrides: SettingsMap = {}): Promise<void> {
         for (const categoryName in overrides) {
             const category = overrides[categoryName];
             if (category) {
@@ -81,7 +83,7 @@ export class Settings {
                 // TODO: to support a virtual module of settings.
                 // For now, we use a system module context to dynamically import the relative path of module.
                 const settingsModule = '../settings.js';
-                import(settingsModule).then((res): void => {
+                import(settingsModule).then((res: {default: SettingsMap}): void => {
                     this._settings = res.default;
                     resolve();
                 }).catch((e): void => reject(e));
@@ -91,7 +93,7 @@ export class Settings {
             if (!HTML5 && !path.startsWith('http')) {
                 // TODO: readJsonSync not working on Taobao IDE
                 if (TAOBAO || TAOBAO_MINIGAME) {
-                    globalThis.fsUtils.readJson(path, (err, result): void => {
+                    globalThis.fsUtils.readJson(path, (err: unknown, result: SettingsMap): void => {
                         if (err) {
                             reject(err);
                             return;
@@ -104,7 +106,7 @@ export class Settings {
                     if (result instanceof Error) {
                         reject(result);
                     } else {
-                        this._settings = result;
+                        this._settings = result as SettingsMap;
                         resolve();
                     }
                 }
@@ -113,7 +115,7 @@ export class Settings {
                 xhr.open('GET', path);
                 xhr.responseType = 'text';
                 xhr.onload = (): void => {
-                    this._settings = JSON.parse(xhr.response);
+                    this._settings = JSON.parse(xhr.response) as SettingsMap;
                     resolve();
                 };
                 xhr.onerror = (): void => {
@@ -146,7 +148,7 @@ export class Settings {
         if (!(category in this._override)) {
             this._override[category] = {};
         }
-        this._override[category][name] = value;
+        this._override[category]![name] = value;
     }
 
     /**
@@ -165,7 +167,7 @@ export class Settings {
      * console.log(settings.querySettings(Settings.Category.ENGINE, 'debug')); // print false
      * ```
      */
-    querySettings<T = any> (category: Category | string, name: string): T | null {
+    querySettings<T = unknown> (category: Category | string, name: string): T | null {
         if (category in this._override) {
             const categorySettings = this._override[category];
             if (categorySettings && name in categorySettings) {
@@ -181,8 +183,8 @@ export class Settings {
         return null;
     }
 
-    private _settings: Record<string, any> = {};
-    private _override: Record<string, any> = {};
+    private _settings: SettingsMap = {};
+    private _override: SettingsMap = {};
 }
 
 export declare namespace Settings {
