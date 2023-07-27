@@ -8,6 +8,8 @@ const TAG_NAME_CC_CATEGORY = 'ccCategory';
 
 const TAG_NAME_LEGACY_PUBLIC = 'legacyPublic'.toLowerCase();
 
+const TAG_ENGINE_INTERNAL = 'engineInternal';
+
 const CATEGORY_CONFIG_FILE_NAME = 'category.json';
 
 interface CategoryConfig {
@@ -54,6 +56,7 @@ export function load (app: Application) {
             handleLink(context, reflection);
         });
     });
+    app.converter.on(Converter.EVEN, (c))
 
     type ReflectionId = Reflection['id'];
 
@@ -165,6 +168,7 @@ export function load (app: Application) {
     }
 
     // NOTE: this is a bug on typedoc, we fix in this plugin.
+    // should not generate typeArguments field in typeParameters' type field.
     function fixTypeArguments (_context: Context, reflection: SignatureReflection, node?: ts.Node) {
         if (reflection.typeParameters) {
             for (const typeParam of reflection.typeParameters) {
@@ -176,6 +180,13 @@ export function load (app: Application) {
                 }
             }
         }
+    }
+
+    function cullEngineInternal (_context: Context, reflection: Reflection, node?: ts.Node) {
+
+        reflection.traverse((r, p) => {
+            r
+        });
     }
 
     function setCategory (reflectionId: ReflectionId, categoryId: string, categoryConfig: CategoryConfig) {
