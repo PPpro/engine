@@ -534,7 +534,7 @@ bool FileUtils::writeDataToFile(const Data &data, const ccstd::string &fullPath)
 
 bool FileUtils::init() {
     addSearchPath("Resources", true);
-    addSearchPath("data", true);
+    // addSearchPath("data", true);
     _searchPathArray.push_back(_defaultResRootPath);
     return true;
 }

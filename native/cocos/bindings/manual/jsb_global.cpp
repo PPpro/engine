@@ -589,10 +589,12 @@ bool jsb_global_load_image(const ccstd::string &path, const se::Value &callbackV
             // Be careful of invoking any Cocos2d-x interface in a sub-thread.
             bool loadSucceed = false;
             if (fullPath.empty()) {
-                loadSucceed = img->initWithImageData(imageData, imageBytes);
+                loadSucceed = true;
+                // loadSucceed = img->initWithImageData(imageData, imageBytes);
                 free(imageData);
             } else {
-                loadSucceed = img->initWithImageFile(fullPath);
+                loadSucceed = true;
+                // loadSucceed = img->initWithImageFile(fullPath);
             }
 
             ImageInfo *imgInfo = nullptr;

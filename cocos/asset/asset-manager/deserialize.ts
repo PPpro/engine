@@ -42,6 +42,9 @@ export interface IDependProp {
 export default function deserializeAsset (json: Record<string, any>, options: Record<string, any> & {
     __uuid__?: string;
 }): Asset {
+    if (json._document) {
+        console.log('pptest 12', json._document.length, json._document.map(a => a.__type__).join(', '))
+    }
     let classFinder: deserialize.ClassFinder;
     if (EDITOR) {
         classFinder = (type, data, owner, propName): Constructor<unknown> => {

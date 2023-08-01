@@ -492,6 +492,10 @@ export class AnimationGraphPoseLayoutMaintainer {
 
         const nTransforms = this._transformRecords.length;
         assertIsTrue(transforms.length === nTransforms);
+        const a = Object.entries(this._transformRecords).map(([key, record]) => {
+            return record.node.name;
+        }).join(', ');
+        // console.log('pptest ', a);
         for (let iTransform = 0; iTransform < nTransforms; ++iTransform) {
             const transform = transforms.getTransform(iTransform, cacheTransform);
             const { node } = this._transformRecords[iTransform];

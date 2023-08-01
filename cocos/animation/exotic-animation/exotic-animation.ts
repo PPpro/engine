@@ -54,6 +54,10 @@ export class ExoticAnimation {
     }
 
     public createEvaluatorForAnimationGraph (context: AnimationClipGraphBindingContext): ExoticTrsAGEvaluation {
+        console.log('pptest', this._nodeAnimations.map(node => {
+            // @ts-ignore
+            return node._path;
+        }));
         return new ExoticTrsAGEvaluation(this._nodeAnimations, context);
     }
 

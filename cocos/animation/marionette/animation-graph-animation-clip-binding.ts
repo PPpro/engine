@@ -336,9 +336,12 @@ export function createAnimationAGEvaluation (
     clip: AnimationClip,
     context: AnimationClipGraphBindingContext,
 ): AnimationClipAGEvaluation {
+    console.log('pptest 2', clip.isAdditive_experimental);
     if (clip.isAdditive_experimental) {
+        console.log('pptest 3');
         return new AnimationClipAGEvaluationAdditive(clip, context);
     } else {
+        console.log('pptest 4');
         return new AnimationClipAGEvaluationRegular(clip, context);
     }
 }
@@ -348,16 +351,18 @@ class AnimationClipAGEvaluationRegular implements AnimationClipAGEvaluation {
         clip: AnimationClip,
         context: AnimationClipGraphBindingContext,
     ) {
+        console.log('pptest 5');
         clip._trySyncLegacyData();
-
+        
         const trackEvaluations: AGTrackEvaluation<unknown>[] = [];
         let exoticAnimationEvaluation: ExoticTrsAGEvaluation | undefined;
         const auxiliaryCurveEvaluations: AuxiliaryCurveEvaluation[] = [];
-
+        
         const {
             tracks,
             [exoticAnimationTag]: exoticAnimation,
         } = clip;
+        console.log('pptest 6', typeof exoticAnimation);
 
         for (const track of tracks) {
             if (track instanceof UntypedTrack) {

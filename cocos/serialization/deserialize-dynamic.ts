@@ -31,6 +31,7 @@ import { Platform } from '../../pal/system-info/enum-type';
 import type { deserialize, CCClassConstructor } from './deserialize';
 import { CCON } from './ccon';
 import { Asset } from '../asset/assets';
+import { AnimationClip } from '../animation';
 
 function compileObjectTypeJit (
     sources: string[],
@@ -52,6 +53,7 @@ function compileObjectTypeJit (
     } else {
         sources.push(`
 if (prop) {
+    console.log('pptest 205', ${propNameLiteralToSet});
     s._deserializeAndAssignField(o, prop, ${propNameLiteralToSet});
 } else {
     o${accessorToSet}=null;
@@ -185,9 +187,8 @@ function compileDeserializeNative (_self: _Deserializer, klass: CCClassConstruct
     ((): void => {
         const props: string[] = klass.__values__;
         shouldCopyRawData = props[props.length - 1] === '_$erialized';
-
+        
         const attrs = CCClass.Attr.getClassAttrs(klass);
-
         for (let p = 0; p < props.length; p++) {
             const propName = props[p];
             let propNameToRead = propName;
@@ -223,6 +224,7 @@ function compileDeserializeNative (_self: _Deserializer, klass: CCClassConstruct
     })();
 
     return (s, o, d, k): void => {
+
         for (let i = 0; i < simpleProps.length; ++i) {
             const prop = d[simplePropsToRead[i]];
             if (prop !== undefined) {
@@ -247,6 +249,7 @@ function compileDeserializeNative (_self: _Deserializer, klass: CCClassConstruct
                         o[propName] = null;
                     }
                 } else if (prop) {
+                    console.log('pptest 201', propName)
                     s._deserializeAndAssignField(o, prop, propName);
                 } else {
                     o[propName] = null;
@@ -478,6 +481,7 @@ class _Deserializer {
         owner?: Record<PropertyKey, unknown> | unknown[],
         propName?: string,
     ): Record<string, any> | null {
+        console.log('pptest 21', serialized.__type__);
         switch (serialized.__type__) {
         case 'TypedArray':
             return this._deserializeTypedArrayView(serialized);
@@ -515,6 +519,7 @@ class _Deserializer {
         for (let i = 0; i < value.length; i++) {
             prop = value[i];
             if (typeof prop === 'object' && prop) {
+                console.log('pptest 202', `${i}`)
                 const isAssetType = this._deserializeAndAssignField(obj, prop, `${i}`);
                 if (isAssetType) {
                     // fill default value for primitive objects (no constructor)
@@ -640,40 +645,48 @@ class _Deserializer {
 
     private _deserializeFireClass (obj: Record<PropertyKey, unknown>, serialized: SerializedGeneralTypedObject, klass: CCClassConstructor<unknown>): void {
         let deserialize: CompiledDeserializeFn;
-        // eslint-disable-next-line no-prototype-builtins
-        if (klass.hasOwnProperty('__deserialize__')) {
-            deserialize = klass.__deserialize__ as CompiledDeserializeFn;
-        } else {
-            deserialize = compileDeserialize(this, klass);
-
-            // DEBUG: Check MissingScript data for issue 9878
-            try {
-                if (klass === MissingScript) {
-                    const props: string[] = klass.__values__;
-                    if (props.length === 0 || props[props.length - 1] !== '_$erialized') {
-                        error(`The '_$erialized' prop of MissingScript is missing. Will force the raw data to be save.`);
-                        error(`    Error props: ['${props}']. Please contact jare.`);
-                        // props.push('_$erialized');
-                    }
-
-                    const rawDeserialize: CompiledDeserializeFn = deserialize;
-                    deserialize = function (deserializer: _Deserializer,
-                        object: Record<string, unknown>,
-                        deserialized: Record<string, unknown>,
-                        constructor: AnyFunction): void {
-                        rawDeserialize(deserializer, object, deserialized, constructor);
-                        if (!object._$erialized) {
-                            error(`Unable to stash previously serialized data. ${JSON.stringify(deserialized)}`);
+        console.log('pptest 10', klass.name);
+        try {
+            // eslint-disable-next-line no-prototype-builtins
+            if (klass.hasOwnProperty('__deserialize__')) {
+                console.log('pptest 101', klass.name);
+                deserialize = klass.__deserialize__ as CompiledDeserializeFn;
+            } else {
+                console.log('pptest 102', klass.name);
+                deserialize = compileDeserialize(this, klass);
+    
+                // DEBUG: Check MissingScript data for issue 9878
+                try {
+                    if (klass === MissingScript) {
+                        const props: string[] = klass.__values__;
+                        if (props.length === 0 || props[props.length - 1] !== '_$erialized') {
+                            error(`The '_$erialized' prop of MissingScript is missing. Will force the raw data to be save.`);
+                            error(`    Error props: ['${props}']. Please contact jare.`);
+                            // props.push('_$erialized');
                         }
-                    };
+    
+                        const rawDeserialize: CompiledDeserializeFn = deserialize;
+                        deserialize = function (deserializer: _Deserializer,
+                            object: Record<string, unknown>,
+                            deserialized: Record<string, unknown>,
+                            constructor: AnyFunction): void {
+                            rawDeserialize(deserializer, object, deserialized, constructor);
+                            if (!object._$erialized) {
+                                error(`Unable to stash previously serialized data. ${JSON.stringify(deserialized)}`);
+                            }
+                        };
+                    }
+                } catch (e) {
+                    error(`Error when checking MissingScript 6, ${e}`);
                 }
-            } catch (e) {
-                error(`Error when checking MissingScript 6, ${e}`);
+    
+                js.value(klass, '__deserialize__', deserialize, true);
             }
+            deserialize(this, obj, serialized, klass);
 
-            js.value(klass, '__deserialize__', deserialize, true);
+        } catch (e: any) {
+            console.log('pptest 101', e.stack)
         }
-        deserialize(this, obj, serialized, klass);
     }
 
     /**
@@ -684,6 +697,7 @@ class _Deserializer {
         serializedField: SerializedFieldObjectValue,
         propName: string,
     ): boolean {
+        console.log('pptest 30', propName)
         const id = (serializedField as Partial<SerializedObjectReference>).__id__;
         if (typeof id === 'number') {
             const field = this.deserializedList[id];
@@ -751,6 +765,7 @@ class _Deserializer {
                     instance[propName] = prop;
                 }
             } else if (prop) {
+                console.log('pptest 203', propName)
                 const isAssetType = this._deserializeAndAssignField(instance, prop, propName);
                 if (isAssetType) {
                     // fill default value for primitive objects (no constructor)
@@ -820,6 +835,7 @@ class _Deserializer {
             if (typeof value !== 'object') {
                 instance[propName] = value;
             } else if (value) {
+                console.log('pptest 204', propName)
                 this._deserializeAndAssignField(instance, value, propName);
             } else {
                 instance[propName] = null;

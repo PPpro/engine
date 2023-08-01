@@ -188,6 +188,7 @@ class ClipMotionEval implements MotionEval {
     private _ignoreEmbeddedPlayers: boolean;
 
     private _setClip (clip: AnimationClip, context: AnimationGraphBindingContext): void {
+        console.log('pptest _setClip', clip.uuid);
         this._clipEval?.destroy();
         this._frameEventEval = null;
         if (this._clipEmbeddedPlayerEval) {
