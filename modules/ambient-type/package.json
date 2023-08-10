@@ -1,0 +1,19 @@
+{
+  "name": "@cocos/ambient-type",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.d.ts",
+  "types": "./src/index.d.ts",
+  "scripts": {
+    "build": "node ./scripts/build-consts.js"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts"
+    }
+  },
+  "devDependencies": {
+    "@cocos/build-engine": "*"
+  }
+}
