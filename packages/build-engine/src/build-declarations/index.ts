@@ -140,16 +140,13 @@ export async function build (options: {
         );
     }
 
+    const giftInputs: string[] = [];
     const types = parsedCommandLine.options.types?.map((typeFile) => `${typeFile}.d.ts`);
     if (types) {
         for (const file of types) {
-            const destPath = ps.join(unbundledOutDirNormalized, ps.isAbsolute(file) ? ps.basename(file) : file);
-            await fs.ensureDir(ps.dirname(destPath));
-            await fs.copyFile(file, destPath);
+            giftInputs.push(file);
         }
     }
-
-    const giftInputs: string[] = [];
     const listGiftInputs = async (dir: string) => {
         for (const file of await fs.readdir(dir)) {
             const path = ps.join(dir, file);
