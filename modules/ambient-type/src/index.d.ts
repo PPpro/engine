@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/triple-slash-reference */
 // default ambient types
 /// <reference path="../lib/consts.d.ts"/>
 /// <reference path="./types/editor-extends.d.ts"/>
