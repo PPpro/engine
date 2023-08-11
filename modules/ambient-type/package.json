@@ -12,8 +12,5 @@
     ".": {
       "types": "./src/index.d.ts"
     }
-  },
-  "devDependencies": {
-    "@cocos/build-engine": "*"
   }
 }
