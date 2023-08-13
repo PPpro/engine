@@ -13,7 +13,6 @@
 
 // pal types
 /// <reference path="./types/pal/audio.d.ts"/>
-/// <reference path="./types/pal/env.d.ts"/>
 /// <reference path="./types/pal/input-box.d.ts"/>
 /// <reference path="./types/pal/input.d.ts"/>
 /// <reference path="./types/pal/minigame.d.ts"/>

@@ -23,7 +23,7 @@
 */
 
 import { COCOSPLAY, HUAWEI, OPPO, VIVO } from 'internal:constants';
-import { checkPalIntegrity, withImpl } from '../../integrity-check';
+import { checkPalIntegrity, withImpl } from '@pal/utils';
 
 declare const require: (path: string) =>  Promise<void>;
 declare const ral: any;

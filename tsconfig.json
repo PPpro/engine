@@ -23,7 +23,7 @@
         ]
     },
     "types": [
-      "./modules/ambient-type/src/index"
+      "cc-ambient-type"
     ],
   },
   "include": [
