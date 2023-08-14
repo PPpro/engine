@@ -1,0 +1,17 @@
+{
+  "name": "@pal/env",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "minigame": "./src/minigame/env.ts",
+      "runtime": "./src/runtime/env.ts",
+      "web": "./src/web/env.ts",
+      "native": "./src/native/env.ts"
+    }
+  }
+}
