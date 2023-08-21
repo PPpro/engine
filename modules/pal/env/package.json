@@ -8,10 +8,16 @@
   "exports": {
     ".": {
       "types": "./src/index.d.ts",
-      "minigame": "./src/minigame/env.ts",
-      "runtime": "./src/runtime/env.ts",
-      "web": "./src/web/env.ts",
-      "native": "./src/native/env.ts"
+      "publish": {
+        "minigame": "./src/minigame/env.ts",
+        "runtime": "./src/runtime/env.ts",
+        "web": "./src/web/env.ts",
+        "native": "./src/native/env.ts"
+      },
+      "editor": {
+
+      },
+      "node": "./package.json"
     }
   }
 }
