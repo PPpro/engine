@@ -13,5 +13,8 @@
       "types": "./src/index.d.ts",
       "default": "./src/index.d.ts"
     }
+  },
+  "devDependencies": {
+    "@cocos/build-engine": "*"
   }
 }
