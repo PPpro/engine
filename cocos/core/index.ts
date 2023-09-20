@@ -40,7 +40,7 @@ export * from './memop';
 export * from './value-types';
 export * from './utils';
 export * from './data';
-export * from './event';
+export * from '@base/event';
 export * from './platform';
 export * from './scheduler';
 export * from './curves';

@@ -25,7 +25,8 @@
 import { EDITOR_NOT_IN_PREVIEW } from 'internal:constants';
 import { Armature, Bone, EventObject, AnimationState } from '@cocos/dragonbones-js';
 import { UIRenderer } from '../2d/framework/ui-renderer';
-import { Color, Enum, ccenum, RecyclePool, js, CCObject, EventTarget, _decorator } from '../core';
+import { Color, Enum, ccenum, RecyclePool, js, CCObject, _decorator } from '../core';
+import { EventTarget } from '@base/event';
 import { errorID, warn, error } from '@base/debug';
 import { cclegacy } from '@base/global';
 import { BlendFactor } from '../gfx';

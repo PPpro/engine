@@ -24,7 +24,8 @@
 
 import { EDITOR_NOT_IN_PREVIEW } from 'internal:constants';
 
-import { Vec2, Rect, _decorator, Eventify, tooltip, CCInteger, serializable, CCFloat, CCBoolean } from '../../../../core';
+import { Vec2, Rect, _decorator, tooltip, CCInteger, serializable, CCFloat, CCBoolean } from '../../../../core';
+import { Eventify } from '@base/event';
 import { cclegacy } from '@base/global';
 import { PhysicsGroup } from '../../../../physics/framework/physics-enum';
 
