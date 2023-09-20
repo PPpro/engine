@@ -33,6 +33,7 @@
     "clear": "node ./scripts/clear-cache.js",
     "clear-platform": "node ./native/utils/clear-platform.js && node ./scripts/clear-file.js",
     "update:native-external": "node ./native/utils/update-external.js",
+    "fix-eslint": "./scripts/auto-fix-eslint.sh",
     "test": "gulp test"
   },
   "repository": {
