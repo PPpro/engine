@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 设置要检查的根目录
-root_directory="/Users/zhengjianpei/Desktop/cocos-editor/resources/3d/engine"
+root_directory="c:/Users/pp/Desktop/cocos-editor-scripting/resources/3d/engine/"
 
 # 找到所有的 .ts 文件
 ts_files=$(find "$root_directory" -type f -name "*.ts" -not -path "*/node_modules/*")
