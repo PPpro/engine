@@ -9,7 +9,7 @@ ts_files=$(find "$root_directory" -type f -name "*.ts" -not -path "*/node_module
 # 遍历每个 .ts 文件并运行 ESLint
 for file in $ts_files; do
   echo "Running ESLint on $file"
-  npx eslint "$file" --fix # 使用你的 ESLint 配置文件和选项
+  npx eslint "$file" --plugin import --parser @typescript-eslint/parser --fix --rule '"import/order": [error]' --no-eslintrc # 使用你的 ESLint 配置文件和选项
 done
 
 echo "ESLint 检查完成"
